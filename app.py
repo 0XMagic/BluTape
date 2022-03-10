@@ -3,13 +3,9 @@ import info, objects, macro
 from color import *
 from tkinter.filedialog import asksaveasfile, askopenfile
 from tkinter import simpledialog
+
 has_seen_warn = False
 app = tk.Tk()
-
-
-
-
-
 
 appdata = {
 		key: getattr(info, key, backup) for key, backup in [
@@ -141,6 +137,7 @@ def move_up(o: objects.Container, n):
 	def result():
 		macro.swap(o, n, n - 1)
 		add_main_text_frames(o)
+
 	return result
 
 
@@ -186,12 +183,6 @@ def main_text_popup(o: objects.Container):
 		if lb.size():
 			lb.delete(0, last = lb.size() - 1)
 
-		if s:
-			txh.grid_forget()
-		else:
-			txh.grid(row = 0, column = 0)
-			txh.tkraise(aboveThis=tx)
-
 		can_see = macro.get_available(o.parent)
 		can_see = [x for x in can_see if s.lower() in x.lower() or not s]
 		can_see.sort()
@@ -218,18 +209,16 @@ def main_text_popup(o: objects.Container):
 				add_main_text_frames(o.parent)
 				w_on_close()
 
-	top = tk.Toplevel(app, bg=COLOR_BACKGROUND)
+	top = tk.Toplevel(app, bg = COLOR_BACKGROUND)
 	top.protocol("WM_DELETE_WINDOW", w_on_close)
 	top.geometry("350x250")
 
 	top.title("Set element type")
-	lb = tk.Listbox(top, width = 43, bg=COLOR_BACKGROUND_ALT, fg = COLOR_TEXT_GENERIC)
+	lb = tk.Listbox(top, width = 43, bg = COLOR_BACKGROUND_ALT, fg = COLOR_TEXT_GENERIC)
 	sv = tk.StringVar()
-	svh = tk.StringVar()
-	svh.set("aaaaa")
+
 	sv.set("Current selection:\nNone")
-	tx = tk.Text(top, width = 32, height = 1, bg=COLOR_BACKGROUND_ALT, fg = COLOR_TEXT_STR)
-	txh = tk.Label(top, textvariable = svh, fg = COLOR_TEXT_GENERIC, bg = COLOR_BACKGROUND_ALT)
+	tx = tk.Text(top, width = 32, height = 1, bg = COLOR_BACKGROUND_ALT, fg = COLOR_TEXT_STR, pady = 3)
 	ct = tk.Label(top, textvariable = sv, fg = COLOR_TEXT_GENERIC, bg = COLOR_BACKGROUND)
 	tx.bind("<KeyRelease>", lb_update)
 	lb.bind("<Button-1>", lb_click)
@@ -239,11 +228,11 @@ def main_text_popup(o: objects.Container):
 	_i_list.sort()
 	for n, v in enumerate(_i_list):
 		lb.insert(n, v)
-	tx.grid(row = 0, column=0)
-	txh.grid(row = 0, column = 0)
-	lb.grid(row = 1, column=0)
-	ct.grid(row = 2, column=0)
-	cb.grid(row = 3, column=0)
+	top.grid_columnconfigure(0, weight = 1)
+	tx.grid(row = 0, column = 0, sticky = "n")
+	lb.grid(row = 1, column = 0, sticky = "n")
+	ct.grid(row = 2, column = 0, sticky = "n")
+	cb.grid(row = 3, column = 0, sticky = "n")
 	top.grab_set()
 	dx = app.winfo_x() + 64
 	dy = app.winfo_y() + 64
@@ -273,6 +262,7 @@ def del_wrapper(o: objects.Container, n):
 
 	return result
 
+
 def txt_update_wrapper(v, b):
 	def result(*args):
 		if isinstance(v, objects.Pair):
@@ -281,7 +271,9 @@ def txt_update_wrapper(v, b):
 			if s.endswith("\n"):
 				s = s[:-1]
 			v.value(s)
+
 	return result
+
 
 def add_main_text_frames(o: objects.Container):
 	main_export.configure(command = export(o.get_root()))
@@ -323,7 +315,7 @@ def add_main_text_frames(o: objects.Container):
 			)
 			b.insert(1.0, v.value())
 			b.grid(row = 0, column = 3, sticky = 'w')
-			b.bind("<KeyRelease>", txt_update_wrapper(v,b))
+			b.bind("<KeyRelease>", txt_update_wrapper(v, b))
 		else:
 			tk.Button(
 					f,
