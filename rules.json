@@ -1,0 +1,3228 @@
+{
+	"#base": {
+		"valid_in": [
+			"root"
+		],
+		"types": [
+			"var"
+		]
+	},
+	"WaveSchedule": {
+		"valid_in": [
+			"root"
+		],
+		"types": []
+	},
+	"StartingCurrency": {
+		"valid_in": [
+			"WaveSchedule",
+			"population"
+		],
+		"types": [
+			"var",
+			"int"
+		]
+	},
+	"RespawnWaveTime": {
+		"valid_in": [
+			"WaveSchedule",
+			"population"
+		],
+		"types": [
+			"var",
+			"int"
+		]
+	},
+	"CanBotsAttackWhileInSpawnRoom": {
+		"valid_in": [
+			"WaveSchedule",
+			"population"
+		],
+		"types": [
+			"var"
+		]
+	},
+	"Mission": {
+		"valid_in": [
+			"WaveSchedule",
+			"population"
+		],
+		"types": []
+	},
+	"Objective": {
+		"valid_in": [
+			"Mission"
+		],
+		"types": [
+			"var"
+		]
+	},
+	"InitialCooldown": {
+		"valid_in": [
+			"Mission"
+		],
+		"types": [
+			"var",
+			"int"
+		]
+	},
+	"Where": {
+		"valid_in": [
+			"Mission",
+			"WaveSpawn"
+		],
+		"types": [
+			"var"
+		]
+	},
+	"BeginAtWave": {
+		"valid_in": [
+			"Mission"
+		],
+		"types": [
+			"var",
+			"int"
+		]
+	},
+	"RunForThisManyWaves": {
+		"valid_in": [
+			"Mission"
+		],
+		"types": [
+			"var",
+			"int"
+		]
+	},
+	"CooldownTime": {
+		"valid_in": [
+			"Mission"
+		],
+		"types": [
+			"var",
+			"int"
+		]
+	},
+	"TFBot": {
+		"valid_in": [
+			"Mission",
+			"WaveSpawn",
+			"RandomChoice",
+			"Squad"
+		],
+		"types": []
+	},
+	"Template": {
+		"valid_in": [
+			"TFBot"
+		],
+		"types": [
+			"var"
+		]
+	},
+	"DesiredCount": {
+		"valid_in": [
+			"Mission"
+		],
+		"types": [
+			"var",
+			"int"
+		]
+	},
+	"Class": {
+		"valid_in": [
+			"TFBot",
+			"T_TFBot_Heavyweapons_Deflector",
+			"T_TFBot_Sniper_Jarate",
+			"T_TFGateBot_Scout_Melee",
+			"T_TFGateBot_Scout_Normal",
+			"T_TFGateBot_Scout_Hard",
+			"T_TFGateBot_Scout_FAN",
+			"T_TFGateBot_Scout_FAN_Crit",
+			"T_TFGateBot_Sniper_Huntsman_Spammer_Crit",
+			"T_TFGateBot_Scout_Sandman_FastCharge",
+			"T_TFGateBot_Soldier_Easy",
+			"T_TFGateBot_Soldier_Normal",
+			"T_TFGateBot_Soldier_Normal_DirectHit_Crit",
+			"T_TFGateBot_Soldier_Hard",
+			"T_TFGateBot_Soldier_RocketPush",
+			"T_TFGateBot_Soldier_RocketShotgun_Expert",
+			"T_TFGateBot_Soldier_Extended_Battalion_Hard",
+			"T_TFGateBot_Soldier_Extended_Concheror_Normal",
+			"T_TFGateBot_Soldier_Extended_Concheror_Normal_Crit",
+			"T_TFGateBot_Pyro_Normal",
+			"T_TFGateBot_Pyro_Hard",
+			"T_TFGateBot_Pyro_Expert",
+			"T_TFGateBot_Pyro_AlwaysFireWeapon",
+			"T_TFGateBot_Pyro_Flaregun",
+			"T_TFGateBot_Demoman_Easy",
+			"T_TFGateBot_Demoman_Normal",
+			"T_TFGateBot_Demoman_Hard",
+			"T_TFGateBot_Demo_Burst_Normal",
+			"T_TFGateBot_Demo_Burst_Normal_Crit",
+			"T_TFGateBot_Heavy_Easy",
+			"T_TFGateBot_Heavy_Normal",
+			"T_TFGateBot_Heavy_Hard",
+			"T_TFGateBot_Heavy_Normal_Crit",
+			"T_TFGateBot_Heavy_Expert_Crit",
+			"T_TFGateBot_Heavyweapons_Shotgun",
+			"T_TFGateBot_Heavy_IronFist",
+			"T_TFGateBot_Heavy_IronFist_Airblast",
+			"T_TFGateBot_Heavy_IronFist_Crit",
+			"T_TFGateBot_Chief_Soldier_SlowCritBarrage",
+			"T_TFGateBot_Giant_Soldier_SlowCritBarrage",
+			"T_TFGateBot_Giant_Soldier_SlowBarrage",
+			"T_TFGateBot_Giant_Heavyweapons_Deflector",
+			"T_TFGateBot_Giant_Heavyweapons_Heater",
+			"T_TFGateBot_Giant_Heavyweapons_Shotgun",
+			"T_TFGateBot_Giant_Heavyweapons_Shotgun_Crit",
+			"T_TFGateBot_Giant_Heavyweapons_HealOnKill",
+			"T_TFGateBot_Chief_Heavyweapons_HealOnKill",
+			"T_TFGateBot_Giant_Soldier_Extended_Concheror",
+			"T_TFGateBot_Giant_Soldier_Extended_Concheror_Crit",
+			"T_TFGateBot_Giant_Soldier_RocketPush",
+			"T_TFGateBot_Giant_Soldier_BurstFire",
+			"T_TFGateBot_Giant_Soldier_BurstFire_Crit",
+			"T_TFGateBot_Giant_Soldier_RocketShotgun",
+			"T_TFGateBot_Giant_Demo_Burst",
+			"T_TFGateBot_Giant_Demo_Burst_Crit",
+			"T_TFGateBot_Giant_Scout_FAN",
+			"T_TFGateBot_Giant_Soldier",
+			"T_TFGateBot_Giant_Soldier_Spammer",
+			"T_TFGateBot_Giant_Soldier_Spammer_Crit",
+			"T_TFGateBot_Giant_Soldier_Spammer_Reload",
+			"T_TFGateBot_Giant_Pyro_AlwaysFire",
+			"T_TFGateBot_Giant_Pyro_AlwaysFire_Crit",
+			"T_TFBot_Giant_Scout",
+			"T_TFBot_Giant_Soldier",
+			"T_TFBot_Giant_Pyro",
+			"T_TFBot_Giant_Demoman",
+			"T_TFBot_Giant_Demo_RapidFire",
+			"T_TFBot_Giant_Heavyweapons",
+			"T_TFBot_Giant_Medic",
+			"T_TFBot_Giant_Heavyweapons_Deflector",
+			"T_TFBot_Giant_Heavyweapons_Shotgun",
+			"T_TFBot_Giant_Heavyweapons_BrassBeast",
+			"T_TFBot_Giant_Heavyweapons_Natascha",
+			"T_TFBot_Giant_Heavyweapons_HealOnKill",
+			"T_TFBot_Chief_Heavyweapons_HealOnKill",
+			"T_TFBot_Heavyweapons_Heater",
+			"T_TFBot_Giant_Scout_Fast",
+			"T_TFBot_Giant_Scout_FAN",
+			"T_TFBot_Giant_Scout_Jumping_Sandman",
+			"T_TFBot_Giant_DemoMan_PrinceTavish",
+			"T_TFBot_Giant_Scout_Baseball",
+			"T_TFBot_Giant_Scout_Baseball_Armored",
+			"T_TFBot_Giant_Scout_Bonk",
+			"T_TFBot_Giant_Soldier_Crit",
+			"T_TFBot_Giant_Pyro_Flare_Spammer",
+			"T_TFBot_Giant_Pyro_Flare_Spammer_ScorchShot",
+			"T_TFBot_Giant_Pyro_Pusher",
+			"T_TFBot_Giant_Boxing_Heavy",
+			"T_TFBot_Giant_Demo_Burst",
+			"T_TFBot_Giant_Demo_Spammer_Reload_Chief",
+			"T_TFBot_Giant_Soldier_Spammer",
+			"T_TFBot_Giant_Soldier_Spammer_Reload",
+			"T_TFBot_Giant_Soldier_Extended_Buff_Banner",
+			"T_TFBot_Giant_Soldier_Extended_Concheror",
+			"T_TFBot_Giant_Soldier_Extended_Battalion",
+			"T_TFBot_Giant_Soldier_RocketShotgun",
+			"T_TFBot_Giant_Medic_Regen",
+			"T_TFBot_SentryBuster",
+			"T_TFBot_Soldier_BurstFire",
+			"T_TFBot_Giant_Soldier_SlowBarrage",
+			"T_TFBot_Chief_Gauntlet",
+			"T_TFBot_Chief_Tavish",
+			"T_TFBot_Chief_Pyro",
+			"T_TFBot_Chief_Soldier",
+			"T_TFBot_Chief_Soldier_SlowCrit",
+			"T_TFBot_Giant_Soldier_RocketPush",
+			"T_TFBot_Chief_Soldier_RocketPush",
+			"T_TFBot_Chief_Soldier_Atomic",
+			"T_TFBot_Chief_Demo_Atomic",
+			"T_TFBot_Giant_Major_League",
+			"T_TFBot_Giant_Metalbeard",
+			"T_TFBot_Chief_Soldier_Extended_Concheror",
+			"T_TFBot_Sniper",
+			"T_TFBot_Sniper_Razorback",
+			"T_TFBot_Sniper_Sydney_Sleeper",
+			"T_TFBot_Sniper_Huntsman",
+			"T_TFBot_Sniper_Huntsman_Spammer",
+			"T_TFBot_Scout_Melee",
+			"T_TFBot_Scout_Fish",
+			"T_TFBot_Scout_SunStick",
+			"T_TFBot_Scout_Bonk",
+			"T_TFBot_Scout_Sandman",
+			"T_TFBot_Scout_Sandman_FastCharge",
+			"T_TFBot_Scout_Wrap_Assassin",
+			"T_TFBot_Scout_Jumping_Sandman",
+			"T_TFBot_Scout_Scattergun_SlowFire",
+			"T_TFBot_Scout_FAN",
+			"T_TFBot_Scout_Shortstop",
+			"T_TFBot_Spy",
+			"T_TFBot_Medic",
+			"T_TFBot_Medic_QuickUber",
+			"T_TFBot_Medic_BigHeal",
+			"T_TFBot_Medic_QuickFix",
+			"T_TFBot_Medic_SlowRecharge",
+			"T_TFBot_Medic_Vaccinator_Bullet",
+			"T_TFBot_Medic_Vaccinator_Blast",
+			"T_TFBot_Medic_Vaccinator_Fire",
+			"T_TFBot_Heavyweapons_Fist",
+			"T_TFBot_Heavyweapons_Heavyweight_Champ",
+			"T_TFBot_Heavyweapons_Heavyweight_Champ_Fast",
+			"T_TFBot_Heavyweapons_Gnome",
+			"T_TFBot_Heavyweapons_Shotgun",
+			"T_TFBot_Heavy_IronFist_Airblast",
+			"T_TFBot_Demoman",
+			"T_TFBot_Demoman_Knight",
+			"T_TFBot_Demoman_Samurai",
+			"T_TFBot_Demo_Burst",
+			"T_TFBot_Soldier_Buff_Banner",
+			"T_TFBot_Soldier_Extended_Buff_Banner",
+			"T_TFBot_Soldier_Extended_Concheror",
+			"T_TFBot_Soldier_Extended_Battalion",
+			"T_TFBot_Soldier_RocketPush",
+			"T_TFBot_Soldier_RocketShotgun",
+			"T_TFBot_Pyro",
+			"T_TFBot_Pyro_Flaregun",
+			"T_TFBot_ScorchShot",
+			"T_TFBot_ScorchShot_FastShot",
+			"T_TFBot_Engineer_Sentry_Teleporter",
+			"T_TFBot_Engineer_Sentry_Battle_TeleIn",
+			"T_TFBot_Engineer_Sentry_Tele_Battle",
+			"T_TFBot_Engineer_Sentry_Battle"
+		],
+		"types": [
+			"var"
+		]
+	},
+	"Skill": {
+		"valid_in": [
+			"TFBot",
+			"T_TFBot_Heavyweapons_Deflector",
+			"T_TFBot_Sniper_Jarate",
+			"Default",
+			"RevertGateBotsBehavior",
+			"T_TFBot_Giant_Scout",
+			"T_TFBot_Giant_Soldier",
+			"T_TFBot_Giant_Pyro",
+			"T_TFBot_Giant_Demoman",
+			"T_TFBot_Giant_Demo_RapidFire",
+			"T_TFBot_Giant_Heavyweapons",
+			"T_TFBot_Giant_Medic",
+			"T_TFBot_Giant_Heavyweapons_Deflector",
+			"T_TFBot_Giant_Heavyweapons_Shotgun",
+			"T_TFBot_Giant_Heavyweapons_BrassBeast",
+			"T_TFBot_Giant_Heavyweapons_Natascha",
+			"T_TFBot_Giant_Heavyweapons_HealOnKill",
+			"T_TFBot_Chief_Heavyweapons_HealOnKill",
+			"T_TFBot_Heavyweapons_Heater",
+			"T_TFBot_Giant_Scout_Fast",
+			"T_TFBot_Giant_Scout_FAN",
+			"T_TFBot_Giant_Scout_Jumping_Sandman",
+			"T_TFBot_Giant_DemoMan_PrinceTavish",
+			"T_TFBot_Giant_Scout_Baseball",
+			"T_TFBot_Giant_Scout_Baseball_Armored",
+			"T_TFBot_Giant_Scout_Bonk",
+			"T_TFBot_Giant_Soldier_Crit",
+			"T_TFBot_Giant_Pyro_Flare_Spammer",
+			"T_TFBot_Giant_Pyro_Flare_Spammer_ScorchShot",
+			"T_TFBot_Giant_Pyro_Pusher",
+			"T_TFBot_Giant_Boxing_Heavy",
+			"T_TFBot_Giant_Demo_Burst",
+			"T_TFBot_Giant_Demo_Spammer_Reload_Chief",
+			"T_TFBot_Giant_Soldier_Spammer",
+			"T_TFBot_Giant_Soldier_Spammer_Reload",
+			"T_TFBot_Giant_Soldier_Extended_Buff_Banner",
+			"T_TFBot_Giant_Soldier_Extended_Concheror",
+			"T_TFBot_Giant_Soldier_Extended_Battalion",
+			"T_TFBot_Giant_Soldier_RocketShotgun",
+			"T_TFBot_Giant_Medic_Regen",
+			"T_TFBot_SentryBuster",
+			"T_TFBot_Soldier_BurstFire",
+			"T_TFBot_Giant_Soldier_SlowBarrage",
+			"T_TFBot_Chief_Gauntlet",
+			"T_TFBot_Chief_Tavish",
+			"T_TFBot_Chief_Pyro",
+			"T_TFBot_Chief_Soldier",
+			"T_TFBot_Chief_Soldier_SlowCrit",
+			"T_TFBot_Giant_Soldier_RocketPush",
+			"T_TFBot_Chief_Soldier_RocketPush",
+			"T_TFBot_Chief_Soldier_Atomic",
+			"T_TFBot_Chief_Demo_Atomic",
+			"T_TFBot_Giant_Major_League",
+			"T_TFBot_Giant_Metalbeard",
+			"T_TFBot_Chief_Soldier_Extended_Concheror",
+			"T_TFBot_Sniper",
+			"T_TFBot_Sniper_Razorback",
+			"T_TFBot_Sniper_Sydney_Sleeper",
+			"T_TFBot_Sniper_Huntsman",
+			"T_TFBot_Sniper_Huntsman_Spammer",
+			"T_TFBot_Scout_Melee",
+			"T_TFBot_Scout_Fish",
+			"T_TFBot_Scout_SunStick",
+			"T_TFBot_Scout_Bonk",
+			"T_TFBot_Scout_Sandman",
+			"T_TFBot_Scout_Sandman_FastCharge",
+			"T_TFBot_Scout_Wrap_Assassin",
+			"T_TFBot_Scout_Jumping_Sandman",
+			"T_TFBot_Scout_Scattergun_SlowFire",
+			"T_TFBot_Scout_FAN",
+			"T_TFBot_Scout_Shortstop",
+			"T_TFBot_Spy",
+			"T_TFBot_Medic",
+			"T_TFBot_Medic_QuickUber",
+			"T_TFBot_Medic_BigHeal",
+			"T_TFBot_Medic_QuickFix",
+			"T_TFBot_Medic_SlowRecharge",
+			"T_TFBot_Medic_Vaccinator_Bullet",
+			"T_TFBot_Medic_Vaccinator_Blast",
+			"T_TFBot_Medic_Vaccinator_Fire",
+			"T_TFBot_Heavyweapons_Fist",
+			"T_TFBot_Heavyweapons_Heavyweight_Champ",
+			"T_TFBot_Heavyweapons_Heavyweight_Champ_Fast",
+			"T_TFBot_Heavyweapons_Gnome",
+			"T_TFBot_Heavyweapons_Shotgun",
+			"T_TFBot_Heavy_IronFist_Airblast",
+			"T_TFBot_Demoman",
+			"T_TFBot_Demoman_Knight",
+			"T_TFBot_Demoman_Samurai",
+			"T_TFBot_Demo_Burst",
+			"T_TFBot_Soldier_Buff_Banner",
+			"T_TFBot_Soldier_Extended_Buff_Banner",
+			"T_TFBot_Soldier_Extended_Concheror",
+			"T_TFBot_Soldier_Extended_Battalion",
+			"T_TFBot_Soldier_RocketPush",
+			"T_TFBot_Soldier_RocketShotgun",
+			"T_TFBot_Pyro",
+			"T_TFBot_Pyro_Flaregun",
+			"T_TFBot_ScorchShot",
+			"T_TFBot_ScorchShot_FastShot",
+			"T_TFBot_Engineer_Sentry_Teleporter",
+			"T_TFBot_Engineer_Sentry_Battle_TeleIn",
+			"T_TFBot_Engineer_Sentry_Tele_Battle",
+			"T_TFBot_Engineer_Sentry_Battle"
+		],
+		"types": [
+			"var"
+		]
+	},
+	"Name": {
+		"valid_in": [
+			"TFBot",
+			"WaveSpawn",
+			"Tank",
+			"T_TFBot_Heavyweapons_Deflector",
+			"T_TFBot_Sniper_Jarate",
+			"T_TFGateBot_Scout_FAN",
+			"T_TFGateBot_Scout_FAN_Crit",
+			"T_TFGateBot_Sniper_Huntsman_Spammer_Crit",
+			"T_TFGateBot_Scout_Sandman_FastCharge",
+			"T_TFGateBot_Soldier_Normal_DirectHit_Crit",
+			"T_TFGateBot_Soldier_RocketPush",
+			"T_TFGateBot_Soldier_RocketShotgun_Expert",
+			"T_TFGateBot_Soldier_Extended_Battalion_Hard",
+			"T_TFGateBot_Soldier_Extended_Concheror_Normal",
+			"T_TFGateBot_Soldier_Extended_Concheror_Normal_Crit",
+			"T_TFGateBot_Pyro_Flaregun",
+			"T_TFGateBot_Demo_Burst_Normal",
+			"T_TFGateBot_Demo_Burst_Normal_Crit",
+			"T_TFGateBot_Heavyweapons_Shotgun",
+			"T_TFGateBot_Heavy_IronFist",
+			"T_TFGateBot_Heavy_IronFist_Airblast",
+			"T_TFGateBot_Heavy_IronFist_Crit",
+			"T_TFGateBot_Chief_Soldier_SlowCritBarrage",
+			"T_TFGateBot_Giant_Soldier_SlowCritBarrage",
+			"T_TFGateBot_Giant_Soldier_SlowBarrage",
+			"T_TFGateBot_Giant_Heavyweapons_Deflector",
+			"T_TFGateBot_Giant_Heavyweapons_Shotgun",
+			"T_TFGateBot_Giant_Heavyweapons_Shotgun_Crit",
+			"T_TFGateBot_Giant_Heavyweapons_HealOnKill",
+			"T_TFGateBot_Chief_Heavyweapons_HealOnKill",
+			"T_TFGateBot_Giant_Soldier_Extended_Concheror",
+			"T_TFGateBot_Giant_Soldier_Extended_Concheror_Crit",
+			"T_TFGateBot_Giant_Soldier_RocketPush",
+			"T_TFGateBot_Giant_Soldier_BurstFire",
+			"T_TFGateBot_Giant_Soldier_BurstFire_Crit",
+			"T_TFGateBot_Giant_Soldier_RocketShotgun",
+			"T_TFGateBot_Giant_Demo_Burst",
+			"T_TFGateBot_Giant_Demo_Burst_Crit",
+			"T_TFGateBot_Giant_Scout_FAN",
+			"T_TFGateBot_Giant_Soldier",
+			"T_TFGateBot_Giant_Soldier_Spammer",
+			"T_TFGateBot_Giant_Soldier_Spammer_Crit",
+			"T_TFGateBot_Giant_Soldier_Spammer_Reload",
+			"T_TFGateBot_Giant_Pyro_AlwaysFire",
+			"T_TFGateBot_Giant_Pyro_AlwaysFire_Crit",
+			"T_TFBot_Giant_Scout",
+			"T_TFBot_Giant_Soldier",
+			"T_TFBot_Giant_Pyro",
+			"T_TFBot_Giant_Demoman",
+			"T_TFBot_Giant_Demo_RapidFire",
+			"T_TFBot_Giant_Heavyweapons",
+			"T_TFBot_Giant_Medic",
+			"T_TFBot_Giant_Heavyweapons_Deflector",
+			"T_TFBot_Giant_Heavyweapons_Shotgun",
+			"T_TFBot_Giant_Heavyweapons_BrassBeast",
+			"T_TFBot_Giant_Heavyweapons_Natascha",
+			"T_TFBot_Giant_Heavyweapons_HealOnKill",
+			"T_TFBot_Chief_Heavyweapons_HealOnKill",
+			"T_TFBot_Heavyweapons_Heater",
+			"T_TFBot_Giant_Scout_Fast",
+			"T_TFBot_Giant_Scout_FAN",
+			"T_TFBot_Giant_Scout_Jumping_Sandman",
+			"T_TFBot_Giant_DemoMan_PrinceTavish",
+			"T_TFBot_Giant_Scout_Baseball",
+			"T_TFBot_Giant_Scout_Baseball_Armored",
+			"T_TFBot_Giant_Scout_Bonk",
+			"T_TFBot_Giant_Soldier_Crit",
+			"T_TFBot_Giant_Pyro_Flare_Spammer",
+			"T_TFBot_Giant_Pyro_Flare_Spammer_ScorchShot",
+			"T_TFBot_Giant_Pyro_Pusher",
+			"T_TFBot_Giant_Boxing_Heavy",
+			"T_TFBot_Giant_Demo_Burst",
+			"T_TFBot_Giant_Demo_Spammer_Reload_Chief",
+			"T_TFBot_Giant_Soldier_Spammer",
+			"T_TFBot_Giant_Soldier_Spammer_Reload",
+			"T_TFBot_Giant_Soldier_Extended_Buff_Banner",
+			"T_TFBot_Giant_Soldier_Extended_Concheror",
+			"T_TFBot_Giant_Soldier_Extended_Battalion",
+			"T_TFBot_Giant_Soldier_RocketShotgun",
+			"T_TFBot_Giant_Medic_Regen",
+			"T_TFBot_SentryBuster",
+			"T_TFBot_Soldier_BurstFire",
+			"T_TFBot_Giant_Soldier_SlowBarrage",
+			"T_TFBot_Chief_Gauntlet",
+			"T_TFBot_Chief_Tavish",
+			"T_TFBot_Chief_Pyro",
+			"T_TFBot_Chief_Soldier",
+			"T_TFBot_Chief_Soldier_SlowCrit",
+			"T_TFBot_Giant_Soldier_RocketPush",
+			"T_TFBot_Chief_Soldier_RocketPush",
+			"T_TFBot_Chief_Soldier_Atomic",
+			"T_TFBot_Chief_Demo_Atomic",
+			"T_TFBot_Giant_Major_League",
+			"T_TFBot_Giant_Metalbeard",
+			"T_TFBot_Chief_Soldier_Extended_Concheror",
+			"T_TFBot_Sniper_Razorback",
+			"T_TFBot_Sniper_Sydney_Sleeper",
+			"T_TFBot_Sniper_Huntsman",
+			"T_TFBot_Sniper_Huntsman_Spammer",
+			"T_TFBot_Scout_Bonk",
+			"T_TFBot_Scout_Sandman",
+			"T_TFBot_Scout_Sandman_FastCharge",
+			"T_TFBot_Scout_Wrap_Assassin",
+			"T_TFBot_Scout_FAN",
+			"T_TFBot_Scout_Shortstop",
+			"T_TFBot_Medic",
+			"T_TFBot_Medic_QuickUber",
+			"T_TFBot_Medic_BigHeal",
+			"T_TFBot_Medic_QuickFix",
+			"T_TFBot_Medic_SlowRecharge",
+			"T_TFBot_Heavyweapons_Fist",
+			"T_TFBot_Heavyweapons_Heavyweight_Champ",
+			"T_TFBot_Heavyweapons_Heavyweight_Champ_Fast",
+			"T_TFBot_Heavyweapons_Gnome",
+			"T_TFBot_Heavyweapons_Shotgun",
+			"T_TFBot_Heavy_IronFist_Airblast",
+			"T_TFBot_Demoman_Knight",
+			"T_TFBot_Demoman_Samurai",
+			"T_TFBot_Demo_Burst",
+			"T_TFBot_Soldier_Buff_Banner",
+			"T_TFBot_Soldier_Extended_Buff_Banner",
+			"T_TFBot_Soldier_Extended_Concheror",
+			"T_TFBot_Soldier_Extended_Battalion",
+			"T_TFBot_Soldier_RocketPush",
+			"T_TFBot_Soldier_RocketShotgun",
+			"T_TFBot_Pyro_Flaregun",
+			"T_TFBot_ScorchShot",
+			"T_TFBot_ScorchShot_FastShot",
+			"T_TFBot_Engineer_Sentry_Teleporter",
+			"T_TFBot_Engineer_Sentry_Battle_TeleIn",
+			"T_TFBot_Engineer_Sentry_Tele_Battle",
+			"T_TFBot_Engineer_Sentry_Battle"
+		],
+		"types": [
+			"var",
+			"quotes"
+		]
+	},
+	"MaxVisionRange": {
+		"valid_in": [
+			"TFBot",
+			"T_TFBot_Heavyweapons_Deflector",
+			"Default",
+			"RevertGateBotsBehavior",
+			"T_TFBot_Giant_Heavyweapons",
+			"T_TFBot_Giant_Heavyweapons_Deflector",
+			"T_TFBot_Giant_Heavyweapons_Shotgun",
+			"T_TFBot_Giant_Heavyweapons_HealOnKill",
+			"T_TFBot_Chief_Heavyweapons_HealOnKill",
+			"T_TFBot_Heavyweapons_Heater",
+			"T_TFBot_Giant_Scout_FAN",
+			"T_TFBot_Sniper",
+			"T_TFBot_Sniper_Razorback",
+			"T_TFBot_Sniper_Sydney_Sleeper",
+			"T_TFBot_Scout_FAN"
+		],
+		"types": [
+			"var",
+			"int"
+		]
+	},
+	"Wave": {
+		"valid_in": [
+			"WaveSchedule",
+			"population"
+		],
+		"types": []
+	},
+	"StartWaveOutput": {
+		"valid_in": [
+			"Wave"
+		],
+		"types": []
+	},
+	"Target": {
+		"valid_in": [
+			"StartWaveOutput",
+			"DoneOutput",
+			"FirstSpawnOutput",
+			"OnKilledOutput",
+			"OnBombDroppedOutput",
+			"InitWaveOutput"
+		],
+		"types": [
+			"var"
+		]
+	},
+	"Action": {
+		"valid_in": [
+			"StartWaveOutput",
+			"DoneOutput",
+			"FirstSpawnOutput",
+			"OnKilledOutput",
+			"OnBombDroppedOutput",
+			"InitWaveOutput"
+		],
+		"types": [
+			"var"
+		]
+	},
+	"DoneOutput": {
+		"valid_in": [
+			"Wave"
+		],
+		"types": []
+	},
+	"WaitWhenDone": {
+		"valid_in": [
+			"Wave"
+		],
+		"types": [
+			"var",
+			"int"
+		]
+	},
+	"Checkpoint": {
+		"valid_in": [
+			"Wave"
+		],
+		"types": [
+			"var"
+		]
+	},
+	"WaveSpawn": {
+		"valid_in": [
+			"Wave"
+		],
+		"types": []
+	},
+	"TotalCount": {
+		"valid_in": [
+			"WaveSpawn"
+		],
+		"types": [
+			"var",
+			"int"
+		]
+	},
+	"MaxActive": {
+		"valid_in": [
+			"WaveSpawn"
+		],
+		"types": [
+			"var",
+			"int"
+		]
+	},
+	"SpawnCount": {
+		"valid_in": [
+			"WaveSpawn"
+		],
+		"types": [
+			"var",
+			"int"
+		]
+	},
+	"WaitBeforeStarting": {
+		"valid_in": [
+			"WaveSpawn"
+		],
+		"types": [
+			"var",
+			"int"
+		]
+	},
+	"WaitBetweenSpawns": {
+		"valid_in": [
+			"WaveSpawn"
+		],
+		"types": [
+			"var",
+			"int",
+			"float"
+		]
+	},
+	"TotalCurrency": {
+		"valid_in": [
+			"WaveSpawn"
+		],
+		"types": [
+			"var",
+			"int"
+		]
+	},
+	"WeaponRestrictions": {
+		"valid_in": [
+			"TFBot",
+			"T_TFBot_Heavyweapons_Deflector",
+			"T_TFBot_Sniper_Jarate",
+			"Default",
+			"RevertGateBotsBehavior",
+			"T_TFBot_Giant_Scout",
+			"T_TFBot_Giant_Soldier",
+			"T_TFBot_Giant_Pyro",
+			"T_TFBot_Giant_Demoman",
+			"T_TFBot_Giant_Demo_RapidFire",
+			"T_TFBot_Giant_Heavyweapons",
+			"T_TFBot_Giant_Medic",
+			"T_TFBot_Giant_Heavyweapons_Deflector",
+			"T_TFBot_Giant_Heavyweapons_Shotgun",
+			"T_TFBot_Giant_Heavyweapons_BrassBeast",
+			"T_TFBot_Giant_Heavyweapons_Natascha",
+			"T_TFBot_Giant_Heavyweapons_HealOnKill",
+			"T_TFBot_Chief_Heavyweapons_HealOnKill",
+			"T_TFBot_Heavyweapons_Heater",
+			"T_TFBot_Giant_Scout_Fast",
+			"T_TFBot_Giant_Scout_Jumping_Sandman",
+			"T_TFBot_Giant_DemoMan_PrinceTavish",
+			"T_TFBot_Giant_Scout_Baseball",
+			"T_TFBot_Giant_Scout_Baseball_Armored",
+			"T_TFBot_Giant_Scout_Bonk",
+			"T_TFBot_Giant_Soldier_Crit",
+			"T_TFBot_Giant_Pyro_Flare_Spammer",
+			"T_TFBot_Giant_Pyro_Flare_Spammer_ScorchShot",
+			"T_TFBot_Giant_Pyro_Pusher",
+			"T_TFBot_Giant_Boxing_Heavy",
+			"T_TFBot_Giant_Demo_Burst",
+			"T_TFBot_Giant_Demo_Spammer_Reload_Chief",
+			"T_TFBot_Giant_Soldier_Spammer",
+			"T_TFBot_Giant_Soldier_Spammer_Reload",
+			"T_TFBot_Giant_Soldier_Extended_Buff_Banner",
+			"T_TFBot_Giant_Soldier_Extended_Concheror",
+			"T_TFBot_Giant_Soldier_Extended_Battalion",
+			"T_TFBot_Giant_Soldier_RocketShotgun",
+			"T_TFBot_SentryBuster",
+			"T_TFBot_Soldier_BurstFire",
+			"T_TFBot_Giant_Soldier_SlowBarrage",
+			"T_TFBot_Chief_Gauntlet",
+			"T_TFBot_Chief_Tavish",
+			"T_TFBot_Chief_Pyro",
+			"T_TFBot_Chief_Soldier",
+			"T_TFBot_Chief_Soldier_SlowCrit",
+			"T_TFBot_Giant_Soldier_RocketPush",
+			"T_TFBot_Chief_Soldier_RocketPush",
+			"T_TFBot_Chief_Soldier_Atomic",
+			"T_TFBot_Chief_Demo_Atomic",
+			"T_TFBot_Giant_Major_League",
+			"T_TFBot_Giant_Metalbeard",
+			"T_TFBot_Chief_Soldier_Extended_Concheror",
+			"T_TFBot_Sniper_Huntsman",
+			"T_TFBot_Scout_Melee",
+			"T_TFBot_Scout_Fish",
+			"T_TFBot_Scout_SunStick",
+			"T_TFBot_Scout_Bonk",
+			"T_TFBot_Scout_Sandman",
+			"T_TFBot_Scout_Sandman_FastCharge",
+			"T_TFBot_Scout_Wrap_Assassin",
+			"T_TFBot_Scout_Jumping_Sandman",
+			"T_TFBot_Heavyweapons_Fist",
+			"T_TFBot_Heavyweapons_Heavyweight_Champ",
+			"T_TFBot_Heavyweapons_Heavyweight_Champ_Fast",
+			"T_TFBot_Heavyweapons_Gnome",
+			"T_TFBot_Heavyweapons_Shotgun",
+			"T_TFBot_Heavy_IronFist_Airblast",
+			"T_TFBot_Demoman_Knight",
+			"T_TFBot_Demoman_Samurai",
+			"T_TFBot_Demo_Burst",
+			"T_TFBot_Soldier_RocketPush",
+			"T_TFBot_Soldier_RocketShotgun",
+			"T_TFBot_Pyro",
+			"T_TFBot_Pyro_Flaregun",
+			"T_TFBot_ScorchShot",
+			"T_TFBot_ScorchShot_FastShot"
+		],
+		"types": [
+			"var",
+			"quotes"
+		]
+	},
+	"WaitForAllSpawned": {
+		"valid_in": [
+			"WaveSpawn"
+		],
+		"types": [
+			"var",
+			"quotes"
+		]
+	},
+	"Support": {
+		"valid_in": [
+			"WaveSpawn"
+		],
+		"types": [
+			"var",
+			"int"
+		]
+	},
+	"RandomChoice": {
+		"valid_in": [
+			"WaveSpawn"
+		],
+		"types": []
+	},
+	"Squad": {
+		"valid_in": [
+			"WaveSpawn"
+		],
+		"types": []
+	},
+	"WaitForAllDead": {
+		"valid_in": [
+			"WaveSpawn"
+		],
+		"types": [
+			"var",
+			"quotes"
+		]
+	},
+	"FirstSpawnOutput": {
+		"valid_in": [
+			"WaveSpawn"
+		],
+		"types": []
+	},
+	"Tank": {
+		"valid_in": [
+			"WaveSpawn",
+			"Squad"
+		],
+		"types": []
+	},
+	"Health": {
+		"valid_in": [
+			"Tank",
+			"TFBot",
+			"T_TFGateBot_Sniper_Huntsman_Spammer_Crit",
+			"T_TFGateBot_Heavy_IronFist",
+			"T_TFGateBot_Heavy_IronFist_Airblast",
+			"T_TFGateBot_Heavy_IronFist_Crit",
+			"T_TFGateBot_Chief_Soldier_SlowCritBarrage",
+			"T_TFGateBot_Giant_Soldier_SlowCritBarrage",
+			"T_TFGateBot_Giant_Soldier_SlowBarrage",
+			"T_TFGateBot_Giant_Heavyweapons_Deflector",
+			"T_TFGateBot_Giant_Heavyweapons_Heater",
+			"T_TFGateBot_Giant_Heavyweapons_Shotgun",
+			"T_TFGateBot_Giant_Heavyweapons_Shotgun_Crit",
+			"T_TFGateBot_Giant_Heavyweapons_HealOnKill",
+			"T_TFGateBot_Chief_Heavyweapons_HealOnKill",
+			"T_TFGateBot_Giant_Soldier_Extended_Concheror",
+			"T_TFGateBot_Giant_Soldier_Extended_Concheror_Crit",
+			"T_TFGateBot_Giant_Soldier_RocketPush",
+			"T_TFGateBot_Giant_Soldier_BurstFire",
+			"T_TFGateBot_Giant_Soldier_BurstFire_Crit",
+			"T_TFGateBot_Giant_Soldier_RocketShotgun",
+			"T_TFGateBot_Giant_Demo_Burst",
+			"T_TFGateBot_Giant_Demo_Burst_Crit",
+			"T_TFGateBot_Giant_Scout_FAN",
+			"T_TFGateBot_Giant_Soldier",
+			"T_TFGateBot_Giant_Soldier_Spammer",
+			"T_TFGateBot_Giant_Soldier_Spammer_Crit",
+			"T_TFGateBot_Giant_Soldier_Spammer_Reload",
+			"T_TFGateBot_Giant_Pyro_AlwaysFire",
+			"T_TFGateBot_Giant_Pyro_AlwaysFire_Crit",
+			"T_TFBot_Giant_Scout",
+			"T_TFBot_Giant_Soldier",
+			"T_TFBot_Giant_Pyro",
+			"T_TFBot_Giant_Demoman",
+			"T_TFBot_Giant_Demo_RapidFire",
+			"T_TFBot_Giant_Heavyweapons",
+			"T_TFBot_Giant_Medic",
+			"T_TFBot_Giant_Heavyweapons_Deflector",
+			"T_TFBot_Giant_Heavyweapons_Shotgun",
+			"T_TFBot_Giant_Heavyweapons_BrassBeast",
+			"T_TFBot_Giant_Heavyweapons_Natascha",
+			"T_TFBot_Giant_Heavyweapons_HealOnKill",
+			"T_TFBot_Chief_Heavyweapons_HealOnKill",
+			"T_TFBot_Heavyweapons_Heater",
+			"T_TFBot_Giant_Scout_Fast",
+			"T_TFBot_Giant_Scout_FAN",
+			"T_TFBot_Giant_Scout_Jumping_Sandman",
+			"T_TFBot_Giant_DemoMan_PrinceTavish",
+			"T_TFBot_Giant_Scout_Baseball",
+			"T_TFBot_Giant_Scout_Baseball_Armored",
+			"T_TFBot_Giant_Scout_Bonk",
+			"T_TFBot_Giant_Soldier_Crit",
+			"T_TFBot_Giant_Pyro_Flare_Spammer",
+			"T_TFBot_Giant_Pyro_Flare_Spammer_ScorchShot",
+			"T_TFBot_Giant_Pyro_Pusher",
+			"T_TFBot_Giant_Boxing_Heavy",
+			"T_TFBot_Giant_Demo_Burst",
+			"T_TFBot_Giant_Demo_Spammer_Reload_Chief",
+			"T_TFBot_Giant_Soldier_Spammer",
+			"T_TFBot_Giant_Soldier_Spammer_Reload",
+			"T_TFBot_Giant_Soldier_Extended_Buff_Banner",
+			"T_TFBot_Giant_Soldier_Extended_Concheror",
+			"T_TFBot_Giant_Soldier_Extended_Battalion",
+			"T_TFBot_Giant_Soldier_RocketShotgun",
+			"T_TFBot_Giant_Medic_Regen",
+			"T_TFBot_SentryBuster",
+			"T_TFBot_Soldier_BurstFire",
+			"T_TFBot_Giant_Soldier_SlowBarrage",
+			"T_TFBot_Chief_Gauntlet",
+			"T_TFBot_Chief_Tavish",
+			"T_TFBot_Chief_Pyro",
+			"T_TFBot_Chief_Soldier",
+			"T_TFBot_Chief_Soldier_SlowCrit",
+			"T_TFBot_Giant_Soldier_RocketPush",
+			"T_TFBot_Chief_Soldier_RocketPush",
+			"T_TFBot_Chief_Soldier_Atomic",
+			"T_TFBot_Chief_Demo_Atomic",
+			"T_TFBot_Giant_Major_League",
+			"T_TFBot_Giant_Metalbeard",
+			"T_TFBot_Chief_Soldier_Extended_Concheror",
+			"T_TFBot_Sniper_Huntsman_Spammer",
+			"T_TFBot_Scout_Sandman",
+			"T_TFBot_Scout_Sandman_FastCharge",
+			"T_TFBot_Scout_Jumping_Sandman",
+			"T_TFBot_Scout_Shortstop",
+			"T_TFBot_Heavyweapons_Fist",
+			"T_TFBot_Heavyweapons_Gnome",
+			"T_TFBot_Heavy_IronFist_Airblast",
+			"T_TFBot_Demoman_Knight",
+			"T_TFBot_Demoman_Samurai",
+			"T_TFBot_Engineer_Sentry_Teleporter",
+			"T_TFBot_Engineer_Sentry_Battle_TeleIn",
+			"T_TFBot_Engineer_Sentry_Tele_Battle",
+			"T_TFBot_Engineer_Sentry_Battle"
+		],
+		"types": [
+			"var",
+			"int"
+		]
+	},
+	"Speed": {
+		"valid_in": [
+			"Tank"
+		],
+		"types": [
+			"var",
+			"int"
+		]
+	},
+	"StartingPathTrackNode": {
+		"valid_in": [
+			"Tank"
+		],
+		"types": [
+			"var",
+			"quotes"
+		]
+	},
+	"OnKilledOutput": {
+		"valid_in": [
+			"Tank"
+		],
+		"types": []
+	},
+	"OnBombDroppedOutput": {
+		"valid_in": [
+			"Tank"
+		],
+		"types": []
+	},
+	"Skin": {
+		"valid_in": [
+			"Tank"
+		],
+		"types": [
+			"var",
+			"int"
+		]
+	},
+	"Item": {
+		"valid_in": [
+			"TFBot",
+			"T_TFBot_Heavyweapons_Deflector",
+			"T_TFBot_Sniper_Jarate",
+			"Default",
+			"RevertGateBotsBehavior",
+			"T_TFBot_Giant_Demoman",
+			"T_TFBot_Giant_Demo_RapidFire",
+			"T_TFBot_Giant_Medic",
+			"T_TFBot_Giant_Heavyweapons_Deflector",
+			"T_TFBot_Giant_Heavyweapons_Shotgun",
+			"T_TFBot_Giant_Heavyweapons_BrassBeast",
+			"T_TFBot_Giant_Heavyweapons_Natascha",
+			"T_TFBot_Giant_Heavyweapons_HealOnKill",
+			"T_TFBot_Chief_Heavyweapons_HealOnKill",
+			"T_TFBot_Heavyweapons_Heater",
+			"T_TFBot_Giant_Scout_Fast",
+			"T_TFBot_Giant_Scout_FAN",
+			"T_TFBot_Giant_Scout_Jumping_Sandman",
+			"T_TFBot_Giant_DemoMan_PrinceTavish",
+			"T_TFBot_Giant_Scout_Baseball",
+			"T_TFBot_Giant_Scout_Baseball_Armored",
+			"T_TFBot_Giant_Scout_Bonk",
+			"T_TFBot_Giant_Soldier_Crit",
+			"T_TFBot_Giant_Pyro_Flare_Spammer",
+			"T_TFBot_Giant_Pyro_Flare_Spammer_ScorchShot",
+			"T_TFBot_Giant_Pyro_Pusher",
+			"T_TFBot_Giant_Boxing_Heavy",
+			"T_TFBot_Giant_Demo_Burst",
+			"T_TFBot_Giant_Soldier_Spammer",
+			"T_TFBot_Giant_Soldier_Spammer_Reload",
+			"T_TFBot_Giant_Soldier_Extended_Buff_Banner",
+			"T_TFBot_Giant_Soldier_Extended_Concheror",
+			"T_TFBot_Giant_Soldier_Extended_Battalion",
+			"T_TFBot_Giant_Soldier_RocketShotgun",
+			"T_TFBot_Giant_Medic_Regen",
+			"T_TFBot_SentryBuster",
+			"T_TFBot_Soldier_BurstFire",
+			"T_TFBot_Chief_Gauntlet",
+			"T_TFBot_Chief_Tavish",
+			"T_TFBot_Chief_Soldier",
+			"T_TFBot_Chief_Soldier_SlowCrit",
+			"T_TFBot_Giant_Soldier_RocketPush",
+			"T_TFBot_Chief_Soldier_RocketPush",
+			"T_TFBot_Chief_Soldier_Atomic",
+			"T_TFBot_Chief_Demo_Atomic",
+			"T_TFBot_Giant_Major_League",
+			"T_TFBot_Giant_Metalbeard",
+			"T_TFBot_Chief_Soldier_Extended_Concheror",
+			"T_TFBot_Sniper_Razorback",
+			"T_TFBot_Sniper_Sydney_Sleeper",
+			"T_TFBot_Sniper_Huntsman",
+			"T_TFBot_Sniper_Huntsman_Spammer",
+			"T_TFBot_Scout_Fish",
+			"T_TFBot_Scout_SunStick",
+			"T_TFBot_Scout_Bonk",
+			"T_TFBot_Scout_Sandman",
+			"T_TFBot_Scout_Sandman_FastCharge",
+			"T_TFBot_Scout_Wrap_Assassin",
+			"T_TFBot_Scout_Jumping_Sandman",
+			"T_TFBot_Scout_FAN",
+			"T_TFBot_Scout_Shortstop",
+			"T_TFBot_Medic",
+			"T_TFBot_Medic_BigHeal",
+			"T_TFBot_Medic_QuickFix",
+			"T_TFBot_Medic_SlowRecharge",
+			"T_TFBot_Medic_Vaccinator_Bullet",
+			"T_TFBot_Medic_Vaccinator_Blast",
+			"T_TFBot_Medic_Vaccinator_Fire",
+			"T_TFBot_Heavyweapons_Fist",
+			"T_TFBot_Heavyweapons_Heavyweight_Champ",
+			"T_TFBot_Heavyweapons_Heavyweight_Champ_Fast",
+			"T_TFBot_Heavyweapons_Gnome",
+			"T_TFBot_Heavyweapons_Shotgun",
+			"T_TFBot_Heavy_IronFist_Airblast",
+			"T_TFBot_Demoman_Knight",
+			"T_TFBot_Demoman_Samurai",
+			"T_TFBot_Demo_Burst",
+			"T_TFBot_Soldier_Buff_Banner",
+			"T_TFBot_Soldier_Extended_Buff_Banner",
+			"T_TFBot_Soldier_Extended_Concheror",
+			"T_TFBot_Soldier_Extended_Battalion",
+			"T_TFBot_Soldier_RocketPush",
+			"T_TFBot_Soldier_RocketShotgun",
+			"T_TFBot_Pyro_Flaregun",
+			"T_TFBot_ScorchShot",
+			"T_TFBot_ScorchShot_FastShot"
+		],
+		"types": [
+			"var",
+			"quotes"
+		]
+	},
+	"Attributes": {
+		"valid_in": [
+			"TFBot",
+			"Default",
+			"RevertGateBotsBehavior",
+			"T_TFBot_Giant_Scout",
+			"T_TFBot_Giant_Soldier",
+			"T_TFBot_Giant_Pyro",
+			"T_TFBot_Giant_Demoman",
+			"T_TFBot_Giant_Demo_RapidFire",
+			"T_TFBot_Giant_Heavyweapons",
+			"T_TFBot_Giant_Medic",
+			"T_TFBot_Giant_Heavyweapons_Deflector",
+			"T_TFBot_Giant_Heavyweapons_Shotgun",
+			"T_TFBot_Giant_Heavyweapons_BrassBeast",
+			"T_TFBot_Giant_Heavyweapons_Natascha",
+			"T_TFBot_Giant_Heavyweapons_HealOnKill",
+			"T_TFBot_Chief_Heavyweapons_HealOnKill",
+			"T_TFBot_Heavyweapons_Heater",
+			"T_TFBot_Giant_Scout_Fast",
+			"T_TFBot_Giant_Scout_FAN",
+			"T_TFBot_Giant_Scout_Jumping_Sandman",
+			"T_TFBot_Giant_DemoMan_PrinceTavish",
+			"T_TFBot_Giant_Scout_Baseball",
+			"T_TFBot_Giant_Scout_Baseball_Armored",
+			"T_TFBot_Giant_Scout_Bonk",
+			"T_TFBot_Giant_Soldier_Crit",
+			"T_TFBot_Giant_Pyro_Flare_Spammer",
+			"T_TFBot_Giant_Pyro_Flare_Spammer_ScorchShot",
+			"T_TFBot_Giant_Pyro_Pusher",
+			"T_TFBot_Giant_Boxing_Heavy",
+			"T_TFBot_Giant_Demo_Burst",
+			"T_TFBot_Giant_Demo_Spammer_Reload_Chief",
+			"T_TFBot_Giant_Soldier_Spammer",
+			"T_TFBot_Giant_Soldier_Spammer_Reload",
+			"T_TFBot_Giant_Soldier_Extended_Buff_Banner",
+			"T_TFBot_Giant_Soldier_Extended_Concheror",
+			"T_TFBot_Giant_Soldier_Extended_Battalion",
+			"T_TFBot_Giant_Soldier_RocketShotgun",
+			"T_TFBot_Giant_Medic_Regen",
+			"T_TFBot_SentryBuster",
+			"T_TFBot_Soldier_BurstFire",
+			"T_TFBot_Giant_Soldier_SlowBarrage",
+			"T_TFBot_Chief_Gauntlet",
+			"T_TFBot_Chief_Tavish",
+			"T_TFBot_Chief_Pyro",
+			"T_TFBot_Chief_Soldier",
+			"T_TFBot_Chief_Soldier_SlowCrit",
+			"T_TFBot_Giant_Soldier_RocketPush",
+			"T_TFBot_Chief_Soldier_RocketPush",
+			"T_TFBot_Chief_Soldier_Atomic",
+			"T_TFBot_Chief_Demo_Atomic",
+			"T_TFBot_Giant_Major_League",
+			"T_TFBot_Giant_Metalbeard",
+			"T_TFBot_Chief_Soldier_Extended_Concheror",
+			"T_TFBot_Scout_Jumping_Sandman",
+			"T_TFBot_Medic",
+			"T_TFBot_Medic_QuickUber",
+			"T_TFBot_Medic_SlowRecharge",
+			"T_TFBot_Medic_Vaccinator_Bullet",
+			"T_TFBot_Medic_Vaccinator_Blast",
+			"T_TFBot_Medic_Vaccinator_Fire",
+			"T_TFBot_Heavyweapons_Gnome",
+			"T_TFBot_Demoman_Samurai",
+			"T_TFBot_Demo_Burst",
+			"T_TFBot_Soldier_Buff_Banner",
+			"T_TFBot_Soldier_Extended_Buff_Banner",
+			"T_TFBot_Soldier_Extended_Concheror",
+			"T_TFBot_Soldier_Extended_Battalion",
+			"T_TFBot_Soldier_RocketPush",
+			"T_TFBot_Soldier_RocketShotgun",
+			"T_TFBot_ScorchShot",
+			"T_TFBot_Engineer_Sentry_Teleporter",
+			"T_TFBot_Engineer_Sentry_Battle_TeleIn"
+		],
+		"types": [
+			"var",
+			"quotes"
+		]
+	},
+	"ItemAttributes": {
+		"valid_in": [
+			"TFBot",
+			"T_TFBot_Heavyweapons_Deflector",
+			"T_TFBot_Sniper_Jarate",
+			"Default",
+			"RevertGateBotsBehavior",
+			"T_TFBot_Giant_Demoman",
+			"T_TFBot_Giant_Demo_RapidFire",
+			"T_TFBot_Giant_Heavyweapons",
+			"T_TFBot_Giant_Medic",
+			"T_TFBot_Giant_Heavyweapons_Deflector",
+			"T_TFBot_Giant_Heavyweapons_Shotgun",
+			"T_TFBot_Giant_Heavyweapons_BrassBeast",
+			"T_TFBot_Giant_Heavyweapons_Natascha",
+			"T_TFBot_Giant_Heavyweapons_HealOnKill",
+			"T_TFBot_Chief_Heavyweapons_HealOnKill",
+			"T_TFBot_Heavyweapons_Heater",
+			"T_TFBot_Giant_Scout_FAN",
+			"T_TFBot_Giant_Scout_Jumping_Sandman",
+			"T_TFBot_Giant_DemoMan_PrinceTavish",
+			"T_TFBot_Giant_Scout_Baseball",
+			"T_TFBot_Giant_Scout_Baseball_Armored",
+			"T_TFBot_Giant_Soldier_Crit",
+			"T_TFBot_Giant_Pyro_Flare_Spammer",
+			"T_TFBot_Giant_Pyro_Flare_Spammer_ScorchShot",
+			"T_TFBot_Giant_Pyro_Pusher",
+			"T_TFBot_Giant_Boxing_Heavy",
+			"T_TFBot_Giant_Demo_Burst",
+			"T_TFBot_Giant_Demo_Spammer_Reload_Chief",
+			"T_TFBot_Giant_Soldier_Spammer",
+			"T_TFBot_Giant_Soldier_Spammer_Reload",
+			"T_TFBot_Giant_Soldier_RocketShotgun",
+			"T_TFBot_Giant_Medic_Regen",
+			"T_TFBot_Soldier_BurstFire",
+			"T_TFBot_Giant_Soldier_SlowBarrage",
+			"T_TFBot_Chief_Gauntlet",
+			"T_TFBot_Chief_Tavish",
+			"T_TFBot_Chief_Pyro",
+			"T_TFBot_Chief_Soldier",
+			"T_TFBot_Chief_Soldier_SlowCrit",
+			"T_TFBot_Giant_Soldier_RocketPush",
+			"T_TFBot_Chief_Soldier_RocketPush",
+			"T_TFBot_Chief_Soldier_Atomic",
+			"T_TFBot_Chief_Demo_Atomic",
+			"T_TFBot_Giant_Major_League",
+			"T_TFBot_Giant_Metalbeard",
+			"T_TFBot_Sniper_Huntsman",
+			"T_TFBot_Sniper_Huntsman_Spammer",
+			"T_TFBot_Scout_Sandman",
+			"T_TFBot_Scout_Sandman_FastCharge",
+			"T_TFBot_Scout_Jumping_Sandman",
+			"T_TFBot_Scout_Scattergun_SlowFire",
+			"T_TFBot_Scout_FAN",
+			"T_TFBot_Medic",
+			"T_TFBot_Medic_QuickUber",
+			"T_TFBot_Medic_BigHeal",
+			"T_TFBot_Medic_SlowRecharge",
+			"T_TFBot_Medic_Vaccinator_Bullet",
+			"T_TFBot_Medic_Vaccinator_Blast",
+			"T_TFBot_Medic_Vaccinator_Fire",
+			"T_TFBot_Heavyweapons_Gnome",
+			"T_TFBot_Heavyweapons_Shotgun",
+			"T_TFBot_Heavy_IronFist_Airblast",
+			"T_TFBot_Demoman_Knight",
+			"T_TFBot_Demoman_Samurai",
+			"T_TFBot_Demo_Burst",
+			"T_TFBot_Soldier_RocketPush",
+			"T_TFBot_Soldier_RocketShotgun",
+			"T_TFBot_ScorchShot",
+			"T_TFBot_ScorchShot_FastShot"
+		],
+		"types": []
+	},
+	"ItemName": {
+		"valid_in": [
+			"ItemAttributes",
+			"CharacterAttributes",
+			"Itemattributes"
+		],
+		"types": [
+			"var",
+			"quotes"
+		]
+	},
+	"\"faster reload rate\"": {
+		"valid_in": [
+			"ItemAttributes",
+			"CharacterAttributes"
+		],
+		"types": [
+			"var"
+		]
+	},
+	"\"fire rate bonus\"": {
+		"valid_in": [
+			"ItemAttributes",
+			"CharacterAttributes"
+		],
+		"types": [
+			"var"
+		]
+	},
+	"RandomSpawn": {
+		"valid_in": [
+			"WaveSpawn"
+		],
+		"types": [
+			"var",
+			"int"
+		]
+	},
+	"\"damage bonus\"": {
+		"valid_in": [
+			"ItemAttributes",
+			"CharacterAttributes"
+		],
+		"types": [
+			"var"
+		]
+	},
+	"Tag": {
+		"valid_in": [
+			"TFBot",
+			"Default",
+			"RevertGateBotsBehavior",
+			"T_TFBot_Giant_Soldier_SlowBarrage"
+		],
+		"types": [
+			"var",
+			"quotes"
+		]
+	},
+	"\"uber duration bonus\"": {
+		"valid_in": [
+			"ItemAttributes",
+			"CharacterAttributes"
+		],
+		"types": [
+			"var"
+		]
+	},
+	"CharacterAttributes": {
+		"valid_in": [
+			"TFBot",
+			"Default",
+			"RevertGateBotsBehavior",
+			"T_TFBot_Giant_Scout",
+			"T_TFBot_Giant_Soldier",
+			"T_TFBot_Giant_Pyro",
+			"T_TFBot_Giant_Demoman",
+			"T_TFBot_Giant_Demo_RapidFire",
+			"T_TFBot_Giant_Heavyweapons",
+			"T_TFBot_Giant_Medic",
+			"T_TFBot_Giant_Heavyweapons_Deflector",
+			"T_TFBot_Giant_Heavyweapons_Shotgun",
+			"T_TFBot_Giant_Heavyweapons_BrassBeast",
+			"T_TFBot_Giant_Heavyweapons_Natascha",
+			"T_TFBot_Giant_Heavyweapons_HealOnKill",
+			"T_TFBot_Chief_Heavyweapons_HealOnKill",
+			"T_TFBot_Heavyweapons_Heater",
+			"T_TFBot_Giant_Scout_Fast",
+			"T_TFBot_Giant_Scout_FAN",
+			"T_TFBot_Giant_Scout_Jumping_Sandman",
+			"T_TFBot_Giant_DemoMan_PrinceTavish",
+			"T_TFBot_Giant_Scout_Baseball",
+			"T_TFBot_Giant_Scout_Baseball_Armored",
+			"T_TFBot_Giant_Scout_Bonk",
+			"T_TFBot_Giant_Soldier_Crit",
+			"T_TFBot_Giant_Pyro_Flare_Spammer",
+			"T_TFBot_Giant_Pyro_Flare_Spammer_ScorchShot",
+			"T_TFBot_Giant_Pyro_Pusher",
+			"T_TFBot_Giant_Boxing_Heavy",
+			"T_TFBot_Giant_Demo_Burst",
+			"T_TFBot_Giant_Demo_Spammer_Reload_Chief",
+			"T_TFBot_Giant_Soldier_Spammer",
+			"T_TFBot_Giant_Soldier_Spammer_Reload",
+			"T_TFBot_Giant_Soldier_Extended_Buff_Banner",
+			"T_TFBot_Giant_Soldier_Extended_Concheror",
+			"T_TFBot_Giant_Soldier_Extended_Battalion",
+			"T_TFBot_Giant_Soldier_RocketShotgun",
+			"T_TFBot_Giant_Medic_Regen",
+			"T_TFBot_SentryBuster",
+			"T_TFBot_Soldier_BurstFire",
+			"T_TFBot_Giant_Soldier_SlowBarrage",
+			"T_TFBot_Chief_Gauntlet",
+			"T_TFBot_Chief_Tavish",
+			"T_TFBot_Chief_Pyro",
+			"T_TFBot_Chief_Soldier",
+			"T_TFBot_Chief_Soldier_SlowCrit",
+			"T_TFBot_Giant_Soldier_RocketPush",
+			"T_TFBot_Chief_Soldier_RocketPush",
+			"T_TFBot_Chief_Soldier_Atomic",
+			"T_TFBot_Chief_Demo_Atomic",
+			"T_TFBot_Giant_Major_League",
+			"T_TFBot_Giant_Metalbeard",
+			"T_TFBot_Chief_Soldier_Extended_Concheror",
+			"T_TFBot_Sniper_Huntsman_Spammer",
+			"T_TFBot_Scout_Jumping_Sandman",
+			"T_TFBot_Scout_Shortstop",
+			"T_TFBot_Medic",
+			"T_TFBot_Medic_QuickUber",
+			"T_TFBot_Medic_BigHeal",
+			"T_TFBot_Medic_SlowRecharge",
+			"T_TFBot_Medic_Vaccinator_Bullet",
+			"T_TFBot_Medic_Vaccinator_Blast",
+			"T_TFBot_Medic_Vaccinator_Fire",
+			"T_TFBot_Heavyweapons_Gnome",
+			"T_TFBot_Demoman_Samurai",
+			"T_TFBot_Soldier_Extended_Buff_Banner",
+			"T_TFBot_Soldier_Extended_Concheror",
+			"T_TFBot_Soldier_Extended_Battalion"
+		],
+		"types": []
+	},
+	"\"move speed bonus\"": {
+		"valid_in": [
+			"ItemAttributes",
+			"CharacterAttributes"
+		],
+		"types": [
+			"var"
+		]
+	},
+	"\"Projectile speed increased\"": {
+		"valid_in": [
+			"ItemAttributes",
+			"CharacterAttributes"
+		],
+		"types": [
+			"var"
+		]
+	},
+	"BehaviorModifiers": {
+		"valid_in": [
+			"TFBot",
+			"Default"
+		],
+		"types": [
+			"var"
+		]
+	},
+	"Description": {
+		"valid_in": [
+			"Wave"
+		],
+		"types": [
+			"var",
+			"quotes"
+		]
+	},
+	"Advanced": {
+		"valid_in": [
+			"WaveSchedule",
+			"population"
+		],
+		"types": [
+			"var",
+			"int"
+		]
+	},
+	"FormationSize": {
+		"valid_in": [
+			"Squad"
+		],
+		"types": [
+			"var",
+			"int"
+		]
+	},
+	"\"increase buff duration\"": {
+		"valid_in": [
+			"ItemAttributes",
+			"CharacterAttributes"
+		],
+		"types": [
+			"var"
+		]
+	},
+	"\"fire rate penalty\"": {
+		"valid_in": [
+			"ItemAttributes",
+			"CharacterAttributes"
+		],
+		"types": [
+			"var"
+		]
+	},
+	"ClassIcon": {
+		"valid_in": [
+			"TFBot",
+			"T_TFBot_Heavyweapons_Deflector",
+			"T_TFBot_Sniper_Jarate",
+			"T_TFGateBot_Scout_FAN",
+			"T_TFGateBot_Scout_FAN_Crit",
+			"T_TFGateBot_Sniper_Huntsman_Spammer_Crit",
+			"T_TFGateBot_Scout_Sandman_FastCharge",
+			"T_TFGateBot_Soldier_RocketPush",
+			"T_TFGateBot_Soldier_RocketShotgun_Expert",
+			"T_TFGateBot_Soldier_Extended_Battalion_Hard",
+			"T_TFGateBot_Soldier_Extended_Concheror_Normal",
+			"T_TFGateBot_Soldier_Extended_Concheror_Normal_Crit",
+			"T_TFGateBot_Pyro_Flaregun",
+			"T_TFGateBot_Demo_Burst_Normal",
+			"T_TFGateBot_Demo_Burst_Normal_Crit",
+			"T_TFGateBot_Heavy_Normal_Crit",
+			"T_TFGateBot_Heavy_Expert_Crit",
+			"T_TFGateBot_Heavyweapons_Shotgun",
+			"T_TFGateBot_Heavy_IronFist",
+			"T_TFGateBot_Heavy_IronFist_Airblast",
+			"T_TFGateBot_Heavy_IronFist_Crit",
+			"T_TFGateBot_Chief_Soldier_SlowCritBarrage",
+			"T_TFGateBot_Giant_Soldier_SlowCritBarrage",
+			"T_TFGateBot_Giant_Soldier_SlowBarrage",
+			"T_TFGateBot_Giant_Heavyweapons_Deflector",
+			"T_TFGateBot_Giant_Heavyweapons_Heater",
+			"T_TFGateBot_Giant_Heavyweapons_Shotgun",
+			"T_TFGateBot_Giant_Heavyweapons_Shotgun_Crit",
+			"T_TFGateBot_Giant_Heavyweapons_HealOnKill",
+			"T_TFGateBot_Chief_Heavyweapons_HealOnKill",
+			"T_TFGateBot_Giant_Soldier_Extended_Concheror",
+			"T_TFGateBot_Giant_Soldier_Extended_Concheror_Crit",
+			"T_TFGateBot_Giant_Soldier_RocketPush",
+			"T_TFGateBot_Giant_Soldier_BurstFire",
+			"T_TFGateBot_Giant_Soldier_BurstFire_Crit",
+			"T_TFGateBot_Giant_Soldier_RocketShotgun",
+			"T_TFGateBot_Giant_Demo_Burst",
+			"T_TFGateBot_Giant_Demo_Burst_Crit",
+			"T_TFGateBot_Giant_Scout_FAN",
+			"T_TFGateBot_Giant_Soldier",
+			"T_TFGateBot_Giant_Soldier_Spammer",
+			"T_TFGateBot_Giant_Soldier_Spammer_Crit",
+			"T_TFGateBot_Giant_Soldier_Spammer_Reload",
+			"T_TFGateBot_Giant_Pyro_AlwaysFire",
+			"T_TFGateBot_Giant_Pyro_AlwaysFire_Crit",
+			"T_TFBot_Giant_Scout",
+			"T_TFBot_Giant_Soldier",
+			"T_TFBot_Giant_Pyro",
+			"T_TFBot_Giant_Demoman",
+			"T_TFBot_Giant_Demo_RapidFire",
+			"T_TFBot_Giant_Heavyweapons",
+			"T_TFBot_Giant_Medic",
+			"T_TFBot_Giant_Heavyweapons_Deflector",
+			"T_TFBot_Giant_Heavyweapons_Shotgun",
+			"T_TFBot_Giant_Heavyweapons_BrassBeast",
+			"T_TFBot_Giant_Heavyweapons_Natascha",
+			"T_TFBot_Giant_Heavyweapons_HealOnKill",
+			"T_TFBot_Chief_Heavyweapons_HealOnKill",
+			"T_TFBot_Heavyweapons_Heater",
+			"T_TFBot_Giant_Scout_Fast",
+			"T_TFBot_Giant_Scout_FAN",
+			"T_TFBot_Giant_Scout_Jumping_Sandman",
+			"T_TFBot_Giant_DemoMan_PrinceTavish",
+			"T_TFBot_Giant_Scout_Baseball",
+			"T_TFBot_Giant_Scout_Baseball_Armored",
+			"T_TFBot_Giant_Scout_Bonk",
+			"T_TFBot_Giant_Soldier_Crit",
+			"T_TFBot_Giant_Pyro_Flare_Spammer",
+			"T_TFBot_Giant_Pyro_Flare_Spammer_ScorchShot",
+			"T_TFBot_Giant_Boxing_Heavy",
+			"T_TFBot_Giant_Demo_Burst",
+			"T_TFBot_Giant_Demo_Spammer_Reload_Chief",
+			"T_TFBot_Giant_Soldier_Spammer",
+			"T_TFBot_Giant_Soldier_Spammer_Reload",
+			"T_TFBot_Giant_Soldier_Extended_Buff_Banner",
+			"T_TFBot_Giant_Soldier_Extended_Concheror",
+			"T_TFBot_Giant_Soldier_Extended_Battalion",
+			"T_TFBot_Giant_Soldier_RocketShotgun",
+			"T_TFBot_Giant_Medic_Regen",
+			"T_TFBot_SentryBuster",
+			"T_TFBot_Soldier_BurstFire",
+			"T_TFBot_Giant_Soldier_SlowBarrage",
+			"T_TFBot_Chief_Gauntlet",
+			"T_TFBot_Chief_Tavish",
+			"T_TFBot_Chief_Pyro",
+			"T_TFBot_Chief_Soldier",
+			"T_TFBot_Chief_Soldier_SlowCrit",
+			"T_TFBot_Giant_Soldier_RocketPush",
+			"T_TFBot_Chief_Soldier_RocketPush",
+			"T_TFBot_Chief_Soldier_Atomic",
+			"T_TFBot_Chief_Demo_Atomic",
+			"T_TFBot_Giant_Major_League",
+			"T_TFBot_Giant_Metalbeard",
+			"T_TFBot_Chief_Soldier_Extended_Concheror",
+			"T_TFBot_Sniper_Sydney_Sleeper",
+			"T_TFBot_Sniper_Huntsman",
+			"T_TFBot_Sniper_Huntsman_Spammer",
+			"T_TFBot_Scout_Melee",
+			"T_TFBot_Scout_SunStick",
+			"T_TFBot_Scout_Bonk",
+			"T_TFBot_Scout_Sandman",
+			"T_TFBot_Scout_Sandman_FastCharge",
+			"T_TFBot_Scout_Jumping_Sandman",
+			"T_TFBot_Scout_FAN",
+			"T_TFBot_Scout_Shortstop",
+			"T_TFBot_Medic",
+			"T_TFBot_Medic_QuickUber",
+			"T_TFBot_Medic_SlowRecharge",
+			"T_TFBot_Heavyweapons_Fist",
+			"T_TFBot_Heavyweapons_Heavyweight_Champ",
+			"T_TFBot_Heavyweapons_Heavyweight_Champ_Fast",
+			"T_TFBot_Heavyweapons_Gnome",
+			"T_TFBot_Heavyweapons_Shotgun",
+			"T_TFBot_Heavy_IronFist_Airblast",
+			"T_TFBot_Demoman_Knight",
+			"T_TFBot_Demoman_Samurai",
+			"T_TFBot_Demo_Burst",
+			"T_TFBot_Soldier_Buff_Banner",
+			"T_TFBot_Soldier_Extended_Buff_Banner",
+			"T_TFBot_Soldier_Extended_Concheror",
+			"T_TFBot_Soldier_Extended_Battalion",
+			"T_TFBot_Soldier_RocketPush",
+			"T_TFBot_Soldier_RocketShotgun",
+			"T_TFBot_Pyro_Flaregun",
+			"T_TFBot_ScorchShot",
+			"T_TFBot_ScorchShot_FastShot"
+		],
+		"types": [
+			"var"
+		]
+	},
+	"\"ubercharge rate bonus\"": {
+		"valid_in": [
+			"ItemAttributes",
+			"CharacterAttributes"
+		],
+		"types": [
+			"var"
+		]
+	},
+	"\"heal rate bonus\"": {
+		"valid_in": [
+			"ItemAttributes",
+			"CharacterAttributes"
+		],
+		"types": [
+			"var"
+		]
+	},
+	"TeleportWhere": {
+		"valid_in": [
+			"TFBot",
+			"T_TFBot_Engineer_Sentry_Teleporter",
+			"T_TFBot_Engineer_Sentry_Tele_Battle"
+		],
+		"types": [
+			"var"
+		]
+	},
+	"FixedRespawnWaveTime": {
+		"valid_in": [
+			"WaveSchedule",
+			"population"
+		],
+		"types": [
+			"var"
+		]
+	},
+	"EventPopfile": {
+		"valid_in": [
+			"WaveSchedule",
+			"population"
+		],
+		"types": [
+			"var"
+		]
+	},
+	"population": {
+		"valid_in": [
+			"root"
+		],
+		"types": []
+	},
+	"AddSentryBusterWhenKillCountExceeds": {
+		"valid_in": [
+			"population"
+		],
+		"types": [
+			"var",
+			"int"
+		]
+	},
+	"\"turn to gold\"": {
+		"valid_in": [
+			"ItemAttributes",
+			"CharacterAttributes"
+		],
+		"types": [
+			"var"
+		]
+	},
+	"Sound": {
+		"valid_in": [
+			"Wave"
+		],
+		"types": [
+			"var",
+			"quotes"
+		]
+	},
+	"Scale": {
+		"valid_in": [
+			"TFBot",
+			"T_TFGateBot_Heavy_IronFist",
+			"T_TFGateBot_Heavy_IronFist_Airblast",
+			"T_TFGateBot_Heavy_IronFist_Crit",
+			"T_TFGateBot_Chief_Soldier_SlowCritBarrage",
+			"T_TFGateBot_Chief_Heavyweapons_HealOnKill",
+			"T_TFBot_Chief_Heavyweapons_HealOnKill",
+			"T_TFBot_Giant_Demo_Spammer_Reload_Chief",
+			"T_TFBot_Chief_Gauntlet",
+			"T_TFBot_Chief_Tavish",
+			"T_TFBot_Chief_Pyro",
+			"T_TFBot_Chief_Soldier",
+			"T_TFBot_Chief_Soldier_SlowCrit",
+			"T_TFBot_Chief_Soldier_RocketPush",
+			"T_TFBot_Chief_Soldier_Atomic",
+			"T_TFBot_Chief_Demo_Atomic",
+			"T_TFBot_Chief_Soldier_Extended_Concheror",
+			"T_TFBot_Scout_Shortstop",
+			"T_TFBot_Heavyweapons_Fist",
+			"T_TFBot_Heavy_IronFist_Airblast",
+			"T_TFBot_Demoman_Samurai"
+		],
+		"types": [
+			"var",
+			"int",
+			"float",
+			"quotes"
+		]
+	},
+	"\"is australium item\"": {
+		"valid_in": [
+			"ItemAttributes",
+			"CharacterAttributes"
+		],
+		"types": [
+			"var"
+		]
+	},
+	"\"item style override\"": {
+		"valid_in": [
+			"ItemAttributes",
+			"CharacterAttributes"
+		],
+		"types": [
+			"var"
+		]
+	},
+	"\"projectile spread angle penalty\"": {
+		"valid_in": [
+			"ItemAttributes",
+			"CharacterAttributes"
+		],
+		"types": [
+			"var"
+		]
+	},
+	"\"clip size bonus\"": {
+		"valid_in": [
+			"ItemAttributes",
+			"CharacterAttributes"
+		],
+		"types": [
+			"var"
+		]
+	},
+	"AutoJumpMin": {
+		"valid_in": [
+			"TFBot",
+			"T_TFBot_Giant_Scout_Jumping_Sandman",
+			"T_TFBot_Scout_Jumping_Sandman",
+			"T_TFBot_Demoman_Samurai"
+		],
+		"types": [
+			"var",
+			"int"
+		]
+	},
+	"AutoJumpMax": {
+		"valid_in": [
+			"TFBot",
+			"T_TFBot_Giant_Scout_Jumping_Sandman",
+			"T_TFBot_Scout_Jumping_Sandman",
+			"T_TFBot_Demoman_Samurai"
+		],
+		"types": [
+			"var",
+			"int"
+		]
+	},
+	"\"clip size upgrade atomic\"": {
+		"valid_in": [
+			"ItemAttributes",
+			"CharacterAttributes"
+		],
+		"types": [
+			"var"
+		]
+	},
+	"\"Projectile speed decreased\"": {
+		"valid_in": [
+			"ItemAttributes",
+			"CharacterAttributes"
+		],
+		"types": [
+			"var"
+		]
+	},
+	"\"cancel falling damage\"": {
+		"valid_in": [
+			"ItemAttributes",
+			"CharacterAttributes"
+		],
+		"types": [
+			"var"
+		]
+	},
+	"\"increased jump height\"": {
+		"valid_in": [
+			"ItemAttributes",
+			"CharacterAttributes"
+		],
+		"types": [
+			"var"
+		]
+	},
+	"\"dmg taken increased\"": {
+		"valid_in": [
+			"ItemAttributes",
+			"CharacterAttributes"
+		],
+		"types": [
+			"var"
+		]
+	},
+	"FirstSpawnWarningSound": {
+		"valid_in": [
+			"WaveSpawn"
+		],
+		"types": [
+			"var",
+			"quotes"
+		]
+	},
+	"\"clip size bonus upgrade\"": {
+		"valid_in": [
+			"ItemAttributes",
+			"CharacterAttributes"
+		],
+		"types": [
+			"var"
+		]
+	},
+	"\"use large smoke explosion\"": {
+		"valid_in": [
+			"ItemAttributes",
+			"CharacterAttributes"
+		],
+		"types": [
+			"var"
+		]
+	},
+	"\"damage force reduction\"": {
+		"valid_in": [
+			"ItemAttributes",
+			"CharacterAttributes"
+		],
+		"types": [
+			"var"
+		]
+	},
+	"\"airblast vulnerability multiplier\"": {
+		"valid_in": [
+			"ItemAttributes",
+			"CharacterAttributes"
+		],
+		"types": [
+			"var"
+		]
+	},
+	"DoneWarningSound": {
+		"valid_in": [
+			"WaveSpawn"
+		],
+		"types": [
+			"var",
+			"quotes"
+		]
+	},
+	"InitWaveOutput": {
+		"valid_in": [
+			"Wave"
+		],
+		"types": []
+	},
+	"WaitBetweenSpawnsAfterDeath": {
+		"valid_in": [
+			"WaveSpawn"
+		],
+		"types": [
+			"var",
+			"int"
+		]
+	},
+	"\"mult airblast refire time\"": {
+		"valid_in": [
+			"ItemAttributes",
+			"CharacterAttributes"
+		],
+		"types": [
+			"var"
+		]
+	},
+	"Templates": {
+		"valid_in": [
+			"WaveSchedule"
+		],
+		"types": []
+	},
+	"T_TFBot_Heavyweapons_Deflector": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"\"attack projectiles\"": {
+		"valid_in": [
+			"ItemAttributes",
+			"CharacterAttributes"
+		],
+		"types": [
+			"var"
+		]
+	},
+	"T_TFBot_Sniper_Jarate": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"\"effect bar recharge rate increased\"": {
+		"valid_in": [
+			"ItemAttributes",
+			"CharacterAttributes"
+		],
+		"types": [
+			"var"
+		]
+	},
+	"\"Reload time decreased\"": {
+		"valid_in": [
+			"ItemAttributes",
+			"CharacterAttributes"
+		],
+		"types": [
+			"var"
+		]
+	},
+	"\"Attack not cancel charge\"": {
+		"valid_in": [
+			"ItemAttributes",
+			"CharacterAttributes"
+		],
+		"types": [
+			"var"
+		]
+	},
+	"\"critboost on kill\"": {
+		"valid_in": [
+			"ItemAttributes",
+			"CharacterAttributes"
+		],
+		"types": [
+			"var"
+		]
+	},
+	"\"charge time increased\"": {
+		"valid_in": [
+			"ItemAttributes",
+			"CharacterAttributes"
+		],
+		"types": [
+			"var"
+		]
+	},
+	"\"charge recharge rate increased\"": {
+		"valid_in": [
+			"ItemAttributes",
+			"CharacterAttributes"
+		],
+		"types": [
+			"var"
+		]
+	},
+	"\"bot custom jump particle\"": {
+		"valid_in": [
+			"ItemAttributes",
+			"CharacterAttributes"
+		],
+		"types": [
+			"var"
+		]
+	},
+	"T_TFGateBot_Scout_Melee": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"EventChangeAttributes": {
+		"valid_in": [
+			"T_TFGateBot_Scout_Melee",
+			"T_TFGateBot_Scout_Normal",
+			"T_TFGateBot_Scout_Hard",
+			"T_TFGateBot_Scout_FAN",
+			"T_TFGateBot_Scout_FAN_Crit",
+			"T_TFGateBot_Sniper_Huntsman_Spammer_Crit",
+			"T_TFGateBot_Scout_Sandman_FastCharge",
+			"T_TFGateBot_Soldier_Easy",
+			"T_TFGateBot_Soldier_Normal",
+			"T_TFGateBot_Soldier_Normal_DirectHit_Crit",
+			"T_TFGateBot_Soldier_Hard",
+			"T_TFGateBot_Soldier_RocketPush",
+			"T_TFGateBot_Soldier_RocketShotgun_Expert",
+			"T_TFGateBot_Soldier_Extended_Battalion_Hard",
+			"T_TFGateBot_Soldier_Extended_Concheror_Normal",
+			"T_TFGateBot_Soldier_Extended_Concheror_Normal_Crit",
+			"T_TFGateBot_Pyro_Normal",
+			"T_TFGateBot_Pyro_Hard",
+			"T_TFGateBot_Pyro_Expert",
+			"T_TFGateBot_Pyro_AlwaysFireWeapon",
+			"T_TFGateBot_Pyro_Flaregun",
+			"T_TFGateBot_Demoman_Easy",
+			"T_TFGateBot_Demoman_Normal",
+			"T_TFGateBot_Demoman_Hard",
+			"T_TFGateBot_Demo_Burst_Normal",
+			"T_TFGateBot_Demo_Burst_Normal_Crit",
+			"T_TFGateBot_Heavy_Easy",
+			"T_TFGateBot_Heavy_Normal",
+			"T_TFGateBot_Heavy_Hard",
+			"T_TFGateBot_Heavy_Normal_Crit",
+			"T_TFGateBot_Heavy_Expert_Crit",
+			"T_TFGateBot_Heavyweapons_Shotgun",
+			"T_TFGateBot_Heavy_IronFist",
+			"T_TFGateBot_Heavy_IronFist_Airblast",
+			"T_TFGateBot_Heavy_IronFist_Crit",
+			"T_TFGateBot_Chief_Soldier_SlowCritBarrage",
+			"T_TFGateBot_Giant_Soldier_SlowCritBarrage",
+			"T_TFGateBot_Giant_Soldier_SlowBarrage",
+			"T_TFGateBot_Giant_Heavyweapons_Deflector",
+			"T_TFGateBot_Giant_Heavyweapons_Heater",
+			"T_TFGateBot_Giant_Heavyweapons_Shotgun",
+			"T_TFGateBot_Giant_Heavyweapons_Shotgun_Crit",
+			"T_TFGateBot_Giant_Heavyweapons_HealOnKill",
+			"T_TFGateBot_Chief_Heavyweapons_HealOnKill",
+			"T_TFGateBot_Giant_Soldier_Extended_Concheror",
+			"T_TFGateBot_Giant_Soldier_Extended_Concheror_Crit",
+			"T_TFGateBot_Giant_Soldier_RocketPush",
+			"T_TFGateBot_Giant_Soldier_BurstFire",
+			"T_TFGateBot_Giant_Soldier_BurstFire_Crit",
+			"T_TFGateBot_Giant_Soldier_RocketShotgun",
+			"T_TFGateBot_Giant_Demo_Burst",
+			"T_TFGateBot_Giant_Demo_Burst_Crit",
+			"T_TFGateBot_Giant_Scout_FAN",
+			"T_TFGateBot_Giant_Soldier",
+			"T_TFGateBot_Giant_Soldier_Spammer",
+			"T_TFGateBot_Giant_Soldier_Spammer_Crit",
+			"T_TFGateBot_Giant_Soldier_Spammer_Reload",
+			"T_TFGateBot_Giant_Pyro_AlwaysFire",
+			"T_TFGateBot_Giant_Pyro_AlwaysFire_Crit"
+		],
+		"types": []
+	},
+	"Default": {
+		"valid_in": [
+			"EventChangeAttributes"
+		],
+		"types": []
+	},
+	"\"damage penalty\"": {
+		"valid_in": [
+			"ItemAttributes",
+			"CharacterAttributes"
+		],
+		"types": [
+			"var"
+		]
+	},
+	"RevertGateBotsBehavior": {
+		"valid_in": [
+			"EventChangeAttributes"
+		],
+		"types": []
+	},
+	"T_TFGateBot_Scout_Normal": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFGateBot_Scout_Hard": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFGateBot_Scout_FAN": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"\"scattergun knockback mult\"": {
+		"valid_in": [
+			"ItemAttributes",
+			"CharacterAttributes"
+		],
+		"types": [
+			"var"
+		]
+	},
+	"T_TFGateBot_Scout_FAN_Crit": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFGateBot_Sniper_Huntsman_Spammer_Crit": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"\"scale\"": {
+		"valid_in": [
+			"T_TFGateBot_Sniper_Huntsman_Spammer_Crit",
+			"T_TFBot_Sniper_Huntsman_Spammer"
+		],
+		"types": [
+			"var",
+			"float"
+		]
+	},
+	"\"head scale\"": {
+		"valid_in": [
+			"ItemAttributes",
+			"CharacterAttributes"
+		],
+		"types": [
+			"var"
+		]
+	},
+	"T_TFGateBot_Scout_Sandman_FastCharge": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFGateBot_Soldier_Easy": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFGateBot_Soldier_Normal": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFGateBot_Soldier_Normal_DirectHit_Crit": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFGateBot_Soldier_Hard": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFGateBot_Soldier_RocketPush": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"\"damage causes airblast\"": {
+		"valid_in": [
+			"ItemAttributes",
+			"CharacterAttributes"
+		],
+		"types": [
+			"var"
+		]
+	},
+	"\"Blast radius decreased\"": {
+		"valid_in": [
+			"ItemAttributes",
+			"CharacterAttributes"
+		],
+		"types": [
+			"var"
+		]
+	},
+	"T_TFGateBot_Soldier_RocketShotgun_Expert": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"\"blast radius increased\"": {
+		"valid_in": [
+			"ItemAttributes",
+			"CharacterAttributes"
+		],
+		"types": [
+			"var"
+		]
+	},
+	"\"heal on hit for rapidfire\"": {
+		"valid_in": [
+			"ItemAttributes",
+			"CharacterAttributes"
+		],
+		"types": [
+			"var"
+		]
+	},
+	"T_TFGateBot_Soldier_Extended_Battalion_Hard": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFGateBot_Soldier_Extended_Concheror_Normal": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFGateBot_Soldier_Extended_Concheror_Normal_Crit": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFGateBot_Pyro_Normal": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFGateBot_Pyro_Hard": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFGateBot_Pyro_Expert": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFGateBot_Pyro_AlwaysFireWeapon": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFGateBot_Pyro_Flaregun": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFGateBot_Demoman_Easy": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFGateBot_Demoman_Normal": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFGateBot_Demoman_Hard": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFGateBot_Demo_Burst_Normal": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"\"clip size penalty\"": {
+		"valid_in": [
+			"ItemAttributes",
+			"CharacterAttributes"
+		],
+		"types": [
+			"var"
+		]
+	},
+	"T_TFGateBot_Demo_Burst_Normal_Crit": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFGateBot_Heavy_Easy": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFGateBot_Heavy_Normal": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFGateBot_Heavy_Hard": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFGateBot_Heavy_Normal_Crit": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFGateBot_Heavy_Expert_Crit": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFGateBot_Heavyweapons_Shotgun": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"\"bullets per shot bonus\"": {
+		"valid_in": [
+			"ItemAttributes",
+			"CharacterAttributes"
+		],
+		"types": [
+			"var"
+		]
+	},
+	"T_TFGateBot_Heavy_IronFist": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFGateBot_Heavy_IronFist_Airblast": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFGateBot_Heavy_IronFist_Crit": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFGateBot_Chief_Soldier_SlowCritBarrage": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"\"health regen\"": {
+		"valid_in": [
+			"ItemAttributes",
+			"CharacterAttributes"
+		],
+		"types": [
+			"var"
+		]
+	},
+	"\"override footstep sound set\"": {
+		"valid_in": [
+			"ItemAttributes",
+			"CharacterAttributes"
+		],
+		"types": [
+			"var"
+		]
+	},
+	"\"airblast vertical vulnerability multiplier\"": {
+		"valid_in": [
+			"ItemAttributes",
+			"CharacterAttributes"
+		],
+		"types": [
+			"var"
+		]
+	},
+	"\"rage giving scale\"": {
+		"valid_in": [
+			"ItemAttributes",
+			"CharacterAttributes"
+		],
+		"types": [
+			"var"
+		]
+	},
+	"T_TFGateBot_Giant_Soldier_SlowCritBarrage": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFGateBot_Giant_Soldier_SlowBarrage": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFGateBot_Giant_Heavyweapons_Deflector": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFGateBot_Giant_Heavyweapons_Heater": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFGateBot_Giant_Heavyweapons_Shotgun": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFGateBot_Giant_Heavyweapons_Shotgun_Crit": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFGateBot_Giant_Heavyweapons_HealOnKill": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"\"heal on kill\"": {
+		"valid_in": [
+			"ItemAttributes",
+			"CharacterAttributes"
+		],
+		"types": [
+			"var"
+		]
+	},
+	"T_TFGateBot_Chief_Heavyweapons_HealOnKill": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFGateBot_Giant_Soldier_Extended_Concheror": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFGateBot_Giant_Soldier_Extended_Concheror_Crit": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFGateBot_Giant_Soldier_RocketPush": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFGateBot_Giant_Soldier_BurstFire": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFGateBot_Giant_Soldier_BurstFire_Crit": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFGateBot_Giant_Soldier_RocketShotgun": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFGateBot_Giant_Demo_Burst": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFGateBot_Giant_Demo_Burst_Crit": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFGateBot_Giant_Scout_FAN": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"\"weapon spread bonus\"": {
+		"valid_in": [
+			"ItemAttributes",
+			"CharacterAttributes"
+		],
+		"types": [
+			"var"
+		]
+	},
+	"T_TFGateBot_Giant_Soldier": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFGateBot_Giant_Soldier_Spammer": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFGateBot_Giant_Soldier_Spammer_Crit": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFGateBot_Giant_Soldier_Spammer_Reload": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFGateBot_Giant_Pyro_AlwaysFire": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFGateBot_Giant_Pyro_AlwaysFire_Crit": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Giant_Scout": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Giant_Soldier": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Giant_Pyro": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Giant_Demoman": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Giant_Demo_RapidFire": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Giant_Heavyweapons": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Giant_Medic": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Giant_Heavyweapons_Deflector": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Giant_Heavyweapons_Shotgun": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Giant_Heavyweapons_BrassBeast": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Giant_Heavyweapons_Natascha": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Giant_Heavyweapons_HealOnKill": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Chief_Heavyweapons_HealOnKill": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Heavyweapons_Heater": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Giant_Scout_Fast": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Giant_Scout_FAN": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Giant_Scout_Jumping_Sandman": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"\"max health additive penalty\"": {
+		"valid_in": [
+			"ItemAttributes",
+			"CharacterAttributes"
+		],
+		"types": [
+			"var"
+		]
+	},
+	"T_TFBot_Giant_DemoMan_PrinceTavish": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Giant_Scout_Baseball": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Giant_Scout_Baseball_Armored": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"\"set item tint RGB\"": {
+		"valid_in": [
+			"Itemattributes"
+		],
+		"types": [
+			"var"
+		]
+	},
+	"\"move speed penalty\"": {
+		"valid_in": [
+			"ItemAttributes",
+			"CharacterAttributes"
+		],
+		"types": [
+			"var"
+		]
+	},
+	"T_TFBot_Giant_Scout_Bonk": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Giant_Soldier_Crit": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Giant_Pyro_Flare_Spammer": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Giant_Pyro_Flare_Spammer_ScorchShot": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Giant_Pyro_Pusher": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"\"airblast pushback scale\"": {
+		"valid_in": [
+			"ItemAttributes",
+			"CharacterAttributes"
+		],
+		"types": [
+			"var"
+		]
+	},
+	"T_TFBot_Giant_Boxing_Heavy": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Giant_Demo_Burst": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Giant_Demo_Spammer_Reload_Chief": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Giant_Soldier_Spammer": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Giant_Soldier_Spammer_Reload": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Giant_Soldier_Extended_Buff_Banner": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Giant_Soldier_Extended_Concheror": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Giant_Soldier_Extended_Battalion": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Giant_Soldier_RocketShotgun": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Giant_Medic_Regen": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_SentryBuster": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"\"cannot be backstabbed\"": {
+		"valid_in": [
+			"ItemAttributes",
+			"CharacterAttributes"
+		],
+		"types": [
+			"var"
+		]
+	},
+	"T_TFBot_Soldier_BurstFire": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Giant_Soldier_SlowBarrage": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Chief_Gauntlet": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Chief_Tavish": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Chief_Pyro": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Chief_Soldier": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Chief_Soldier_SlowCrit": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Giant_Soldier_RocketPush": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Chief_Soldier_RocketPush": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Chief_Soldier_Atomic": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Chief_Demo_Atomic": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"\"grenade launcher mortar mode\"": {
+		"valid_in": [
+			"ItemAttributes",
+			"CharacterAttributes"
+		],
+		"types": [
+			"var"
+		]
+	},
+	"T_TFBot_Giant_Major_League": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Giant_Metalbeard": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Chief_Soldier_Extended_Concheror": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Sniper": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Sniper_Razorback": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Sniper_Sydney_Sleeper": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Sniper_Huntsman": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Sniper_Huntsman_Spammer": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Scout_Melee": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Scout_Fish": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Scout_SunStick": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Scout_Bonk": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Scout_Sandman": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Scout_Sandman_FastCharge": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Scout_Wrap_Assassin": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Scout_Jumping_Sandman": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Scout_Scattergun_SlowFire": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Scout_FAN": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Scout_Shortstop": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Spy": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Medic": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Medic_QuickUber": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Medic_BigHeal": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Medic_QuickFix": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Medic_SlowRecharge": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Medic_Vaccinator_Bullet": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"\"medigun bullet resist passive\"": {
+		"valid_in": [
+			"ItemAttributes",
+			"CharacterAttributes"
+		],
+		"types": [
+			"var"
+		]
+	},
+	"\"medigun bullet resist deployed\"": {
+		"valid_in": [
+			"ItemAttributes",
+			"CharacterAttributes"
+		],
+		"types": [
+			"var"
+		]
+	},
+	"T_TFBot_Medic_Vaccinator_Blast": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"\"medigun blast resist passive\"": {
+		"valid_in": [
+			"ItemAttributes",
+			"CharacterAttributes"
+		],
+		"types": [
+			"var"
+		]
+	},
+	"\"medigun blast resist deployed\"": {
+		"valid_in": [
+			"ItemAttributes",
+			"CharacterAttributes"
+		],
+		"types": [
+			"var"
+		]
+	},
+	"T_TFBot_Medic_Vaccinator_Fire": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"\"medigun fire resist passive\"": {
+		"valid_in": [
+			"ItemAttributes",
+			"CharacterAttributes"
+		],
+		"types": [
+			"var"
+		]
+	},
+	"\"medigun fire resist deployed\"": {
+		"valid_in": [
+			"ItemAttributes",
+			"CharacterAttributes"
+		],
+		"types": [
+			"var"
+		]
+	},
+	"T_TFBot_Heavyweapons_Fist": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Heavyweapons_Heavyweight_Champ": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Heavyweapons_Heavyweight_Champ_Fast": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Heavyweapons_Gnome": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Heavyweapons_Shotgun": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Heavy_IronFist_Airblast": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Demoman": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Demoman_Knight": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Demoman_Samurai": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Demo_Burst": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Soldier_Buff_Banner": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Soldier_Extended_Buff_Banner": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Soldier_Extended_Concheror": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Soldier_Extended_Battalion": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Soldier_RocketPush": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Soldier_RocketShotgun": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Pyro": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Pyro_Flaregun": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_ScorchShot": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_ScorchShot_FastShot": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Engineer_Sentry_Teleporter": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Engineer_Sentry_Battle_TeleIn": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Engineer_Sentry_Tele_Battle": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	},
+	"T_TFBot_Engineer_Sentry_Battle": {
+		"valid_in": [
+			"Templates"
+		],
+		"types": []
+	}
+}

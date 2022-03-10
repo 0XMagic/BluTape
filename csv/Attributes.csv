@@ -1,0 +1,832 @@
+damage penalty
+damage bonus
+clip size penalty
+clip size bonus
+fire rate penalty
+fire rate bonus
+heal rate penalty
+heal rate bonus
+ubercharge rate penalty
+ubercharge rate bonus
+overheal bonus
+overheal decay penalty
+overheal decay bonus
+overheal decay disabled
+crit mod disabled
+heal on hit for rapidfire
+add uber charge on hit
+medigun charge is crit boost
+tmp dmgbuff on hit
+crit vs burning players
+dmg penalty vs nonburning
+no crit vs nonburning
+mod flamethrower push
+mod flamethrower back crit
+hidden secondary max ammo penalty
+max health additive bonus
+alt-fire disabled
+crit mod disabled hidden
+fists have radial buff
+critboost on kill
+slow enemy on hit
+set cloak is feign death
+mult cloak meter consume rate
+mult cloak meter regen rate
+spread penalty
+hidden primary max ammo bonus
+mod bat launches balls
+dmg penalty vs nonstunned
+zoom speed mod disabled
+sniper charge per sec
+sniper no headshots
+scattergun no reload single
+scattergun has knockback
+bullets per shot bonus
+sniper zoom penalty
+sniper no charge
+set cloak is movement based
+no double jump
+absorb damage while cloaked
+revolver use hit locations
+backstab shield
+fire retardant
+move speed penalty
+obsolete ammo penalty
+jarate description
+health regen
+self dmg push force increased
+self dmg push force decreased
+dmg taken from fire reduced
+dmg taken from fire increased
+dmg taken from crit reduced
+dmg taken from crit increased
+dmg taken from blast reduced
+dmg taken from blast increased
+dmg taken from bullets reduced
+dmg taken from bullets increased
+increase player capture value
+health from healers reduced
+health from healers increased
+weapon burn dmg increased
+weapon burn dmg reduced
+weapon burn time increased
+weapon burn time reduced
+aiming movespeed increased
+maxammo primary increased
+maxammo primary reduced
+maxammo secondary increased
+maxammo secondary reduced
+maxammo metal increased
+maxammo metal reduced
+cloak consume rate increased
+cloak consume rate decreased
+cloak regen rate increased
+cloak regen rate decreased
+minigun spinup time increased
+minigun spinup time decreased
+max pipebombs increased
+max pipebombs decreased
+SRifle Charge rate increased
+SRifle Charge rate decreased
+Construction rate increased
+Construction rate decreased
+Repair rate increased
+Repair rate decreased
+Reload time increased
+Reload time decreased
+selfdmg on hit for rapidfire
+Blast radius increased
+Blast radius decreased
+Projectile range increased
+Projectile range decreased
+Projectile speed increased
+Projectile speed decreased
+overheal penalty
+weapon spread bonus
+move speed bonus
+health from packs increased
+health from packs decreased
+heal on hit for slowfire
+selfdmg on hit for slowfire
+ammo regen
+metal regen
+mod mini-crit airborne
+mod shovel damage boost
+mod soldier buff type
+dmg falloff increased
+dmg falloff decreased
+sticky detonate mode
+sticky arm time penalty
+stickies detonate stickies
+mod demo buff type
+speed boost when active
+mod wrench builds minisentry
+max health additive penalty
+sticky arm time bonus
+sticky air burst mode
+provide on active
+health drain
+medic regen bonus
+medic regen penalty
+community description
+soldier model index
+attach particle effect
+rocket jump damage reduction
+mod sentry killed revenge
+dmg bonus vs buildings
+dmg penalty vs players
+lunchbox adds maxhealth bonus
+hidden maxhealth non buffed
+selfmade description
+set item tint RGB
+custom employee number
+lunchbox adds minicrits
+taunt is highfive
+damage applies to sappers
+Wrench index
+building cost reduction
+bleeding duration
+turn to gold
+DEPRECATED socketed item definition id DEPRECATED
+custom texture lo
+cannot trade
+disguise on backstab
+cannot disguise
+silent killer
+disguise speed penalty
+add cloak on kill
+SET BONUS: cloak blink time penalty
+SET BONUS: quiet unstealth
+flame size penalty
+flame size bonus
+flame life penalty
+flame life bonus
+charged airblast
+add cloak on hit
+disguise damage reduction
+disguise no burn
+SET BONUS: dmg from sentry reduced
+airblast cost increased
+airblast cost decreased
+purchased
+flame ammopersec increased
+flame ammopersec decreased
+jarate duration
+SET BONUS: no death from headshots
+deploy time increased
+deploy time decreased
+minicrits become crits
+heal on kill
+no self blast dmg
+slow enemy on hit major
+aiming movespeed decreased
+duel loser account id
+event date
+gifter account id
+set supply crate series
+preserve ubercharge
+elevate quality
+active health regen
+active health degen
+referenced item id low
+referenced item id high
+referenced item def UPDATED
+always tradable
+noise maker
+halloween item
+collection bits DEPRECATED
+switch from wep deploy time decreased
+enables aoe heal
+gesture speed increase
+charge time increased
+drop health pack on kill
+hit self on miss
+dmg from ranged reduced
+dmg from melee increased
+blast dmg to self increased
+Set DamageType Ignite
+minicrit vs burning player
+tradable after date
+force level display
+kill eater
+apply z velocity on damage
+apply look velocity on damage
+sanguisuge
+mark for death
+decapitate type
+restore health on kill
+mult decloak rate
+mult sniper charge after bodyshot
+mult sniper charge after miss
+dmg bonus while half dead
+dmg penalty while half alive
+honorbound
+custom texture hi
+makers mark id
+unique craft index
+mod medic killed revenge
+medigun charge is megaheal
+mod medic killed minicrit boost
+mod medic healed damage bonus
+mod medic healed deploy time penalty
+mod shovel speed boost
+mod weapon blocks healing
+mult sniper charge after headshot
+minigun no spin sounds
+ubercharge rate bonus for healer
+reload time decreased while healed
+reload time increased hidden
+mod medic killed marked for death
+mod rage on hit penalty
+mod rage on hit bonus
+mod rage damage boost
+mult charge turn control
+no charge impact range
+charge impact damage increased
+charge recharge rate increased
+air dash count
+speed buff ally
+damage force reduction
+mult cloak rate
+airblast pushback scale
+mult airblast refire time
+airblast vertical pushback scale
+ammo becomes health
+boots falling stomp
+deflection size multiplier
+set item tint RGB 2
+saxxy award category
+melee bounds multiplier
+melee range multiplier
+mod mini-crit airborne deploy
+projectile penetration
+mod crit while airborne
+mult sniper charge penalty DISPLAY ONLY
+mod see enemy health
+powerup max charges
+powerup charges
+powerup duration
+critboost
+ubercharge
+cancel falling damage
+bidirectional teleport
+multiple sentries
+effect bar recharge rate increased
+maxammo grenades1 increased
+override projectile type
+energy weapon no ammo
+energy weapon charged shot
+energy weapon penetration
+energy weapon no hurt building
+energy weapon no deflect
+engy building health bonus
+engy sentry damage bonus
+no crit boost
+centerfire projectile
+kill eater score type
+kill eater score type 2
+kill eater 2
+has pipboy build interface
+sapper kills collect crits
+sniper only fire zoomed
+mod ammo per shot
+add onhit addammo
+electrical airblast DISPLAY ONLY
+mod use metal ammo type
+expiration date
+mod max primary clip override
+sniper full charge damage bonus
+sniper fires tracer
+sniper no headshot without full charge
+mod no reload DISPLAY ONLY
+sniper penetrate players when charged
+crit kill will gib
+recall
+unlimited quantity
+disable weapon hiding for animations
+applies snare effect
+uber duration bonus
+refill_ammo
+store sort override DEPRECATED
+faster reload rate
+increase buff duration
+robo sapper
+build rate bonus
+taunt is press and hold
+attack projectiles
+accuracy scales damage
+currency bonus
+increased jump height
+building instant upgrade
+disable fancy class select anim
+airblast vulnerability multiplier
+override footstep sound set
+spawn with physics toy
+fish damage override
+SET BONUS: special dsp
+bombinomicon effect on death
+clip size bonus upgrade
+hide enemy health
+subtract victim medigun charge on hit
+subtract victim cloak on hit
+reveal cloaked victim on hit
+reveal disguised victim on hit
+jarate backstabber
+engy sentry fire rate increased
+engy sentry radius increased
+engy dispenser radius increased
+mod bat launches ornaments
+freeze backstab victim
+fire rate penalty HIDDEN
+energy weapon no drain
+ragdolls become ash
+engy disposable sentries
+alt fire teleport to spawn
+cannot pick up buildings
+stun enemies wielding same weapon
+mod ammo per shot missed DISPLAY ONLY
+airblast disabled
+increase buff duration HIDDEN
+crit forces victim to laugh
+melts in fire
+damage all connected
+become fireproof on hit by fire
+crit from behind
+crit does no damage
+add jingle to footsteps
+set icicle knife mode
+mod stun waist high airborne
+extinguish earns revenge crits
+burn damage earns rage
+tickle enemies wielding same weapon
+attach particle effect static
+cosmetic taunt sound
+accepted wedding ring account id 1
+accepted wedding ring account id 2
+tool escrow until date
+generate rage on damage
+aiming no flinch
+aiming knockback resistance
+sniper aiming movespeed decreased
+kill eater user 1
+kill eater user score type 1
+kill eater user 2
+kill eater user score type 2
+kill eater user 3
+kill eater user score type 3
+strange part new counter ID
+mvm completed challenges bitmask
+rage on kill
+kill eater kill type
+shot penetrate all players
+headshot damage increase
+SET BONUS: mystery solving time decrease
+damage penalty on bodyshot
+sniper rage DISPLAY ONLY
+fire rate bonus HIDDEN
+explosive sniper shot
+melee attack rate bonus
+projectile penetration heavy
+rage on assists
+armor piercing
+cannot pick up intelligence
+SET BONUS: chance of hunger decrease
+cannot be backstabbed
+squad surplus claimer id DEPRECATED
+share consumable with patient
+airblast vertical vulnerability multiplier
+vision opt in flags
+crit vs disguised players
+crit vs non burning players
+kill forces attacker to laugh
+damage bonus while disguised
+projectile spread angle penalty
+dmg taken increased
+auto fires full clip
+self mark for death
+counts as assister is some kind of pet this update is going to be awesome
+mod flaregun fires pellets with knockback
+can overload
+boost on damage
+hype resets on jump
+pyro year number
+no primary ammo from dispensers while active
+pyrovision only DISPLAY ONLY
+clip size penalty HIDDEN
+sapper damage bonus
+sapper damage penalty
+sapper damage leaches health
+sapper health bonus
+sapper health penalty
+ring of fire while aiming
+uses ammo while aiming
+sapper degenerates buildings
+sapper damage penalty hidden
+cleaver description
+ragdolls plasma effect
+crit vs stunned players
+crit vs wet players
+override item level desc string
+clip size upgrade atomic
+auto fires full clip all at once
+major move speed bonus
+major increased jump height
+head scale
+pyrovision opt in DISPLAY ONLY
+halloweenvision opt in DISPLAY ONLY
+halloweenvision filter DISPLAY ONLY
+player skin override
+never craftable
+zombiezombiezombiezombie
+sapper voice pak
+sapper voice pak idle wait
+merasmus hat level display ONLY
+strange restriction type 1
+strange restriction value 1
+strange restriction type 2
+strange restriction value 2
+strange restriction user type 1
+strange restriction user value 1
+strange restriction user type 2
+strange restriction user value 2
+strange restriction user type 3
+strange restriction user value 3
+engineer sentry build rate multiplier
+engineer teleporter build rate multiplier
+grenade launcher mortar mode
+grenade not explode on impact
+strange score selector
+engineer building teleporting pickup
+grenade damage reduction on world contact
+engineer rage on dmg
+mark for death on building pickup
+medigun charge is resists
+arrow heals buildings
+Projectile speed increased HIDDEN
+damage bonus HIDDEN
+cannonball push back
+rage giving scale
+overheal fill rate reduced
+canteen specialist
+overheal expert
+mad milk syringes
+rocket specialist
+SET BONUS: move speed set bonus
+SET BONUS: health regen set bonus
+SET BONUS: dmg taken from crit reduced set bonus
+SET BONUS: dmg taken from fire reduced set bonus
+healing mastery
+kill eater 3
+kill eater score type 3
+strange restriction type 3
+strange restriction value 3
+bot custom jump particle
+generate rage on heal
+custom name attr
+custom desc attr
+medigun bullet resist passive
+medigun blast resist passive
+medigun fire resist passive
+medigun bullet resist deployed
+medigun blast resist deployed
+medigun fire resist deployed
+medigun crit bullet percent bar deplete
+medigun crit blast percent bar deplete
+medigun crit fire percent bar deplete
+throwable fire speed
+throwable damage
+throwable healing
+throwable particle trail only
+SET BONUS: dmg taken from bullets increased
+SET BONUS: max health additive bonus
+scattergun knockback mult
+particle effect vertical offset
+particle effect use head origin
+use large smoke explosion
+damage causes airblast
+increased jump height from weapon
+damage force increase
+healing received bonus
+afterburn immunity
+decoded by itemdefindex
+hype decays over time
+SET BONUS: custom taunt particle attr
+airblast vulnerability multiplier hidden
+damage force increase hidden
+damage force increase text
+SET BONUS: calling card on kill
+righthand pose parameter
+set throwable type
+add head on hit
+item style override
+paint decal enum
+show paint description
+bot medic uber health threshold
+bot medic uber deploy delay duration
+single wep deploy time decreased
+halloween reload time decreased
+halloween fire rate bonus
+halloween increased jump height
+special taunt
+revive
+taunt attack name
+taunt attack time
+taunt force move forward
+taunt mimic
+taunt success sound
+taunt success sound offset
+taunt success sound loop
+taunt success sound loop offset
+increased air control
+rocket launch impulse
+minicritboost on kill
+no metal from dispensers while active
+projectile entity name
+is throwable primable
+throwable detonation time
+throwable recharge time
+closerange backattack minicrits
+torso scale
+rocketjump attackrate bonus
+is throwable chargeable
+back headshot
+rj air bombardment
+projectile particle name
+air jump on attack
+sniper crit no scope
+sniper independent zoom DISPLAY ONLY
+axtinguisher properties
+full charge turn control
+parachute attribute
+taunt force weapon slot
+mini rockets
+rocket jump damage reduction HIDDEN
+clipsize increase on kill
+breadgloves properties
+taunt turn speed
+sniper fires tracer HIDDEN
+fire rate bonus with reduced health
+tag__summer2014
+crate generation code
+stickybomb fizzle time
+stickybomb charge rate
+grenade no bounce
+class select override vcd
+custom projectile model
+lose demo charge on damage when charging
+grenade no spin
+grenade detonation damage penalty
+taunt turn acceleration time
+taunt move acceleration time
+taunt move speed
+shuffle crate item def min
+shuffle crate item def max
+limited quantity item
+SET BONUS: alien isolation xeno bonus pos
+SET BONUS: alien isolation xeno bonus neg
+SET BONUS: alien isolation merc bonus pos
+SET BONUS: alien isolation merc bonus neg
+disable weapon switch
+hand scale
+display duck leaderboard
+duck rating
+duck badge level
+tag__eotlearlysupport
+unlimited quantity hidden
+duckstreaks active
+panic_attack
+panic_attack_negative
+auto fires full clip penalty
+auto fires when full
+force weapon switch
+weapon_uses_stattrak_module
+is_operation_pass
+weapon_stattrak_module_scale
+set_item_texture_wear
+cloak_consume_on_feign_death_activate
+stickybomb_charge_damage_increase
+NoCloakWhenCloaked
+ReducedCloakFromAmmo
+elevate to unusual if applicable
+weapon_allow_inspect
+metal_pickup_decreased
+lose hype on take damage
+healing received penalty
+crit_vs_burning_FLARES_DISPLAY_ONLY
+speed_boost_on_kill
+speed_boost_on_hit
+spunup_damage_resistance
+ubercharge overheal rate penalty
+reduced_healing_from_medics
+health on radius damage
+style changes on strange level
+cannot restore
+hide crate series number
+has team color paintkit
+cosmetic_allow_inspect
+hat only unusual effect
+items traded in for
+texture_wear_default
+taunt only unusual effect
+deactive date
+is giger counter
+hide_strange_prefix
+always_transmit_so
+allow_halloween_offering
+cannot_transmute
+single wep holster time increased
+single wep deploy time increased
+charge time decreased
+dmg penalty vs buildings
+charge impact damage decreased
+non economy
+charge meter on hit
+minicrit_boost_when_charged
+minicrit_boost_charge_rate
+is_a_sword
+ammo gives charge
+extinguish restores health
+extinguish reduces cooldown
+cannot giftwrap
+tool needs giftwrap
+fuse bonus
+move speed bonus shield required
+damage bonus bullet vs sentry target
+mod teleporter cost
+damage blast push
+move speed bonus resource level
+hype on damage
+dmg taken from fire reduced on active
+damage bonus vs burning
+min_viewmodel_offset
+dmg pierces resists absorbs
+energy buff dmg taken multiplier
+lose revenge crits on death DISPLAY ONLY
+patient overheal penalty
+item_meter_charge_rate
+mult_spread_scale_first_shot
+unusualifier_attribute_template_name
+tool_target_item_icon_offset
+add_head_on_kill
+mult_spread_scales_consecutive
+fixed_shot_pattern
+mod_cloak_no_regen_from_items
+ubercharge_preserved_on_spawn_max
+mod_air_control_blast_jump
+spunup_push_force_immunity
+mod_mark_attacker_for_death
+use_model_cache_icon
+mod_disguise_consumes_cloak
+inspect_viewmodel_offset
+is_passive_weapon
+no_jump
+no_duck
+no_attack
+airblast_destroy_projectile
+airblast_pushback_disabled
+airblast_pushback_no_stun
+airblast_pushback_no_viewpunch
+airblast_deflect_projectiles_disabled
+airblast_put_out_teammate_disabled
+afterburn duration penalty
+afterburn duration bonus
+aoe_deflection
+mult_end_flame_size
+airblast_give_teammate_speed_boost
+airblast_turn_projectile_to_ammo
+paintkit_proto_def_index
+taunt_attr_player_invis_percent
+redirected_flame_size_mult
+flame_reflect_on_collision
+flame_spread_degree
+holster_anim_time
+flame_gravity
+flame_ignore_player_velocity
+flame_drag
+flame_speed
+grenades1_resupply_denied
+grenades2_resupply_denied
+grenades3_resupply_denied
+item_meter_resupply_denied
+mult_player_movespeed_active
+mult_dmgtaken_active
+mult_patient_overheal_penalty_active
+mult_health_fromhealers_penalty_active
+mod_maxhealth_drain_rate
+item_meter_charge_type
+max_flame_reflection_count
+flame_reflection_add_life_time
+reflected_flame_dmg_reduction
+flame_lifetime
+flame_random_life_time_offset
+flame_up_speed
+custom_paintkit_seed_lo
+custom_paintkit_seed_hi
+crit_dmg_falloff
+crits_become_minicrits
+falling_impact_radius_pushback
+falling_impact_radius_stun
+thermal_thruster_air_launch
+thermal_thruster
+mult_item_meter_charge_rate
+explode_on_ignite
+lunchbox healing decreased
+speed_boost_on_hit_enemy
+item_meter_starts_empty_DISPLAY_ONLY
+item_meter_charge_type_3_DISPLAY_ONLY
+repair health to metal ratio DISPLAY ONLY
+health drain medic
+CARD: damage bonus
+CARD: dmg taken from bullets reduced
+CARD: move speed bonus
+CARD: health regen
+SPELL: set item tint RGB
+SPELL: set Halloween footstep type
+SPELL: Halloween voice modulation
+SPELL: Halloween pumpkin explosions
+SPELL: Halloween green flames
+SPELL: Halloween death ghosts
+Attack not cancel charge
+recipe component defined item 1
+recipe component defined item 2
+recipe component defined item 3
+recipe component defined item 4
+recipe component defined item 5
+recipe component defined item 6
+recipe component defined item 7
+recipe component defined item 8
+recipe component defined item 9
+recipe component defined item 10
+start drop date
+end drop date
+tool target item
+killstreak effect
+killstreak idleeffect
+spellbook page attr id
+Halloween Spellbook Page: Tumidum
+Halloween Spellbook Page: Gratanter
+Halloween Spellbook Page: Audere
+Halloween Spellbook Page: Congeriae
+Halloween Spellbook Page: Veteris
+additional halloween response criteria name
+loot rarity
+quality text override
+item name text override
+killstreak tier
+wide item level
+is australium item
+is marketable
+allowed in medieval mode
+crit on hard hit
+series number
+recipe no partial complete
+kill refills meter
+random drop line item unusual chance
+random drop line item unusual list
+random drop line item 0
+random drop line item 1
+random drop line item 2
+random drop line item 3
+on taunt attach particle effect
+loot list name
+upgrade rate decrease
+can shuffle crate contents
+random drop line item footer desc
+is commodity
+voice pitch scale
+gunslinger punch combo
+cannot delete
+quest loaner id low
+quest loaner id hi
+is_festivized
+fire particle blue
+fire particle red
+fire particle blue crit
+fire particle red crit
+meter_label
+item_meter_damage_for_full_charge
+airblast cost scale hidden
+dragons fury positive properties
+dragons fury negative properties
+dragons fury neutral properties
+force center wrap
+attack_minicrits_and_consumes_burning
+item slot criteria 1
+item in slot 1
+item slot criteria 2
+item in slot 2
+item slot criteria 3
+item in slot 3
+item slot criteria 4
+item in slot 4
+item slot criteria 5
+item in slot 5
+item slot criteria 6
+item in slot 6
+item slot criteria 7
+item in slot 7
+item slot criteria 8
+item in slot 8
+quest earned standard points
+quest earned bonus points
+item drop wave
