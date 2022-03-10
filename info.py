@@ -1,7 +1,7 @@
 title = "BluTape"
 full_title = "BluTape Mission Generator"
 author = "ZeroX"
-repo = None  #todo: put a link to the program's github repo when posted
+repo = "https://github.com/0XMagic/BluTape"
 version = 6.0
 window_size = (1280, 720)
-window_pos = (-2520, 200)
+window_pos = (200, 200)
