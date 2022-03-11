@@ -106,7 +106,22 @@ def load():
 		print("loading save file")
 		rs = macro.load(io)
 		if io is not None:
+			ver = getattr(rs,"schema", -1)
+			if ver != info.schema_ver:
+				if ver == -1:
+					ver = "unknown"
+				simpledialog.messagebox.showerror(
+						"Unable to load file",
+						"File version mismatch\n"
+						f"Blutape:\t{info.schema_ver}\n"
+						f"File:\t{ver}"
+				)
+				io.close()
+				return
+
 			add_main_text_frames(rs)
+			main_back.configure(command = lambda: None)
+
 			io.close()
 
 	return result
@@ -203,6 +218,12 @@ def main_text_popup(o: objects.Container):
 			#I have to set it twice for some reason
 			_s = sv.get().replace("Current selection:\n", "")
 			if _s != "None":
+				o.name_mode = nb_var.get()
+				if o.name_mode:
+					_l = nt.get("1.0", tk.END).replace("\n", "")
+					if _l.replace(" ",""):
+						o.name = _l
+
 				o.key(_s)
 				macro.apply_type_changes(o.parent)
 				o.key(_s)
@@ -211,15 +232,43 @@ def main_text_popup(o: objects.Container):
 
 	top = tk.Toplevel(app, bg = COLOR_BACKGROUND)
 	top.protocol("WM_DELETE_WINDOW", w_on_close)
-	top.geometry("350x250")
+	top.geometry("350x300")
 
 	top.title("Set element type")
 	lb = tk.Listbox(top, width = 43, bg = COLOR_BACKGROUND_ALT, fg = COLOR_TEXT_GENERIC)
 	sv = tk.StringVar()
 
-	sv.set("Current selection:\nNone")
+	sv.set(f"Current selection:\n{o.key()}")
 	tx = tk.Text(top, width = 32, height = 1, bg = COLOR_BACKGROUND_ALT, fg = COLOR_TEXT_STR, pady = 3)
 	ct = tk.Label(top, textvariable = sv, fg = COLOR_TEXT_GENERIC, bg = COLOR_BACKGROUND)
+
+	fr = tk.Frame(top, bg = COLOR_BACKGROUND)
+
+	nb_var = tk.IntVar()
+	nb_var.set(o.name_mode)
+
+	def nb_func(obj):
+		def result():
+			if nb_var.get():
+				obj.configure(fg = COLOR_TEXT_STR, text = '')
+				nt.grid(row = 0, column = 1, sticky = "n")
+			else:
+				obj.configure(fg = COLOR_TEXT_GENERIC, text = 'Custom label')
+				nt.grid_forget()
+		return result
+
+	nb = tk.Checkbutton(
+			fr,
+			variable = nb_var, onvalue = 1, offvalue = 0,
+			fg = COLOR_TEXT_GENERIC, bg = COLOR_BACKGROUND
+	)
+
+	nt = tk.Text(fr, width = 16, height = 1, bg = COLOR_BACKGROUND_ALT, fg = COLOR_TEXT_STR)
+
+	nt.insert("1.0",o.name)
+
+	nb.configure(command = nb_func(nb))
+
 	tx.bind("<KeyRelease>", lb_update)
 	lb.bind("<Button-1>", lb_click)
 
@@ -232,7 +281,12 @@ def main_text_popup(o: objects.Container):
 	tx.grid(row = 0, column = 0, sticky = "n")
 	lb.grid(row = 1, column = 0, sticky = "n")
 	ct.grid(row = 2, column = 0, sticky = "n")
-	cb.grid(row = 3, column = 0, sticky = "n")
+
+	fr.grid(row = 3, column = 0, sticky = "n")
+
+	nb.grid(row = 0, column = 0, sticky = "n")
+	nb_func(nb)()
+	cb.grid(row = 4, column = 0, sticky = "n")
 	top.grab_set()
 	dx = app.winfo_x() + 64
 	dy = app.winfo_y() + 64
@@ -301,7 +355,7 @@ def add_main_text_frames(o: objects.Container):
 		tk.Button(
 				f,
 				width = 32,
-				text = v.key(),
+				text = v.key() if not v.name_mode else v.name,
 				command = mtp_wrapper(v)
 		).grid(row = 0, column = 2, sticky = 'w')
 

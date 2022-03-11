@@ -1,4 +1,5 @@
 import json
+import info
 with open("rules.json") as fl:
 	data = json.load(fl)
 
@@ -7,6 +8,9 @@ global_root = None
 
 class Pair:
 	def __init__(self, *args, parent = None):
+		self.name = ""
+		self.name_mode = 0
+		self.schema = info.schema_ver
 		self.__key = None
 		self.__value = None
 		self.__key_quote = False
@@ -49,6 +53,9 @@ class Pair:
 class Container:
 	def __init__(self, *args, is_root = True, parent=None):
 		self.__value = ""
+		self.name = ""
+		self.name_mode = 0
+		self.schema = info.schema_ver
 		self.parent = self
 		if parent is not None:
 			self.parent = parent
