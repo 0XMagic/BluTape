@@ -7,7 +7,7 @@ from tkinter import simpledialog
 has_seen_warn = False
 app = tk.Tk()
 
-appdata = {
+app_info = {
 		key: getattr(info, key, backup) for key, backup in [
 				("title", "untitled application"),
 				("full_title", "untitled application (long ver)"),
@@ -20,11 +20,11 @@ appdata = {
 		]
 }
 
-app.wm_title(f"{appdata['title']} v{appdata['version']}")
-app.geometry("x".join([str(dim) for dim in appdata["window_size"]]))
-app.geometry("".join([f"+{dim}" if dim >= 0 else str(dim) for dim in appdata["window_pos"]]))
+app.wm_title(f"{app_info['title']} v{app_info['version']}")
+app.geometry("x".join([str(dim) for dim in app_info["window_size"]]))
+app.geometry("".join([f"+{dim}" if dim >= 0 else str(dim) for dim in app_info["window_pos"]]))
 app.configure(bg = COLOR_BACKGROUND)
-print(f"{appdata['title']} AppCore loaded")
+print(f"{app_info['title']} AppCore loaded")
 main_frame = tk.Frame(app, bg = COLOR_BACKGROUND)
 main_text_frames = {
 		"button": dict(),
@@ -50,8 +50,7 @@ def export(o: objects.Container):
 		io = asksaveasfile(
 				initialfile = 'mvm_mapName_missionName.pop',
 				defaultextension = ".pop",
-				filetypes = [("MVM Population files", "*.pop"), ("All Files", "*.*")]
-
+				filetypes = [("MVM Population files", "*.pop")]
 		)
 		print("exporting file")
 		macro.export_to_file(o, io)
@@ -63,53 +62,57 @@ def export(o: objects.Container):
 
 def save(o: objects.Container):
 	def result():
+		print("attempting to save...")
 		io = asksaveasfile(
+				parent = app,
+				initialdir = macro.appdata("data/saves"),
 				initialfile = 'blutape_save.blu',
 				defaultextension = ".blu",
-				filetypes = [("BluTape Save File", "*.blu"), ("All Files", "*.*")],
-				mode = "wb"
-
+				filetypes = [("BluTape Save", "*.blu")],
+				mode = "wb",
 		)
-		print("saving file")
-		macro.save(o, io)
-		if io is not None:
-			io.close()
+		if macro.save(o, io):
+			print("save completed")
+		else:
+			print("save aborted")
 
 	return result
 
 
 def load():
 	def result():
+		print("loading save file")
 		io = askopenfile(
+				parent = app,
+				initialdir = macro.appdata("data/saves"),
 				initialfile = 'blutape_save.blu',
 				defaultextension = ".blu",
-				filetypes = [("BluTape Save File", "*.blu"), ("All Files", "*.*")],
+				filetypes = [("BluTape Save", "*.blu")],
 				mode = "rb"
 		)
-		global has_seen_warn
-		if not has_seen_warn and io is not None:
-			db = simpledialog.messagebox.askyesno(
-					"Save file warning",
-					"Malicious save files can perform arbitrary code execution.\n"
-					"ONLY OPEN SAVE FILES THAT YOU TRUST!\n"
-					"Do you wish to continue loading this file?",
-					icon = "warning"
-			)
-			if not db or db is None:
-				print("rejected file load")
-				io.close()
-				return
-			else:
-				print("warning accepted")
-				has_seen_warn = True
 
-		print("loading save file")
 		rs = macro.load(io)
+
+		if isinstance(rs, int):
+			if rs == 1:
+				print("load aborted")
+			elif rs == 2:
+				print("load aborted, invalid file")
+				simpledialog.messagebox.showerror(
+						"Unable to validate file",
+						"For security reasons, sharing saves are disallowed.\n"
+						"This is due to a code execution exploit in the loader.\n"
+						"You can still share imports and exports.\n"
+						"This will also appear if you attempt to load a corrupted save."
+				)
+			return
+
 		if io is not None:
-			ver = getattr(rs,"schema", -1)
+			ver = getattr(rs, "schema", -1)
 			if ver != info.schema_ver:
 				if ver == -1:
 					ver = "unknown"
+				print("load aborted, version mismatch")
 				simpledialog.messagebox.showerror(
 						"Unable to load file",
 						"File version mismatch\n"
@@ -118,10 +121,8 @@ def load():
 				)
 				io.close()
 				return
-
 			add_main_text_frames(rs)
 			main_back.configure(command = lambda: None)
-
 			io.close()
 
 	return result
@@ -221,7 +222,7 @@ def main_text_popup(o: objects.Container):
 				o.name_mode = nb_var.get()
 				if o.name_mode:
 					_l = nt.get("1.0", tk.END).replace("\n", "")
-					if _l.replace(" ",""):
+					if _l.replace(" ", ""):
 						o.name = _l
 
 				o.key(_s)
@@ -255,6 +256,7 @@ def main_text_popup(o: objects.Container):
 			else:
 				obj.configure(fg = COLOR_TEXT_GENERIC, text = 'Custom label')
 				nt.grid_forget()
+
 		return result
 
 	nb = tk.Checkbutton(
@@ -265,7 +267,7 @@ def main_text_popup(o: objects.Container):
 
 	nt = tk.Text(fr, width = 16, height = 1, bg = COLOR_BACKGROUND_ALT, fg = COLOR_TEXT_STR)
 
-	nt.insert("1.0",o.name)
+	nt.insert("1.0", o.name)
 
 	nb.configure(command = nb_func(nb))
 

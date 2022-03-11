@@ -6,3 +6,4 @@ version = 6.0
 schema_ver = 1
 window_size = (1280, 720)
 window_pos = (200, 200)
+path = "/".join(__file__.split("\\")[:-1]) + "/"
