@@ -4,8 +4,7 @@ with open("datafiles/json/keywords.json") as fl:
 	data = json.load(fl)
 
 
-data["None"] = {"valid_in": [x for x in data.keys()], "types": []}
-data["None"]["valid_in"] += ["None"]
+data["None"] = {"valid_in": [x for x in data.keys()] + ["None"], "types": []}
 global_root = None
 
 
