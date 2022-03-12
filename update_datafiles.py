@@ -1,8 +1,16 @@
 import os
 import json
 
-#used for generating rules.json
-#don't need to run this if you already have rules
+"""
+Used for generating datafiles/json/keywords.json
+
+This script does not need to be run after installing BluTape.
+keywords.json is already generated.
+
+This script only needs to be run if any of the following are changed:
+	datafiles/popfiles/*.pop
+	datafiles/spreadsheets/Attributes.csv  (in a future update)
+"""
 
 
 def get_content():
