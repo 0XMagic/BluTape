@@ -2,7 +2,6 @@ from objects import *
 import pickle
 import os
 import secrets
-import zipfile
 
 hide_appdata_nag = False
 
@@ -48,7 +47,7 @@ def save_dir_validate():
 	path = appdata(".secret")
 	if not os.path.isfile(path):
 		gen = secrets.SystemRandom()
-		rng = list(range(33, 127)) + list(range(161, 255))
+		rng = list(range(0, 127)) + list(range(161, 255))
 		token = "".join([chr(x) for x in gen.choices(rng, k=255)])
 		with open(path,"w") as io:
 			io.write(token)
@@ -103,13 +102,13 @@ def load(wr):
 
 
 def add_item(c: Container, s: str, *v, force_at = -1):
-	if s not in data or not can_contain(c, s):
-		raise Exception("invalid add")
+	#if s not in data or not can_contain(c, s):
+		#raise Exception(f"invalid add {s}")
 	if "var" in data[s]["types"]:
 		q = "quotes" in data[s]["types"]
 		if not v:
-			v = ["null"]
-		result = c.add_item(None, s, v[0], value_quotes = q, force_at = force_at)
+			v = ["None"]
+		result = c.add_item(s, v[0], value_quotes = q, force_at = force_at)
 		result.add_flags(s)
 	else:
 		result = c.add_container(s, force_at = force_at)
@@ -120,6 +119,10 @@ def add_item(c: Container, s: str, *v, force_at = -1):
 def apply_type_changes(o: Container):
 	for n in range(len(o.content)):
 		s = o.content[n].key()
+
+		if s not in data:
+			s = "None"
+			o.content[n].key(s)
 
 		if "var" in data[s]["types"]:
 			if isinstance(o.content[n], Container):

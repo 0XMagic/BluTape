@@ -184,7 +184,7 @@ def add_menu(o: objects.Container):
 	avail.sort()
 	if avail:
 		c = macro.add_item(o, avail[0])
-		c.key(avail[0])
+
 		c.is_temp = True
 		add_main_text_frames(o)
 		main_text_popup(c)
@@ -240,11 +240,10 @@ def main_text_popup(o: objects.Container):
 					_l = nt.get("1.0", tk.END).replace("\n", "")
 					if _l.replace(" ", ""):
 						o.name = _l
+
+				o.key(_s)
 				macro.apply_type_changes(o.parent)
 				o.key(_s)
-
-				if o.is_temp:
-					o.value("")
 
 				o.is_temp = False
 				add_main_text_frames(o.parent)

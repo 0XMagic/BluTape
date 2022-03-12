@@ -3,6 +3,9 @@ import info
 with open("rules.json") as fl:
 	data = json.load(fl)
 
+
+data["None"] = {"valid_in": [x for x in data.keys()], "types": []}
+data["None"]["valid_in"] += ["None"]
 global_root = None
 
 
