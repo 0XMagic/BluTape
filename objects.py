@@ -1,6 +1,6 @@
 import json
 import info
-with open("rules.json") as fl:
+with open("datafiles/json/keywords.json") as fl:
 	data = json.load(fl)
 
 
