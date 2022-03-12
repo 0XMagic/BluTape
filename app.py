@@ -26,6 +26,17 @@ app.geometry("".join([f"+{dim}" if dim >= 0 else str(dim) for dim in app_info["w
 app.configure(bg = COLOR_BACKGROUND)
 print(f"{app_info['title']} AppCore loaded")
 main_frame = tk.Frame(app, bg = COLOR_BACKGROUND)
+path_frame = tk.Frame(app, bg = COLOR_BACKGROUND)
+
+path_str = tk.StringVar()
+path_str.set("root")
+l_path = tk.Label(
+		textvariable = path_str,
+		bg = COLOR_BACKGROUND,
+		fg = COLOR_TEXT_HIGHLIGHT,
+		font = ('Corrier new', 20)
+)
+
 main_text_frames = {
 		"button": dict(),
 		"text":   dict()
@@ -44,6 +55,8 @@ main_back = tk.Button(
 
 main_back.grid(row = 0, column = 0)
 
+def update_top_path(v):
+	path_str.set(v.get_path())
 
 def export(o: objects.Container):
 	def result():
@@ -122,6 +135,7 @@ def load():
 				io.close()
 				return
 			add_main_text_frames(rs)
+			update_top_path(rs)
 			main_back.configure(command = lambda: None)
 			io.close()
 
@@ -167,6 +181,7 @@ def move_down(o: objects.Container, n):
 
 def add_menu(o: objects.Container):
 	avail = macro.get_available(o)
+	avail.sort()
 	if avail:
 		c = macro.add_item(o, avail[0])
 		c.key(avail[0])
@@ -294,7 +309,7 @@ def main_text_popup(o: objects.Container):
 	nb_func(nb)()
 	cb.grid(row = 4, column = 0, sticky = "n")
 	top.grab_set()
-	dx = app.winfo_x() + 64
+	dx = app.winfo_x() + 135
 	dy = app.winfo_y() + 64
 	top.geometry(f"+{dx}+{dy}")
 
@@ -303,14 +318,16 @@ def back_wrapper(o: objects.Container):
 	def result():
 		add_main_text_frames(o.parent)
 		main_back.configure(command = back_wrapper(o.parent))
-
+		update_top_path(o.parent)
 	return result
 
 
 def amt_wrapper(o: objects.Container):
 	def result():
+
 		add_main_text_frames(o)
 		main_back.configure(command = back_wrapper(o))
+		update_top_path(o)
 
 	return result
 
@@ -336,6 +353,7 @@ def txt_update_wrapper(v, b):
 
 
 def add_main_text_frames(o: objects.Container):
+
 	main_export.configure(command = export(o.get_root()))
 	main_save.configure(command = save(o))
 	main_load.configure(command = load())
@@ -354,6 +372,7 @@ def add_main_text_frames(o: objects.Container):
 	main_text_frames["text"].clear()
 	n = 0
 	for v in o.content:
+
 
 		mode = "text" if isinstance(v, objects.Pair) else "button"
 		f = tk.Frame(main_frame, bg = COLOR_BACKGROUND)
@@ -401,9 +420,9 @@ def add_main_text_frames(o: objects.Container):
 	main_add.configure(command = lambda: add_menu(o))
 	main_add.grid_forget()
 	main_add.grid(row = n, column = 1, sticky = 'w')
-
-
-main_frame.grid(row = 0, column = 1, sticky = 'w')
+l_path.grid(row = 0, column = 0, sticky = 'w')
+path_frame.grid(row = 0, column = 0, sticky = 'w')
+main_frame.grid(row = 1, column = 0, sticky = 'w')
 
 
 def launch():

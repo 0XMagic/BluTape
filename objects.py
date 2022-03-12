@@ -107,6 +107,15 @@ class Container:
 			self.__value = args[0]
 		return self.__value
 
+	def get_path(self, n=5):
+		result = self.name if self.name_mode else self.key()
+		if not self.__is_root:
+			if n:
+				result = self.parent.get_path(n=n-1) + " > " + result
+			else:
+				result = "... > " + result
+		return result
+
 	def add_item(self, k, v, key_quotes = False, value_quotes = False, force_at = -1):
 		to_add = Pair(parent = self)
 		to_add.key(k, quotes = key_quotes)
