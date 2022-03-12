@@ -1,0 +1,81 @@
+{
+  "Advanced": {
+    "content": [
+      "1",
+      "0"
+    ]
+  },
+  "Skill": {
+    "default": 1,
+    "content": [
+      "Easy",
+      "Normal",
+      "Hard",
+      "Expert"
+    ]
+  },
+  "WeaponRestrictions": {
+    "content": [
+      "PrimaryOnly",
+      "SecondaryOnly",
+      "MeleeOnly"
+    ]
+  },
+  "Attributes": {
+    "default": 7,
+    "content": [
+      "RemoveOnDeath",
+      "Aggressive",
+      "SuppressFire",
+      "DisableDodge",
+      "BecomeSpectatorOnDeath",
+      "RetainBuildings",
+      "SpawnWithFullCharge",
+      "AlwaysCrit",
+      "IgnoreEnemies",
+      "HoldFireUntilFullReload",
+      "AlwaysFireWeapon",
+      "TeleportToHint",
+      "MiniBoss",
+      "UseBossHealthBar",
+      "IgnoreFlag",
+      "AutoJump",
+      "AirChargeOnly",
+      "VaccinatorBullets",
+      "VaccinatorBlast",
+      "VaccinatorFire",
+      "BulletImmune",
+      "BlastImmune",
+      "FireImmune",
+      "Parachute",
+      "ProjectileShield"
+    ]
+  },
+  "Tag": {
+    "content": [
+      "bot_giant",
+      "bot_sentrybuster",
+      "bot_squad_member",
+      "bot_gatebot"
+    ]
+  },
+  "BehaviorModifiers": {
+    "content": [
+      "push",
+      "mobber"
+    ]
+  },
+  "Class": {
+    "content": [
+      "Scout",
+      "Soldier",
+      "Pyro",
+      "Demoman",
+      "Heavyweapons",
+      "Engineer",
+      "Medic",
+      "Sniper",
+      "Spy"
+    ]
+  }
+}
