@@ -170,8 +170,10 @@ def add_menu(o: objects.Container):
 	if avail:
 		c = macro.add_item(o, avail[0])
 		c.key(avail[0])
-		print("added ", avail[0])
+		print("added", avail[0])
+		c.is_temp = True
 		add_main_text_frames(o)
+		main_text_popup(c)
 
 
 def mtp_wrapper(o: objects.Container):
@@ -187,12 +189,13 @@ def main_text_popup(o: objects.Container):
 	print("selected ", o.key())
 
 	def w_on_close():
+		if o.is_temp:
+			del_wrapper(o.parent, o.get_self_index())()
 		top.grab_release()
 		top.destroy()
 
 	def lb_update(*args):
 		s = tx.get("1.0", tk.END)
-		print(list(s))
 
 		if s.endswith("\n"):
 			s = s[:-1]
@@ -228,6 +231,7 @@ def main_text_popup(o: objects.Container):
 				o.key(_s)
 				macro.apply_type_changes(o.parent)
 				o.key(_s)
+				o.is_temp = False
 				add_main_text_frames(o.parent)
 				w_on_close()
 
@@ -350,6 +354,7 @@ def add_main_text_frames(o: objects.Container):
 	main_text_frames["text"].clear()
 	n = 0
 	for v in o.content:
+
 		mode = "text" if isinstance(v, objects.Pair) else "button"
 		f = tk.Frame(main_frame, bg = COLOR_BACKGROUND)
 		main_text_frames[mode][n] = f
@@ -370,24 +375,28 @@ def add_main_text_frames(o: objects.Container):
 					fg = COLOR_TEXT_STR
 			)
 			b.insert(1.0, v.value())
-			b.grid(row = 0, column = 3, sticky = 'w')
+
 			b.bind("<KeyRelease>", txt_update_wrapper(v, b))
+
+			if not v.is_temp: b.grid(row = 0, column = 3, sticky = 'w')
 		else:
-			tk.Button(
+			b = tk.Button(
 					f,
 					width = 16,
 					text = "edit",
 					command = amt_wrapper(v)
-			).grid(row = 0, column = 3, sticky = 'w', padx = 69)
+			)
+			if not v.is_temp: b.grid(row = 0, column = 3, sticky = 'w', padx = 69)
 
-		db = tk.Button(f, text = "remove", command = del_wrapper(o, n), width = 9)
-		mu = tk.Button(f, text = "↑", command = move_up(o, n))
-		md = tk.Button(f, text = "↓", command = move_down(o, n))
-		mu.grid(row = 0, column = 0, sticky = 'w')
-		md.grid(row = 0, column = 1, sticky = 'w')
-		db.grid(row = 0, column = 4, sticky = 'w', padx = 35)
-		f.grid(row = n, column = 1, sticky = 'w')
-		n += 1
+		if not v.is_temp:
+			db = tk.Button(f, text = "remove", command = del_wrapper(o, n), width = 9)
+			mu = tk.Button(f, text = "↑", command = move_up(o, n))
+			md = tk.Button(f, text = "↓", command = move_down(o, n))
+			mu.grid(row = 0, column = 0, sticky = 'w')
+			md.grid(row = 0, column = 1, sticky = 'w')
+			db.grid(row = 0, column = 4, sticky = 'w', padx = 35)
+			f.grid(row = n, column = 1, sticky = 'w')
+			n += 1
 
 	main_add.configure(command = lambda: add_menu(o))
 	main_add.grid_forget()

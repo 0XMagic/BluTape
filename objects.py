@@ -8,6 +8,7 @@ global_root = None
 
 class Pair:
 	def __init__(self, *args, parent = None):
+		self.is_temp = False
 		self.name = ""
 		self.name_mode = 0
 		self.schema = info.schema_ver
@@ -21,6 +22,12 @@ class Pair:
 		if len(args) == 2:
 			self.key(args[0])
 			self.value(args[1])
+
+	def get_self_index(self):
+		for n, x in enumerate(self.parent.content):
+			if x == self:
+				return n
+		return -1
 
 	def key(self, *args, quotes = False):
 		if args:
@@ -52,6 +59,7 @@ class Pair:
 
 class Container:
 	def __init__(self, *args, is_root = True, parent=None):
+		self.is_temp = False
 		self.__value = ""
 		self.name = ""
 		self.name_mode = 0
@@ -76,6 +84,12 @@ class Container:
 		if self.parent != self:
 			return self.parent.get_root()
 		return self
+
+	def get_self_index(self):
+		for n, x in enumerate(self.parent.content):
+			if x == self:
+				return n
+		return -1
 
 	def add_flags(self, *flags):
 		self.flags += list(flags)
