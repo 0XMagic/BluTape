@@ -15,8 +15,7 @@
 	},
 	"StartingCurrency": {
 		"valid_in": [
-			"WaveSchedule",
-			"population"
+			"WaveSchedule"
 		],
 		"types": [
 			"var",
@@ -25,8 +24,7 @@
 	},
 	"RespawnWaveTime": {
 		"valid_in": [
-			"WaveSchedule",
-			"population"
+			"WaveSchedule"
 		],
 		"types": [
 			"var",
@@ -35,8 +33,7 @@
 	},
 	"CanBotsAttackWhileInSpawnRoom": {
 		"valid_in": [
-			"WaveSchedule",
-			"population"
+			"WaveSchedule"
 		],
 		"types": [
 			"var"
@@ -44,8 +41,7 @@
 	},
 	"Mission": {
 		"valid_in": [
-			"WaveSchedule",
-			"population"
+			"WaveSchedule"
 		],
 		"types": []
 	},
@@ -572,8 +568,7 @@
 	},
 	"Wave": {
 		"valid_in": [
-			"WaveSchedule",
-			"population"
+			"WaveSchedule"
 		],
 		"types": []
 	},
@@ -1398,8 +1393,7 @@
 	},
 	"Advanced": {
 		"valid_in": [
-			"WaveSchedule",
-			"population"
+			"WaveSchedule"
 		],
 		"types": [
 			"var",
@@ -1596,8 +1590,7 @@
 	},
 	"FixedRespawnWaveTime": {
 		"valid_in": [
-			"WaveSchedule",
-			"population"
+			"WaveSchedule"
 		],
 		"types": [
 			"var"
@@ -1605,22 +1598,15 @@
 	},
 	"EventPopfile": {
 		"valid_in": [
-			"WaveSchedule",
-			"population"
+			"WaveSchedule"
 		],
 		"types": [
 			"var"
 		]
 	},
-	"population": {
-		"valid_in": [
-			"root"
-		],
-		"types": []
-	},
 	"AddSentryBusterWhenKillCountExceeds": {
 		"valid_in": [
-			"population"
+			"WaveSchedule"
 		],
 		"types": [
 			"var",

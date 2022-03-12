@@ -1,7 +1,7 @@
 #base robot_giant.pop
 #base robot_standard.pop
 #base robot_gatebot.pop
-population
+WaveSchedule
 {
 	Advanced	1
 	EventPopfile	Halloween
