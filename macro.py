@@ -107,7 +107,7 @@ def add_item(c: Container, s: str, *v, force_at = -1):
 	if "var" in data[s]["types"]:
 		q = "quotes" in data[s]["types"]
 		if not v:
-			v = ["None"]
+			v = [""]
 		result = c.add_item(s, v[0], value_quotes = q, force_at = force_at)
 		result.add_flags(s)
 	else:
@@ -196,7 +196,7 @@ def can_contain(o: Container, s: str):
 def get_available(o: Container):
 	result = list()
 	for s, d in data.items():
-		if can_contain(o, s):
+		if can_contain(o, s) and s != "None":
 			result.append(s)
 	return result
 
