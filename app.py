@@ -3,9 +3,31 @@ import info, objects, macro
 from color import *
 from tkinter.filedialog import asksaveasfile, askopenfile
 from tkinter import simpledialog
+from tkinter import ttk
 
 has_seen_warn = False
 app = tk.Tk()
+style = ttk.Style()
+
+
+style.theme_create(
+		'combostyle',
+		parent = 'alt',
+		settings = {
+				'TCombobox':
+					{
+							'configure':
+								{
+										'selectbackground': COLOR_BACKGROUND_ALT,
+										'fieldbackground':  COLOR_BACKGROUND_ALT,
+										'background':       COLOR_TEXT_GENERIC,
+										'foreground':       COLOR_TEXT_STR
+								}
+					}
+		}
+)
+
+style.theme_use("combostyle")
 
 app_info = {
 		key: getattr(info, key, backup) for key, backup in [
@@ -55,8 +77,10 @@ main_back = tk.Button(
 
 main_back.grid(row = 0, column = 0)
 
+
 def update_top_path(v):
 	path_str.set(v.get_path())
+
 
 def export(o: objects.Container):
 	def result():
@@ -192,6 +216,7 @@ def add_menu(o: objects.Container):
 
 def mtp_wrapper(o: objects.Container):
 	v = o
+
 	def result():
 		main_text_popup(v)
 
@@ -318,12 +343,12 @@ def back_wrapper(o: objects.Container):
 		add_main_text_frames(o.parent)
 		main_back.configure(command = back_wrapper(o.parent))
 		update_top_path(o.parent)
+
 	return result
 
 
 def amt_wrapper(o: objects.Container):
 	def result():
-
 		add_main_text_frames(o)
 		main_back.configure(command = back_wrapper(o))
 		update_top_path(o)
@@ -351,8 +376,16 @@ def txt_update_wrapper(v, b):
 	return result
 
 
-def add_main_text_frames(o: objects.Container):
+def sel_update_wrapper(v, b, tv1):
+	tv = tv1
+	def result(*args):
+		v.value(tv.get())
+		add_main_text_frames(v.parent)
 
+	return result
+
+
+def add_main_text_frames(o: objects.Container):
 	main_export.configure(command = export(o.get_root()))
 	main_save.configure(command = save(o))
 	main_load.configure(command = load())
@@ -372,7 +405,6 @@ def add_main_text_frames(o: objects.Container):
 	n = 0
 	for v in o.content:
 
-
 		mode = "text" if isinstance(v, objects.Pair) else "button"
 		f = tk.Frame(main_frame, bg = COLOR_BACKGROUND)
 		main_text_frames[mode][n] = f
@@ -385,18 +417,56 @@ def add_main_text_frames(o: objects.Container):
 		).grid(row = 0, column = 2, sticky = 'w')
 
 		if mode == "text":
-			b = tk.Text(
-					f,
-					width = 32,
-					height = 1,
-					bg = COLOR_BACKGROUND_ALT,
-					fg = COLOR_TEXT_STR
-			)
-			b.insert(1.0, v.value())
+			s_con, s_def = macro.get_pair_selections(v)
+			if s_con:
+				tv = tk.StringVar()
+				"""
+										width = 32,
+						height = 1,
+						bg = COLOR_BACKGROUND_ALT,
+						fg = COLOR_TEXT_STR,
+				"""
+				b = ttk.Combobox(
+						f,
+						textvariable = tv,
+						values = s_con,
+						width = 32,
+						height = min(len(s_con), 15),
+						state = "readonly",
 
-			b.bind("<KeyRelease>", txt_update_wrapper(v, b))
+				)
 
-			if not v.is_temp: b.grid(row = 0, column = 3, sticky = 'w')
+				if v.value() not in s_con:
+					b.current(newindex = s_def)
+				else:
+					b.current(newindex = [n for n, x in enumerate(s_con) if x == v.value()][0])
+
+				b['foreground'] = COLOR_TEXT_STR
+
+
+
+				b.option_add("*TCombobox*Listbox.background", COLOR_BACKGROUND_ALT)
+				b.option_add("*TCombobox*Listbox.foreground", COLOR_TEXT_STR)
+
+				b.option_add("*TCombobox*Listbox.SelectBackground", COLOR_BACKGROUND_ALT)
+				b.option_add("*TCombobox*Listbox.SelectForeground", COLOR_TEXT_STR)
+
+				b.bind("<KeyRelease>", sel_update_wrapper(v, b, tv))
+				b.bind("<<ComboboxSelected>>", sel_update_wrapper(v, b, tv))
+
+				if not v.is_temp: b.grid(row = 0, column = 3, sticky = 'w')
+			else:
+				b = tk.Text(
+						f,
+						width = 32,
+						height = 1,
+						bg = COLOR_BACKGROUND_ALT,
+						fg = COLOR_TEXT_STR
+				)
+				b.insert(1.0, v.value())
+
+				b.bind("<KeyRelease>", txt_update_wrapper(v, b))
+				if not v.is_temp: b.grid(row = 0, column = 3, sticky = 'w')
 		else:
 			b = tk.Button(
 					f,
@@ -419,6 +489,8 @@ def add_main_text_frames(o: objects.Container):
 	main_add.configure(command = lambda: add_menu(o))
 	main_add.grid_forget()
 	main_add.grid(row = n, column = 1, sticky = 'w')
+
+
 l_path.grid(row = 0, column = 0, sticky = 'w')
 path_frame.grid(row = 0, column = 0, sticky = 'w')
 main_frame.grid(row = 1, column = 0, sticky = 'w')

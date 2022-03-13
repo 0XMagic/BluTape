@@ -102,8 +102,6 @@ def load(wr):
 
 
 def add_item(c: Container, s: str, *v, force_at = -1):
-	#if s not in data or not can_contain(c, s):
-		#raise Exception(f"invalid add {s}")
 	if "var" in data[s]["types"]:
 		q = "quotes" in data[s]["types"]
 		if not v:
@@ -142,22 +140,17 @@ def apply_type_changes(o: Container):
 def swap(o: Container, a, b):
 	print(a, b)
 	if b < 0 or a < 0 or a >= len(o.content) or b >= len(o.content):
-		print("failed to swap due to bounds")
 		return False
 
 	k1 = o.content[a].key()
 	v1 = o.content[a].value()
-
 	k2 = o.content[b].key()
 	v2 = o.content[b].value()
-
 	tmp = o.content[a]
 	o.content[a] = o.content[b]
 	o.content[b] = tmp
-
 	o.content[a].key(k2)
 	o.content[a].value(v2)
-
 	o.content[b].key(k1)
 	o.content[b].value(v1)
 	apply_type_changes(o)
@@ -204,3 +197,9 @@ def get_available(o: Container):
 def list_available(o):
 	r = get_available(o)
 	print("\n".join([f"[{x}] {y}" for x, y in enumerate(r)]))
+
+def get_pair_selections(o: Pair):
+	r = selections.get(o.key(), dict())
+	result = (r.get("content",list()), r.get("default", 0))
+	return result
+

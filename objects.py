@@ -1,8 +1,11 @@
 import json
 import info
+
 with open("datafiles/json/keywords.json") as fl:
 	data = json.load(fl)
 
+with open("datafiles/json/selection.json") as fl:
+	selections = json.load(fl)
 
 data["None"] = {"valid_in": [x for x in data.keys()] + ["None"], "types": []}
 global_root = None
@@ -60,7 +63,7 @@ class Pair:
 
 
 class Container:
-	def __init__(self, *args, is_root = True, parent=None):
+	def __init__(self, *args, is_root = True, parent = None):
 		self.is_temp = False
 		self.__value = ""
 		self.name = ""
@@ -109,11 +112,11 @@ class Container:
 			self.__value = args[0]
 		return self.__value
 
-	def get_path(self, n=5):
+	def get_path(self, n = 5):
 		result = self.name if self.name_mode else self.key()
 		if not self.__is_root:
 			if n:
-				result = self.parent.get_path(n=n-1) + " > " + result
+				result = self.parent.get_path(n = n - 1) + " > " + result
 			else:
 				result = "... > " + result
 		return result
@@ -129,8 +132,6 @@ class Container:
 			self.content[force_at] = to_add
 
 		return to_add
-
-
 
 	def add_container(self, *args, force_at = -1):
 		to_add = Container(*args, is_root = False, parent = self)
