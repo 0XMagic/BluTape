@@ -1,4 +1,10 @@
 {
+  "CanBotsAttackWhileInSpawnRoom": {
+    "content": [
+      "yes",
+      "no"
+    ]
+  },
   "Advanced": {
     "content": [
       "1",
@@ -76,6 +82,21 @@
       "Medic",
       "Sniper",
       "Spy"
+    ]
+  },
+  "EventPopfile":
+  {
+    "content": [
+      "Halloween"
+    ]
+  },
+  "Objective": {
+    "content": [
+      "DestroySentries",
+      "Sniper",
+      "Spy",
+      "Engineer",
+      "SeekAndDestroy"
     ]
   }
 }
