@@ -27,7 +27,8 @@ def appdata(*args):
 def save_dir_validate():
 	folders = [
 			"data/saves",
-			"data/templates"
+			"data/templates",
+			"data/exports"
 	]
 
 	for f in folders:
@@ -68,7 +69,6 @@ def get_secret_b():
 def save(o: Container, wr, get_root = True):
 	if wr is None:
 		return False
-	o.get_root().pwd = get_secret()
 	s = pickle.dumps(o.get_root() if get_root else o)
 	gen = secrets.SystemRandom()
 	r = gen.randint(0,len(s)-1)
@@ -175,9 +175,10 @@ def export_to_file(o: Container, wr):
 			]]) + "\n"
 
 	if wr is None:
-		return
+		return False
 	txt = list_to_indented_string(o.export())
 	wr.write(watermark + txt)
+	return True
 
 
 def can_contain(o: Container, s: str):

@@ -1,4 +1,5 @@
 import tkinter as tk
+import os
 import info, objects, macro
 from color import *
 from tkinter.filedialog import asksaveasfile, askopenfile
@@ -8,7 +9,9 @@ from tkinter import ttk
 has_seen_warn = False
 app = tk.Tk()
 style = ttk.Style()
-
+active_object = None
+active_path = ""
+active_export_path = ""
 
 style.theme_create(
 		'combostyle',
@@ -42,6 +45,162 @@ app_info = {
 		]
 }
 
+def save_global():
+	if not isinstance(active_object, objects.Container):
+		print("Tried to save but the active object is invalid")
+		print("If the project is not empty, this is a bug, please let me know if so!")
+		return
+
+	if not active_path or not os.path.isfile(active_path):
+		print("no valid active path, running Save As instead")
+		save_as_global()
+		return
+
+	print(f"attempting to Save\nactive path: {active_path}")
+	io = open(active_path, "wb")
+	if macro.save(active_object, io):
+		print("save complete")
+	else:
+		print("save failed")
+
+
+
+#to replace the save function for the button
+#uses a global that matches the most recent object
+def save_as_global():
+	if not isinstance(active_object, objects.Container):
+		print("Tried to save but the active object is invalid")
+		print("If the project is not empty, this is a bug, please let me know if so!")
+		return
+	global active_path
+	initial_dir = macro.appdata("data/saves")
+	initial_file = 'blutape_save.blu'
+
+	if active_path:
+		aps = active_path.split("/")
+		initial_dir = "/".join(aps[:-1])
+		initial_file = aps[-1]
+	print(f"attempting to Save As\nactive path: {initial_dir}/{initial_file}")
+
+	io = asksaveasfile(
+			parent = app,
+			initialdir = initial_dir,
+			initialfile = initial_file,
+			defaultextension = ".blu",
+			filetypes = [("BluTape Save", "*.blu")],
+			mode = "wb",
+	)
+	p = None
+	if io is not None:
+		p = io.name
+
+	if macro.save(active_object, io):
+		print("save complete")
+
+		active_path = p
+	else:
+		print("save aborted")
+
+
+def open_global():
+	global active_path
+	initial_dir = macro.appdata("data/saves")
+	initial_file = 'blutape_save.blu'
+
+	if active_path:
+		aps = active_path.split("/")
+		initial_dir = "/".join(aps[:-1])
+		initial_file = aps[-1]
+
+	print(f"attempting to Open Save\nactive path: {initial_dir}/{initial_file}")
+
+	io = askopenfile(
+			parent = app,
+			initialdir = initial_dir,
+			initialfile = initial_file,
+			defaultextension = ".blu",
+			filetypes = [("BluTape Save", "*.blu")],
+			mode = "rb"
+	)
+
+	p = None
+	if io is not None:
+		p = io.name
+
+	o = macro.load(io)
+
+	if not isinstance(o, objects.Container):
+		if o == 1 or io is None:
+			print("load aborted")
+		elif o == 2:
+			print("invalid load")
+			simpledialog.messagebox.showerror(
+					"Unable to load file: creator mismatch",
+					"For security reasons, sharing saves are disallowed.\n"
+					"This is due to security exploit in the file loader.\n"
+					"You can still share exports."
+			)
+		return
+
+	version = getattr(o, "schema", -1)
+
+	if version != info.schema_ver:
+		simpledialog.messagebox.showerror(
+				"Unable to load file: ",
+				"File version mismatch\n"
+				f"Blutape:\t{info.schema_ver}\n"
+				f"File:\t{version}"
+		)
+		return
+
+	add_main_text_frames(o)
+	update_top_path(o)
+	main_back.configure(command = lambda: None)
+	print(f"updated active path to {p}")
+	active_path = p
+
+
+def export_global(entire_project = True):
+	if not isinstance(active_object, objects.Container):
+		return
+
+	global active_export_path
+
+	initial_file = "mvm_mapName_missionName.pop"
+	initial_dir = macro.appdata("data/exports")
+
+	if active_export_path:
+		axp_split = active_export_path.split("/")
+		to_initial_dir = "/".join(axp_split[:-1])
+		if os.path.isdir(to_initial_dir):
+			initial_dir = to_initial_dir
+		initial_file = axp_split[-1]
+
+	print(f"attempting to Export\nactive path: {initial_dir}/{initial_file}")
+
+	io = asksaveasfile(
+			initialdir = initial_dir,
+			initialfile = initial_file,
+			defaultextension = ".pop",
+			filetypes = [("MVM Population files", "*.pop")]
+	)
+
+	#for possible partial export support in the future
+	if entire_project:
+		o = active_object.get_root()
+	else:
+		o = active_object
+
+	if macro.export_to_file(o, io):
+		p = io.name
+		print(f"exporting complete\nfile: {p}")
+		active_export_path = p
+
+	if io is not None:
+		io.close()
+	pass
+
+
 app.wm_title(f"{app_info['title']} v{app_info['version']}")
 app.geometry("x".join([str(dim) for dim in app_info["window_size"]]))
 app.geometry("".join([f"+{dim}" if dim >= 0 else str(dim) for dim in app_info["window_pos"]]))
@@ -49,6 +208,55 @@ app.configure(bg = COLOR_BACKGROUND)
 print(f"{app_info['title']} AppCore loaded")
 main_frame = tk.Frame(app, bg = COLOR_BACKGROUND)
 path_frame = tk.Frame(app, bg = COLOR_BACKGROUND)
+top_bar = tk.Menu(
+		app,
+		activebackground = COLOR_TEXT_HIGHLIGHT,
+
+		#these kwargs only work on linux
+		background = COLOR_BACKGROUND_ALT,
+		foreground = COLOR_TEXT_GENERIC
+)
+
+top_bar_file = tk.Menu(
+		top_bar,
+		tearoff = 0,
+		background = COLOR_BACKGROUND_ALT,
+		foreground = COLOR_TEXT_GENERIC
+)
+
+top_bar_file.add_command(
+		label = "Open",
+		command = open_global,
+		font = ("", 12)
+)
+
+top_bar_file.add_command(
+		label = "Save",
+		command = save_global,
+		font = ("", 12)
+)
+
+top_bar_file.add_command(
+		label = "Save As",
+		command = save_as_global,
+		font = ("", 12)
+)
+
+top_bar_file.add_command(
+		label = "Export",
+		command = export_global,
+		font = ("", 12)
+)
+
+top_bar.add_cascade(
+		label = "File",
+		menu = top_bar_file,
+		font = ("", 12)
+)
+
+app.configure(
+		menu = top_bar
+)
 
 path_str = tk.StringVar()
 path_str.set("root")
@@ -78,6 +286,7 @@ main_back = tk.Button(
 main_back.grid(row = 0, column = 0)
 
 
+
 def update_top_path(v):
 	path_str.set(v.get_path())
 
@@ -95,96 +304,6 @@ def export(o: objects.Container):
 			io.close()
 
 	return result
-
-
-def save(o: objects.Container):
-	def result():
-		print("attempting to save...")
-		io = asksaveasfile(
-				parent = app,
-				initialdir = macro.appdata("data/saves"),
-				initialfile = 'blutape_save.blu',
-				defaultextension = ".blu",
-				filetypes = [("BluTape Save", "*.blu")],
-				mode = "wb",
-		)
-		if macro.save(o, io):
-			print("save completed")
-		else:
-			print("save aborted")
-
-	return result
-
-
-def load():
-	def result():
-		print("loading save file")
-		io = askopenfile(
-				parent = app,
-				initialdir = macro.appdata("data/saves"),
-				initialfile = 'blutape_save.blu',
-				defaultextension = ".blu",
-				filetypes = [("BluTape Save", "*.blu")],
-				mode = "rb"
-		)
-
-		rs = macro.load(io)
-
-		if isinstance(rs, int):
-			if rs == 1:
-				print("load aborted")
-			elif rs == 2:
-				print("load aborted, invalid file")
-				simpledialog.messagebox.showerror(
-						"Unable to validate file",
-						"For security reasons, sharing saves are disallowed.\n"
-						"This is due to a code execution exploit in the loader.\n"
-						"You can still share imports and exports.\n"
-						"This will also appear if you attempt to load a corrupted save."
-				)
-			return
-
-		if io is not None:
-			ver = getattr(rs, "schema", -1)
-			if ver != info.schema_ver:
-				if ver == -1:
-					ver = "unknown"
-				print("load aborted, version mismatch")
-				simpledialog.messagebox.showerror(
-						"Unable to load file",
-						"File version mismatch\n"
-						f"Blutape:\t{info.schema_ver}\n"
-						f"File:\t{ver}"
-				)
-				io.close()
-				return
-			add_main_text_frames(rs)
-			update_top_path(rs)
-			main_back.configure(command = lambda: None)
-			io.close()
-
-	return result
-
-
-main_export = tk.Button(
-		main_frame,
-		width = 23,
-		text = "export"
-)
-main_save = tk.Button(
-		main_frame,
-		width = 23,
-		text = "save"
-)
-
-main_load = tk.Button(
-		main_frame,
-		width = 23,
-		text = "load"
-)
-main_export.grid(row = 1, column = 0)
-main_save.grid(row = 2, column = 0)
-main_load.grid(row = 3, column = 0)
 
 
 def move_up(o: objects.Container, n):
@@ -378,6 +497,7 @@ def txt_update_wrapper(v, b):
 
 def sel_update_wrapper(v, b, tv1):
 	tv = tv1
+
 	def result(*args):
 		v.value(tv.get())
 		add_main_text_frames(v.parent)
@@ -386,9 +506,9 @@ def sel_update_wrapper(v, b, tv1):
 
 
 def add_main_text_frames(o: objects.Container):
-	main_export.configure(command = export(o.get_root()))
-	main_save.configure(command = save(o))
-	main_load.configure(command = load())
+	global active_object
+	if o != active_object:
+		active_object = o
 	for x in main_text_frames["button"].values():
 		for y in x.grid_slaves():
 			y.grid_forget()
@@ -442,8 +562,6 @@ def add_main_text_frames(o: objects.Container):
 					b.current(newindex = [n for n, x in enumerate(s_con) if x == v.value()][0])
 
 				b['foreground'] = COLOR_TEXT_STR
-
-
 
 				b.option_add("*TCombobox*Listbox.background", COLOR_BACKGROUND_ALT)
 				b.option_add("*TCombobox*Listbox.foreground", COLOR_TEXT_STR)
