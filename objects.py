@@ -53,6 +53,8 @@ class Pair:
 		return all([flag in self.flags for flag in flags])
 
 	def export(self):
+		if self.is_temp:
+			return []
 		rk = self.key()
 		rv = self.value()
 		if self.__key_quote:
@@ -145,6 +147,6 @@ class Container:
 		result = list()
 		for content in self.content:
 			result += content.export()
-		if not self.__is_root:
+		if not self.__is_root and not self.is_temp:
 			result = [self.__key, "{"] + result + ["}"]
 		return result
