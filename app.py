@@ -56,7 +56,7 @@ l_path = tk.Label(
 		textvariable = path_str,
 		bg = COLOR_BACKGROUND,
 		fg = COLOR_TEXT_HIGHLIGHT,
-		font = ('Corrier new', 20)
+		font = ('Courier New bold', 20)
 )
 
 main_text_frames = {
