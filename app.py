@@ -557,7 +557,8 @@ def add_main_text_frames(o: objects.Container):
 				)
 
 				if v.value() not in s_con:
-					v.value(s_con[s_def])
+					if not v.is_temp:
+						v.value(s_con[s_def])
 					b.current(newindex = s_def)
 				else:
 					b.current(newindex = [n for n, x in enumerate(s_con) if x == v.value()][0])
