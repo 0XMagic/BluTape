@@ -6,6 +6,8 @@ import secrets
 hide_appdata_nag = False
 
 def create_project():
+
+
 	result = Container("root")
 	save_dir_validate()
 	return result
@@ -28,7 +30,8 @@ def save_dir_validate():
 	folders = [
 			"data/saves",
 			"data/templates",
-			"data/exports"
+			"data/exports",
+			"data/projects"
 	]
 
 	for f in folders:
@@ -138,7 +141,6 @@ def apply_type_changes(o: Container):
 
 
 def swap(o: Container, a, b):
-	print(a, b)
 	if b < 0 or a < 0 or a >= len(o.content) or b >= len(o.content):
 		return False
 

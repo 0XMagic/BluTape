@@ -1,7 +1,9 @@
-from macro import *
-import app
+import objects
+import macro
+import application
 
 if __name__ == "__main__":
-	project = create_project()
-	app.add_main_text_frames(project)
-	app.launch()
+	macro.save_dir_validate()
+	blank_project = objects.Project()
+	application.set_active_project(blank_project)
+	application.launch()

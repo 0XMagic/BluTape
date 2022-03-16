@@ -1,4 +1,11 @@
 {
+  "#base": {
+    "content": [
+      "robot_standard.pop",
+      "robot_giant.pop",
+      "robot_gatebot.pop"
+    ]
+  },
   "CanBotsAttackWhileInSpawnRoom": {
     "content": [
       "yes",

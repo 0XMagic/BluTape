@@ -1,3 +1,10 @@
+"""
+THIS FILE IS NO LONGER IN USE.
+IT WILL BE DELETED WHEN I'M DONE COPYING FROM IT.
+"""
+
+
+
 import tkinter as tk
 import os
 import info, objects, macro
@@ -12,6 +19,7 @@ style = ttk.Style()
 active_object = None
 active_path = ""
 active_export_path = ""
+proj = None
 
 style.theme_create(
 		'combostyle',
@@ -327,7 +335,6 @@ def add_menu(o: objects.Container):
 	avail.sort()
 	if avail:
 		c = macro.add_item(o, avail[0])
-
 		c.is_temp = True
 		add_main_text_frames(o)
 		main_text_popup(c)

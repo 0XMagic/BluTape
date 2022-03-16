@@ -2,8 +2,21 @@ title = "BluTape"
 full_title = "BluTape Mission Generator"
 author = "ZeroX"
 repo = "https://github.com/0XMagic/BluTape"
-version = 6.0
+version = 6.1
 schema_ver = 4
 window_size = (1280, 720)
 window_pos = (200, 200)
 path = "/".join(__file__.split("\\")[:-1]) + "/"
+text_config = {
+		"up":                "↑",
+		"down":              "↓",
+		"left":              "←",
+		"right":             "→",
+		"delete":            "⛔ ",  #needs a space to center it
+		"modify window":     "Modify Element",
+		"modify window new": "New Element",
+		"modify confirm":    "Confirm",
+		"add element":       "Add Item",
+		"edit":              "edit",
+		"root splitter":     "/"
+}
