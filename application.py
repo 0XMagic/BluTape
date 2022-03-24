@@ -323,7 +323,6 @@ class Element:
 
 	def func_text(self, *args):
 		self.object.value(self.var_text.get())
-		print(self.object.value())
 
 	def func_delete(self):
 		if self.object is not None:
