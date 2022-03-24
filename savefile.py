@@ -5,43 +5,61 @@ import json
 import info
 from tkinter.filedialog import asksaveasfile, askopenfile
 import macro
+
 fullpath = os.getenv("APPDATA")
 if fullpath is None: fullpath = info.path[:-1]
 fullpath = fullpath.replace("\\", "/") + "/Blutape/data/"
 
 
 def save_project(parent: tk.Tk, project: objects.Project, save_as = False):
-	#save as if path does not exist, or if save as is specified
-	if not (project.path and os.path.isfile(project.path)) or save_as:
-		if not project.path:
-			project.path = "New Blutape Project"
-		elif project.path.endswith(".blu"):
-			project.path = project.path[:-4]
-		if project.path:
-			project.path = fullpath + "projects/" + project.path
-		project.path += ".blu"
-		path_split = project.path.split("/")
-		initial_dir = "/".join(path_split[:-1])
-		initial_file = path_split[-1]
+	print("Attempting save...")
+	backup = (project.path, project.project_name)
+
+	if not os.path.isdir(project.path):
+		project.path = fullpath + "projects/"
+		if not save_as:
+			print("Save directory not found, switching type to SaveAs")
+		save_as = True
+
+	elif not project.path.endswith("/"):
+		project.path += "/"
+
+	save_file = project.path + project.project_name + ".blu"
+	if not os.path.isfile(save_file):
+		project.project_name = "new_blutape_project"
+		if not save_as:
+			print("Save file name not found, switching type to SaveAs")
+		save_as = True
+
+	if save_as:
 		io = asksaveasfile(
 				parent = parent,
-				initialdir = initial_dir,
-				initialfile = initial_file,
+				initialdir = project.path,
+				initialfile = project.project_name,
 				defaultextension = ".blu",
 				filetypes = [("BluTape Save", "*.blu")],
 				mode = "w",
 		)
 	else:
-		io = open(project.path, "w")
+		io = open(save_file, "w")
 
 	if io is None:
-		print("save aborted")
+		project.path = backup[0]
+		project.project_name = backup[1]
+		print("Save aborted")
 		return
-	json.dump(project.export_json(), io, indent=5)
+
+	new_path = io.name.split("/")
+	project.project_name = new_path[-1][:-4]
+	project.path = "/".join(new_path[:-1])
+	json.dump(project.export_json(), io, indent = 5)
+	print("Saved project", project.project_name, "to", project.path)
 	io.close()
+	return
 
 
 def load_project(parent):
+	print("Attempting load...")
 	io = askopenfile(
 			parent = parent,
 			initialdir = fullpath + "projects/",
@@ -50,40 +68,38 @@ def load_project(parent):
 			mode = "r"
 	)
 	if io is None:
-		print("load aborted")
+		print("Load aborted")
 		return
 	result = objects.Project()
 	result.import_json(json.load(io), io.name)
+	ns = io.name.split("/")
+	print("Loaded project", ns[-1], "from", "/".join(ns[:-1]))
 	io.close()
 	return result
 
 
 def export_project(parent, project: objects.Project):
-	if not project.pop_directory:
-		project.pop_directory = "New Blutape Project"
-	elif project.pop_directory.endswith(".pop"):
-		project.pop_directory = project.pop_directory.path[:-4]
-	if project.pop_directory:
-		project.path = fullpath + "exports/" + project.pop_directory
-	project.path += ".pop"
-	path_split = project.path.split("/")
-	initial_dir = "/".join(path_split[:-1])
-	initial_file = project.map_name + "_" + project.mission_name + ".pop"
-
+	print("Attempting export...")
+	watermark = "\n".join(["//" + x for x in [f"Made with {info.full_title}", info.repo]]) + "\n"
+	project.repair_strings()
+	if not os.path.isdir(project.pop_directory):
+		project.pop_directory = fullpath + "exports/"
+	i_file = project.map_name + "_" + project.mission_name + ".pop"
 	io = asksaveasfile(
-				parent = parent,
-				initialdir = initial_dir,
-				initialfile = initial_file,
-				defaultextension = ".pop",
-				filetypes = [("MvM Mission", "*.pop")],
-				mode = "w",
-		)
+			parent = parent,
+			initialdir = project.pop_directory,
+			initialfile = i_file,
+			defaultextension = ".pop",
+			filetypes = [("MvM Mission", "*.pop")],
+			mode = "w",
+	)
+
 	if io is None:
 		print("export aborted")
 		return
-	io.write(
-			macro.list_to_indented_string(
-					project.export()
-			)
-	)
+
+	project.pop_directory = "/".join(io.name.split("/")[:-1])
+	print("Exported mission", i_file, "to", project.pop_directory)
+	io.write(watermark + macro.list_to_indented_string(project.export()))
 	io.close()
+	return

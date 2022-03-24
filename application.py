@@ -457,7 +457,7 @@ top_bar_file.add_command(
 
 top_bar_file.add_command(
 		label = "Save As",
-		command = func_save,
+		command = func_save_as,
 		font = ("", 12)
 )
 

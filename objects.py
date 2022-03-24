@@ -175,7 +175,7 @@ class Container:
 						"key":       self.key(),
 						"name":      self.name,
 						"name_mode": self.name_mode,
-						"schema":   self.schema,
+						"schema":    self.schema,
 						"content":   [
 								c.export_json() for c in self.content if not c.is_temp
 						]
@@ -209,15 +209,17 @@ class Project:
 		self.container = Container("root")
 		#blank str -> directory not set, ask user for it when needed
 		self.path = ""  #save path of the project, set this on file load/saveAs
+		self.project_name = "new_blutape_project"
 		self.pop_directory = ""  #where to export the popfile
-		self.mission_name = "New_Blutape_Mission"
+		self.mission_name = "new_blutape_mission"
 		self.map_name = "mvm_coaltown"
 
-	def export_json(self):
+	def repair_strings(self):
 		if not self.map_name.startswith("mvm_"):
 			self.map_name = "mvm_" + self.map_name.replace(" ", "_")
 		self.mission_name = self.mission_name.replace(" ", "_")
-		#todo: implement some system that replaces the N:\Users\name with a '*'
+
+	def export_json(self):
 		return {
 				"map":       self.map_name,
 				"mission":   self.mission_name,
@@ -226,14 +228,16 @@ class Project:
 		}
 
 	def import_json(self, d, name):
-		self.path = name
-
-		#convert json type to true dict
+		ns = name.split("/")
+		self.path = "/".join(ns[:-1])
+		self.project_name = ns[-1]
+		if self.project_name.endswith(".blu"):
+			self.project_name = self.project_name[:-4]
 		if not isinstance(d, dict):
 			d = dict(d)
 
-		self.map_name = d.get("map","mvm_coaltown")
-		self.mission_name = d.get("mission","new_blutape_mission")
+		self.map_name = d.get("map", "mvm_coaltown")
+		self.mission_name = d.get("mission", "new_blutape_mission")
 		self.pop_directory = d.get("export_to", "")
 		#the first layer is already created and should be skipped to avoid issues
 		self.container.get_root().import_json(d["project"]["Container"])
