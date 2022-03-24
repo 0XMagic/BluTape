@@ -1,6 +1,5 @@
 import json
 import info
-import os
 
 with open("datafiles/json/keywords.json") as fl:
 	data = json.load(fl)
@@ -200,7 +199,7 @@ class Container:
 				c.import_json(x["Container"])
 
 			if "Pair" in x:
-				self.add_item(x["Pair"]["key"],x["Pair"]["value"])
+				self.add_item(x["Pair"]["key"], x["Pair"]["value"])
 
 		pass
 
