@@ -232,9 +232,9 @@ class Project:
 		if not isinstance(d, dict):
 			d = dict(d)
 
-		self.map_name = d["map"]
-		self.mission_name = d["mission"]
-		self.pop_directory = d["export_to"]
+		self.map_name = d.get("map","mvm_coaltown")
+		self.mission_name = d.get("mission","new_blutape_mission")
+		self.pop_directory = d.get("export_to", "")
 		#the first layer is already created and should be skipped to avoid issues
 		self.container.get_root().import_json(d["project"]["Container"])
 
