@@ -1878,24 +1878,6 @@
 			"quotes"
 		]
 	},
-	"faster reload rate": {
-		"valid_in": [
-			"ItemAttributes",
-			"CharacterAttributes"
-		],
-		"types": [
-			"var"
-		]
-	},
-	"fire rate bonus": {
-		"valid_in": [
-			"ItemAttributes",
-			"CharacterAttributes"
-		],
-		"types": [
-			"var"
-		]
-	},
 	"RandomSpawn": {
 		"valid_in": [
 			"WaveSpawn"
@@ -1903,15 +1885,6 @@
 		"types": [
 			"var",
 			"int"
-		]
-	},
-	"damage bonus": {
-		"valid_in": [
-			"ItemAttributes",
-			"CharacterAttributes"
-		],
-		"types": [
-			"var"
 		]
 	},
 	"Tag": {
@@ -2085,15 +2058,6 @@
 			"quotes"
 		]
 	},
-	"uber duration bonus": {
-		"valid_in": [
-			"ItemAttributes",
-			"CharacterAttributes"
-		],
-		"types": [
-			"var"
-		]
-	},
 	"CharacterAttributes": {
 		"valid_in": [
 			"TFBot",
@@ -2262,24 +2226,6 @@
 		],
 		"types": []
 	},
-	"move speed bonus": {
-		"valid_in": [
-			"ItemAttributes",
-			"CharacterAttributes"
-		],
-		"types": [
-			"var"
-		]
-	},
-	"Projectile speed increased": {
-		"valid_in": [
-			"ItemAttributes",
-			"CharacterAttributes"
-		],
-		"types": [
-			"var"
-		]
-	},
 	"BehaviorModifiers": {
 		"valid_in": [
 			"TFBot",
@@ -2314,24 +2260,6 @@
 		"types": [
 			"var",
 			"int"
-		]
-	},
-	"increase buff duration": {
-		"valid_in": [
-			"ItemAttributes",
-			"CharacterAttributes"
-		],
-		"types": [
-			"var"
-		]
-	},
-	"fire rate penalty": {
-		"valid_in": [
-			"ItemAttributes",
-			"CharacterAttributes"
-		],
-		"types": [
-			"var"
 		]
 	},
 	"ClassIcon": {
@@ -2497,24 +2425,6 @@
 			"T_TFBot_Engineer_Sentry_Battle_TeleIn",
 			"T_TFBot_Engineer_Sentry_Tele_Battle",
 			"T_TFBot_Engineer_Sentry_Battle"
-		],
-		"types": [
-			"var"
-		]
-	},
-	"ubercharge rate bonus": {
-		"valid_in": [
-			"ItemAttributes",
-			"CharacterAttributes"
-		],
-		"types": [
-			"var"
-		]
-	},
-	"heal rate bonus": {
-		"valid_in": [
-			"ItemAttributes",
-			"CharacterAttributes"
 		],
 		"types": [
 			"var"
@@ -2713,15 +2623,6 @@
 			"int"
 		]
 	},
-	"turn to gold": {
-		"valid_in": [
-			"ItemAttributes",
-			"CharacterAttributes"
-		],
-		"types": [
-			"var"
-		]
-	},
 	"Sound": {
 		"valid_in": [
 			"Wave"
@@ -2900,42 +2801,6 @@
 			"int",
 			"float",
 			"quotes"
-		]
-	},
-	"is australium item": {
-		"valid_in": [
-			"ItemAttributes",
-			"CharacterAttributes"
-		],
-		"types": [
-			"var"
-		]
-	},
-	"item style override": {
-		"valid_in": [
-			"ItemAttributes",
-			"CharacterAttributes"
-		],
-		"types": [
-			"var"
-		]
-	},
-	"projectile spread angle penalty": {
-		"valid_in": [
-			"ItemAttributes",
-			"CharacterAttributes"
-		],
-		"types": [
-			"var"
-		]
-	},
-	"clip size bonus": {
-		"valid_in": [
-			"ItemAttributes",
-			"CharacterAttributes"
-		],
-		"types": [
-			"var"
 		]
 	},
 	"AutoJumpMin": {
@@ -3276,51 +3141,6 @@
 			"int"
 		]
 	},
-	"clip size upgrade atomic": {
-		"valid_in": [
-			"ItemAttributes",
-			"CharacterAttributes"
-		],
-		"types": [
-			"var"
-		]
-	},
-	"Projectile speed decreased": {
-		"valid_in": [
-			"ItemAttributes",
-			"CharacterAttributes"
-		],
-		"types": [
-			"var"
-		]
-	},
-	"cancel falling damage": {
-		"valid_in": [
-			"ItemAttributes",
-			"CharacterAttributes"
-		],
-		"types": [
-			"var"
-		]
-	},
-	"increased jump height": {
-		"valid_in": [
-			"ItemAttributes",
-			"CharacterAttributes"
-		],
-		"types": [
-			"var"
-		]
-	},
-	"dmg taken increased": {
-		"valid_in": [
-			"ItemAttributes",
-			"CharacterAttributes"
-		],
-		"types": [
-			"var"
-		]
-	},
 	"FirstSpawnWarningSound": {
 		"valid_in": [
 			"WaveSpawn"
@@ -3328,42 +3148,6 @@
 		"types": [
 			"var",
 			"quotes"
-		]
-	},
-	"clip size bonus upgrade": {
-		"valid_in": [
-			"ItemAttributes",
-			"CharacterAttributes"
-		],
-		"types": [
-			"var"
-		]
-	},
-	"use large smoke explosion": {
-		"valid_in": [
-			"ItemAttributes",
-			"CharacterAttributes"
-		],
-		"types": [
-			"var"
-		]
-	},
-	"damage force reduction": {
-		"valid_in": [
-			"ItemAttributes",
-			"CharacterAttributes"
-		],
-		"types": [
-			"var"
-		]
-	},
-	"airblast vulnerability multiplier": {
-		"valid_in": [
-			"ItemAttributes",
-			"CharacterAttributes"
-		],
-		"types": [
-			"var"
 		]
 	},
 	"DoneWarningSound": {
@@ -3390,15 +3174,6 @@
 			"int"
 		]
 	},
-	"mult airblast refire time": {
-		"valid_in": [
-			"ItemAttributes",
-			"CharacterAttributes"
-		],
-		"types": [
-			"var"
-		]
-	},
 	"Templates": {
 		"valid_in": [
 			"WaveSchedule"
@@ -3411,83 +3186,11 @@
 		],
 		"types": []
 	},
-	"attack projectiles": {
-		"valid_in": [
-			"ItemAttributes",
-			"CharacterAttributes"
-		],
-		"types": [
-			"var"
-		]
-	},
 	"T_TFBot_Sniper_Jarate": {
 		"valid_in": [
 			"Templates"
 		],
 		"types": []
-	},
-	"effect bar recharge rate increased": {
-		"valid_in": [
-			"ItemAttributes",
-			"CharacterAttributes"
-		],
-		"types": [
-			"var"
-		]
-	},
-	"Reload time decreased": {
-		"valid_in": [
-			"ItemAttributes",
-			"CharacterAttributes"
-		],
-		"types": [
-			"var"
-		]
-	},
-	"Attack not cancel charge": {
-		"valid_in": [
-			"ItemAttributes",
-			"CharacterAttributes"
-		],
-		"types": [
-			"var"
-		]
-	},
-	"critboost on kill": {
-		"valid_in": [
-			"ItemAttributes",
-			"CharacterAttributes"
-		],
-		"types": [
-			"var"
-		]
-	},
-	"charge time increased": {
-		"valid_in": [
-			"ItemAttributes",
-			"CharacterAttributes"
-		],
-		"types": [
-			"var"
-		]
-	},
-	"charge recharge rate increased": {
-		"valid_in": [
-			"ItemAttributes",
-			"CharacterAttributes"
-		],
-		"types": [
-			"var"
-		]
-	},
-	"bot custom jump particle": {
-		"valid_in": [
-			"ItemAttributes",
-			"CharacterAttributes"
-		],
-		"types": [
-			"var"
-		]
 	},
 	"T_TFGateBot_Scout_Melee": {
 		"valid_in": [
@@ -3666,15 +3369,6 @@
 		],
 		"types": []
 	},
-	"damage penalty": {
-		"valid_in": [
-			"ItemAttributes",
-			"CharacterAttributes"
-		],
-		"types": [
-			"var"
-		]
-	},
 	"RevertGateBotsBehavior": {
 		"valid_in": [
 			"EventChangeAttributes"
@@ -3699,15 +3393,6 @@
 		],
 		"types": []
 	},
-	"scattergun knockback mult": {
-		"valid_in": [
-			"ItemAttributes",
-			"CharacterAttributes"
-		],
-		"types": [
-			"var"
-		]
-	},
 	"T_TFGateBot_Scout_FAN_Crit": {
 		"valid_in": [
 			"Templates"
@@ -3719,15 +3404,6 @@
 			"Templates"
 		],
 		"types": []
-	},
-	"head scale": {
-		"valid_in": [
-			"ItemAttributes",
-			"CharacterAttributes"
-		],
-		"types": [
-			"var"
-		]
 	},
 	"T_TFGateBot_Scout_Sandman_FastCharge": {
 		"valid_in": [
@@ -3765,47 +3441,11 @@
 		],
 		"types": []
 	},
-	"damage causes airblast": {
-		"valid_in": [
-			"ItemAttributes",
-			"CharacterAttributes"
-		],
-		"types": [
-			"var"
-		]
-	},
-	"Blast radius decreased": {
-		"valid_in": [
-			"ItemAttributes",
-			"CharacterAttributes"
-		],
-		"types": [
-			"var"
-		]
-	},
 	"T_TFGateBot_Soldier_RocketShotgun_Expert": {
 		"valid_in": [
 			"Templates"
 		],
 		"types": []
-	},
-	"blast radius increased": {
-		"valid_in": [
-			"ItemAttributes",
-			"CharacterAttributes"
-		],
-		"types": [
-			"var"
-		]
-	},
-	"heal on hit for rapidfire": {
-		"valid_in": [
-			"ItemAttributes",
-			"CharacterAttributes"
-		],
-		"types": [
-			"var"
-		]
 	},
 	"T_TFGateBot_Soldier_Extended_Battalion_Hard": {
 		"valid_in": [
@@ -3879,15 +3519,6 @@
 		],
 		"types": []
 	},
-	"clip size penalty": {
-		"valid_in": [
-			"ItemAttributes",
-			"CharacterAttributes"
-		],
-		"types": [
-			"var"
-		]
-	},
 	"T_TFGateBot_Demo_Burst_Normal_Crit": {
 		"valid_in": [
 			"Templates"
@@ -3930,15 +3561,6 @@
 		],
 		"types": []
 	},
-	"bullets per shot bonus": {
-		"valid_in": [
-			"ItemAttributes",
-			"CharacterAttributes"
-		],
-		"types": [
-			"var"
-		]
-	},
 	"T_TFGateBot_Heavy_IronFist": {
 		"valid_in": [
 			"Templates"
@@ -3962,42 +3584,6 @@
 			"Templates"
 		],
 		"types": []
-	},
-	"health regen": {
-		"valid_in": [
-			"ItemAttributes",
-			"CharacterAttributes"
-		],
-		"types": [
-			"var"
-		]
-	},
-	"override footstep sound set": {
-		"valid_in": [
-			"ItemAttributes",
-			"CharacterAttributes"
-		],
-		"types": [
-			"var"
-		]
-	},
-	"airblast vertical vulnerability multiplier": {
-		"valid_in": [
-			"ItemAttributes",
-			"CharacterAttributes"
-		],
-		"types": [
-			"var"
-		]
-	},
-	"rage giving scale": {
-		"valid_in": [
-			"ItemAttributes",
-			"CharacterAttributes"
-		],
-		"types": [
-			"var"
-		]
 	},
 	"T_TFGateBot_Giant_Soldier_SlowCritBarrage": {
 		"valid_in": [
@@ -4040,15 +3626,6 @@
 			"Templates"
 		],
 		"types": []
-	},
-	"heal on kill": {
-		"valid_in": [
-			"ItemAttributes",
-			"CharacterAttributes"
-		],
-		"types": [
-			"var"
-		]
 	},
 	"T_TFGateBot_Chief_Heavyweapons_HealOnKill": {
 		"valid_in": [
@@ -4109,15 +3686,6 @@
 			"Templates"
 		],
 		"types": []
-	},
-	"weapon spread bonus": {
-		"valid_in": [
-			"ItemAttributes",
-			"CharacterAttributes"
-		],
-		"types": [
-			"var"
-		]
 	},
 	"T_TFGateBot_Giant_Soldier": {
 		"valid_in": [
@@ -4257,15 +3825,6 @@
 		],
 		"types": []
 	},
-	"max health additive penalty": {
-		"valid_in": [
-			"ItemAttributes",
-			"CharacterAttributes"
-		],
-		"types": [
-			"var"
-		]
-	},
 	"T_TFBot_Giant_DemoMan_PrinceTavish": {
 		"valid_in": [
 			"Templates"
@@ -4286,19 +3845,12 @@
 	},
 	"set item tint RGB": {
 		"valid_in": [
-			"Itemattributes"
+			"CharacterAttributes",
+			"ItemAttributes"
 		],
 		"types": [
-			"var"
-		]
-	},
-	"move speed penalty": {
-		"valid_in": [
-			"ItemAttributes",
-			"CharacterAttributes"
-		],
-		"types": [
-			"var"
+			"float",
+			"int"
 		]
 	},
 	"T_TFBot_Giant_Scout_Bonk": {
@@ -4330,15 +3882,6 @@
 			"Templates"
 		],
 		"types": []
-	},
-	"airblast pushback scale": {
-		"valid_in": [
-			"ItemAttributes",
-			"CharacterAttributes"
-		],
-		"types": [
-			"var"
-		]
 	},
 	"T_TFBot_Giant_Boxing_Heavy": {
 		"valid_in": [
@@ -4406,15 +3949,6 @@
 		],
 		"types": []
 	},
-	"cannot be backstabbed": {
-		"valid_in": [
-			"ItemAttributes",
-			"CharacterAttributes"
-		],
-		"types": [
-			"var"
-		]
-	},
 	"T_TFBot_Soldier_BurstFire": {
 		"valid_in": [
 			"Templates"
@@ -4480,15 +4014,6 @@
 			"Templates"
 		],
 		"types": []
-	},
-	"grenade launcher mortar mode": {
-		"valid_in": [
-			"ItemAttributes",
-			"CharacterAttributes"
-		],
-		"types": [
-			"var"
-		]
 	},
 	"T_TFBot_Giant_Major_League": {
 		"valid_in": [
@@ -4646,71 +4171,17 @@
 		],
 		"types": []
 	},
-	"medigun bullet resist passive": {
-		"valid_in": [
-			"ItemAttributes",
-			"CharacterAttributes"
-		],
-		"types": [
-			"var"
-		]
-	},
-	"medigun bullet resist deployed": {
-		"valid_in": [
-			"ItemAttributes",
-			"CharacterAttributes"
-		],
-		"types": [
-			"var"
-		]
-	},
 	"T_TFBot_Medic_Vaccinator_Blast": {
 		"valid_in": [
 			"Templates"
 		],
 		"types": []
 	},
-	"medigun blast resist passive": {
-		"valid_in": [
-			"ItemAttributes",
-			"CharacterAttributes"
-		],
-		"types": [
-			"var"
-		]
-	},
-	"medigun blast resist deployed": {
-		"valid_in": [
-			"ItemAttributes",
-			"CharacterAttributes"
-		],
-		"types": [
-			"var"
-		]
-	},
 	"T_TFBot_Medic_Vaccinator_Fire": {
 		"valid_in": [
 			"Templates"
 		],
 		"types": []
-	},
-	"medigun fire resist passive": {
-		"valid_in": [
-			"ItemAttributes",
-			"CharacterAttributes"
-		],
-		"types": [
-			"var"
-		]
-	},
-	"medigun fire resist deployed": {
-		"valid_in": [
-			"ItemAttributes",
-			"CharacterAttributes"
-		],
-		"types": [
-			"var"
-		]
 	},
 	"T_TFBot_Heavyweapons_Fist": {
 		"valid_in": [
@@ -4855,5 +4326,8315 @@
 			"Templates"
 		],
 		"types": []
+	},
+	"damage penalty": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"damage bonus": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"clip size penalty": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"clip size bonus": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"fire rate penalty": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"fire rate bonus": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"heal rate penalty": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"heal rate bonus": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"ubercharge rate penalty": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"ubercharge rate bonus": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"overheal bonus": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"overheal decay penalty": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"overheal decay bonus": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"overheal decay disabled": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"crit mod disabled": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"heal on hit for rapidfire": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"add uber charge on hit": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"medigun charge is crit boost": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"tmp dmgbuff on hit": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"crit vs burning players": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"dmg penalty vs nonburning": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"no crit vs nonburning": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"mod flamethrower push": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"mod flamethrower back crit": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"hidden secondary max ammo penalty": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"max health additive bonus": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"alt-fire disabled": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"crit mod disabled hidden": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"fists have radial buff": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"critboost on kill": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"slow enemy on hit": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"set cloak is feign death": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"mult cloak meter consume rate": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"mult cloak meter regen rate": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"spread penalty": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"hidden primary max ammo bonus": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"mod bat launches balls": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"dmg penalty vs nonstunned": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"zoom speed mod disabled": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"sniper charge per sec": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"sniper no headshots": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"scattergun no reload single": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"scattergun has knockback": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"bullets per shot bonus": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"sniper zoom penalty": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"sniper no charge": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"set cloak is movement based": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"no double jump": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"absorb damage while cloaked": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"revolver use hit locations": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"backstab shield": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"fire retardant": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"move speed penalty": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"obsolete ammo penalty": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"jarate description": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"health regen": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"self dmg push force increased": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"self dmg push force decreased": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"dmg taken from fire reduced": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"dmg taken from fire increased": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"dmg taken from crit reduced": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"dmg taken from crit increased": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"dmg taken from blast reduced": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"dmg taken from blast increased": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"dmg taken from bullets reduced": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"dmg taken from bullets increased": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"increase player capture value": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"health from healers reduced": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"health from healers increased": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"weapon burn dmg increased": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"weapon burn dmg reduced": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"weapon burn time increased": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"weapon burn time reduced": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"aiming movespeed increased": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"maxammo primary increased": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"maxammo primary reduced": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"maxammo secondary increased": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"maxammo secondary reduced": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"maxammo metal increased": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"maxammo metal reduced": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"cloak consume rate increased": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"cloak consume rate decreased": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"cloak regen rate increased": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"cloak regen rate decreased": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"minigun spinup time increased": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"minigun spinup time decreased": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"max pipebombs increased": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"max pipebombs decreased": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"SRifle Charge rate increased": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"SRifle Charge rate decreased": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"Construction rate increased": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"Construction rate decreased": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"Repair rate increased": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"Repair rate decreased": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"Reload time increased": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"Reload time decreased": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"selfdmg on hit for rapidfire": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"Blast radius increased": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"Blast radius decreased": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"Projectile range increased": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"Projectile range decreased": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"Projectile speed increased": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"Projectile speed decreased": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"overheal penalty": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"weapon spread bonus": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"move speed bonus": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"health from packs increased": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"health from packs decreased": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"heal on hit for slowfire": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"selfdmg on hit for slowfire": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"ammo regen": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"metal regen": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"mod mini-crit airborne": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"mod shovel damage boost": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"mod soldier buff type": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"dmg falloff increased": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"dmg falloff decreased": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"sticky detonate mode": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"sticky arm time penalty": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"stickies detonate stickies": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"mod demo buff type": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"speed boost when active": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"mod wrench builds minisentry": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"max health additive penalty": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"sticky arm time bonus": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"sticky air burst mode": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"provide on active": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"health drain": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"medic regen bonus": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"medic regen penalty": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"community description": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"soldier model index": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"attach particle effect": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"rocket jump damage reduction": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"mod sentry killed revenge": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"dmg bonus vs buildings": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"dmg penalty vs players": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"lunchbox adds maxhealth bonus": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"hidden maxhealth non buffed": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"selfmade description": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"custom employee number": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"lunchbox adds minicrits": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"taunt is highfive": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"damage applies to sappers": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"Wrench index": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"building cost reduction": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"bleeding duration": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"turn to gold": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"DEPRECATED socketed item definition id DEPRECATED": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"custom texture lo": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"cannot trade": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"disguise on backstab": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"cannot disguise": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"silent killer": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"disguise speed penalty": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"add cloak on kill": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"SET BONUS: cloak blink time penalty": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"SET BONUS: quiet unstealth": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"flame size penalty": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"flame size bonus": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"flame life penalty": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"flame life bonus": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"charged airblast": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"add cloak on hit": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"disguise damage reduction": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"disguise no burn": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"SET BONUS: dmg from sentry reduced": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"airblast cost increased": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"airblast cost decreased": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"purchased": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"flame ammopersec increased": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"flame ammopersec decreased": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"jarate duration": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"SET BONUS: no death from headshots": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"deploy time increased": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"deploy time decreased": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"minicrits become crits": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"heal on kill": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"no self blast dmg": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"slow enemy on hit major": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"aiming movespeed decreased": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"duel loser account id": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"event date": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"gifter account id": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"set supply crate series": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"preserve ubercharge": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"elevate quality": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"active health regen": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"active health degen": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"referenced item id low": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"referenced item id high": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"referenced item def UPDATED": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"always tradable": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"noise maker": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"halloween item": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"collection bits DEPRECATED": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"switch from wep deploy time decreased": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"enables aoe heal": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"gesture speed increase": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"charge time increased": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"drop health pack on kill": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"hit self on miss": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"dmg from ranged reduced": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"dmg from melee increased": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"blast dmg to self increased": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"Set DamageType Ignite": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"minicrit vs burning player": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"tradable after date": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"force level display": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"kill eater": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"apply z velocity on damage": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"apply look velocity on damage": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"sanguisuge": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"mark for death": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"decapitate type": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"restore health on kill": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"mult decloak rate": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"mult sniper charge after bodyshot": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"mult sniper charge after miss": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"dmg bonus while half dead": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"dmg penalty while half alive": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"honorbound": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"custom texture hi": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"makers mark id": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"unique craft index": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"mod medic killed revenge": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"medigun charge is megaheal": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"mod medic killed minicrit boost": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"mod medic healed damage bonus": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"mod medic healed deploy time penalty": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"mod shovel speed boost": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"mod weapon blocks healing": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"mult sniper charge after headshot": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"minigun no spin sounds": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"ubercharge rate bonus for healer": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"reload time decreased while healed": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"reload time increased hidden": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"mod medic killed marked for death": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"mod rage on hit penalty": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"mod rage on hit bonus": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"mod rage damage boost": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"mult charge turn control": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"no charge impact range": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"charge impact damage increased": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"charge recharge rate increased": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"air dash count": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"speed buff ally": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"damage force reduction": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"mult cloak rate": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"airblast pushback scale": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"mult airblast refire time": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"airblast vertical pushback scale": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"ammo becomes health": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"boots falling stomp": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"deflection size multiplier": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"set item tint RGB 2": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"saxxy award category": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"melee bounds multiplier": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"melee range multiplier": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"mod mini-crit airborne deploy": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"projectile penetration": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"mod crit while airborne": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"mult sniper charge penalty DISPLAY ONLY": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"mod see enemy health": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"powerup max charges": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"powerup charges": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"powerup duration": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"critboost": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"ubercharge": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"cancel falling damage": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"bidirectional teleport": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"multiple sentries": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"effect bar recharge rate increased": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"maxammo grenades1 increased": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"override projectile type": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"energy weapon no ammo": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"energy weapon charged shot": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"energy weapon penetration": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"energy weapon no hurt building": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"energy weapon no deflect": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"engy building health bonus": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"engy sentry damage bonus": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"no crit boost": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"centerfire projectile": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"kill eater score type": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"kill eater score type 2": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"kill eater 2": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"has pipboy build interface": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"sapper kills collect crits": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"sniper only fire zoomed": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"mod ammo per shot": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"add onhit addammo": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"electrical airblast DISPLAY ONLY": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"mod use metal ammo type": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"expiration date": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"mod max primary clip override": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"sniper full charge damage bonus": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"sniper fires tracer": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"sniper no headshot without full charge": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"mod no reload DISPLAY ONLY": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"sniper penetrate players when charged": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"crit kill will gib": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"recall": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"unlimited quantity": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"disable weapon hiding for animations": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"applies snare effect": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"uber duration bonus": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"refill_ammo": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"store sort override DEPRECATED": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"faster reload rate": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"increase buff duration": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"robo sapper": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"build rate bonus": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"taunt is press and hold": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"attack projectiles": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"accuracy scales damage": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"currency bonus": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"increased jump height": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"building instant upgrade": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"disable fancy class select anim": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"airblast vulnerability multiplier": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"override footstep sound set": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"spawn with physics toy": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"fish damage override": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"SET BONUS: special dsp": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"bombinomicon effect on death": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"clip size bonus upgrade": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"hide enemy health": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"subtract victim medigun charge on hit": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"subtract victim cloak on hit": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"reveal cloaked victim on hit": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"reveal disguised victim on hit": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"jarate backstabber": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"engy sentry fire rate increased": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"engy sentry radius increased": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"engy dispenser radius increased": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"mod bat launches ornaments": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"freeze backstab victim": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"fire rate penalty HIDDEN": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"energy weapon no drain": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"ragdolls become ash": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"engy disposable sentries": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"alt fire teleport to spawn": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"cannot pick up buildings": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"stun enemies wielding same weapon": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"mod ammo per shot missed DISPLAY ONLY": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"airblast disabled": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"increase buff duration HIDDEN": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"crit forces victim to laugh": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"melts in fire": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"damage all connected": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"become fireproof on hit by fire": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"crit from behind": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"crit does no damage": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"add jingle to footsteps": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"set icicle knife mode": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"mod stun waist high airborne": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"extinguish earns revenge crits": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"burn damage earns rage": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"tickle enemies wielding same weapon": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"attach particle effect static": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"cosmetic taunt sound": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"accepted wedding ring account id 1": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"accepted wedding ring account id 2": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"tool escrow until date": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"generate rage on damage": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"aiming no flinch": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"aiming knockback resistance": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"sniper aiming movespeed decreased": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"kill eater user 1": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"kill eater user score type 1": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"kill eater user 2": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"kill eater user score type 2": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"kill eater user 3": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"kill eater user score type 3": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"strange part new counter ID": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"mvm completed challenges bitmask": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"rage on kill": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"kill eater kill type": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"shot penetrate all players": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"headshot damage increase": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"SET BONUS: mystery solving time decrease": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"damage penalty on bodyshot": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"sniper rage DISPLAY ONLY": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"fire rate bonus HIDDEN": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"explosive sniper shot": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"melee attack rate bonus": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"projectile penetration heavy": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"rage on assists": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"armor piercing": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"cannot pick up intelligence": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"SET BONUS: chance of hunger decrease": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"cannot be backstabbed": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"squad surplus claimer id DEPRECATED": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"share consumable with patient": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"airblast vertical vulnerability multiplier": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"vision opt in flags": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"crit vs disguised players": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"crit vs non burning players": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"kill forces attacker to laugh": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"damage bonus while disguised": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"projectile spread angle penalty": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"dmg taken increased": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"auto fires full clip": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"self mark for death": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"counts as assister is some kind of pet this update is going to be awesome": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"mod flaregun fires pellets with knockback": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"can overload": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"boost on damage": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"hype resets on jump": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"pyro year number": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"no primary ammo from dispensers while active": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"pyrovision only DISPLAY ONLY": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"clip size penalty HIDDEN": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"sapper damage bonus": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"sapper damage penalty": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"sapper damage leaches health": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"sapper health bonus": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"sapper health penalty": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"ring of fire while aiming": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"uses ammo while aiming": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"sapper degenerates buildings": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"sapper damage penalty hidden": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"cleaver description": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"ragdolls plasma effect": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"crit vs stunned players": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"crit vs wet players": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"override item level desc string": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"clip size upgrade atomic": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"auto fires full clip all at once": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"major move speed bonus": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"major increased jump height": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"head scale": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"pyrovision opt in DISPLAY ONLY": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"halloweenvision opt in DISPLAY ONLY": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"halloweenvision filter DISPLAY ONLY": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"player skin override": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"never craftable": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"zombiezombiezombiezombie": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"sapper voice pak": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"sapper voice pak idle wait": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"merasmus hat level display ONLY": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"strange restriction type 1": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"strange restriction value 1": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"strange restriction type 2": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"strange restriction value 2": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"strange restriction user type 1": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"strange restriction user value 1": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"strange restriction user type 2": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"strange restriction user value 2": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"strange restriction user type 3": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"strange restriction user value 3": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"engineer sentry build rate multiplier": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"engineer teleporter build rate multiplier": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"grenade launcher mortar mode": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"grenade not explode on impact": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"strange score selector": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"engineer building teleporting pickup": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"grenade damage reduction on world contact": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"engineer rage on dmg": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"mark for death on building pickup": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"medigun charge is resists": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"arrow heals buildings": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"Projectile speed increased HIDDEN": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"damage bonus HIDDEN": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"cannonball push back": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"rage giving scale": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"overheal fill rate reduced": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"canteen specialist": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"overheal expert": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"mad milk syringes": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"rocket specialist": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"SET BONUS: move speed set bonus": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"SET BONUS: health regen set bonus": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"SET BONUS: dmg taken from crit reduced set bonus": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"SET BONUS: dmg taken from fire reduced set bonus": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"healing mastery": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"kill eater 3": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"kill eater score type 3": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"strange restriction type 3": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"strange restriction value 3": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"bot custom jump particle": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"generate rage on heal": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"custom name attr": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"custom desc attr": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"medigun bullet resist passive": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"medigun blast resist passive": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"medigun fire resist passive": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"medigun bullet resist deployed": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"medigun blast resist deployed": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"medigun fire resist deployed": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"medigun crit bullet percent bar deplete": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"medigun crit blast percent bar deplete": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"medigun crit fire percent bar deplete": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"throwable fire speed": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"throwable damage": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"throwable healing": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"throwable particle trail only": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"SET BONUS: dmg taken from bullets increased": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"SET BONUS: max health additive bonus": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"scattergun knockback mult": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"particle effect vertical offset": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"particle effect use head origin": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"use large smoke explosion": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"damage causes airblast": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"increased jump height from weapon": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"damage force increase": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"healing received bonus": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"afterburn immunity": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"decoded by itemdefindex": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"hype decays over time": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"SET BONUS: custom taunt particle attr": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"airblast vulnerability multiplier hidden": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"damage force increase hidden": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"damage force increase text": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"SET BONUS: calling card on kill": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"righthand pose parameter": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"set throwable type": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"add head on hit": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"item style override": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"paint decal enum": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"show paint description": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"bot medic uber health threshold": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"bot medic uber deploy delay duration": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"single wep deploy time decreased": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"halloween reload time decreased": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"halloween fire rate bonus": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"halloween increased jump height": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"special taunt": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"revive": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"taunt attack name": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"taunt attack time": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"taunt force move forward": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"taunt mimic": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"taunt success sound": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"taunt success sound offset": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"taunt success sound loop": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"taunt success sound loop offset": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"increased air control": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"rocket launch impulse": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"minicritboost on kill": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"no metal from dispensers while active": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"projectile entity name": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"is throwable primable": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"throwable detonation time": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"throwable recharge time": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"closerange backattack minicrits": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"torso scale": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"rocketjump attackrate bonus": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"is throwable chargeable": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"back headshot": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"rj air bombardment": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"projectile particle name": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"air jump on attack": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"sniper crit no scope": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"sniper independent zoom DISPLAY ONLY": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"axtinguisher properties": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"full charge turn control": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"parachute attribute": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"taunt force weapon slot": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"mini rockets": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"rocket jump damage reduction HIDDEN": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"clipsize increase on kill": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"breadgloves properties": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"taunt turn speed": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"sniper fires tracer HIDDEN": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"fire rate bonus with reduced health": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"tag__summer2014": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"crate generation code": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"stickybomb fizzle time": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"stickybomb charge rate": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"grenade no bounce": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"class select override vcd": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"custom projectile model": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"lose demo charge on damage when charging": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"grenade no spin": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"grenade detonation damage penalty": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"taunt turn acceleration time": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"taunt move acceleration time": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"taunt move speed": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"shuffle crate item def min": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"shuffle crate item def max": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"limited quantity item": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"SET BONUS: alien isolation xeno bonus pos": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"SET BONUS: alien isolation xeno bonus neg": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"SET BONUS: alien isolation merc bonus pos": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"SET BONUS: alien isolation merc bonus neg": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"disable weapon switch": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"hand scale": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"display duck leaderboard": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"duck rating": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"duck badge level": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"tag__eotlearlysupport": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"unlimited quantity hidden": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"duckstreaks active": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"panic_attack": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"panic_attack_negative": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"auto fires full clip penalty": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"auto fires when full": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"force weapon switch": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"weapon_uses_stattrak_module": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"is_operation_pass": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"weapon_stattrak_module_scale": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"set_item_texture_wear": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"cloak_consume_on_feign_death_activate": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"stickybomb_charge_damage_increase": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"NoCloakWhenCloaked": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"ReducedCloakFromAmmo": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"elevate to unusual if applicable": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"weapon_allow_inspect": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"metal_pickup_decreased": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"lose hype on take damage": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"healing received penalty": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"crit_vs_burning_FLARES_DISPLAY_ONLY": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"speed_boost_on_kill": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"speed_boost_on_hit": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"spunup_damage_resistance": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"ubercharge overheal rate penalty": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"reduced_healing_from_medics": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"health on radius damage": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"style changes on strange level": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"cannot restore": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"hide crate series number": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"has team color paintkit": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"cosmetic_allow_inspect": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"hat only unusual effect": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"items traded in for": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"texture_wear_default": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"taunt only unusual effect": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"deactive date": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"is giger counter": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"hide_strange_prefix": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"always_transmit_so": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"allow_halloween_offering": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"cannot_transmute": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"single wep holster time increased": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"single wep deploy time increased": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"charge time decreased": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"dmg penalty vs buildings": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"charge impact damage decreased": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"non economy": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"charge meter on hit": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"minicrit_boost_when_charged": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"minicrit_boost_charge_rate": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"is_a_sword": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"ammo gives charge": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"extinguish restores health": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"extinguish reduces cooldown": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"cannot giftwrap": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"tool needs giftwrap": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"fuse bonus": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"move speed bonus shield required": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"damage bonus bullet vs sentry target": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"mod teleporter cost": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"damage blast push": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"move speed bonus resource level": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"hype on damage": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"dmg taken from fire reduced on active": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"damage bonus vs burning": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"min_viewmodel_offset": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"dmg pierces resists absorbs": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"energy buff dmg taken multiplier": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"lose revenge crits on death DISPLAY ONLY": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"patient overheal penalty": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"item_meter_charge_rate": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"mult_spread_scale_first_shot": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"unusualifier_attribute_template_name": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"tool_target_item_icon_offset": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"add_head_on_kill": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"mult_spread_scales_consecutive": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"fixed_shot_pattern": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"mod_cloak_no_regen_from_items": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"ubercharge_preserved_on_spawn_max": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"mod_air_control_blast_jump": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"spunup_push_force_immunity": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"mod_mark_attacker_for_death": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"use_model_cache_icon": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"mod_disguise_consumes_cloak": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"inspect_viewmodel_offset": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"is_passive_weapon": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"no_jump": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"no_duck": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"no_attack": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"airblast_destroy_projectile": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"airblast_pushback_disabled": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"airblast_pushback_no_stun": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"airblast_pushback_no_viewpunch": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"airblast_deflect_projectiles_disabled": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"airblast_put_out_teammate_disabled": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"afterburn duration penalty": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"afterburn duration bonus": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"aoe_deflection": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"mult_end_flame_size": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"airblast_give_teammate_speed_boost": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"airblast_turn_projectile_to_ammo": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"paintkit_proto_def_index": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"taunt_attr_player_invis_percent": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"redirected_flame_size_mult": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"flame_reflect_on_collision": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"flame_spread_degree": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"holster_anim_time": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"flame_gravity": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"flame_ignore_player_velocity": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"flame_drag": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"flame_speed": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"grenades1_resupply_denied": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"grenades2_resupply_denied": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"grenades3_resupply_denied": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"item_meter_resupply_denied": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"mult_player_movespeed_active": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"mult_dmgtaken_active": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"mult_patient_overheal_penalty_active": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"mult_health_fromhealers_penalty_active": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"mod_maxhealth_drain_rate": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"item_meter_charge_type": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"max_flame_reflection_count": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"flame_reflection_add_life_time": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"reflected_flame_dmg_reduction": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"flame_lifetime": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"flame_random_life_time_offset": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"flame_up_speed": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"custom_paintkit_seed_lo": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"custom_paintkit_seed_hi": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"crit_dmg_falloff": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"crits_become_minicrits": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"falling_impact_radius_pushback": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"falling_impact_radius_stun": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"thermal_thruster_air_launch": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"thermal_thruster": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"mult_item_meter_charge_rate": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"explode_on_ignite": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"lunchbox healing decreased": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"speed_boost_on_hit_enemy": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"item_meter_starts_empty_DISPLAY_ONLY": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"item_meter_charge_type_3_DISPLAY_ONLY": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"repair health to metal ratio DISPLAY ONLY": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"health drain medic": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"CARD: damage bonus": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"CARD: dmg taken from bullets reduced": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"CARD: move speed bonus": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"CARD: health regen": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"SPELL: set item tint RGB": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"SPELL: set Halloween footstep type": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"SPELL: Halloween voice modulation": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"SPELL: Halloween pumpkin explosions": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"SPELL: Halloween green flames": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"SPELL: Halloween death ghosts": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"Attack not cancel charge": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"recipe component defined item 1": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"recipe component defined item 2": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"recipe component defined item 3": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"recipe component defined item 4": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"recipe component defined item 5": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"recipe component defined item 6": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"recipe component defined item 7": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"recipe component defined item 8": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"recipe component defined item 9": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"recipe component defined item 10": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"start drop date": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"end drop date": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"tool target item": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"killstreak effect": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"killstreak idleeffect": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"spellbook page attr id": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"Halloween Spellbook Page: Tumidum": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"Halloween Spellbook Page: Gratanter": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"Halloween Spellbook Page: Audere": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"Halloween Spellbook Page: Congeriae": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"Halloween Spellbook Page: Veteris": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"additional halloween response criteria name": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"loot rarity": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"quality text override": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"item name text override": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"killstreak tier": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"wide item level": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"is australium item": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"is marketable": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"allowed in medieval mode": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"crit on hard hit": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"series number": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"recipe no partial complete": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"kill refills meter": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"random drop line item unusual chance": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"random drop line item unusual list": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"random drop line item 0": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"random drop line item 1": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"random drop line item 2": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"random drop line item 3": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"on taunt attach particle effect": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"loot list name": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"upgrade rate decrease": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"can shuffle crate contents": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"random drop line item footer desc": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"is commodity": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"voice pitch scale": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"gunslinger punch combo": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"cannot delete": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"quest loaner id low": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"quest loaner id hi": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"is_festivized": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"fire particle blue": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"fire particle red": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"fire particle blue crit": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"fire particle red crit": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"meter_label": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"item_meter_damage_for_full_charge": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"airblast cost scale hidden": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"dragons fury positive properties": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"dragons fury negative properties": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"dragons fury neutral properties": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"force center wrap": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"attack_minicrits_and_consumes_burning": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"item slot criteria 1": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"item in slot 1": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"item slot criteria 2": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"item in slot 2": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"item slot criteria 3": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"item in slot 3": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"item slot criteria 4": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"item in slot 4": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"item slot criteria 5": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"item in slot 5": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"item slot criteria 6": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"item in slot 6": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"item slot criteria 7": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"item in slot 7": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"item slot criteria 8": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"item in slot 8": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"quest earned standard points": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"quest earned bonus points": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
+	},
+	"item drop wave": {
+		"valid_in": [
+			"CharacterAttributes",
+			"ItemAttributes"
+		],
+		"types": [
+			"float",
+			"int"
+		]
 	}
 }

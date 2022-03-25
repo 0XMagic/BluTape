@@ -71,8 +71,8 @@ def consolidate(data):
 
 				if k not in result:
 					result[k] = {
-							"valid_in":  list(),
-							"types": list()
+							"valid_in": list(),
+							"types":    list()
 					}
 			#quick fix to unify character attributes and item attributes since they both use stats
 			if p in ["ItemAttributes", "CharacterAttributes"] and k != "ItemName":
@@ -112,9 +112,25 @@ def consolidate(data):
 
 
 def unify_templates(data: dict):
+	print("updating templates")
 	all_templates = [k for k, v in data.items() if "Templates" in v["valid_in"]]
 	to_apply = [k for k, v in data.items() if any(i in all_templates for i in v["valid_in"])]
 	for a in to_apply: data[a]["valid_in"] += [t for t in all_templates if t not in data[a]["valid_in"]]
+	return data
+
+
+def attribute_fix(data: dict):
+	print("updating attribute database")
+	with open("datafiles/spreadsheets/Attributes.csv") as fl:
+		attrs = [x for x in fl.read().split("\n") if x and not x.startswith("//")]
+	data = {k: v for k, v in data.items() if "CharacterAttributes" not in v["valid_in"]}
+
+	for a in attrs:
+		data[a] = {
+				"valid_in": ["CharacterAttributes", "ItemAttributes"],
+				"types":    ["float", "int"]
+		}
+	print("inserted", len(data), "attributes")
 	return data
 
 
@@ -122,6 +138,7 @@ def main():
 	content = get_content()
 	data = consolidate(content)
 	data = unify_templates(data)
+	data = attribute_fix(data)
 	with open("datafiles/json/keywords.json", "w") as j:
 		json.dump(data, j, indent = "\t")
 
