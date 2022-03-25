@@ -62,11 +62,6 @@ def consolidate(data):
 				k = line.split(" ")[0]
 			parent.append(k)
 			p = parent[-2]
-
-
-
-
-
 			if k not in result:
 				for z in result.keys():
 					if z.lower() == k.lower():
@@ -115,9 +110,17 @@ def consolidate(data):
 	return result
 
 
+def unify_templates(data: dict):
+	all_templates = [k for k, v in data.items() if "Templates" in v["valid_in"]]
+	to_apply = [k for k, v in data.items() if any(i in all_templates for i in v["valid_in"])]
+	for a in to_apply: data[a]["valid_in"] += [t for t in all_templates if t not in data[a]["valid_in"]]
+	return data
+
+
 def main():
 	content = get_content()
 	data = consolidate(content)
+	data = unify_templates(data)
 	with open("datafiles/json/keywords.json", "w") as j:
 		json.dump(data, j, indent = "\t")
 

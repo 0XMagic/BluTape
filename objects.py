@@ -3,6 +3,8 @@ import info
 
 #if a key or value contains any of these chars, put quotes around it when exporting
 force_quotes = " \t"
+
+
 def check_quotes(v):
 	s = str(v)
 	if any([b in s for b in force_quotes]):
