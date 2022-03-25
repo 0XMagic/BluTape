@@ -60,7 +60,7 @@ def consolidate(data):
 				k = line.split("\" ")[0] + "\""
 			else:
 				k = line.split(" ")[0]
-			k = k.replace("\"","")
+			k = k.replace("\"", "")
 			parent.append(k)
 			p = parent[-2]
 			if k not in result:
