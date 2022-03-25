@@ -1,6 +1,15 @@
 import json
 import info
 
+#if a key or value contains any of these chars, put quotes around it when exporting
+force_quotes = " \t"
+def check_quotes(v):
+	s = str(v)
+	if any([b in s for b in force_quotes]):
+		s = f"\"{s}\""
+	return s
+
+
 with open("datafiles/json/keywords.json") as fl:
 	data = json.load(fl)
 
@@ -59,12 +68,8 @@ class Pair:
 	def export(self):
 		if self.is_temp:
 			return []
-		rk = self.key()
-		rv = self.value()
-		if self.__key_quote:
-			rk = f"\"{rk}\""
-		if self.__value_quote:
-			rv = f"\"{rv}\""
+		rk = check_quotes(self.key())
+		rv = check_quotes(self.value())
 		return [f"{rk}\t{rv}"]
 
 	def export_json(self):

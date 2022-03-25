@@ -79,7 +79,7 @@ def consolidate(data):
 							"types": list()
 					}
 			#quick fix to unify character attributes and item attributes since they both use stats
-			if p in ["ItemAttributes", "CharacterAttributes"]:
+			if p in ["ItemAttributes", "CharacterAttributes"] and k != "ItemName":
 				p1 = ["ItemAttributes", "CharacterAttributes"]
 			else:
 				p1 = [p]
@@ -118,7 +118,7 @@ def consolidate(data):
 def main():
 	content = get_content()
 	data = consolidate(content)
-	with open("datafiles/json/rules.json", "w") as j:
+	with open("datafiles/json/keywords.json", "w") as j:
 		json.dump(data, j, indent = "\t")
 
 

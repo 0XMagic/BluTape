@@ -1217,7 +1217,6 @@
 	"ItemName": {
 		"valid_in": [
 			"ItemAttributes",
-			"CharacterAttributes",
 			"Itemattributes"
 		],
 		"types": [
