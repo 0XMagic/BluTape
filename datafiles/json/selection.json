@@ -4,19 +4,22 @@
       "robot_standard.pop",
       "robot_giant.pop",
       "robot_gatebot.pop"
-    ]
+    ],
+    "lim": 1
   },
   "CanBotsAttackWhileInSpawnRoom": {
     "content": [
       "yes",
       "no"
-    ]
+    ],
+    "lim": 2
   },
   "Advanced": {
     "content": [
       "1",
       "0"
-    ]
+    ],
+    "lim": 2
   },
   "Skill": {
     "default": 1,
@@ -25,17 +28,18 @@
       "Normal",
       "Hard",
       "Expert"
-    ]
+    ],
+    "lim": 2
   },
   "WeaponRestrictions": {
     "content": [
       "PrimaryOnly",
       "SecondaryOnly",
       "MeleeOnly"
-    ]
+    ],
+    "lim": 2
   },
   "Attributes": {
-    "default": 7,
     "content": [
       "RemoveOnDeath",
       "Aggressive",
@@ -62,7 +66,8 @@
       "FireImmune",
       "Parachute",
       "ProjectileShield"
-    ]
+    ],
+    "lim": 1
   },
   "Tag": {
     "content": [
@@ -70,13 +75,15 @@
       "bot_sentrybuster",
       "bot_squad_member",
       "bot_gatebot"
-    ]
+    ],
+    "lim": 1
   },
   "BehaviorModifiers": {
     "content": [
       "push",
       "mobber"
-    ]
+    ],
+    "lim": 2
   },
   "Class": {
     "content": [
@@ -89,13 +96,14 @@
       "Medic",
       "Sniper",
       "Spy"
-    ]
+    ],
+    "lim": 2
   },
-  "EventPopfile":
-  {
+  "EventPopfile": {
     "content": [
       "Halloween"
-    ]
+    ],
+    "lim": 2
   },
   "Objective": {
     "content": [
@@ -104,6 +112,164 @@
       "Spy",
       "Engineer",
       "SeekAndDestroy"
-    ]
+    ],
+    "lim": 2
+  },
+  "WaveSchedule": {
+    "lim": 2
+  },
+  "AddSentryBusterWhenKillCountExceeds": {
+    "lim": 2
+  },
+  "FixedRespawnWaveTime": {
+    "content": [
+      "yes",
+      "no"
+    ],
+    "lim": 2
+  },
+  "RespawnWaveTime": {
+    "lim": 2
+  },
+  "StartingCurrency": {
+    "lim": 2
+  },
+  "Templates": {
+    "lim": 2
+  },
+  "CharacterAttributes": {
+    "lim": 2
+  },
+  "BeginAtWave": {
+    "lim": 2
+  },
+  "CooldownTime": {
+    "lim": 2
+  },
+  "DesiredCount": {
+    "lim": 2
+  },
+  "InitialCooldown": {
+    "lim": 2
+  },
+  "RunForThisManyWaves": {
+    "lim": 2
+  },
+  "Where": {
+    "lim": 2
+  },
+  "Checkpoint": {
+    "lim": 2
+  },
+  "Description": {
+    "lim": 2
+  },
+  "StartWaveOutput": {
+    "lim": 2
+  },
+  "DoneOutput": {
+    "lim": 2
+  },
+  "InitWaveOutput": {
+    "lim": 2
+  },
+  "WaitWhenDone": {
+    "lim": 2
+  },
+  "Action": {
+    "lim": 2
+  },
+  "Target": {
+    "lim": 2
+  },
+  "DoneWarningSound": {
+    "lim": 2
+  },
+  "FirstSpawnOutput": {
+    "lim": 2
+  },
+  "FirstSpawnWarningSound": {
+    "lim": 2
+  },
+  "MaxActive": {
+    "lim": 2
+  },
+  "Name": {
+    "lim": 2
+  },
+  "SpawnCount": {
+    "lim": 2
+  },
+  "TotalCount": {
+    "lim": 2
+  },
+  "TotalCurrency": {
+    "lim": 2
+  },
+  "WaitBeforeStarting": {
+    "lim": 2
+  },
+  "WaitBetweenSpawns": {
+    "lim": 2
+  },
+  "WaitBetweenSpawnsAfterDeath": {
+    "lim": 2
+  },
+  "WaitForAllDead": {
+    "lim": 2
+  },
+  "WaitForAllSpawned": {
+    "lim": 2
+  },
+  "RandomSpawn": {
+    "lim": 2
+  },
+  "Support": {
+    "lim": 2
+  },
+  "FormationSize": {
+    "lim": 2
+  },
+  "Health": {
+    "lim": 2
+  },
+  "OnBombDroppedOutput": {
+    "lim": 2
+  },
+  "OnKilledOutput": {
+    "lim": 2
+  },
+  "Skin": {
+    "lim": 2
+  },
+  "Speed": {
+    "lim": 2
+  },
+  "StartingPathTrackNode": {
+    "lim": 2
+  },
+  "AutoJumpMin": {
+    "lim": 2
+  },
+  "AutoJumpMax": {
+    "lim": 2
+  },
+  "ClassIcon": {
+    "lim": 2
+  },
+  "ItemName": {
+    "lim": 2
+  },
+  "Scale": {
+    "lim": 2
+  },
+  "Template": {
+    "lim": 2
+  },
+  "TeleportWhere": {
+    "lim": 2
+  },
+  "MaxVisionRange": {
+    "lim": 2
   }
 }

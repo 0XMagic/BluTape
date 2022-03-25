@@ -5,9 +5,8 @@ import secrets
 
 hide_appdata_nag = False
 
+
 def create_project():
-
-
 	result = Container("root")
 	save_dir_validate()
 	return result
@@ -24,6 +23,7 @@ def appdata(*args):
 			hide_appdata_nag = True
 		return "data/" + append
 	return path.replace("\\", "/") + "/Blutape/" + append
+
 
 #create/confirm save directories and add them to .gitignore to prevent accidentally pushing save files
 def save_dir_validate():
@@ -52,8 +52,8 @@ def save_dir_validate():
 	if not os.path.isfile(path):
 		gen = secrets.SystemRandom()
 		rng = list(range(0, 127)) + list(range(161, 255))
-		token = "".join([chr(x) for x in gen.choices(rng, k=255)])
-		with open(path,"w") as io:
+		token = "".join([chr(x) for x in gen.choices(rng, k = 255)])
+		with open(path, "w") as io:
 			io.write(token)
 
 
@@ -62,11 +62,11 @@ def get_secret():
 		result = io.read()
 	return result
 
+
 def get_secret_b():
 	with open(appdata(".secret"), "rb") as io:
 		result = io.read()
 	return result
-
 
 
 def save(o: Container, wr, get_root = True):
@@ -74,8 +74,8 @@ def save(o: Container, wr, get_root = True):
 		return False
 	s = pickle.dumps(o.get_root() if get_root else o)
 	gen = secrets.SystemRandom()
-	r = gen.randint(0,len(s)-1)
-	s = s[:r] + get_secret_b() + s[r-1:]
+	r = gen.randint(0, len(s) - 1)
+	s = s[:r] + get_secret_b() + s[r - 1:]
 	wr.write(s)
 	wr.close()
 	return True
@@ -184,7 +184,18 @@ def export_to_file(o: Container, wr):
 
 
 def can_contain(o: Container, s: str):
-	if o.key() in data[s]["valid_in"]:
+	key = o.key()
+	if key in data[s]["valid_in"]:
+
+		if "CharacterAttributes" in data[s]["valid_in"]:
+			lim = 2
+		else:
+			lim = selections.get(s, dict()).get("lim", 0)
+
+		if lim == 1:
+			return is_selection_available(o, s)
+		if lim == 2:
+			return len([x.key() for x in o.content if x.key() == s and not x.is_temp]) == 0
 		return True
 	return False
 
@@ -201,8 +212,23 @@ def list_available(o):
 	r = get_available(o)
 	print("\n".join([f"[{x}] {y}" for x, y in enumerate(r)]))
 
-def get_pair_selections(o: Pair):
-	r = selections.get(o.key(), dict())
-	result = (r.get("content",list()), r.get("default", 0))
-	return result
 
+def get_pair_selections(o: Pair):
+	key = o.key()
+	r = selections.get(key, dict())
+	con, d = r.get("content", list()), r.get("default", 0)
+	is_list = len(con) != 0
+	others = [x.value() for x in o.parent.content if x.key() == key]
+	con = [x for x in con if x not in others]
+	if is_list and o.value():
+		con = [o.value()] + [x for x in con if x != o.value()]
+	if d > len(con):
+		d = 0
+	return con, d
+
+
+def is_selection_available(o: Container, key: str):
+	r = selections.get(key, dict())
+	used = [x.value() for x in o.content if x.key() == key]
+	con = [x for x in r.get("content", list()) if x not in used]
+	return len(con) != 0
