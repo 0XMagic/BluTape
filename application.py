@@ -18,7 +18,6 @@ def update_elements(force_update = False):
 		to_add = Element(frame_element_items)
 		elements.append(to_add)
 
-
 	for n, x in enumerate(elements):
 		if n < len(active_object.content):
 			x.update(active_object.content[n], n, force_update = force_update)
@@ -28,7 +27,6 @@ def update_elements(force_update = False):
 
 
 def modify_element_window(o: (objects.Container, objects.Pair), element_index, add_mode = False):
-
 	if element_index == -1:
 		to_set = Element(frame_element_items)
 		element_index = len(elements)
@@ -68,12 +66,11 @@ def modify_element_window(o: (objects.Container, objects.Pair), element_index, a
 
 	def btn_confirm(*args):
 		if sv.get():
-			#I have to set it twice for some reason
 			_s = sv.get().replace("Current selection:\n", "")
 			if _s != "None":
-				o.name_mode = nb_var.get()
+				o.name_mode = int(nb_var.get() or o.name_override)
 				if o.name_mode:
-					_l = nt.get("1.0", tk.END).replace("\n", "")
+					_l = nt.get().replace("\n", "")
 					if _l.replace(" ", ""):
 						o.name = _l
 
@@ -84,14 +81,18 @@ def modify_element_window(o: (objects.Container, objects.Pair), element_index, a
 				o.is_temp = False
 				w_on_close()
 
-	def nb_func(obj):
+	def nb_func(obj, alt = False):
 		def result():
-			if nb_var.get():
-				obj.configure(fg = COLOR_TEXT_STR, text = '')
+			if alt:
+				obj.grid_forget()
 				nt.grid(row = 0, column = 1, sticky = "n")
 			else:
-				obj.configure(fg = COLOR_TEXT_GENERIC, text = 'Custom label')
-				nt.grid_forget()
+				if nb_var.get():
+					obj.configure(fg = COLOR_TEXT_STR, text = '')
+					nt.grid(row = 0, column = 1, sticky = "n")
+				else:
+					obj.configure(fg = COLOR_TEXT_GENERIC, text = 'Custom label')
+					nt.grid_forget()
 
 		return result
 
@@ -121,9 +122,9 @@ def modify_element_window(o: (objects.Container, objects.Pair), element_index, a
 			fg = COLOR_TEXT_GENERIC, bg = COLOR_BACKGROUND
 	)
 
-	nt = tk.Text(fr, width = 16, height = 1, bg = COLOR_BACKGROUND_ALT, fg = COLOR_TEXT_STR)
+	nt = tk.Entry(fr, width = 16, bg = COLOR_BACKGROUND_ALT, fg = COLOR_TEXT_STR)
 
-	nt.insert("1.0", o.name)
+	nt.insert(0, o.name)
 
 	nb.configure(command = nb_func(nb))
 
@@ -135,19 +136,30 @@ def modify_element_window(o: (objects.Container, objects.Pair), element_index, a
 	_i_list.sort()
 	for n, v in enumerate(_i_list):
 		lb.insert(n, v)
-	top.grid_columnconfigure(0, weight = 1)
-	tx.grid(row = 0, column = 0, sticky = "n")
-	lb.grid(row = 1, column = 0, sticky = "n")
-	ct.grid(row = 2, column = 0, sticky = "n")
-
-	fr.grid(row = 3, column = 0, sticky = "n")
-
-	nb.grid(row = 0, column = 0, sticky = "n")
-	nb_func(nb)()
-	cb.grid(row = 4, column = 0, sticky = "n")
-	top.grab_set()
 	w = 350
 	h = 300
+	top.grid_columnconfigure(0, weight = 1)
+
+	fr.grid(row = 3, column = 0, sticky = "n")
+	nb.grid(row = 0, column = 0, sticky = "n")
+	mode_alt = o.key() == "%template%"
+	nb_func(nb, alt = mode_alt)()
+	tmp_sv = tk.StringVar()
+	tmp_sv.set("Template name")
+	tmp_label = tk.Label(top, textvariable = tmp_sv, fg = COLOR_TEXT_GENERIC, bg = COLOR_BACKGROUND)
+	if mode_alt:
+		o.name_override = True
+		tmp_label.grid(row = 0, column = 0, sticky = "n")
+		if not nt.get():
+			nt.insert(0, "New_Template")
+		h = 75
+	else:
+		tx.grid(row = 0, column = 0, sticky = "n")
+		lb.grid(row = 1, column = 0, sticky = "n")
+		ct.grid(row = 2, column = 0, sticky = "n")
+	cb.grid(row = 4, column = 0, sticky = "n")
+	top.grab_set()
+
 	dx = round(app.winfo_x() + app.winfo_width() / 2 - w / 2)
 	dy = round(app.winfo_y() + app.winfo_height() / 2 - h / 2)
 

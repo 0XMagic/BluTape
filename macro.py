@@ -185,6 +185,9 @@ def export_to_file(o: Container, wr):
 
 def can_contain(o: Container, s: str):
 	key = o.key()
+	if key == "%template%":
+		key = "TFBot"
+
 	if key in data[s]["valid_in"]:
 
 		if "CharacterAttributes" in data[s]["valid_in"]:
@@ -202,6 +205,9 @@ def can_contain(o: Container, s: str):
 
 def get_available(o: Container):
 	result = list()
+	key = o.key()
+	if key == "Templates":
+		return ["%template%"]
 	for s, d in data.items():
 		if can_contain(o, s) and s != "None":
 			result.append(s)

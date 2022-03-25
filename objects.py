@@ -22,6 +22,7 @@ with open("datafiles/json/selection.json") as fl:
 	selections = json.load(fl)
 
 data["None"] = {"valid_in": [x for x in data.keys()] + ["None"], "types": []}
+data["%template%"] = {"valid_in": ["Templates"], "types": []}
 global_root = None
 
 
@@ -31,6 +32,7 @@ class Pair:
 		self.name = ""
 		self.name_mode = 0
 		self.schema = info.schema_ver
+		self.name_override = False
 		self.__key = None
 		self.__value = None
 		self.__key_quote = False
@@ -94,6 +96,7 @@ class Container:
 		self.__value = ""
 		self.name = ""
 		self.name_mode = 0
+		self.name_override = False
 		self.schema = info.schema_ver
 		self.parent = self
 		if parent is not None:
@@ -176,17 +179,19 @@ class Container:
 		for content in self.content:
 			result += content.export()
 		if not self.__is_root and not self.is_temp:
-			result = [self.__key, "{"] + result + ["}"]
+			key = self.name if self.name_override else self.__key
+			result = [key, "{"] + result + ["}"]
 		return result
 
 	def export_json(self):
 		return {
 				"Container": {
-						"key":       self.key(),
-						"name":      self.name,
-						"name_mode": self.name_mode,
-						"schema":    self.schema,
-						"content":   [
+						"key":           self.key(),
+						"name":          self.name,
+						"name_override": self.name_override,
+						"name_mode":     self.name_mode,
+						"schema":        self.schema,
+						"content":       [
 								c.export_json() for c in self.content if not c.is_temp
 						]
 
@@ -197,6 +202,7 @@ class Container:
 		self.key(d["key"])
 		self.name = d["name"]
 		self.name_mode = d["name_mode"]
+		self.name_override = d.get("name_override", False)
 
 		if self.name_mode:
 			print(f"loaded {self.name} ({self.key()})")
