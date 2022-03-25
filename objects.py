@@ -6,7 +6,10 @@ force_quotes = " \t"
 def check_quotes(v):
 	s = str(v)
 	if any([b in s for b in force_quotes]):
-		s = f"\"{s}\""
+		if not s.startswith("\""):
+			s = f"\"{s}"
+		if not s.endswith("\""):
+			s = f"{s}\""
 	return s
 
 
