@@ -78,6 +78,18 @@ def load_project(parent):
 	return result
 
 
+def autoload():
+	a_path = fullpath + "projects/autoload.blu"
+	result = objects.Project()
+	if not os.path.isfile(a_path):
+		print("You can make a default project by naming it 'autoload.blu'")
+		return result
+	print("Loading default project")
+	with open(a_path, "r") as fl:
+		result.import_json(json.load(fl), None)
+	return result
+
+
 def export_project(parent, project: objects.Project):
 	print("Attempting export...")
 	watermark = "\n".join(["//" + x for x in [f"Made with {info.full_title}", info.repo]]) + "\n"

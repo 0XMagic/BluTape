@@ -249,9 +249,10 @@ class Project:
 		}
 
 	def import_json(self, d, name):
-		ns = name.split("/")
-		self.path = "/".join(ns[:-1])
-		self.project_name = ns[-1]
+		if name is not None:
+			ns = name.split("/")
+			self.path = "/".join(ns[:-1])
+			self.project_name = ns[-1]
 		if self.project_name.endswith(".blu"):
 			self.project_name = self.project_name[:-4]
 		if not isinstance(d, dict):
