@@ -32,7 +32,10 @@ def modify_element_window(o: (objects.Container, objects.Pair), element_index, a
 		element_index = len(elements)
 		elements.append(to_set)
 
-	def w_on_close():
+	def w_on_close(*args):
+		if len(args):
+			if args[0].char != "\x1b":
+				return
 		if o.is_temp:
 			elements[element_index].update(None, element_index)
 			o.self_destruct()
@@ -65,6 +68,9 @@ def modify_element_window(o: (objects.Container, objects.Pair), element_index, a
 				sv.set("Current selection:\n" + _s)
 
 	def btn_confirm(*args):
+		if len(args):
+			if args[0].char != "\r":
+				return
 		if sv.get():
 			_s = sv.get().replace("Current selection:\n", "")
 			if _s != "None":
@@ -130,6 +136,8 @@ def modify_element_window(o: (objects.Container, objects.Pair), element_index, a
 
 	tx.bind("<KeyRelease>", lb_update)
 	lb.bind("<Button-1>", lb_click)
+	top.bind("<Key>", btn_confirm)
+	top.bind("<Key>", w_on_close)
 
 	cb = tk.Button(top, text = info.text_config.get("modify confirm", "???"), command = btn_confirm)
 	_i_list = macro.get_available(o.parent)
@@ -152,11 +160,13 @@ def modify_element_window(o: (objects.Container, objects.Pair), element_index, a
 		tmp_label.grid(row = 0, column = 0, sticky = "n")
 		if not nt.get():
 			nt.insert(0, "New_Template")
+		nt.focus_set()
 		h = 75
 	else:
 		tx.grid(row = 0, column = 0, sticky = "n")
 		lb.grid(row = 1, column = 0, sticky = "n")
 		ct.grid(row = 2, column = 0, sticky = "n")
+		tx.focus_set()
 	cb.grid(row = 4, column = 0, sticky = "n")
 	top.grab_set()
 
