@@ -21,8 +21,13 @@ with open("datafiles/json/keywords.json") as fl:
 with open("datafiles/json/selection.json") as fl:
 	selections = json.load(fl)
 
+with open("datafiles/icons.txt") as fl:
+	icons = [x for x in fl.read().split("\n") if x and not x.startswith("//")]
+
 data["None"] = {"valid_in": [x for x in data.keys()] + ["None"], "types": []}
 data["%template%"] = {"valid_in": ["Templates"], "types": []}
+selections["ClassIcon"]["content"] = icons
+
 global_root = None
 
 
