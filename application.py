@@ -380,6 +380,7 @@ class Element:
 				grid(self.frame, n, 0, pady = 3, sticky = "nw")
 
 			if mode == 1:
+				self.text.grid_forget()
 				grid(self.edit_button, 0, 3, sticky = 'w', padx = 5)
 			else:
 				self.edit_button.grid_forget()
