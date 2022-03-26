@@ -10,6 +10,12 @@ import savefile
 def grid(e, r, c, **kwargs):
 	e.grid(row = r, column = c, **kwargs)
 
+def update_sel_boxes():
+	for n, x in enumerate(elements):
+		if n < len(active_object.content):
+			s_con, s_def = macro.get_pair_selections(active_object.content[n])
+			if s_con:
+				x.select['values'] = s_con
 
 def update_elements(force_update = False):
 	app.focus_set()
@@ -222,6 +228,7 @@ def set_active_project(p: objects.Project):
 	update_elements()
 
 
+
 class Element:
 	def __init__(self, parent: (tk.Frame, tk.Tk)):
 		self.frame = tk.Frame(parent, bg = COLOR_BACKGROUND)
@@ -350,6 +357,8 @@ class Element:
 		if self.object is not None:
 			self.object.self_destruct()
 			self.update(None, self.get_self_index())
+			update_sel_boxes()
+
 
 		pass
 
@@ -392,8 +401,11 @@ class Element:
 			self.select['values'] = s_con
 			v = self.object.value()
 			i = s_con.index(v) if v in s_con else s_def
-			self.select.current(newindex = i)
-			self.object.value(s_con[i])
+			if s_con:
+				self.select.current(newindex = i)
+				self.object.value(s_con[i])
+			else:
+				self.object.value(None)
 
 		if mode != self.mode:
 			if mode == 0:

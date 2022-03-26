@@ -2,7 +2,7 @@ from objects import *
 import pickle
 import os
 import secrets
-
+import templates
 hide_appdata_nag = False
 
 
@@ -223,6 +223,8 @@ def get_pair_selections(o: Pair):
 	key = o.key()
 	r = selections.get(key, dict())
 	con, d = r.get("content", list()), r.get("default", 0)
+	if selections.get(key,dict()).get("use_template_files"):
+		con = list(templates.active_bases.keys())
 	is_list = len(con) != 0
 	others = [x.value() for x in o.parent.content if x.key() == key]
 	con = [x for x in con if x not in others]

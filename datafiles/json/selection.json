@@ -1,11 +1,10 @@
 {
   "#base": {
     "content": [
-      "robot_standard.pop",
-      "robot_giant.pop",
-      "robot_gatebot.pop"
+      "placeholder"
     ],
-    "lim": 1
+    "lim": 1,
+    "use_template_files": true
   },
   "CanBotsAttackWhileInSpawnRoom": {
     "content": [
@@ -135,6 +134,7 @@
     "lim": 2
   },
   "Templates": {
+    "content": ["placeholder"],
     "lim": 2
   },
   "CharacterAttributes": {
@@ -264,7 +264,11 @@
     "lim": 2
   },
   "Template": {
-    "lim": 2
+    "lim": 2,
+    "use_active_templates": true,
+    "content": [
+      "placeholder"
+    ]
   },
   "TeleportWhere": {
     "lim": 2

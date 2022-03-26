@@ -5,10 +5,26 @@ import json
 import info
 from tkinter.filedialog import asksaveasfile, askopenfile
 import macro
+import templates
 
 fullpath = os.getenv("APPDATA")
 if fullpath is None: fullpath = info.path[:-1]
 fullpath = fullpath.replace("\\", "/") + "/Blutape/data/"
+
+
+def reload_templates():
+	templates.reset()
+
+	for s in [
+			"datafiles/templates",
+			fullpath + "templates/"
+	]:
+		for p in os.listdir(s):
+			templates.load(s + "/" + p)
+
+
+
+
 
 
 def save_project(parent: tk.Tk, project: objects.Project, save_as = False):

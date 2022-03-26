@@ -1,6 +1,5 @@
 import json
 import info
-
 #if a key or value contains any of these chars, put quotes around it when exporting
 force_quotes = " \t"
 
@@ -26,6 +25,7 @@ with open("datafiles/icons.txt") as fl:
 
 data["None"] = {"valid_in": [x for x in data.keys()] + ["None"], "types": []}
 data["%template%"] = {"valid_in": ["Templates"], "types": []}
+data["EventChangeAttributes"]["valid_in"].append("TFBot")
 selections["ClassIcon"]["content"] = icons
 
 global_root = None
