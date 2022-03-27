@@ -16,7 +16,7 @@ def reload_templates():
 	templates.reset()
 
 	for s in [
-			"datafiles/templates",
+			info.path + "datafiles/templates",
 			fullpath + "templates/"
 	]:
 		for p in os.listdir(s):

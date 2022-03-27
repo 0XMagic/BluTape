@@ -3850,7 +3850,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"T_TFBot_Giant_Scout_Bonk": {
@@ -4334,7 +4335,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"damage bonus": {
@@ -4344,7 +4346,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"clip size penalty": {
@@ -4354,7 +4357,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"clip size bonus": {
@@ -4364,7 +4368,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"fire rate penalty": {
@@ -4374,7 +4379,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"fire rate bonus": {
@@ -4384,7 +4390,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"heal rate penalty": {
@@ -4394,7 +4401,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"heal rate bonus": {
@@ -4404,7 +4412,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"ubercharge rate penalty": {
@@ -4414,7 +4423,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"ubercharge rate bonus": {
@@ -4424,7 +4434,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"overheal bonus": {
@@ -4434,7 +4445,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"overheal decay penalty": {
@@ -4444,7 +4456,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"overheal decay bonus": {
@@ -4454,7 +4467,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"overheal decay disabled": {
@@ -4464,7 +4478,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"crit mod disabled": {
@@ -4474,7 +4489,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"heal on hit for rapidfire": {
@@ -4484,7 +4500,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"add uber charge on hit": {
@@ -4494,7 +4511,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"medigun charge is crit boost": {
@@ -4504,7 +4522,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"tmp dmgbuff on hit": {
@@ -4514,7 +4533,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"crit vs burning players": {
@@ -4524,7 +4544,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"dmg penalty vs nonburning": {
@@ -4534,7 +4555,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"no crit vs nonburning": {
@@ -4544,7 +4566,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"mod flamethrower push": {
@@ -4554,7 +4577,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"mod flamethrower back crit": {
@@ -4564,7 +4588,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"hidden secondary max ammo penalty": {
@@ -4574,7 +4599,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"max health additive bonus": {
@@ -4584,7 +4610,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"alt-fire disabled": {
@@ -4594,7 +4621,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"crit mod disabled hidden": {
@@ -4604,7 +4632,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"fists have radial buff": {
@@ -4614,7 +4643,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"critboost on kill": {
@@ -4624,7 +4654,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"slow enemy on hit": {
@@ -4634,7 +4665,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"set cloak is feign death": {
@@ -4644,7 +4676,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"mult cloak meter consume rate": {
@@ -4654,7 +4687,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"mult cloak meter regen rate": {
@@ -4664,7 +4698,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"spread penalty": {
@@ -4674,7 +4709,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"hidden primary max ammo bonus": {
@@ -4684,7 +4720,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"mod bat launches balls": {
@@ -4694,7 +4731,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"dmg penalty vs nonstunned": {
@@ -4704,7 +4742,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"zoom speed mod disabled": {
@@ -4714,7 +4753,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"sniper charge per sec": {
@@ -4724,7 +4764,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"sniper no headshots": {
@@ -4734,7 +4775,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"scattergun no reload single": {
@@ -4744,7 +4786,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"scattergun has knockback": {
@@ -4754,7 +4797,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"bullets per shot bonus": {
@@ -4764,7 +4808,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"sniper zoom penalty": {
@@ -4774,7 +4819,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"sniper no charge": {
@@ -4784,7 +4830,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"set cloak is movement based": {
@@ -4794,7 +4841,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"no double jump": {
@@ -4804,7 +4852,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"absorb damage while cloaked": {
@@ -4814,7 +4863,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"revolver use hit locations": {
@@ -4824,7 +4874,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"backstab shield": {
@@ -4834,7 +4885,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"fire retardant": {
@@ -4844,7 +4896,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"move speed penalty": {
@@ -4854,7 +4907,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"obsolete ammo penalty": {
@@ -4864,7 +4918,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"jarate description": {
@@ -4874,7 +4929,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"health regen": {
@@ -4884,7 +4940,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"self dmg push force increased": {
@@ -4894,7 +4951,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"self dmg push force decreased": {
@@ -4904,7 +4962,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"dmg taken from fire reduced": {
@@ -4914,7 +4973,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"dmg taken from fire increased": {
@@ -4924,7 +4984,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"dmg taken from crit reduced": {
@@ -4934,7 +4995,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"dmg taken from crit increased": {
@@ -4944,7 +5006,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"dmg taken from blast reduced": {
@@ -4954,7 +5017,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"dmg taken from blast increased": {
@@ -4964,7 +5028,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"dmg taken from bullets reduced": {
@@ -4974,7 +5039,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"dmg taken from bullets increased": {
@@ -4984,7 +5050,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"increase player capture value": {
@@ -4994,7 +5061,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"health from healers reduced": {
@@ -5004,7 +5072,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"health from healers increased": {
@@ -5014,7 +5083,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"weapon burn dmg increased": {
@@ -5024,7 +5094,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"weapon burn dmg reduced": {
@@ -5034,7 +5105,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"weapon burn time increased": {
@@ -5044,7 +5116,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"weapon burn time reduced": {
@@ -5054,7 +5127,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"aiming movespeed increased": {
@@ -5064,7 +5138,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"maxammo primary increased": {
@@ -5074,7 +5149,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"maxammo primary reduced": {
@@ -5084,7 +5160,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"maxammo secondary increased": {
@@ -5094,7 +5171,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"maxammo secondary reduced": {
@@ -5104,7 +5182,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"maxammo metal increased": {
@@ -5114,7 +5193,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"maxammo metal reduced": {
@@ -5124,7 +5204,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"cloak consume rate increased": {
@@ -5134,7 +5215,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"cloak consume rate decreased": {
@@ -5144,7 +5226,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"cloak regen rate increased": {
@@ -5154,7 +5237,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"cloak regen rate decreased": {
@@ -5164,7 +5248,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"minigun spinup time increased": {
@@ -5174,7 +5259,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"minigun spinup time decreased": {
@@ -5184,7 +5270,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"max pipebombs increased": {
@@ -5194,7 +5281,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"max pipebombs decreased": {
@@ -5204,7 +5292,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"SRifle Charge rate increased": {
@@ -5214,7 +5303,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"SRifle Charge rate decreased": {
@@ -5224,7 +5314,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"Construction rate increased": {
@@ -5234,7 +5325,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"Construction rate decreased": {
@@ -5244,7 +5336,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"Repair rate increased": {
@@ -5254,7 +5347,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"Repair rate decreased": {
@@ -5264,7 +5358,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"Reload time increased": {
@@ -5274,7 +5369,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"Reload time decreased": {
@@ -5284,7 +5380,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"selfdmg on hit for rapidfire": {
@@ -5294,7 +5391,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"Blast radius increased": {
@@ -5304,7 +5402,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"Blast radius decreased": {
@@ -5314,7 +5413,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"Projectile range increased": {
@@ -5324,7 +5424,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"Projectile range decreased": {
@@ -5334,7 +5435,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"Projectile speed increased": {
@@ -5344,7 +5446,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"Projectile speed decreased": {
@@ -5354,7 +5457,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"overheal penalty": {
@@ -5364,7 +5468,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"weapon spread bonus": {
@@ -5374,7 +5479,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"move speed bonus": {
@@ -5384,7 +5490,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"health from packs increased": {
@@ -5394,7 +5501,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"health from packs decreased": {
@@ -5404,7 +5512,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"heal on hit for slowfire": {
@@ -5414,7 +5523,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"selfdmg on hit for slowfire": {
@@ -5424,7 +5534,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"ammo regen": {
@@ -5434,7 +5545,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"metal regen": {
@@ -5444,7 +5556,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"mod mini-crit airborne": {
@@ -5454,7 +5567,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"mod shovel damage boost": {
@@ -5464,7 +5578,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"mod soldier buff type": {
@@ -5474,7 +5589,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"dmg falloff increased": {
@@ -5484,7 +5600,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"dmg falloff decreased": {
@@ -5494,7 +5611,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"sticky detonate mode": {
@@ -5504,7 +5622,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"sticky arm time penalty": {
@@ -5514,7 +5633,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"stickies detonate stickies": {
@@ -5524,7 +5644,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"mod demo buff type": {
@@ -5534,7 +5655,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"speed boost when active": {
@@ -5544,7 +5666,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"mod wrench builds minisentry": {
@@ -5554,7 +5677,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"max health additive penalty": {
@@ -5564,7 +5688,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"sticky arm time bonus": {
@@ -5574,7 +5699,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"sticky air burst mode": {
@@ -5584,7 +5710,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"provide on active": {
@@ -5594,7 +5721,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"health drain": {
@@ -5604,7 +5732,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"medic regen bonus": {
@@ -5614,7 +5743,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"medic regen penalty": {
@@ -5624,7 +5754,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"community description": {
@@ -5634,7 +5765,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"soldier model index": {
@@ -5644,7 +5776,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"attach particle effect": {
@@ -5654,7 +5787,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"rocket jump damage reduction": {
@@ -5664,7 +5798,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"mod sentry killed revenge": {
@@ -5674,7 +5809,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"dmg bonus vs buildings": {
@@ -5684,7 +5820,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"dmg penalty vs players": {
@@ -5694,7 +5831,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"lunchbox adds maxhealth bonus": {
@@ -5704,7 +5842,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"hidden maxhealth non buffed": {
@@ -5714,7 +5853,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"selfmade description": {
@@ -5724,7 +5864,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"custom employee number": {
@@ -5734,7 +5875,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"lunchbox adds minicrits": {
@@ -5744,7 +5886,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"taunt is highfive": {
@@ -5754,7 +5897,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"damage applies to sappers": {
@@ -5764,7 +5908,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"Wrench index": {
@@ -5774,7 +5919,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"building cost reduction": {
@@ -5784,7 +5930,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"bleeding duration": {
@@ -5794,7 +5941,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"turn to gold": {
@@ -5804,7 +5952,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"DEPRECATED socketed item definition id DEPRECATED": {
@@ -5814,7 +5963,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"custom texture lo": {
@@ -5824,7 +5974,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"cannot trade": {
@@ -5834,7 +5985,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"disguise on backstab": {
@@ -5844,7 +5996,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"cannot disguise": {
@@ -5854,7 +6007,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"silent killer": {
@@ -5864,7 +6018,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"disguise speed penalty": {
@@ -5874,7 +6029,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"add cloak on kill": {
@@ -5884,7 +6040,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"SET BONUS: cloak blink time penalty": {
@@ -5894,7 +6051,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"SET BONUS: quiet unstealth": {
@@ -5904,7 +6062,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"flame size penalty": {
@@ -5914,7 +6073,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"flame size bonus": {
@@ -5924,7 +6084,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"flame life penalty": {
@@ -5934,7 +6095,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"flame life bonus": {
@@ -5944,7 +6106,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"charged airblast": {
@@ -5954,7 +6117,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"add cloak on hit": {
@@ -5964,7 +6128,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"disguise damage reduction": {
@@ -5974,7 +6139,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"disguise no burn": {
@@ -5984,7 +6150,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"SET BONUS: dmg from sentry reduced": {
@@ -5994,7 +6161,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"airblast cost increased": {
@@ -6004,7 +6172,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"airblast cost decreased": {
@@ -6014,7 +6183,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"purchased": {
@@ -6024,7 +6194,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"flame ammopersec increased": {
@@ -6034,7 +6205,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"flame ammopersec decreased": {
@@ -6044,7 +6216,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"jarate duration": {
@@ -6054,7 +6227,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"SET BONUS: no death from headshots": {
@@ -6064,7 +6238,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"deploy time increased": {
@@ -6074,7 +6249,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"deploy time decreased": {
@@ -6084,7 +6260,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"minicrits become crits": {
@@ -6094,7 +6271,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"heal on kill": {
@@ -6104,7 +6282,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"no self blast dmg": {
@@ -6114,7 +6293,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"slow enemy on hit major": {
@@ -6124,7 +6304,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"aiming movespeed decreased": {
@@ -6134,7 +6315,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"duel loser account id": {
@@ -6144,7 +6326,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"event date": {
@@ -6154,7 +6337,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"gifter account id": {
@@ -6164,7 +6348,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"set supply crate series": {
@@ -6174,7 +6359,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"preserve ubercharge": {
@@ -6184,7 +6370,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"elevate quality": {
@@ -6194,7 +6381,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"active health regen": {
@@ -6204,7 +6392,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"active health degen": {
@@ -6214,7 +6403,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"referenced item id low": {
@@ -6224,7 +6414,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"referenced item id high": {
@@ -6234,7 +6425,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"referenced item def UPDATED": {
@@ -6244,7 +6436,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"always tradable": {
@@ -6254,7 +6447,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"noise maker": {
@@ -6264,7 +6458,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"halloween item": {
@@ -6274,7 +6469,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"collection bits DEPRECATED": {
@@ -6284,7 +6480,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"switch from wep deploy time decreased": {
@@ -6294,7 +6491,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"enables aoe heal": {
@@ -6304,7 +6502,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"gesture speed increase": {
@@ -6314,7 +6513,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"charge time increased": {
@@ -6324,7 +6524,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"drop health pack on kill": {
@@ -6334,7 +6535,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"hit self on miss": {
@@ -6344,7 +6546,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"dmg from ranged reduced": {
@@ -6354,7 +6557,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"dmg from melee increased": {
@@ -6364,7 +6568,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"blast dmg to self increased": {
@@ -6374,7 +6579,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"Set DamageType Ignite": {
@@ -6384,7 +6590,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"minicrit vs burning player": {
@@ -6394,7 +6601,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"tradable after date": {
@@ -6404,7 +6612,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"force level display": {
@@ -6414,7 +6623,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"kill eater": {
@@ -6424,7 +6634,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"apply z velocity on damage": {
@@ -6434,7 +6645,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"apply look velocity on damage": {
@@ -6444,7 +6656,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"sanguisuge": {
@@ -6454,7 +6667,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"mark for death": {
@@ -6464,7 +6678,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"decapitate type": {
@@ -6474,7 +6689,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"restore health on kill": {
@@ -6484,7 +6700,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"mult decloak rate": {
@@ -6494,7 +6711,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"mult sniper charge after bodyshot": {
@@ -6504,7 +6722,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"mult sniper charge after miss": {
@@ -6514,7 +6733,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"dmg bonus while half dead": {
@@ -6524,7 +6744,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"dmg penalty while half alive": {
@@ -6534,7 +6755,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"honorbound": {
@@ -6544,7 +6766,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"custom texture hi": {
@@ -6554,7 +6777,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"makers mark id": {
@@ -6564,7 +6788,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"unique craft index": {
@@ -6574,7 +6799,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"mod medic killed revenge": {
@@ -6584,7 +6810,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"medigun charge is megaheal": {
@@ -6594,7 +6821,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"mod medic killed minicrit boost": {
@@ -6604,7 +6832,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"mod medic healed damage bonus": {
@@ -6614,7 +6843,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"mod medic healed deploy time penalty": {
@@ -6624,7 +6854,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"mod shovel speed boost": {
@@ -6634,7 +6865,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"mod weapon blocks healing": {
@@ -6644,7 +6876,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"mult sniper charge after headshot": {
@@ -6654,7 +6887,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"minigun no spin sounds": {
@@ -6664,7 +6898,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"ubercharge rate bonus for healer": {
@@ -6674,7 +6909,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"reload time decreased while healed": {
@@ -6684,7 +6920,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"reload time increased hidden": {
@@ -6694,7 +6931,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"mod medic killed marked for death": {
@@ -6704,7 +6942,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"mod rage on hit penalty": {
@@ -6714,7 +6953,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"mod rage on hit bonus": {
@@ -6724,7 +6964,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"mod rage damage boost": {
@@ -6734,7 +6975,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"mult charge turn control": {
@@ -6744,7 +6986,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"no charge impact range": {
@@ -6754,7 +6997,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"charge impact damage increased": {
@@ -6764,7 +7008,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"charge recharge rate increased": {
@@ -6774,7 +7019,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"air dash count": {
@@ -6784,7 +7030,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"speed buff ally": {
@@ -6794,7 +7041,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"damage force reduction": {
@@ -6804,7 +7052,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"mult cloak rate": {
@@ -6814,7 +7063,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"airblast pushback scale": {
@@ -6824,7 +7074,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"mult airblast refire time": {
@@ -6834,7 +7085,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"airblast vertical pushback scale": {
@@ -6844,7 +7096,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"ammo becomes health": {
@@ -6854,7 +7107,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"boots falling stomp": {
@@ -6864,7 +7118,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"deflection size multiplier": {
@@ -6874,7 +7129,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"set item tint RGB 2": {
@@ -6884,7 +7140,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"saxxy award category": {
@@ -6894,7 +7151,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"melee bounds multiplier": {
@@ -6904,7 +7162,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"melee range multiplier": {
@@ -6914,7 +7173,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"mod mini-crit airborne deploy": {
@@ -6924,7 +7184,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"projectile penetration": {
@@ -6934,7 +7195,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"mod crit while airborne": {
@@ -6944,7 +7206,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"mult sniper charge penalty DISPLAY ONLY": {
@@ -6954,7 +7217,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"mod see enemy health": {
@@ -6964,7 +7228,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"powerup max charges": {
@@ -6974,7 +7239,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"powerup charges": {
@@ -6984,7 +7250,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"powerup duration": {
@@ -6994,7 +7261,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"critboost": {
@@ -7004,7 +7272,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"ubercharge": {
@@ -7014,7 +7283,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"cancel falling damage": {
@@ -7024,7 +7294,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"bidirectional teleport": {
@@ -7034,7 +7305,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"multiple sentries": {
@@ -7044,7 +7316,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"effect bar recharge rate increased": {
@@ -7054,7 +7327,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"maxammo grenades1 increased": {
@@ -7064,7 +7338,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"override projectile type": {
@@ -7074,7 +7349,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"energy weapon no ammo": {
@@ -7084,7 +7360,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"energy weapon charged shot": {
@@ -7094,7 +7371,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"energy weapon penetration": {
@@ -7104,7 +7382,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"energy weapon no hurt building": {
@@ -7114,7 +7393,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"energy weapon no deflect": {
@@ -7124,7 +7404,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"engy building health bonus": {
@@ -7134,7 +7415,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"engy sentry damage bonus": {
@@ -7144,7 +7426,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"no crit boost": {
@@ -7154,7 +7437,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"centerfire projectile": {
@@ -7164,7 +7448,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"kill eater score type": {
@@ -7174,7 +7459,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"kill eater score type 2": {
@@ -7184,7 +7470,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"kill eater 2": {
@@ -7194,7 +7481,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"has pipboy build interface": {
@@ -7204,7 +7492,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"sapper kills collect crits": {
@@ -7214,7 +7503,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"sniper only fire zoomed": {
@@ -7224,7 +7514,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"mod ammo per shot": {
@@ -7234,7 +7525,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"add onhit addammo": {
@@ -7244,7 +7536,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"electrical airblast DISPLAY ONLY": {
@@ -7254,7 +7547,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"mod use metal ammo type": {
@@ -7264,7 +7558,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"expiration date": {
@@ -7274,7 +7569,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"mod max primary clip override": {
@@ -7284,7 +7580,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"sniper full charge damage bonus": {
@@ -7294,7 +7591,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"sniper fires tracer": {
@@ -7304,7 +7602,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"sniper no headshot without full charge": {
@@ -7314,7 +7613,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"mod no reload DISPLAY ONLY": {
@@ -7324,7 +7624,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"sniper penetrate players when charged": {
@@ -7334,7 +7635,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"crit kill will gib": {
@@ -7344,7 +7646,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"recall": {
@@ -7354,7 +7657,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"unlimited quantity": {
@@ -7364,7 +7668,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"disable weapon hiding for animations": {
@@ -7374,7 +7679,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"applies snare effect": {
@@ -7384,7 +7690,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"uber duration bonus": {
@@ -7394,7 +7701,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"refill_ammo": {
@@ -7404,7 +7712,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"store sort override DEPRECATED": {
@@ -7414,7 +7723,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"faster reload rate": {
@@ -7424,7 +7734,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"increase buff duration": {
@@ -7434,7 +7745,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"robo sapper": {
@@ -7444,7 +7756,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"build rate bonus": {
@@ -7454,7 +7767,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"taunt is press and hold": {
@@ -7464,7 +7778,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"attack projectiles": {
@@ -7474,7 +7789,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"accuracy scales damage": {
@@ -7484,7 +7800,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"currency bonus": {
@@ -7494,7 +7811,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"increased jump height": {
@@ -7504,7 +7822,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"building instant upgrade": {
@@ -7514,7 +7833,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"disable fancy class select anim": {
@@ -7524,7 +7844,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"airblast vulnerability multiplier": {
@@ -7534,7 +7855,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"override footstep sound set": {
@@ -7544,7 +7866,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"spawn with physics toy": {
@@ -7554,7 +7877,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"fish damage override": {
@@ -7564,7 +7888,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"SET BONUS: special dsp": {
@@ -7574,7 +7899,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"bombinomicon effect on death": {
@@ -7584,7 +7910,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"clip size bonus upgrade": {
@@ -7594,7 +7921,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"hide enemy health": {
@@ -7604,7 +7932,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"subtract victim medigun charge on hit": {
@@ -7614,7 +7943,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"subtract victim cloak on hit": {
@@ -7624,7 +7954,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"reveal cloaked victim on hit": {
@@ -7634,7 +7965,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"reveal disguised victim on hit": {
@@ -7644,7 +7976,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"jarate backstabber": {
@@ -7654,7 +7987,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"engy sentry fire rate increased": {
@@ -7664,7 +7998,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"engy sentry radius increased": {
@@ -7674,7 +8009,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"engy dispenser radius increased": {
@@ -7684,7 +8020,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"mod bat launches ornaments": {
@@ -7694,7 +8031,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"freeze backstab victim": {
@@ -7704,7 +8042,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"fire rate penalty HIDDEN": {
@@ -7714,7 +8053,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"energy weapon no drain": {
@@ -7724,7 +8064,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"ragdolls become ash": {
@@ -7734,7 +8075,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"engy disposable sentries": {
@@ -7744,7 +8086,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"alt fire teleport to spawn": {
@@ -7754,7 +8097,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"cannot pick up buildings": {
@@ -7764,7 +8108,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"stun enemies wielding same weapon": {
@@ -7774,7 +8119,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"mod ammo per shot missed DISPLAY ONLY": {
@@ -7784,7 +8130,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"airblast disabled": {
@@ -7794,7 +8141,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"increase buff duration HIDDEN": {
@@ -7804,7 +8152,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"crit forces victim to laugh": {
@@ -7814,7 +8163,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"melts in fire": {
@@ -7824,7 +8174,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"damage all connected": {
@@ -7834,7 +8185,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"become fireproof on hit by fire": {
@@ -7844,7 +8196,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"crit from behind": {
@@ -7854,7 +8207,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"crit does no damage": {
@@ -7864,7 +8218,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"add jingle to footsteps": {
@@ -7874,7 +8229,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"set icicle knife mode": {
@@ -7884,7 +8240,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"mod stun waist high airborne": {
@@ -7894,7 +8251,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"extinguish earns revenge crits": {
@@ -7904,7 +8262,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"burn damage earns rage": {
@@ -7914,7 +8273,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"tickle enemies wielding same weapon": {
@@ -7924,7 +8284,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"attach particle effect static": {
@@ -7934,7 +8295,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"cosmetic taunt sound": {
@@ -7944,7 +8306,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"accepted wedding ring account id 1": {
@@ -7954,7 +8317,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"accepted wedding ring account id 2": {
@@ -7964,7 +8328,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"tool escrow until date": {
@@ -7974,7 +8339,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"generate rage on damage": {
@@ -7984,7 +8350,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"aiming no flinch": {
@@ -7994,7 +8361,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"aiming knockback resistance": {
@@ -8004,7 +8372,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"sniper aiming movespeed decreased": {
@@ -8014,7 +8383,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"kill eater user 1": {
@@ -8024,7 +8394,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"kill eater user score type 1": {
@@ -8034,7 +8405,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"kill eater user 2": {
@@ -8044,7 +8416,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"kill eater user score type 2": {
@@ -8054,7 +8427,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"kill eater user 3": {
@@ -8064,7 +8438,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"kill eater user score type 3": {
@@ -8074,7 +8449,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"strange part new counter ID": {
@@ -8084,7 +8460,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"mvm completed challenges bitmask": {
@@ -8094,7 +8471,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"rage on kill": {
@@ -8104,7 +8482,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"kill eater kill type": {
@@ -8114,7 +8493,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"shot penetrate all players": {
@@ -8124,7 +8504,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"headshot damage increase": {
@@ -8134,7 +8515,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"SET BONUS: mystery solving time decrease": {
@@ -8144,7 +8526,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"damage penalty on bodyshot": {
@@ -8154,7 +8537,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"sniper rage DISPLAY ONLY": {
@@ -8164,7 +8548,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"fire rate bonus HIDDEN": {
@@ -8174,7 +8559,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"explosive sniper shot": {
@@ -8184,7 +8570,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"melee attack rate bonus": {
@@ -8194,7 +8581,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"projectile penetration heavy": {
@@ -8204,7 +8592,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"rage on assists": {
@@ -8214,7 +8603,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"armor piercing": {
@@ -8224,7 +8614,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"cannot pick up intelligence": {
@@ -8234,7 +8625,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"SET BONUS: chance of hunger decrease": {
@@ -8244,7 +8636,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"cannot be backstabbed": {
@@ -8254,7 +8647,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"squad surplus claimer id DEPRECATED": {
@@ -8264,7 +8658,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"share consumable with patient": {
@@ -8274,7 +8669,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"airblast vertical vulnerability multiplier": {
@@ -8284,7 +8680,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"vision opt in flags": {
@@ -8294,7 +8691,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"crit vs disguised players": {
@@ -8304,7 +8702,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"crit vs non burning players": {
@@ -8314,7 +8713,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"kill forces attacker to laugh": {
@@ -8324,7 +8724,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"damage bonus while disguised": {
@@ -8334,7 +8735,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"projectile spread angle penalty": {
@@ -8344,7 +8746,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"dmg taken increased": {
@@ -8354,7 +8757,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"auto fires full clip": {
@@ -8364,7 +8768,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"self mark for death": {
@@ -8374,7 +8779,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"counts as assister is some kind of pet this update is going to be awesome": {
@@ -8384,7 +8790,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"mod flaregun fires pellets with knockback": {
@@ -8394,7 +8801,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"can overload": {
@@ -8404,7 +8812,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"boost on damage": {
@@ -8414,7 +8823,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"hype resets on jump": {
@@ -8424,7 +8834,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"pyro year number": {
@@ -8434,7 +8845,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"no primary ammo from dispensers while active": {
@@ -8444,7 +8856,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"pyrovision only DISPLAY ONLY": {
@@ -8454,7 +8867,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"clip size penalty HIDDEN": {
@@ -8464,7 +8878,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"sapper damage bonus": {
@@ -8474,7 +8889,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"sapper damage penalty": {
@@ -8484,7 +8900,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"sapper damage leaches health": {
@@ -8494,7 +8911,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"sapper health bonus": {
@@ -8504,7 +8922,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"sapper health penalty": {
@@ -8514,7 +8933,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"ring of fire while aiming": {
@@ -8524,7 +8944,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"uses ammo while aiming": {
@@ -8534,7 +8955,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"sapper degenerates buildings": {
@@ -8544,7 +8966,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"sapper damage penalty hidden": {
@@ -8554,7 +8977,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"cleaver description": {
@@ -8564,7 +8988,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"ragdolls plasma effect": {
@@ -8574,7 +8999,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"crit vs stunned players": {
@@ -8584,7 +9010,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"crit vs wet players": {
@@ -8594,7 +9021,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"override item level desc string": {
@@ -8604,7 +9032,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"clip size upgrade atomic": {
@@ -8614,7 +9043,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"auto fires full clip all at once": {
@@ -8624,7 +9054,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"major move speed bonus": {
@@ -8634,7 +9065,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"major increased jump height": {
@@ -8644,7 +9076,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"head scale": {
@@ -8654,7 +9087,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"pyrovision opt in DISPLAY ONLY": {
@@ -8664,7 +9098,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"halloweenvision opt in DISPLAY ONLY": {
@@ -8674,7 +9109,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"halloweenvision filter DISPLAY ONLY": {
@@ -8684,7 +9120,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"player skin override": {
@@ -8694,7 +9131,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"never craftable": {
@@ -8704,7 +9142,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"zombiezombiezombiezombie": {
@@ -8714,7 +9153,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"sapper voice pak": {
@@ -8724,7 +9164,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"sapper voice pak idle wait": {
@@ -8734,7 +9175,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"merasmus hat level display ONLY": {
@@ -8744,7 +9186,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"strange restriction type 1": {
@@ -8754,7 +9197,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"strange restriction value 1": {
@@ -8764,7 +9208,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"strange restriction type 2": {
@@ -8774,7 +9219,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"strange restriction value 2": {
@@ -8784,7 +9230,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"strange restriction user type 1": {
@@ -8794,7 +9241,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"strange restriction user value 1": {
@@ -8804,7 +9252,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"strange restriction user type 2": {
@@ -8814,7 +9263,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"strange restriction user value 2": {
@@ -8824,7 +9274,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"strange restriction user type 3": {
@@ -8834,7 +9285,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"strange restriction user value 3": {
@@ -8844,7 +9296,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"engineer sentry build rate multiplier": {
@@ -8854,7 +9307,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"engineer teleporter build rate multiplier": {
@@ -8864,7 +9318,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"grenade launcher mortar mode": {
@@ -8874,7 +9329,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"grenade not explode on impact": {
@@ -8884,7 +9340,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"strange score selector": {
@@ -8894,7 +9351,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"engineer building teleporting pickup": {
@@ -8904,7 +9362,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"grenade damage reduction on world contact": {
@@ -8914,7 +9373,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"engineer rage on dmg": {
@@ -8924,7 +9384,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"mark for death on building pickup": {
@@ -8934,7 +9395,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"medigun charge is resists": {
@@ -8944,7 +9406,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"arrow heals buildings": {
@@ -8954,7 +9417,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"Projectile speed increased HIDDEN": {
@@ -8964,7 +9428,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"damage bonus HIDDEN": {
@@ -8974,7 +9439,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"cannonball push back": {
@@ -8984,7 +9450,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"rage giving scale": {
@@ -8994,7 +9461,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"overheal fill rate reduced": {
@@ -9004,7 +9472,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"canteen specialist": {
@@ -9014,7 +9483,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"overheal expert": {
@@ -9024,7 +9494,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"mad milk syringes": {
@@ -9034,7 +9505,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"rocket specialist": {
@@ -9044,7 +9516,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"SET BONUS: move speed set bonus": {
@@ -9054,7 +9527,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"SET BONUS: health regen set bonus": {
@@ -9064,7 +9538,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"SET BONUS: dmg taken from crit reduced set bonus": {
@@ -9074,7 +9549,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"SET BONUS: dmg taken from fire reduced set bonus": {
@@ -9084,7 +9560,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"healing mastery": {
@@ -9094,7 +9571,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"kill eater 3": {
@@ -9104,7 +9582,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"kill eater score type 3": {
@@ -9114,7 +9593,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"strange restriction type 3": {
@@ -9124,7 +9604,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"strange restriction value 3": {
@@ -9134,7 +9615,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"bot custom jump particle": {
@@ -9144,7 +9626,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"generate rage on heal": {
@@ -9154,7 +9637,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"custom name attr": {
@@ -9164,7 +9648,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"custom desc attr": {
@@ -9174,7 +9659,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"medigun bullet resist passive": {
@@ -9184,7 +9670,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"medigun blast resist passive": {
@@ -9194,7 +9681,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"medigun fire resist passive": {
@@ -9204,7 +9692,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"medigun bullet resist deployed": {
@@ -9214,7 +9703,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"medigun blast resist deployed": {
@@ -9224,7 +9714,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"medigun fire resist deployed": {
@@ -9234,7 +9725,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"medigun crit bullet percent bar deplete": {
@@ -9244,7 +9736,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"medigun crit blast percent bar deplete": {
@@ -9254,7 +9747,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"medigun crit fire percent bar deplete": {
@@ -9264,7 +9758,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"throwable fire speed": {
@@ -9274,7 +9769,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"throwable damage": {
@@ -9284,7 +9780,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"throwable healing": {
@@ -9294,7 +9791,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"throwable particle trail only": {
@@ -9304,7 +9802,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"SET BONUS: dmg taken from bullets increased": {
@@ -9314,7 +9813,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"SET BONUS: max health additive bonus": {
@@ -9324,7 +9824,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"scattergun knockback mult": {
@@ -9334,7 +9835,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"particle effect vertical offset": {
@@ -9344,7 +9846,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"particle effect use head origin": {
@@ -9354,7 +9857,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"use large smoke explosion": {
@@ -9364,7 +9868,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"damage causes airblast": {
@@ -9374,7 +9879,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"increased jump height from weapon": {
@@ -9384,7 +9890,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"damage force increase": {
@@ -9394,7 +9901,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"healing received bonus": {
@@ -9404,7 +9912,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"afterburn immunity": {
@@ -9414,7 +9923,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"decoded by itemdefindex": {
@@ -9424,7 +9934,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"hype decays over time": {
@@ -9434,7 +9945,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"SET BONUS: custom taunt particle attr": {
@@ -9444,7 +9956,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"airblast vulnerability multiplier hidden": {
@@ -9454,7 +9967,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"damage force increase hidden": {
@@ -9464,7 +9978,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"damage force increase text": {
@@ -9474,7 +9989,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"SET BONUS: calling card on kill": {
@@ -9484,7 +10000,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"righthand pose parameter": {
@@ -9494,7 +10011,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"set throwable type": {
@@ -9504,7 +10022,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"add head on hit": {
@@ -9514,7 +10033,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"item style override": {
@@ -9524,7 +10044,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"paint decal enum": {
@@ -9534,7 +10055,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"show paint description": {
@@ -9544,7 +10066,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"bot medic uber health threshold": {
@@ -9554,7 +10077,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"bot medic uber deploy delay duration": {
@@ -9564,7 +10088,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"single wep deploy time decreased": {
@@ -9574,7 +10099,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"halloween reload time decreased": {
@@ -9584,7 +10110,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"halloween fire rate bonus": {
@@ -9594,7 +10121,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"halloween increased jump height": {
@@ -9604,7 +10132,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"special taunt": {
@@ -9614,7 +10143,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"revive": {
@@ -9624,7 +10154,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"taunt attack name": {
@@ -9634,7 +10165,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"taunt attack time": {
@@ -9644,7 +10176,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"taunt force move forward": {
@@ -9654,7 +10187,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"taunt mimic": {
@@ -9664,7 +10198,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"taunt success sound": {
@@ -9674,7 +10209,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"taunt success sound offset": {
@@ -9684,7 +10220,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"taunt success sound loop": {
@@ -9694,7 +10231,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"taunt success sound loop offset": {
@@ -9704,7 +10242,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"increased air control": {
@@ -9714,7 +10253,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"rocket launch impulse": {
@@ -9724,7 +10264,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"minicritboost on kill": {
@@ -9734,7 +10275,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"no metal from dispensers while active": {
@@ -9744,7 +10286,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"projectile entity name": {
@@ -9754,7 +10297,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"is throwable primable": {
@@ -9764,7 +10308,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"throwable detonation time": {
@@ -9774,7 +10319,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"throwable recharge time": {
@@ -9784,7 +10330,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"closerange backattack minicrits": {
@@ -9794,7 +10341,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"torso scale": {
@@ -9804,7 +10352,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"rocketjump attackrate bonus": {
@@ -9814,7 +10363,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"is throwable chargeable": {
@@ -9824,7 +10374,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"back headshot": {
@@ -9834,7 +10385,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"rj air bombardment": {
@@ -9844,7 +10396,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"projectile particle name": {
@@ -9854,7 +10407,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"air jump on attack": {
@@ -9864,7 +10418,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"sniper crit no scope": {
@@ -9874,7 +10429,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"sniper independent zoom DISPLAY ONLY": {
@@ -9884,7 +10440,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"axtinguisher properties": {
@@ -9894,7 +10451,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"full charge turn control": {
@@ -9904,7 +10462,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"parachute attribute": {
@@ -9914,7 +10473,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"taunt force weapon slot": {
@@ -9924,7 +10484,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"mini rockets": {
@@ -9934,7 +10495,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"rocket jump damage reduction HIDDEN": {
@@ -9944,7 +10506,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"clipsize increase on kill": {
@@ -9954,7 +10517,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"breadgloves properties": {
@@ -9964,7 +10528,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"taunt turn speed": {
@@ -9974,7 +10539,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"sniper fires tracer HIDDEN": {
@@ -9984,7 +10550,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"fire rate bonus with reduced health": {
@@ -9994,7 +10561,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"tag__summer2014": {
@@ -10004,7 +10572,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"crate generation code": {
@@ -10014,7 +10583,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"stickybomb fizzle time": {
@@ -10024,7 +10594,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"stickybomb charge rate": {
@@ -10034,7 +10605,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"grenade no bounce": {
@@ -10044,7 +10616,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"class select override vcd": {
@@ -10054,7 +10627,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"custom projectile model": {
@@ -10064,7 +10638,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"lose demo charge on damage when charging": {
@@ -10074,7 +10649,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"grenade no spin": {
@@ -10084,7 +10660,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"grenade detonation damage penalty": {
@@ -10094,7 +10671,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"taunt turn acceleration time": {
@@ -10104,7 +10682,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"taunt move acceleration time": {
@@ -10114,7 +10693,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"taunt move speed": {
@@ -10124,7 +10704,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"shuffle crate item def min": {
@@ -10134,7 +10715,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"shuffle crate item def max": {
@@ -10144,7 +10726,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"limited quantity item": {
@@ -10154,7 +10737,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"SET BONUS: alien isolation xeno bonus pos": {
@@ -10164,7 +10748,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"SET BONUS: alien isolation xeno bonus neg": {
@@ -10174,7 +10759,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"SET BONUS: alien isolation merc bonus pos": {
@@ -10184,7 +10770,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"SET BONUS: alien isolation merc bonus neg": {
@@ -10194,7 +10781,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"disable weapon switch": {
@@ -10204,7 +10792,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"hand scale": {
@@ -10214,7 +10803,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"display duck leaderboard": {
@@ -10224,7 +10814,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"duck rating": {
@@ -10234,7 +10825,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"duck badge level": {
@@ -10244,7 +10836,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"tag__eotlearlysupport": {
@@ -10254,7 +10847,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"unlimited quantity hidden": {
@@ -10264,7 +10858,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"duckstreaks active": {
@@ -10274,7 +10869,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"panic_attack": {
@@ -10284,7 +10880,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"panic_attack_negative": {
@@ -10294,7 +10891,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"auto fires full clip penalty": {
@@ -10304,7 +10902,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"auto fires when full": {
@@ -10314,7 +10913,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"force weapon switch": {
@@ -10324,7 +10924,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"weapon_uses_stattrak_module": {
@@ -10334,7 +10935,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"is_operation_pass": {
@@ -10344,7 +10946,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"weapon_stattrak_module_scale": {
@@ -10354,7 +10957,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"set_item_texture_wear": {
@@ -10364,7 +10968,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"cloak_consume_on_feign_death_activate": {
@@ -10374,7 +10979,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"stickybomb_charge_damage_increase": {
@@ -10384,7 +10990,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"NoCloakWhenCloaked": {
@@ -10394,7 +11001,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"ReducedCloakFromAmmo": {
@@ -10404,7 +11012,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"elevate to unusual if applicable": {
@@ -10414,7 +11023,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"weapon_allow_inspect": {
@@ -10424,7 +11034,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"metal_pickup_decreased": {
@@ -10434,7 +11045,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"lose hype on take damage": {
@@ -10444,7 +11056,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"healing received penalty": {
@@ -10454,7 +11067,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"crit_vs_burning_FLARES_DISPLAY_ONLY": {
@@ -10464,7 +11078,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"speed_boost_on_kill": {
@@ -10474,7 +11089,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"speed_boost_on_hit": {
@@ -10484,7 +11100,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"spunup_damage_resistance": {
@@ -10494,7 +11111,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"ubercharge overheal rate penalty": {
@@ -10504,7 +11122,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"reduced_healing_from_medics": {
@@ -10514,7 +11133,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"health on radius damage": {
@@ -10524,7 +11144,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"style changes on strange level": {
@@ -10534,7 +11155,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"cannot restore": {
@@ -10544,7 +11166,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"hide crate series number": {
@@ -10554,7 +11177,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"has team color paintkit": {
@@ -10564,7 +11188,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"cosmetic_allow_inspect": {
@@ -10574,7 +11199,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"hat only unusual effect": {
@@ -10584,7 +11210,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"items traded in for": {
@@ -10594,7 +11221,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"texture_wear_default": {
@@ -10604,7 +11232,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"taunt only unusual effect": {
@@ -10614,7 +11243,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"deactive date": {
@@ -10624,7 +11254,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"is giger counter": {
@@ -10634,7 +11265,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"hide_strange_prefix": {
@@ -10644,7 +11276,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"always_transmit_so": {
@@ -10654,7 +11287,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"allow_halloween_offering": {
@@ -10664,7 +11298,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"cannot_transmute": {
@@ -10674,7 +11309,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"single wep holster time increased": {
@@ -10684,7 +11320,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"single wep deploy time increased": {
@@ -10694,7 +11331,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"charge time decreased": {
@@ -10704,7 +11342,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"dmg penalty vs buildings": {
@@ -10714,7 +11353,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"charge impact damage decreased": {
@@ -10724,7 +11364,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"non economy": {
@@ -10734,7 +11375,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"charge meter on hit": {
@@ -10744,7 +11386,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"minicrit_boost_when_charged": {
@@ -10754,7 +11397,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"minicrit_boost_charge_rate": {
@@ -10764,7 +11408,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"is_a_sword": {
@@ -10774,7 +11419,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"ammo gives charge": {
@@ -10784,7 +11430,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"extinguish restores health": {
@@ -10794,7 +11441,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"extinguish reduces cooldown": {
@@ -10804,7 +11452,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"cannot giftwrap": {
@@ -10814,7 +11463,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"tool needs giftwrap": {
@@ -10824,7 +11474,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"fuse bonus": {
@@ -10834,7 +11485,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"move speed bonus shield required": {
@@ -10844,7 +11496,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"damage bonus bullet vs sentry target": {
@@ -10854,7 +11507,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"mod teleporter cost": {
@@ -10864,7 +11518,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"damage blast push": {
@@ -10874,7 +11529,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"move speed bonus resource level": {
@@ -10884,7 +11540,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"hype on damage": {
@@ -10894,7 +11551,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"dmg taken from fire reduced on active": {
@@ -10904,7 +11562,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"damage bonus vs burning": {
@@ -10914,7 +11573,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"min_viewmodel_offset": {
@@ -10924,7 +11584,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"dmg pierces resists absorbs": {
@@ -10934,7 +11595,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"energy buff dmg taken multiplier": {
@@ -10944,7 +11606,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"lose revenge crits on death DISPLAY ONLY": {
@@ -10954,7 +11617,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"patient overheal penalty": {
@@ -10964,7 +11628,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"item_meter_charge_rate": {
@@ -10974,7 +11639,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"mult_spread_scale_first_shot": {
@@ -10984,7 +11650,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"unusualifier_attribute_template_name": {
@@ -10994,7 +11661,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"tool_target_item_icon_offset": {
@@ -11004,7 +11672,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"add_head_on_kill": {
@@ -11014,7 +11683,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"mult_spread_scales_consecutive": {
@@ -11024,7 +11694,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"fixed_shot_pattern": {
@@ -11034,7 +11705,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"mod_cloak_no_regen_from_items": {
@@ -11044,7 +11716,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"ubercharge_preserved_on_spawn_max": {
@@ -11054,7 +11727,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"mod_air_control_blast_jump": {
@@ -11064,7 +11738,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"spunup_push_force_immunity": {
@@ -11074,7 +11749,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"mod_mark_attacker_for_death": {
@@ -11084,7 +11760,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"use_model_cache_icon": {
@@ -11094,7 +11771,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"mod_disguise_consumes_cloak": {
@@ -11104,7 +11782,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"inspect_viewmodel_offset": {
@@ -11114,7 +11793,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"is_passive_weapon": {
@@ -11124,7 +11804,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"no_jump": {
@@ -11134,7 +11815,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"no_duck": {
@@ -11144,7 +11826,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"no_attack": {
@@ -11154,7 +11837,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"airblast_destroy_projectile": {
@@ -11164,7 +11848,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"airblast_pushback_disabled": {
@@ -11174,7 +11859,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"airblast_pushback_no_stun": {
@@ -11184,7 +11870,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"airblast_pushback_no_viewpunch": {
@@ -11194,7 +11881,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"airblast_deflect_projectiles_disabled": {
@@ -11204,7 +11892,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"airblast_put_out_teammate_disabled": {
@@ -11214,7 +11903,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"afterburn duration penalty": {
@@ -11224,7 +11914,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"afterburn duration bonus": {
@@ -11234,7 +11925,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"aoe_deflection": {
@@ -11244,7 +11936,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"mult_end_flame_size": {
@@ -11254,7 +11947,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"airblast_give_teammate_speed_boost": {
@@ -11264,7 +11958,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"airblast_turn_projectile_to_ammo": {
@@ -11274,7 +11969,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"paintkit_proto_def_index": {
@@ -11284,7 +11980,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"taunt_attr_player_invis_percent": {
@@ -11294,7 +11991,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"redirected_flame_size_mult": {
@@ -11304,7 +12002,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"flame_reflect_on_collision": {
@@ -11314,7 +12013,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"flame_spread_degree": {
@@ -11324,7 +12024,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"holster_anim_time": {
@@ -11334,7 +12035,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"flame_gravity": {
@@ -11344,7 +12046,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"flame_ignore_player_velocity": {
@@ -11354,7 +12057,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"flame_drag": {
@@ -11364,7 +12068,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"flame_speed": {
@@ -11374,7 +12079,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"grenades1_resupply_denied": {
@@ -11384,7 +12090,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"grenades2_resupply_denied": {
@@ -11394,7 +12101,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"grenades3_resupply_denied": {
@@ -11404,7 +12112,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"item_meter_resupply_denied": {
@@ -11414,7 +12123,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"mult_player_movespeed_active": {
@@ -11424,7 +12134,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"mult_dmgtaken_active": {
@@ -11434,7 +12145,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"mult_patient_overheal_penalty_active": {
@@ -11444,7 +12156,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"mult_health_fromhealers_penalty_active": {
@@ -11454,7 +12167,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"mod_maxhealth_drain_rate": {
@@ -11464,7 +12178,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"item_meter_charge_type": {
@@ -11474,7 +12189,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"max_flame_reflection_count": {
@@ -11484,7 +12200,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"flame_reflection_add_life_time": {
@@ -11494,7 +12211,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"reflected_flame_dmg_reduction": {
@@ -11504,7 +12222,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"flame_lifetime": {
@@ -11514,7 +12233,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"flame_random_life_time_offset": {
@@ -11524,7 +12244,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"flame_up_speed": {
@@ -11534,7 +12255,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"custom_paintkit_seed_lo": {
@@ -11544,7 +12266,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"custom_paintkit_seed_hi": {
@@ -11554,7 +12277,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"crit_dmg_falloff": {
@@ -11564,7 +12288,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"crits_become_minicrits": {
@@ -11574,7 +12299,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"falling_impact_radius_pushback": {
@@ -11584,7 +12310,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"falling_impact_radius_stun": {
@@ -11594,7 +12321,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"thermal_thruster_air_launch": {
@@ -11604,7 +12332,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"thermal_thruster": {
@@ -11614,7 +12343,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"mult_item_meter_charge_rate": {
@@ -11624,7 +12354,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"explode_on_ignite": {
@@ -11634,7 +12365,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"lunchbox healing decreased": {
@@ -11644,7 +12376,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"speed_boost_on_hit_enemy": {
@@ -11654,7 +12387,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"item_meter_starts_empty_DISPLAY_ONLY": {
@@ -11664,7 +12398,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"item_meter_charge_type_3_DISPLAY_ONLY": {
@@ -11674,7 +12409,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"repair health to metal ratio DISPLAY ONLY": {
@@ -11684,7 +12420,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"health drain medic": {
@@ -11694,7 +12431,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"CARD: damage bonus": {
@@ -11704,7 +12442,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"CARD: dmg taken from bullets reduced": {
@@ -11714,7 +12453,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"CARD: move speed bonus": {
@@ -11724,7 +12464,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"CARD: health regen": {
@@ -11734,7 +12475,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"SPELL: set item tint RGB": {
@@ -11744,7 +12486,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"SPELL: set Halloween footstep type": {
@@ -11754,7 +12497,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"SPELL: Halloween voice modulation": {
@@ -11764,7 +12508,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"SPELL: Halloween pumpkin explosions": {
@@ -11774,7 +12519,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"SPELL: Halloween green flames": {
@@ -11784,7 +12530,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"SPELL: Halloween death ghosts": {
@@ -11794,7 +12541,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"Attack not cancel charge": {
@@ -11804,7 +12552,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"recipe component defined item 1": {
@@ -11814,7 +12563,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"recipe component defined item 2": {
@@ -11824,7 +12574,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"recipe component defined item 3": {
@@ -11834,7 +12585,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"recipe component defined item 4": {
@@ -11844,7 +12596,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"recipe component defined item 5": {
@@ -11854,7 +12607,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"recipe component defined item 6": {
@@ -11864,7 +12618,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"recipe component defined item 7": {
@@ -11874,7 +12629,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"recipe component defined item 8": {
@@ -11884,7 +12640,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"recipe component defined item 9": {
@@ -11894,7 +12651,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"recipe component defined item 10": {
@@ -11904,7 +12662,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"start drop date": {
@@ -11914,7 +12673,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"end drop date": {
@@ -11924,7 +12684,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"tool target item": {
@@ -11934,7 +12695,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"killstreak effect": {
@@ -11944,7 +12706,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"killstreak idleeffect": {
@@ -11954,7 +12717,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"spellbook page attr id": {
@@ -11964,7 +12728,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"Halloween Spellbook Page: Tumidum": {
@@ -11974,7 +12739,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"Halloween Spellbook Page: Gratanter": {
@@ -11984,7 +12750,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"Halloween Spellbook Page: Audere": {
@@ -11994,7 +12761,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"Halloween Spellbook Page: Congeriae": {
@@ -12004,7 +12772,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"Halloween Spellbook Page: Veteris": {
@@ -12014,7 +12783,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"additional halloween response criteria name": {
@@ -12024,7 +12794,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"loot rarity": {
@@ -12034,7 +12805,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"quality text override": {
@@ -12044,7 +12816,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"item name text override": {
@@ -12054,7 +12827,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"killstreak tier": {
@@ -12064,7 +12838,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"wide item level": {
@@ -12074,7 +12849,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"is australium item": {
@@ -12084,7 +12860,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"is marketable": {
@@ -12094,7 +12871,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"allowed in medieval mode": {
@@ -12104,7 +12882,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"crit on hard hit": {
@@ -12114,7 +12893,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"series number": {
@@ -12124,7 +12904,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"recipe no partial complete": {
@@ -12134,7 +12915,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"kill refills meter": {
@@ -12144,7 +12926,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"random drop line item unusual chance": {
@@ -12154,7 +12937,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"random drop line item unusual list": {
@@ -12164,7 +12948,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"random drop line item 0": {
@@ -12174,7 +12959,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"random drop line item 1": {
@@ -12184,7 +12970,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"random drop line item 2": {
@@ -12194,7 +12981,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"random drop line item 3": {
@@ -12204,7 +12992,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"on taunt attach particle effect": {
@@ -12214,7 +13003,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"loot list name": {
@@ -12224,7 +13014,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"upgrade rate decrease": {
@@ -12234,7 +13025,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"can shuffle crate contents": {
@@ -12244,7 +13036,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"random drop line item footer desc": {
@@ -12254,7 +13047,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"is commodity": {
@@ -12264,7 +13058,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"voice pitch scale": {
@@ -12274,7 +13069,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"gunslinger punch combo": {
@@ -12284,7 +13080,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"cannot delete": {
@@ -12294,7 +13091,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"quest loaner id low": {
@@ -12304,7 +13102,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"quest loaner id hi": {
@@ -12314,7 +13113,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"is_festivized": {
@@ -12324,7 +13124,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"fire particle blue": {
@@ -12334,7 +13135,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"fire particle red": {
@@ -12344,7 +13146,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"fire particle blue crit": {
@@ -12354,7 +13157,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"fire particle red crit": {
@@ -12364,7 +13168,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"meter_label": {
@@ -12374,7 +13179,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"item_meter_damage_for_full_charge": {
@@ -12384,7 +13190,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"airblast cost scale hidden": {
@@ -12394,7 +13201,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"dragons fury positive properties": {
@@ -12404,7 +13212,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"dragons fury negative properties": {
@@ -12414,7 +13223,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"dragons fury neutral properties": {
@@ -12424,7 +13234,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"force center wrap": {
@@ -12434,7 +13245,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"attack_minicrits_and_consumes_burning": {
@@ -12444,7 +13256,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"item slot criteria 1": {
@@ -12454,7 +13267,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"item in slot 1": {
@@ -12464,7 +13278,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"item slot criteria 2": {
@@ -12474,7 +13289,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"item in slot 2": {
@@ -12484,7 +13300,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"item slot criteria 3": {
@@ -12494,7 +13311,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"item in slot 3": {
@@ -12504,7 +13322,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"item slot criteria 4": {
@@ -12514,7 +13333,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"item in slot 4": {
@@ -12524,7 +13344,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"item slot criteria 5": {
@@ -12534,7 +13355,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"item in slot 5": {
@@ -12544,7 +13366,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"item slot criteria 6": {
@@ -12554,7 +13377,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"item in slot 6": {
@@ -12564,7 +13388,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"item slot criteria 7": {
@@ -12574,7 +13399,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"item in slot 7": {
@@ -12584,7 +13410,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"item slot criteria 8": {
@@ -12594,7 +13421,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"item in slot 8": {
@@ -12604,7 +13432,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"quest earned standard points": {
@@ -12614,7 +13443,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"quest earned bonus points": {
@@ -12624,7 +13454,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	},
 	"item drop wave": {
@@ -12634,7 +13465,8 @@
 		],
 		"types": [
 			"float",
-			"int"
+			"int",
+			"var"
 		]
 	}
 }

@@ -128,7 +128,7 @@ def attribute_fix(data: dict):
 	for a in attrs:
 		data[a] = {
 				"valid_in": ["CharacterAttributes", "ItemAttributes"],
-				"types":    ["float", "int"]
+				"types":    ["float", "int", "var"]
 		}
 	print("inserted", len(data), "attributes")
 	return data
