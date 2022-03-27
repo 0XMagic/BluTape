@@ -1,6 +1,7 @@
 content = dict()
 active_bases = dict()
 
+
 class Template:
 	def __init__(self):
 		self.name = ""
@@ -15,6 +16,10 @@ class Template:
 			result.append("\t" * i + x)
 			i += x == "{"
 		return "\n".join(result)
+
+
+def get_all_active():
+	return [k for k, v in content.items() if active_bases.get(v.popfile, False)]
 
 
 def reset():
@@ -58,4 +63,3 @@ def load(path: str):
 
 		if active_item is not None and lv > 0:
 			active_item.content.append(x)
-

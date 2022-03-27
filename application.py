@@ -20,6 +20,9 @@ def update_sel_boxes():
 def update_elements(force_update = False):
 	app.focus_set()
 
+	if macro.should_update_bases(active_object):
+		macro.update_bases(active_object)
+
 	while len(elements) < len(active_object.content):
 		to_add = Element(frame_element_items)
 		elements.append(to_add)
@@ -504,6 +507,25 @@ top_bar_file.add_command(
 top_bar.add_cascade(
 		label = "File",
 		menu = top_bar_file,
+		font = ("", 12)
+)
+
+top_bar_template = tk.Menu(
+		top_bar,
+		tearoff = 0,
+		background = COLOR_BACKGROUND_ALT,
+		foreground = COLOR_TEXT_GENERIC
+)
+
+top_bar_template.add_command(
+		label = "Reload",
+		command = savefile.reload_templates,
+		font = ("", 12)
+)
+
+top_bar.add_cascade(
+		label = "Template",
+		menu = top_bar_template,
 		font = ("", 12)
 )
 

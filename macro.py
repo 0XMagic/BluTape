@@ -3,6 +3,7 @@ import pickle
 import os
 import secrets
 import templates
+
 hide_appdata_nag = False
 
 
@@ -223,13 +224,16 @@ def get_pair_selections(o: Pair):
 	key = o.key()
 	r = selections.get(key, dict())
 	con, d = r.get("content", list()), r.get("default", 0)
-	if selections.get(key,dict()).get("use_template_files"):
+	if selections.get(key, dict()).get("use_template_files"):
 		con = list(templates.active_bases.keys())
+	if selections.get(key, dict()).get("use_active_templates"):
+		con = templates.get_all_active()
 	is_list = len(con) != 0
 	others = [x.value() for x in o.parent.content if x.key() == key]
 	con = [x for x in con if x not in others]
 	if is_list and o.value():
 		con = [o.value()] + [x for x in con if x != o.value()]
+
 	if d > len(con):
 		d = 0
 	return con, d
@@ -240,3 +244,15 @@ def is_selection_available(o: Container, key: str):
 	used = [x.value() for x in o.content if x.key() == key]
 	con = [x for x in r.get("content", list()) if x not in used]
 	return len(con) != 0
+
+
+def should_update_bases(obj):
+	return any(selections.get(i.key(), dict()).get("use_active_templates") for i in obj.content)
+
+
+def update_bases(obj):
+	for x in templates.active_bases:
+		templates.active_bases[x] = False
+	for x in obj.get_root().content:
+		if selections.get(x.key(), dict()).get("use_template_files", False):
+			templates.active_bases[x.value()] = True
