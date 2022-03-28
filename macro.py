@@ -242,7 +242,11 @@ def get_pair_selections(o: Pair):
 def is_selection_available(o: Container, key: str):
 	r = selections.get(key, dict())
 	used = [x.value() for x in o.content if x.key() == key]
-	con = [x for x in r.get("content", list()) if x not in used]
+	if r.get("use_template_files"):
+		content = list(templates.active_bases.keys())
+	else:
+		content = r.get("content", list())
+	con = [x for x in content if x not in used]
 	return len(con) != 0
 
 
