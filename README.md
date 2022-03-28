@@ -36,7 +36,7 @@ various configuration options are located in *info.py*.
 * **Left**: Back button
 * **Return / Right**: Element Action
 
-####Modify Element Window:
+#### Modify Element Window:
 * **Escape**: Cancel
 * **Return**: Confirm
 * **Up/Down**: Navigate listbox
