@@ -56,11 +56,9 @@ def modify_element_window(o: (objects.Container, objects.Pair), element_index, a
 
 	def lb_update(*args):
 		s = tx.get("1.0", tk.END)
-		if s.endswith("\n"):
-			s = s[:-1]
 		if lb.size():
 			lb.delete(0, last = lb.size() - 1)
-
+		s = s.replace("\n","")
 		can_see = macro.get_available(o.parent)
 		can_see = [x for x in can_see if s.lower() in x.lower() or not s]
 		can_see.sort()
@@ -69,10 +67,14 @@ def modify_element_window(o: (objects.Container, objects.Pair), element_index, a
 		if not can_see:
 			lb.insert(0, "no results")
 
-	def lb_click(event):
+	def lb_click(*args):
 		if lb.size():
-			_c = lb.nearest(event.y)
-			_s = lb.get(_c)
+			sel = lb.curselection()
+			if sel:
+				print(args[0].char)
+				_s = lb.get(sel[0])
+			else:
+				_s = "no results"
 			if _s and _s != "no results":
 				sv.set("Current selection:\n" + _s)
 
@@ -145,6 +147,9 @@ def modify_element_window(o: (objects.Container, objects.Pair), element_index, a
 
 	tx.bind("<KeyRelease>", lb_update)
 	lb.bind("<Button-1>", lb_click)
+	lb.bind("<KeyRelease>", lb_click)
+	lb.bind("<Key>", btn_confirm)
+	tx.bind("<Key>", btn_confirm)
 	top.bind("<Key>", btn_confirm)
 	top.bind("<Key>", w_on_close)
 
@@ -175,7 +180,7 @@ def modify_element_window(o: (objects.Container, objects.Pair), element_index, a
 		tx.grid(row = 0, column = 0, sticky = "n")
 		lb.grid(row = 1, column = 0, sticky = "n")
 		ct.grid(row = 2, column = 0, sticky = "n")
-		tx.focus_set()
+		lb.focus_set()
 	cb.grid(row = 4, column = 0, sticky = "n")
 	top.grab_set()
 
