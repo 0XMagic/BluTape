@@ -339,6 +339,9 @@ def element_action(*args):
 
 
 def del_active(*args):
+	in_focus = str(args[0].widget.focus_get())
+	if in_focus.endswith("entry") or in_focus.endswith("combobox"):
+		return
 	a = get_highlighted()
 	if a is not None:
 		a.func_delete()
