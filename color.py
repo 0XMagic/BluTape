@@ -21,3 +21,5 @@ COLOR_ERROR = "#993c3a"
 #Highlighted text
 COLOR_TEXT_HIGHLIGHT = "#4b6eaf"
 
+#highlighted button text
+COLOR_MENU_HIGHLIGHT = "#797AD2"

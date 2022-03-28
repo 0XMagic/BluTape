@@ -20,6 +20,27 @@ various configuration options are located in *info.py*.
 * **path**: this line contains code to auto-generate it's value. ***Changing this WILL cause blutape to be unable to launch!***
 * **text_config**: various text strings for button texts and sub-window titles.
 
+## Keyboard shortcuts
+#### Main Window:
+* **Ctrl + S**: Save
+* **Ctrl + Shift + S**: Save As
+* **Ctrl + E**: Export
+* **Ctrl + O**: Open
+* **Ctrl + Shift + R**: Reload template files
+* **Shift + A**: Add Element
+* **Shift + E**: Change Element
+* **Shift + X / Backspace / Delete**: Delete Element
+* **Escape / Return**: Stop editing text
+* **Up/Down**: Change highlighted Element
+* **Shift + Up/Down**: Shift Elements
+* **Left**: Back button
+* **Return / Right**: Element Action
+
+####Modify Element Window:
+* **Escape**: Cancel
+* **Return**: Confirm
+* **Up/Down**: Navigate listbox
+
 ## Upper menu options
 ### file:
 * **Open**: Open a blutape save file.

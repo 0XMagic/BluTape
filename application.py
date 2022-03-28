@@ -44,6 +44,7 @@ def modify_element_window(o: (objects.Container, objects.Pair), element_index, a
 		elements.append(to_set)
 
 	def w_on_close(*args):
+		global sel_y
 		if len(args):
 			if args[0].char != "\x1b":
 				return
@@ -55,6 +56,9 @@ def modify_element_window(o: (objects.Container, objects.Pair), element_index, a
 		update_elements()
 		top.grab_release()
 		top.destroy()
+		if not o.is_temp:
+			sel_y = element_index
+		frame_color_update()
 
 	def lb_update(*args):
 		s = tx.get("1.0", tk.END)
@@ -73,7 +77,6 @@ def modify_element_window(o: (objects.Container, objects.Pair), element_index, a
 		if lb.size():
 			sel = lb.curselection()
 			if sel:
-				print(args[0].char)
 				_s = lb.get(sel[0])
 			else:
 				_s = "no results"
@@ -81,6 +84,7 @@ def modify_element_window(o: (objects.Container, objects.Pair), element_index, a
 				sv.set("Current selection:\n" + _s)
 
 	def btn_confirm(*args):
+
 		if len(args):
 			if args[0].char != "\r":
 				return
@@ -98,6 +102,7 @@ def modify_element_window(o: (objects.Container, objects.Pair), element_index, a
 				o.key(_s)
 
 				o.is_temp = False
+				elements[element_index].set_highlight(False)
 				w_on_close()
 
 	def nb_func(obj, alt = False):
@@ -194,14 +199,25 @@ def modify_element_window(o: (objects.Container, objects.Pair), element_index, a
 
 
 def func_back():
-	global active_object
+	global active_object, sel_y
+
+	i = active_object.get_self_index()
+
 	active_object = active_object.parent
+
 	update_elements()
+	sel_y = i
+	for e in elements:
+		e.is_in_text = False
+
+	frame_color_update()
+
 
 def func_add_element_if_focus(*args):
 	do_func = not str(args[0].widget.focus_get()).endswith("entry")
 	if do_func:
 		func_add_element()
+
 
 def func_add_element(*args):
 	avail = macro.get_available(active_object)
@@ -227,7 +243,8 @@ def func_save_as():
 
 def func_open_project():
 	new_project = savefile.load_project(app)
-	set_active_project(new_project)
+	if new_project is not None:
+		set_active_project(new_project)
 
 
 def func_export():
@@ -242,6 +259,117 @@ def set_active_project(p: objects.Project):
 	update_elements()
 
 
+def get_highlighted():
+	_a = [x for x in elements if x.is_active]
+	if not _a:
+		return None
+	return _a[0]
+
+
+def arrow_up_move(*args):
+	in_focus = str(args[0].widget.focus_get()).endswith("entry")
+	if in_focus:
+		return
+	a = get_highlighted()
+	if a is not None:
+		a.func_up()
+	frame_color_update()
+
+
+def arrow_down_move(*args):
+	in_focus = str(args[0].widget.focus_get()).endswith("entry")
+	if in_focus:
+		return
+	a = get_highlighted()
+	if a is not None:
+		a.func_down()
+	frame_color_update()
+
+
+def arrow_up(*args):
+	in_focus = str(args[0].widget.focus_get())
+	if in_focus.endswith("entry") or in_focus.endswith("combobox"):
+		return
+	global sel_y
+	if sel_y > 0:
+		sel_y -= 1
+	frame_color_update()
+
+
+def arrow_down(*args):
+	in_focus = str(args[0].widget.focus_get())
+	if in_focus.endswith("entry") or in_focus.endswith("combobox"):
+		return
+	global sel_y
+	sel_y += 1
+	frame_color_update()
+
+
+def arrow_left(*args):
+	in_focus = str(args[0].widget.focus_get()).endswith("entry")
+	if in_focus:
+		return
+	func_back()
+	pass
+
+
+def element_action(*args):
+	a = get_highlighted()
+
+	if a is not None:
+		if a.mode == 1:
+			in_focus = str(args[0].widget.focus_get()).endswith("entry")
+			if in_focus:
+				return
+			a.func_edit()
+		elif a.mode == 2:
+			in_focus = str(args[0].widget.focus_get()).endswith("entry")
+			if not in_focus:
+				a.text.focus_set()
+			else:
+				app.focus_set()
+		elif a.mode == 3:
+			in_focus = str(args[0].widget.focus_get()).endswith("combobox")
+			if not in_focus:
+				a.select.focus_set()
+				a.select.event_generate('<Down>')
+
+			else:
+				a.func_text_lose_focus()
+
+
+def del_active(*args):
+	a = get_highlighted()
+	if a is not None:
+		a.func_delete()
+
+
+def change_key_active(*args):
+	a = get_highlighted()
+	if a is not None:
+		a.func_key()
+
+
+def frame_color_update():
+	global sel_y
+	alive = [n for n, x in enumerate(elements) if x.mode]
+	if not alive:
+		return
+	if sel_y >= len(alive):
+		sel_y = len(alive) - 1
+
+	for n, e in enumerate(elements):
+		e.set_highlight(n == alive[sel_y])
+
+
+def update_sel_y_by_object_id(o: objects.Container, v):
+	global sel_y
+	for n, x in enumerate(elements):
+		if x.object == o.content[v]:
+			sel_y = n
+	frame_color_update()
+
+
 class Element:
 	def __init__(self, parent: (tk.Frame, tk.Tk)):
 		self.frame = tk.Frame(parent, bg = COLOR_BACKGROUND)
@@ -249,6 +377,8 @@ class Element:
 		self.text_mode = 0
 		self.var_selection = tk.StringVar()
 		self.var_text = tk.StringVar()
+		self.is_active = False
+		self.is_in_text = False
 
 		self.mode = 0
 		self.object = None
@@ -273,7 +403,8 @@ class Element:
 		self.var_text.trace_add("write", self.func_text)
 		self.text_is_busy = False
 		self.text.bind("<Escape>", self.func_text_lose_focus)
-		self.text.bind("<Return>", self.func_text_lose_focus)
+		self.text.bind("<FocusIn>", self.f_in)
+		self.text.bind("<FocusOut>", self.f_out)
 
 		self.remove_button = tk.Button(
 				self.frame, width = 2,
@@ -308,6 +439,7 @@ class Element:
 		self.select.option_add("*TCombobox*Listbox.SelectBackground", COLOR_BACKGROUND_ALT)
 		self.select.option_add("*TCombobox*Listbox.SelectForeground", COLOR_TEXT_STR)
 		self.select.bind("<<ComboboxSelected>>", self.func_selection)
+		self.select.bind("<FocusIn>", self.f_in)
 
 		grid(self.remove_button, 0, 0, padx = 5)
 		ud = 1
@@ -316,17 +448,47 @@ class Element:
 		grid(self.shift_frame, 0, 1, padx = 5)
 		grid(self.key_button, 0, 2)
 
+	def f_in(self, *args):
+		global sel_y
+		if self.is_in_text and self.mode == 3 and str(self.select.focus_get()).endswith("combobox"):
+			self.select.event_generate("<Return>")
+			self.is_in_text = False
+		self.is_in_text = True
+		sel_y = self.get_self_index()
+		frame_color_update()
+
+	def f_out(self, *args):
+		self.is_in_text = False
+		frame_color_update()
+
+	def set_highlight(self, b: bool):
+		b1 = self.is_in_text and self.mode != 3
+		to_set = COLOR_MENU_HIGHLIGHT if b and not b1 else COLOR_BACKGROUND
+		self.is_active = b
+		self.frame["bg"] = to_set
+		self.shift_frame["bg"] = to_set
+
+		tb = COLOR_TEXT_NUM if self.text_mode else COLOR_TEXT_STR
+
+		self.text["bg"] = tb if b1 and b else COLOR_BACKGROUND_ALT
+		self.text["fg"] = COLOR_BACKGROUND_ALT if b1 else tb
+
 	def func_edit(self):
 		if self.object is not None:
-			global active_object
+			global active_object, sel_y
 			active_object = self.object
+			sel_y = 0
+
+			for e in elements:
+				e.is_in_text = False
+
 			update_elements()
+			frame_color_update()
 
 		pass
 
-	@staticmethod
-	def func_text_lose_focus(*args):
-		app.focus_set()
+	def func_text_lose_focus(self, *args):
+		app.focus_force()
 
 	def func_key(self):
 		if self.object is not None:
@@ -344,13 +506,15 @@ class Element:
 			o = self.object.parent
 			a = self.object.get_self_index()
 			b = a + offset
-			macro.swap(o, a, b)
+			c = a if sel_y == self.get_self_index() else b
+			macro.swap(o, a, b, on_finish = lambda: update_sel_y_by_object_id(o, c))
 			update_elements()
 
 	def func_selection(self, *args):
 		if self.object is not None:
 			self.object.value(self.var_selection.get())
 			self.select.selection_clear()
+			self.func_text_lose_focus()
 
 	def get_text_mode(self):
 		mode = 0
@@ -376,6 +540,7 @@ class Element:
 			self.object.self_destruct()
 			self.update(None, self.get_self_index())
 			update_sel_boxes()
+			frame_color_update()
 
 		pass
 
@@ -471,7 +636,26 @@ app.geometry("x".join([str(dim) for dim in app_info["window_size"]]))
 app.geometry("".join([f"+{dim}" if dim >= 0 else str(dim) for dim in app_info["window_pos"]]))
 app.configure(bg = COLOR_BACKGROUND)
 
+sel_y = 0
+
 app.bind("<Shift-A>", func_add_element_if_focus)
+app.bind("<Shift-E>", change_key_active)
+app.bind("<Shift-X>", del_active)
+app.bind("<BackSpace>", del_active)
+app.bind("<Delete>", del_active)
+app.bind("<Up>", arrow_up)
+app.bind("<Down>", arrow_down)
+app.bind("<Left>", arrow_left)
+app.bind("<Right>", element_action)
+app.bind("<Return>", element_action)
+app.bind("<Shift-Up>", arrow_up_move)
+app.bind("<Shift-Down>", arrow_down_move)
+app.bind("<Control-s>", lambda a: func_save())
+app.bind("<Control-Shift-S>", lambda a: func_save_as())
+app.bind("<Control-e>", lambda a: func_export())
+app.bind("<Control-o>", lambda a: func_open_project())
+app.bind("<Control-Shift-R>", lambda a: savefile.reload_templates())
+
 
 lbl_path_string = tk.StringVar()
 lbl_path_string.set("root")

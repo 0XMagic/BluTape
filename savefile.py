@@ -85,7 +85,7 @@ def load_project(parent):
 	)
 	if io is None:
 		print("Load aborted")
-		return
+		return None
 	result = objects.Project()
 	result.import_json(json.load(io), io.name)
 	ns = io.name.split("/")

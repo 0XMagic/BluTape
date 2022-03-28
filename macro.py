@@ -121,7 +121,6 @@ def add_item(c: Container, s: str, *v, force_at = -1):
 def apply_type_changes(o: Container):
 	for n in range(len(o.content)):
 		s = o.content[n].key()
-
 		if s not in data:
 			s = "None"
 			o.content[n].key(s)
@@ -141,7 +140,7 @@ def apply_type_changes(o: Container):
 			a.name_mode = a_name_mode
 
 
-def swap(o: Container, a, b):
+def swap(o: Container, a, b, on_finish = None):
 	if b < 0 or a < 0 or a >= len(o.content) or b >= len(o.content):
 		return False
 
@@ -157,6 +156,8 @@ def swap(o: Container, a, b):
 	o.content[b].key(k1)
 	o.content[b].value(v1)
 	apply_type_changes(o)
+	if on_finish:
+		on_finish()
 	return True
 
 
