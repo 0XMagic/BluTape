@@ -10,12 +10,14 @@ import savefile
 def grid(e, r, c, **kwargs):
 	e.grid(row = r, column = c, **kwargs)
 
+
 def update_sel_boxes():
 	for n, x in enumerate(elements):
 		if n < len(active_object.content):
 			s_con, s_def = macro.get_pair_selections(active_object.content[n])
 			if s_con:
 				x.select['values'] = s_con
+
 
 def update_elements(force_update = False):
 	app.focus_set()
@@ -58,7 +60,7 @@ def modify_element_window(o: (objects.Container, objects.Pair), element_index, a
 		s = tx.get("1.0", tk.END)
 		if lb.size():
 			lb.delete(0, last = lb.size() - 1)
-		s = s.replace("\n","")
+		s = s.replace("\n", "")
 		can_see = macro.get_available(o.parent)
 		can_see = [x for x in can_see if s.lower() in x.lower() or not s]
 		can_see.sort()
@@ -196,8 +198,12 @@ def func_back():
 	active_object = active_object.parent
 	update_elements()
 
+def func_add_element_if_focus(*args):
+	do_func = not str(args[0].widget.focus_get()).endswith("entry")
+	if do_func:
+		func_add_element()
 
-def func_add_element():
+def func_add_element(*args):
 	avail = macro.get_available(active_object)
 	avail.sort()
 	to_update = -1
@@ -236,7 +242,6 @@ def set_active_project(p: objects.Project):
 	update_elements()
 
 
-
 class Element:
 	def __init__(self, parent: (tk.Frame, tk.Tk)):
 		self.frame = tk.Frame(parent, bg = COLOR_BACKGROUND)
@@ -267,7 +272,8 @@ class Element:
 
 		self.var_text.trace_add("write", self.func_text)
 		self.text_is_busy = False
-		#self.text.bind("<KeyRelease>", self.func_text)
+		self.text.bind("<Escape>", self.func_text_lose_focus)
+		self.text.bind("<Return>", self.func_text_lose_focus)
 
 		self.remove_button = tk.Button(
 				self.frame, width = 2,
@@ -318,6 +324,10 @@ class Element:
 
 		pass
 
+	@staticmethod
+	def func_text_lose_focus(*args):
+		app.focus_set()
+
 	def func_key(self):
 		if self.object is not None:
 			modify_element_window(self.object, self.get_self_index())
@@ -366,7 +376,6 @@ class Element:
 			self.object.self_destruct()
 			self.update(None, self.get_self_index())
 			update_sel_boxes()
-
 
 		pass
 
@@ -461,6 +470,8 @@ app.wm_title(f"{app_info['title']} v{app_info['version']}")
 app.geometry("x".join([str(dim) for dim in app_info["window_size"]]))
 app.geometry("".join([f"+{dim}" if dim >= 0 else str(dim) for dim in app_info["window_pos"]]))
 app.configure(bg = COLOR_BACKGROUND)
+
+app.bind("<Shift-A>", func_add_element_if_focus)
 
 lbl_path_string = tk.StringVar()
 lbl_path_string.set("root")
