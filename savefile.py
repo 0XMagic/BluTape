@@ -7,24 +7,16 @@ from tkinter.filedialog import asksaveasfile, askopenfile
 import macro
 import templates
 
-fullpath = os.getenv("APPDATA")
-if fullpath is None: fullpath = info.path[:-1]
-fullpath = fullpath.replace("\\", "/") + "/Blutape/data/"
-
 
 def reload_templates():
 	templates.reset()
 
 	for s in [
 			info.path + "datafiles/templates",
-			fullpath + "templates/"
+			info.save_dir + "templates/"
 	]:
 		for p in os.listdir(s):
 			templates.load(s + "/" + p)
-
-
-
-
 
 
 def save_project(parent: tk.Tk, project: objects.Project, save_as = False):
@@ -32,7 +24,7 @@ def save_project(parent: tk.Tk, project: objects.Project, save_as = False):
 	backup = (project.path, project.project_name)
 
 	if not os.path.isdir(project.path):
-		project.path = fullpath + "projects/"
+		project.path = info.save_dir + "projects/"
 		if not save_as:
 			print("Save directory not found, switching type to SaveAs")
 		save_as = True
@@ -78,7 +70,7 @@ def load_project(parent):
 	print("Attempting load...")
 	io = askopenfile(
 			parent = parent,
-			initialdir = fullpath + "projects/",
+			initialdir = info.save_dir + "projects/",
 			defaultextension = ".blu",
 			filetypes = [("BluTape Save", "*.blu")],
 			mode = "r"
@@ -95,7 +87,7 @@ def load_project(parent):
 
 
 def autoload():
-	a_path = fullpath + "projects/autoload.blu"
+	a_path = info.save_dir + "projects/autoload.blu"
 	result = objects.Project()
 	if not os.path.isfile(a_path):
 		print("You can make a default project by naming it 'autoload.blu'")
@@ -111,7 +103,7 @@ def export_project(parent, project: objects.Project):
 	watermark = "\n".join(["//" + x for x in [f"Made with {info.full_title}", info.repo]]) + "\n"
 	project.repair_strings()
 	if not os.path.isdir(project.pop_directory):
-		project.pop_directory = fullpath + "exports/"
+		project.pop_directory = info.save_dir + "exports/"
 	i_file = project.map_name + "_" + project.mission_name + ".pop"
 	io = asksaveasfile(
 			parent = parent,

@@ -1,5 +1,6 @@
 import json
 import info
+
 #if a key or value contains any of these chars, put quotes around it when exporting
 force_quotes = " \t"
 
@@ -221,8 +222,6 @@ class Container:
 
 			if "Pair" in x:
 				self.add_item(x["Pair"]["key"], x["Pair"]["value"])
-
-		pass
 
 
 class Project:

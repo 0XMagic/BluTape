@@ -5,6 +5,7 @@ import info
 import objects
 import macro
 import savefile
+import templates
 
 
 def grid(e, r, c, **kwargs):
@@ -21,14 +22,11 @@ def update_sel_boxes():
 
 def update_elements(force_update = False):
 	app.focus_set()
-
 	if macro.should_update_bases(active_object):
 		macro.update_bases(active_object)
-
 	while len(elements) < len(active_object.content):
 		to_add = Element(frame_element_items)
 		elements.append(to_add)
-
 	for n, x in enumerate(elements):
 		if n < len(active_object.content):
 			x.update(active_object.content[n], n, force_update = force_update)
@@ -61,6 +59,10 @@ def modify_element_window(o: (objects.Container, objects.Pair), element_index, a
 		frame_color_update()
 
 	def lb_update(*args):
+		if args:
+			if args[0].keysym == "Down":
+				lb.focus_set()
+				return
 		s = tx.get("1.0", tk.END)
 		if lb.size():
 			lb.delete(0, last = lb.size() - 1)
@@ -75,7 +77,10 @@ def modify_element_window(o: (objects.Container, objects.Pair), element_index, a
 
 	def lb_click(*args):
 		if lb.size():
-			sel = lb.curselection()
+			if args[0].type is tk.EventType.ButtonPress:
+				sel = [lb.nearest(args[0].y)]
+			else:
+				sel = lb.curselection()
 			if sel:
 				_s = lb.get(sel[0])
 			else:
@@ -84,7 +89,6 @@ def modify_element_window(o: (objects.Container, objects.Pair), element_index, a
 				sv.set("Current selection:\n" + _s)
 
 	def btn_confirm(*args):
-
 		if len(args):
 			if args[0].char != "\r":
 				return
@@ -200,11 +204,8 @@ def modify_element_window(o: (objects.Container, objects.Pair), element_index, a
 
 def func_back():
 	global active_object, sel_y
-
 	i = active_object.get_self_index()
-
 	active_object = active_object.parent
-
 	update_elements()
 	sel_y = i
 	for e in elements:
@@ -219,7 +220,7 @@ def func_add_element_if_focus(*args):
 		func_add_element()
 
 
-def func_add_element(*args):
+def func_add_element():
 	avail = macro.get_available(active_object)
 	avail.sort()
 	to_update = -1
@@ -249,6 +250,11 @@ def func_open_project():
 
 def func_export():
 	savefile.export_project(app, active_project)
+
+
+def func_reload_templates(*args):
+	print("Reloading templates" + "(Keyboard shortcut)" if args else "")
+	templates.reload_templates()
 
 
 def set_active_project(p: objects.Project):
@@ -310,12 +316,10 @@ def arrow_left(*args):
 	if in_focus:
 		return
 	func_back()
-	pass
 
 
 def element_action(*args):
 	a = get_highlighted()
-
 	if a is not None:
 		if a.mode == 1:
 			in_focus = str(args[0].widget.focus_get()).endswith("entry")
@@ -327,13 +331,13 @@ def element_action(*args):
 			if not in_focus:
 				a.text.focus_set()
 			else:
-				app.focus_set()
+				if args[0].keysym != "Right":
+					app.focus_set()
 		elif a.mode == 3:
 			in_focus = str(args[0].widget.focus_get()).endswith("combobox")
 			if not in_focus:
 				a.select.focus_set()
 				a.select.event_generate('<Down>')
-
 			else:
 				a.func_text_lose_focus()
 
@@ -347,7 +351,7 @@ def del_active(*args):
 		a.func_delete()
 
 
-def change_key_active(*args):
+def change_key_active():
 	a = get_highlighted()
 	if a is not None:
 		a.func_key()
@@ -403,11 +407,11 @@ class Element:
 				textvariable = self.var_text
 		)
 
-		self.var_text.trace_add("write", self.func_text)
+		self.var_text.trace_add("write", lambda *args: self.func_text())
 		self.text_is_busy = False
-		self.text.bind("<Escape>", self.func_text_lose_focus)
-		self.text.bind("<FocusIn>", self.f_in)
-		self.text.bind("<FocusOut>", self.f_out)
+		self.text.bind("<Escape>", lambda *args: self.func_text_lose_focus())
+		self.text.bind("<FocusIn>", lambda *args: self.f_in())
+		self.text.bind("<FocusOut>", lambda *args: self.f_out())
 
 		self.remove_button = tk.Button(
 				self.frame, width = 2,
@@ -441,8 +445,8 @@ class Element:
 		self.select.option_add("*TCombobox*Listbox.foreground", COLOR_TEXT_STR)
 		self.select.option_add("*TCombobox*Listbox.SelectBackground", COLOR_BACKGROUND_ALT)
 		self.select.option_add("*TCombobox*Listbox.SelectForeground", COLOR_TEXT_STR)
-		self.select.bind("<<ComboboxSelected>>", self.func_selection)
-		self.select.bind("<FocusIn>", self.f_in)
+		self.select.bind("<<ComboboxSelected>>", lambda *args: self.func_selection())
+		self.select.bind("<FocusIn>", lambda *args: self.f_in())
 
 		grid(self.remove_button, 0, 0, padx = 5)
 		ud = 1
@@ -451,16 +455,15 @@ class Element:
 		grid(self.shift_frame, 0, 1, padx = 5)
 		grid(self.key_button, 0, 2)
 
-	def f_in(self, *args):
+	def f_in(self):
 		global sel_y
 		if self.is_in_text and self.mode == 3 and str(self.select.focus_get()).endswith("combobox"):
 			self.select.event_generate("<Return>")
-			self.is_in_text = False
 		self.is_in_text = True
 		sel_y = self.get_self_index()
 		frame_color_update()
 
-	def f_out(self, *args):
+	def f_out(self):
 		self.is_in_text = False
 		frame_color_update()
 
@@ -488,15 +491,13 @@ class Element:
 			update_elements()
 			frame_color_update()
 
-		pass
-
-	def func_text_lose_focus(self, *args):
+	@staticmethod
+	def func_text_lose_focus():
 		app.focus_force()
 
 	def func_key(self):
 		if self.object is not None:
 			modify_element_window(self.object, self.get_self_index())
-		pass
 
 	def func_up(self):
 		self._swap(-1)
@@ -513,7 +514,7 @@ class Element:
 			macro.swap(o, a, b, on_finish = lambda: update_sel_y_by_object_id(o, c))
 			update_elements()
 
-	def func_selection(self, *args):
+	def func_selection(self):
 		if self.object is not None:
 			self.object.value(self.var_selection.get())
 			self.select.selection_clear()
@@ -535,7 +536,7 @@ class Element:
 		self.text_mode = mode
 		return was_changed
 
-	def func_text(self, *args):
+	def func_text(self):
 		self.object.value(self.var_text.get())
 
 	def func_delete(self):
@@ -545,7 +546,6 @@ class Element:
 			update_sel_boxes()
 			frame_color_update()
 
-		pass
 
 	def get_self_index(self):
 		return [n for n, x in enumerate(elements) if x == self][0] if self in elements else -1
@@ -642,7 +642,7 @@ app.configure(bg = COLOR_BACKGROUND)
 sel_y = 0
 
 app.bind("<Shift-A>", func_add_element_if_focus)
-app.bind("<Shift-E>", change_key_active)
+app.bind("<Shift-E>", lambda *args: change_key_active())
 app.bind("<Shift-X>", del_active)
 app.bind("<BackSpace>", del_active)
 app.bind("<Delete>", del_active)
@@ -657,8 +657,7 @@ app.bind("<Control-s>", lambda a: func_save())
 app.bind("<Control-Shift-S>", lambda a: func_save_as())
 app.bind("<Control-e>", lambda a: func_export())
 app.bind("<Control-o>", lambda a: func_open_project())
-app.bind("<Control-Shift-R>", lambda a: savefile.reload_templates())
-
+app.bind("<Control-Shift-R>", func_reload_templates)
 
 lbl_path_string = tk.StringVar()
 lbl_path_string.set("root")
@@ -722,7 +721,7 @@ top_bar_template = tk.Menu(
 
 top_bar_template.add_command(
 		label = "Reload",
-		command = savefile.reload_templates,
+		command = func_reload_templates,
 		font = ("", 12)
 )
 
@@ -790,4 +789,3 @@ def style_init():
 def launch():
 	style_init()
 	tk.mainloop()
-	pass

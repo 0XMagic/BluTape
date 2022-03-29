@@ -1,12 +1,23 @@
+import os
+
 title = "BluTape"
 full_title = "BluTape Mission Generator"
 author = "ZeroX"
 repo = "https://github.com/0XMagic/BluTape"
-version = 6.2
+version = 6.3
 schema_ver = 4
 window_size = (1280, 720)
 window_pos = (200, 200)
 path = "/".join(__file__.split("\\")[:-1]) + "/"
+
+save_dir = os.getenv("APPDATA")
+if save_dir is None:
+	#fallback for linux/AppleOS
+	save_dir = path + "Blutape/data/"
+else:
+	save_dir = save_dir.replace("\\", "/") + "/Blutape/data/"
+
+
 text_config = {
 		"up":                "↑",
 		"down":              "↓",

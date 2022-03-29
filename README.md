@@ -97,7 +97,7 @@ This is a variant of [element](#element) for the Container [type](#element-types
 ## Adding templates to the project
 1. Copy the pop file with your templates into.
 2. Go to [Template](#template) and click **Reload**.
-3. Go to your Root node and add a #base if the file, it should have it as a new option.
+3. Go to your Root node and add a #base for the added the files.
 
 ## Having a default project when starting BluTape
 To make a project load on start, simply save a project as "autoload.blu"

@@ -1,3 +1,6 @@
+import os
+import info
+
 content = dict()
 active_bases = dict()
 
@@ -63,3 +66,13 @@ def load(path: str):
 
 		if active_item is not None and lv > 0:
 			active_item.content.append(x)
+
+
+def reload_templates():
+	reset()
+	for s in [
+			info.path + "datafiles/templates",
+			info.save_dir + "templates/"
+	]:
+		for p in os.listdir(s):
+			load(s + "/" + p)

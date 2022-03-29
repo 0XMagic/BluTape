@@ -55,7 +55,6 @@ def consolidate(data):
 				parent.append(parent[-1])
 				continue
 			parent.pop()
-
 			if line.startswith("\""):
 				k = line.split("\" ")[0] + "\""
 			else:
@@ -63,27 +62,23 @@ def consolidate(data):
 			k = k.replace("\"", "")
 			parent.append(k)
 			p = parent[-2]
+			if p in ["ItemAttributes", "CharacterAttributes"] and k != "ItemName":
+				continue
 			if k not in result:
+				print(k)
 				for z in result.keys():
 					if z.lower() == k.lower():
 						k = z
 						break
-
 				if k not in result:
-					result[k] = {
-							"valid_in": list(),
-							"types":    list()
-					}
-			#quick fix to unify character attributes and item attributes since they both use stats
-			if p in ["ItemAttributes", "CharacterAttributes"] and k != "ItemName":
-				p1 = ["ItemAttributes", "CharacterAttributes"]
-			else:
-				p1 = [p]
+					result[k] = {"valid_in": list(), "types": list()}
 
-			for p2 in p1:
-				if p2 not in result[k]["valid_in"]:
-					result[k]["valid_in"].append(p2)
+			if len(parent) > 3:
+				if parent[-3] == "Templates" or p == "Templates":
+					continue
 
+			if p not in result[k]["valid_in"]:
+				result[k]["valid_in"].append(p)
 			if " " in line:
 				v = " ".join(line.split(" ")[1:])
 				if v:
@@ -111,34 +106,19 @@ def consolidate(data):
 	return result
 
 
-def unify_templates(data: dict):
-	print("updating templates")
-	all_templates = [k for k, v in data.items() if "Templates" in v["valid_in"]]
-	to_apply = [k for k, v in data.items() if any(i in all_templates for i in v["valid_in"])]
-	for a in to_apply: data[a]["valid_in"] += [t for t in all_templates if t not in data[a]["valid_in"]]
-	return data
-
-
 def attribute_fix(data: dict):
 	print("updating attribute database")
 	with open("datafiles/spreadsheets/Attributes.csv") as fl:
 		attrs = [x for x in fl.read().split("\n") if x and not x.startswith("//")]
 	data = {k: v for k, v in data.items() if "CharacterAttributes" not in v["valid_in"]}
-
 	for a in attrs:
-		data[a] = {
-				"valid_in": ["CharacterAttributes", "ItemAttributes"],
-				"types":    ["float", "int", "var"]
-		}
-	print("inserted", len(data), "attributes")
+		data[a] = {"valid_in": ["CharacterAttributes", "ItemAttributes"], "types": ["float", "int", "var"]}
+	print("Loaded", len(data), "Tf2 attributes")
 	return data
 
 
 def main():
-	content = get_content()
-	data = consolidate(content)
-	data = unify_templates(data)
-	data = attribute_fix(data)
+	data = attribute_fix(consolidate(get_content()))
 	with open("datafiles/json/keywords.json", "w") as j:
 		json.dump(data, j, indent = "\t")
 
