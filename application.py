@@ -351,7 +351,10 @@ def del_active(*args):
 		a.func_delete()
 
 
-def change_key_active():
+def change_key_active(*args):
+	in_focus = str(args[0].widget.focus_get())
+	if in_focus.endswith("entry") or in_focus.endswith("combobox"):
+		return
 	a = get_highlighted()
 	if a is not None:
 		a.func_key()
@@ -642,7 +645,7 @@ app.configure(bg = COLOR_BACKGROUND)
 sel_y = 0
 
 app.bind("<Shift-A>", func_add_element_if_focus)
-app.bind("<Shift-E>", lambda *args: change_key_active())
+app.bind("<Shift-E>", change_key_active)
 app.bind("<Shift-X>", del_active)
 app.bind("<BackSpace>", del_active)
 app.bind("<Delete>", del_active)
