@@ -390,6 +390,8 @@ class Element:
 		self.is_active = False
 		self.is_in_text = False
 
+		self.frame.bind("<Button-1>", self.on_frame_click)
+
 		self.mode = 0
 		self.object = None
 		self.key_button = tk.Button(
@@ -458,6 +460,13 @@ class Element:
 		grid(self.shift_frame, 0, 1, padx = 5)
 		grid(self.key_button, 0, 2)
 
+	def on_frame_click(self, event):
+		if event.x <= 750:
+			global sel_y
+			sel_y = self.get_self_index()
+			frame_color_update()
+
+
 	def f_in(self):
 		global sel_y
 		if self.is_in_text and self.mode == 3 and str(self.select.focus_get()).endswith("combobox"):
@@ -472,7 +481,7 @@ class Element:
 
 	def set_highlight(self, b: bool):
 		b1 = self.is_in_text and self.mode != 3
-		to_set = COLOR_MENU_HIGHLIGHT if b and not b1 else COLOR_BACKGROUND
+		to_set = COLOR_MENU_HIGHLIGHT if b and not b1 else COLOR_BACKGROUND_ALT
 		self.is_active = b
 		self.frame["bg"] = to_set
 		self.shift_frame["bg"] = to_set
@@ -549,7 +558,6 @@ class Element:
 			update_sel_boxes()
 			frame_color_update()
 
-
 	def get_self_index(self):
 		return [n for n, x in enumerate(elements) if x == self][0] if self in elements else -1
 
@@ -599,7 +607,8 @@ class Element:
 			if mode == 0:
 				self.frame.grid_forget()
 			elif self.mode == 0:
-				grid(self.frame, n, 0, pady = 3, sticky = "nw")
+
+				grid(self.frame, n, 0, pady = 3, sticky = "ew")
 
 			if mode == 1:
 				self.text.grid_forget()
@@ -764,11 +773,14 @@ btn_add_element = tk.Button(
 grid(btn_back, 0, 0, sticky = "w")
 grid(lbl_path, 0, 1, sticky = "w")
 grid(btn_add_element, 0, 0, sticky = "nw", pady = 5)
-
-grid(frame_project, 0, 0, sticky = "w")
-grid(frame_header, 0, 0, sticky = "w")
-grid(frame_elements, 1, 0, sticky = "nw")
-grid(frame_element_items, 1, 0, sticky = "nw")
+app.grid_columnconfigure(0, weight=1)
+frame_project.grid_columnconfigure(0, weight=1)
+frame_elements.grid_columnconfigure(0, weight=1)
+frame_element_items.grid_columnconfigure(0, weight=1)
+grid(frame_project, 0, 0, sticky = "new")
+grid(frame_header, 0, 0, sticky = "nw")
+grid(frame_elements, 1, 0, sticky = "new")
+grid(frame_element_items, 1, 0, sticky = "new")
 
 
 def style_init():
