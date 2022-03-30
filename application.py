@@ -368,11 +368,12 @@ def change_key_active(*args):
 
 
 def frame_color_update():
-	to_text = macro.list_to_indented_string(active_object.export(max_recur = 6))
-	side_text['state'] = "normal"
-	side_text.delete("1.0","end")
-	side_text.insert("0.0",to_text)
-	side_text['state'] = "disabled"
+	if side_pin_var.get():
+		to_text = macro.list_to_indented_string(active_object.export(max_recur = 6))
+		side_text['state'] = "normal"
+		side_text.delete("1.0","end")
+		side_text.insert("0.0",to_text)
+		side_text['state'] = "disabled"
 	global sel_y
 	alive = [n for n, x in enumerate(elements) if x.mode]
 	if not alive:
