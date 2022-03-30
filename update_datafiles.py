@@ -9,8 +9,26 @@ keywords.json is already generated.
 
 This script only needs to be run if any of the following are changed:
 	datafiles/popfiles/*.pop
-	datafiles/spreadsheets/Attributes.csv  (in a future update)
+	datafiles/spreadsheets/Attributes.csv
+	datafiles/json/attr_blacklist.json
 """
+
+with open("datafiles/json/attr_blacklist.json", "r") as j:
+	blacklist = dict(json.load(j))
+
+
+#filter out some of the do-nothing stats
+def attribute_is_allowed(s: str):
+	s = s.lower()
+	return not any(
+			(
+					s in blacklist.get("equals", list()),
+					any(s.startswith(x) for x in blacklist.get("startswith", list())),
+					any(x in s for x in blacklist.get("contains", list()))
+			)
+	)
+
+	pass
 
 
 def get_content():
@@ -64,15 +82,16 @@ def consolidate(data):
 			p = parent[-2]
 			if p in ["ItemAttributes", "CharacterAttributes"] and k != "ItemName":
 				continue
+			if p == "Templates":
+				continue
 			if k not in result:
-				print(k)
 				for z in result.keys():
 					if z.lower() == k.lower():
 						k = z
 						break
 				if k not in result:
+					print("registering:", k)
 					result[k] = {"valid_in": list(), "types": list()}
-
 			if len(parent) > 3:
 				if parent[-3] == "Templates" or p == "Templates":
 					continue
@@ -109,11 +128,12 @@ def consolidate(data):
 def attribute_fix(data: dict):
 	print("updating attribute database")
 	with open("datafiles/spreadsheets/Attributes.csv") as fl:
-		attrs = [x for x in fl.read().split("\n") if x and not x.startswith("//")]
+		attrs = [x for x in fl.read().split("\n") if x and not x.startswith("//") and attribute_is_allowed(x)]
 	data = {k: v for k, v in data.items() if "CharacterAttributes" not in v["valid_in"]}
+	data["%attribute%"] = {"valid_in": ["CharacterAttributes", "ItemAttributes"], "types": ["float", "int", "var"]}
 	for a in attrs:
 		data[a] = {"valid_in": ["CharacterAttributes", "ItemAttributes"], "types": ["float", "int", "var"]}
-	print("Loaded", len(data), "Tf2 attributes")
+	print("Loaded", len(attrs), "Tf2 attributes")
 	return data
 
 

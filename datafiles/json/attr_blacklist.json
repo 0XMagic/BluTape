@@ -1,0 +1,61 @@
+{
+  "equals": [
+    "item drop wave",
+    "force center wrap",
+    "cannot delete",
+    "is commodity",
+    "can shuffle crate contents",
+    "on taunt attach particle effect",
+    "revive",
+    "bidirectional teleport",
+    "mod see enemy health",
+    "multiple sentries",
+    "critboost",
+    "ubercharge",
+    "cannot restore",
+    "cannot transmute",
+    "is_operation_pass",
+    "noise maker"
+  ],
+  "startswith": [
+    "item slot criteria",
+    "item in slot",
+    "quest",
+    "fire particle",
+    "random drop",
+    "recipe",
+    "spell:",
+    "is marketable",
+    "set bonus:",
+    "crit mod disabled",
+    "taunt success",
+    "taunt attack",
+    "taunt mimic",
+    "taunt force",
+    "canteen",
+    "powerup"
+  ],
+  "contains": [
+    "halloween",
+    "deprecated",
+    "trade",
+    "inspect",
+    "date",
+    "strange",
+    "craft",
+    "display only",
+    "vision",
+    "ammo",
+    "__",
+    "quantity",
+    "stattrak",
+    "text",
+    "account",
+    "resupply",
+    "tool",
+    "level"
+  ]
+
+
+
+}
