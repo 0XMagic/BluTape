@@ -3,7 +3,7 @@ import info
 
 content = dict()
 active_bases = dict()
-
+active_bases["active_project"] = True
 
 class Template:
 	def __init__(self):
@@ -76,3 +76,9 @@ def reload_templates():
 	]:
 		for p in os.listdir(s):
 			load(s + "/" + p)
+
+
+def clear_live_templates():
+	for k in list(content.keys()):
+		if content[k].popfile == "active_project":
+			content.pop(k)

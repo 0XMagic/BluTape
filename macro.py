@@ -144,7 +144,7 @@ def get_pair_selections(o: Pair):
 	r = selections.get(key, dict())
 	con, d = r.get("content", list()), r.get("default", 0)
 	if selections.get(key, dict()).get("use_template_files"):
-		con = list(templates.active_bases.keys())
+		con = [x for x in list(templates.active_bases.keys()) if x != "active_project"]
 	if selections.get(key, dict()).get("use_active_templates"):
 		con = templates.get_all_active()
 	is_list = len(con) != 0
@@ -162,7 +162,7 @@ def is_selection_available(o: Container, key: str):
 	r = selections.get(key, dict())
 	used = [x.value() for x in o.content if x.key() == key]
 	if r.get("use_template_files"):
-		content = list(templates.active_bases.keys())
+		content = [x for x in list(templates.active_bases.keys()) if x != "active_project"]
 	else:
 		content = r.get("content", list())
 	con = [x for x in content if x not in used]
@@ -175,7 +175,7 @@ def should_update_bases(obj):
 
 def update_bases(obj):
 	for x in templates.active_bases:
-		templates.active_bases[x] = False
+		templates.active_bases[x] = (x == "active_project")
 	for x in obj.get_root().content:
 		if selections.get(x.key(), dict()).get("use_template_files", False):
 			templates.active_bases[x.value()] = True

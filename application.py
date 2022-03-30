@@ -201,11 +201,16 @@ def modify_element_window(o: (objects.Container, objects.Pair), element_index, a
 	top.geometry(f"{w}x{h}")
 	top.geometry(f"+{dx}+{dy}")
 
+def set_active_object(o: objects.Container):
+	global active_object
+	if active_object.key_in_path("Templates"):
+		active_object.update_templates()
+	active_object = o
 
 def func_back():
 	global active_object, sel_y
 	i = active_object.get_self_index()
-	active_object = active_object.parent
+	set_active_object(active_object.parent)
 	update_elements()
 	sel_y = i
 	for e in elements:
@@ -247,6 +252,8 @@ def func_open_project():
 	if new_project is not None:
 		set_active_project(new_project)
 
+	frame_color_update()
+
 
 def func_export():
 	savefile.export_project(app, active_project)
@@ -261,7 +268,7 @@ def set_active_project(p: objects.Project):
 	global active_project
 	global active_object
 	active_project = p
-	active_object = p.container
+	set_active_object(p.container)
 	update_elements()
 
 
@@ -361,6 +368,11 @@ def change_key_active(*args):
 
 
 def frame_color_update():
+	to_text = macro.list_to_indented_string(active_object.export(max_recur = 6))
+	side_text['state'] = "normal"
+	side_text.delete("1.0","end")
+	side_text.insert("0.0",to_text)
+	side_text['state'] = "disabled"
 	global sel_y
 	alive = [n for n, x in enumerate(elements) if x.mode]
 	if not alive:
@@ -494,7 +506,7 @@ class Element:
 	def func_edit(self):
 		if self.object is not None:
 			global active_object, sel_y
-			active_object = self.object
+			set_active_object(self.object)
 			sel_y = 0
 
 			for e in elements:
@@ -630,7 +642,6 @@ class Element:
 
 active_project = objects.Project()  #temp objects to be overwritten by project creator
 active_object = active_project.container
-
 app = tk.Tk()
 style = ttk.Style()
 elements = list()
@@ -770,9 +781,31 @@ btn_add_element = tk.Button(
 		text = info.text_config.get("add element", "???"),
 		command = func_add_element
 )
+side_text = tk.Text(
+		frame_elements,
+		bg = COLOR_BACKGROUND,
+		fg = COLOR_TEXT_GENERIC,
+		state = "disabled"
+)
+
+side_pin_var = tk.IntVar()
+side_pin = tk.Checkbutton(
+		frame_elements,
+		bg = COLOR_BACKGROUND,
+		fg = COLOR_TEXT_HIGHLIGHT,
+		text = "Pin view",
+		variable = side_pin_var,
+		onvalue = 1,
+		offvalue = 0
+)
+
 grid(btn_back, 0, 0, sticky = "w")
 grid(lbl_path, 0, 1, sticky = "w")
 grid(btn_add_element, 0, 0, sticky = "nw", pady = 5)
+grid(side_text, 1, 1, sticky = "nsew")
+grid(side_pin, 0, 1, sticky = "e")
+
+
 app.grid_columnconfigure(0, weight=1)
 frame_project.grid_columnconfigure(0, weight=1)
 frame_elements.grid_columnconfigure(0, weight=1)

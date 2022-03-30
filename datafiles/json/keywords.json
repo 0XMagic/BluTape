@@ -647,17 +647,6 @@
 			"var"
 		]
 	},
-	"%attribute%": {
-		"valid_in": [
-			"CharacterAttributes",
-			"ItemAttributes"
-		],
-		"types": [
-			"float",
-			"int",
-			"var"
-		]
-	},
 	"damage penalty": {
 		"valid_in": [
 			"CharacterAttributes",

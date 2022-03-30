@@ -83,6 +83,7 @@ def load_project(parent):
 	ns = io.name.split("/")
 	print("Loaded project", ns[-1], "from", "/".join(ns[:-1]))
 	io.close()
+	result.container.update_templates()
 	return result
 
 

@@ -1,5 +1,6 @@
 import json
 import info
+import templates
 
 #if a key or value contains any of these chars, put quotes around it when exporting
 force_quotes = " \t"
@@ -78,8 +79,8 @@ class Pair:
 	def has_flags(self, *flags):
 		return all([flag in self.flags for flag in flags])
 
-	def export(self):
-		if self.is_temp:
+	def export(self, max_recur = 10000):
+		if self.is_temp or not max_recur:
 			return []
 		rk = check_quotes(self.key())
 		rv = check_quotes(self.value())
@@ -180,13 +181,44 @@ class Container:
 			self.content[force_at] = to_add
 		return to_add
 
-	def export(self):
+	def key_in_path(self, s: str):
+		if self.__is_root:
+			return False
+
+		return self.key() == s or self.parent.key_in_path(s)
+
+	def update_templates(self, at_root = False, is_in_template = False):
+		if not at_root:
+			self.get_root().update_templates(at_root = True)
+			return
+
+		if not is_in_template:
+			for x in self.content:
+				if x.key() in ["Templates", "root", "WaveSchedule"]:
+					x.update_templates(at_root = True, is_in_template = x.key() == "Templates")
+			return
+
+		templates.clear_live_templates()
+		for x in self.content:
+			to_add = templates.Template()
+			to_add.name = x.name
+			to_add.popfile = "active_project"
+			to_add.content = x.export()
+			templates.content[x.name] = to_add
+
+	def export(self, max_recur = 10000):
 		result = list()
-		for content in self.content:
-			result += content.export()
-		if not self.__is_root and not self.is_temp:
-			key = self.name if self.name_override else self.__key
-			result = [key, "{"] + result + ["}"]
+		key = self.name if self.name_override else self.__key
+		if max_recur:
+			for content in self.content:
+				result += content.export(max_recur = max_recur - 1)
+			if not self.__is_root and not self.is_temp:
+				if max_recur != 1 or result:
+					result = [key, "{"] + result + ["}"]
+				else:
+					result = [key, "{", "...", "}"]
+		else:
+			result = [key, "{", "...", "}"]
 		return result
 
 	def export_json(self):

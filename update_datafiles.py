@@ -130,7 +130,6 @@ def attribute_fix(data: dict):
 	with open("datafiles/spreadsheets/Attributes.csv") as fl:
 		attrs = [x for x in fl.read().split("\n") if x and not x.startswith("//") and attribute_is_allowed(x)]
 	data = {k: v for k, v in data.items() if "CharacterAttributes" not in v["valid_in"]}
-	data["%attribute%"] = {"valid_in": ["CharacterAttributes", "ItemAttributes"], "types": ["float", "int", "var"]}
 	for a in attrs:
 		data[a] = {"valid_in": ["CharacterAttributes", "ItemAttributes"], "types": ["float", "int", "var"]}
 	print("Loaded", len(attrs), "Tf2 attributes")
