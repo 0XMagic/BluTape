@@ -1,5 +1,5 @@
 # BLUTAPE COMPREHENSIVE GUIDE
-**version 6.2**
+**version 6.3**
 
 ## System requirements
 * [The latest version of python](https://www.python.org/)
@@ -95,7 +95,7 @@ This is a variant of [element](#element) for the Container [type](#element-types
 * **Edit button**: Accesses the sub-items of the Container, use the [Back button](#stock-menu) to return to the current Element.
 
 ## Adding templates to the project
-1. Copy the pop file with your templates into.
+1. Copy the pop file with your templates into appdata/blutape/data/templates.
 2. Go to [Template](#template) and click **Reload**.
 3. Go to your Root node and add a #base for the added the files.
 
