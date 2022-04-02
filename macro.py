@@ -1,6 +1,7 @@
 from objects import *
 import os
 import templates
+import shutil
 
 
 def create_project():
@@ -21,6 +22,16 @@ def save_dir_validate():
 		app_f = info.save_dir + f
 		if not os.path.isdir(app_f):
 			os.makedirs(app_f, exist_ok = True)
+
+
+def config_validate():
+	c_def = "datafiles/default_config/"
+	files = [x for x in os.listdir(c_def) if x != "info.txt"]
+	if not os.path.isdir(info.config_dir):
+		os.makedirs(info.config_dir, exist_ok = True)
+
+	for f in files:
+		shutil.copyfile(c_def + f, info.config_dir + f)
 
 
 def add_item(c: Container, s: str, *v, force_at = -1):

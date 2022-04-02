@@ -1,0 +1,7 @@
+THIS IS THE DEFAULT CONFIG USED WHEN FIRST LAUNCHING BLUTAPE
+CHANGING THESE VALUES WILL NOT NECESSARILY CHANGE YOUR CONFIG
+
+To change your config, edit the files in this directory:
+C:\Users\<username>\AppData\Roaming\Blutape\config
+
+This directory and it's associated files will be created automatically when running Blutape if it does not exists.

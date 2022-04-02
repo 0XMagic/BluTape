@@ -1,0 +1,28 @@
+{
+  "//0": "If the key combo contains Shift, the final letter must be capitalised",
+  "//1": "To bind multiple keys to an action, make it a list of key strings",
+  "select up": "<Up>",
+  "select down": "<Down>",
+  "back": "<Left>",
+  "interact": [
+    "<Return>",
+    "<Right>"
+  ],
+  "confirm": "<Return>",
+  "cancel": "<Escape>",
+  "delete": [
+    "<Delete>",
+    "<BackSpace>",
+    "<Shift-X>"
+  ],
+  "move item up": "<Shift-Up>",
+  "move item down": "<Shift-Down>",
+  "add item": "<Shift-A>",
+  "change item": "<Shift-E>",
+  "save": "<Control-s>",
+  "save as": "<Control-Shift-S>",
+  "open": "<Control-o>",
+  "export": "<Control-e>",
+  "reload templates": "<Control-Shift-R>",
+  "reload keybinds": "<Control-r>"
+}

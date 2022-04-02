@@ -1,12 +1,14 @@
 import tkinter as tk
 from tkinter import ttk
+import json
 from color import *
 import info
 import objects
 import macro
 import savefile
 import templates
-
+import keybinds
+import webbrowser
 
 def grid(e, r, c, **kwargs):
 	e.grid(row = r, column = c, **kwargs)
@@ -43,9 +45,6 @@ def modify_element_window(o: (objects.Container, objects.Pair), element_index, a
 
 	def w_on_close(*args):
 		global sel_y
-		if len(args):
-			if args[0].char != "\x1b":
-				return
 		if o.is_temp:
 			elements[element_index].update(None, element_index)
 			o.self_destruct()
@@ -59,10 +58,6 @@ def modify_element_window(o: (objects.Container, objects.Pair), element_index, a
 		frame_color_update()
 
 	def lb_update(*args):
-		if args:
-			if args[0].keysym == "Down":
-				lb.focus_set()
-				return
 		s = tx.get("1.0", tk.END)
 		if lb.size():
 			lb.delete(0, last = lb.size() - 1)
@@ -89,9 +84,6 @@ def modify_element_window(o: (objects.Container, objects.Pair), element_index, a
 				sv.set("Current selection:\n" + _s)
 
 	def btn_confirm(*args):
-		if len(args):
-			if args[0].char != "\r":
-				return
 		if sv.get():
 			_s = sv.get().replace("Current selection:\n", "")
 			if _s != "None":
@@ -159,11 +151,17 @@ def modify_element_window(o: (objects.Container, objects.Pair), element_index, a
 	tx.bind("<KeyRelease>", lb_update)
 	lb.bind("<Button-1>", lb_click)
 	lb.bind("<KeyRelease>", lb_click)
+
+	keybinds.bind_manual(lb, "confirm", btn_confirm)
+	keybinds.bind_manual(tx, "confirm", btn_confirm)
+	keybinds.bind_manual(top, "confirm", btn_confirm)
+	keybinds.bind_manual(top, "cancel", w_on_close)
+	"""
 	lb.bind("<Key>", btn_confirm)
 	tx.bind("<Key>", btn_confirm)
 	top.bind("<Key>", btn_confirm)
 	top.bind("<Key>", w_on_close)
-
+	"""
 	cb = tk.Button(top, text = info.text_config.get("modify confirm", "???"), command = btn_confirm)
 	_i_list = macro.get_available(o.parent)
 	_i_list.sort()
@@ -201,11 +199,13 @@ def modify_element_window(o: (objects.Container, objects.Pair), element_index, a
 	top.geometry(f"{w}x{h}")
 	top.geometry(f"+{dx}+{dy}")
 
+
 def set_active_object(o: objects.Container):
 	global active_object
 	if active_object.key_in_path("Templates"):
 		active_object.update_templates()
 	active_object = o
+
 
 def func_back():
 	global active_object, sel_y
@@ -369,10 +369,10 @@ def change_key_active(*args):
 
 def frame_color_update():
 	if not side_pin_var.get():
-		to_text = macro.list_to_indented_string(active_object.export(max_recur = 6))
+		to_text = macro.list_to_indented_string(active_object.export(max_recur = 8))
 		side_text['state'] = "normal"
-		side_text.delete("1.0","end")
-		side_text.insert("0.0",to_text)
+		side_text.delete("1.0", "end")
+		side_text.insert("0.0", to_text)
 		side_text['state'] = "disabled"
 	global sel_y
 	alive = [n for n, x in enumerate(elements) if x.mode]
@@ -427,7 +427,8 @@ class Element:
 
 		self.var_text.trace_add("write", lambda *args: self.func_text())
 		self.text_is_busy = False
-		self.text.bind("<Escape>", lambda *args: self.func_text_lose_focus())
+		keybinds.bind_manual(self.text, "cancel", lambda *args: self.func_text_lose_focus())
+		#self.text.bind("<Escape>", lambda *args: self.func_text_lose_focus())
 		self.text.bind("<FocusIn>", lambda *args: self.f_in())
 		self.text.bind("<FocusOut>", lambda *args: self.f_out())
 
@@ -478,7 +479,6 @@ class Element:
 			global sel_y
 			sel_y = self.get_self_index()
 			frame_color_update()
-
 
 	def f_in(self):
 		global sel_y
@@ -664,7 +664,7 @@ app.geometry("".join([f"+{dim}" if dim >= 0 else str(dim) for dim in app_info["w
 app.configure(bg = COLOR_BACKGROUND)
 
 sel_y = 0
-
+"""
 app.bind("<Shift-A>", func_add_element_if_focus)
 app.bind("<Shift-E>", change_key_active)
 app.bind("<Shift-X>", del_active)
@@ -682,6 +682,41 @@ app.bind("<Control-Shift-S>", lambda a: func_save_as())
 app.bind("<Control-e>", lambda a: func_export())
 app.bind("<Control-o>", lambda a: func_open_project())
 app.bind("<Control-Shift-R>", func_reload_templates)
+"""
+
+
+def func_reload_binds():
+	keybinds.set_app(app)
+	keybinds.reload()
+	print("reloading keybinds")
+	keybinds.bind("interact", element_action)
+	keybinds.bind("back", arrow_left)
+
+	keybinds.bind("select up", arrow_up)
+	keybinds.bind("select down", arrow_down)
+	keybinds.bind("move item up", arrow_up_move)
+	keybinds.bind("move item down", arrow_down_move)
+
+	keybinds.bind("add item", func_add_element_if_focus)
+	keybinds.bind("change item", change_key_active)
+
+	keybinds.bind("open", lambda a: func_open_project())
+	keybinds.bind("export", lambda a: func_open_project())
+	keybinds.bind("reload templates", func_reload_templates)
+
+	keybinds.bind("save as", lambda a: func_save_as())
+	keybinds.bind("save", lambda a: func_save())
+	keybinds.bind("delete", del_active)
+	keybinds.bind("reload keybinds", lambda a: func_reload_binds())
+
+	keybinds.update()
+	global sel_y
+	sel_y = 0
+	for e in elements:
+		e.frame.destroy()
+	elements.clear()
+	update_elements()
+
 
 lbl_path_string = tk.StringVar()
 lbl_path_string.set("root")
@@ -736,22 +771,60 @@ top_bar.add_cascade(
 		font = ("", 12)
 )
 
-top_bar_template = tk.Menu(
+top_bar_reload = tk.Menu(
 		top_bar,
 		tearoff = 0,
 		background = COLOR_BACKGROUND_ALT,
 		foreground = COLOR_TEXT_GENERIC
 )
 
-top_bar_template.add_command(
-		label = "Reload",
+top_bar_reload.add_command(
+		label = "Templates",
 		command = func_reload_templates,
 		font = ("", 12)
 )
 
+top_bar_reload.add_command(
+		label = "Keybinds",
+		command = func_reload_binds,
+		font = ("", 12)
+)
+
 top_bar.add_cascade(
-		label = "Template",
-		menu = top_bar_template,
+		label = "Reload",
+		menu = top_bar_reload,
+		font = ("", 12)
+)
+
+top_bar_help = tk.Menu(
+		top_bar,
+		tearoff = 0,
+		background = COLOR_BACKGROUND_ALT,
+		foreground = COLOR_TEXT_GENERIC
+)
+
+
+def open_url_wrapper(_v):
+	def result():
+		print("opening",_v)
+		webbrowser.open(_v)
+
+	return result
+
+
+with open("datafiles/help_url.json", "r") as _fl:
+	_js = dict(json.load(_fl))
+
+	for k, v in _js.items():
+		top_bar_help.add_command(
+				label = k,
+				command = open_url_wrapper(v),
+				font = ("", 12)
+		)
+
+top_bar.add_cascade(
+		label = "Guides",
+		menu = top_bar_help,
 		font = ("", 12)
 )
 
@@ -806,11 +879,10 @@ grid(btn_add_element, 0, 0, sticky = "nw", pady = 5)
 grid(side_text, 1, 1, sticky = "nsew")
 grid(side_pin, 0, 1, sticky = "e")
 
-
-app.grid_columnconfigure(0, weight=1)
-frame_project.grid_columnconfigure(0, weight=1)
-frame_elements.grid_columnconfigure(0, weight=1)
-frame_element_items.grid_columnconfigure(0, weight=1)
+app.grid_columnconfigure(0, weight = 1)
+frame_project.grid_columnconfigure(0, weight = 1)
+frame_elements.grid_columnconfigure(0, weight = 1)
+frame_element_items.grid_columnconfigure(0, weight = 1)
 grid(frame_project, 0, 0, sticky = "new")
 grid(frame_header, 0, 0, sticky = "nw")
 grid(frame_elements, 1, 0, sticky = "new")

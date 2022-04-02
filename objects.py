@@ -211,9 +211,11 @@ class Container:
 		key = self.name if self.name_override else self.__key
 		if max_recur:
 			for content in self.content:
-				result += content.export(max_recur = max_recur - 1)
+				result += content.export(max_recur = max_recur - (1 if isinstance(content,Container) else 0))
+
 			if not self.__is_root and not self.is_temp:
-				if max_recur != 1 or result:
+				if max_recur != 1:
+
 					result = [key, "{"] + result + ["}"]
 				else:
 					result = [key, "{", "...", "}"]
