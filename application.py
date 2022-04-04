@@ -870,7 +870,8 @@ side_pin = tk.Checkbutton(
 		text = "Pin view",
 		variable = side_pin_var,
 		onvalue = 1,
-		offvalue = 0
+		offvalue = 0,
+		command = frame_color_update,
 )
 
 grid(btn_back, 0, 0, sticky = "w")
