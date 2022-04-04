@@ -466,6 +466,7 @@ class Element:
 		self.select.option_add("*TCombobox*Listbox.SelectForeground", COLOR_TEXT_STR)
 		self.select.bind("<<ComboboxSelected>>", lambda *args: self.func_selection())
 		self.select.bind("<FocusIn>", lambda *args: self.f_in())
+		self.select_items = list()
 
 		grid(self.remove_button, 0, 0, padx = 5)
 		ud = 1
@@ -608,8 +609,8 @@ class Element:
 		elif mode == 3:
 			self.mode = 0
 			self.select['values'] = s_con
-			v = self.object.value()
-			i = s_con.index(v) if v in s_con else s_def
+			val = self.object.value()
+			i = s_con.index(val) if val in s_con else s_def
 			if s_con:
 				self.select.current(newindex = i)
 				self.object.value(s_con[i])
