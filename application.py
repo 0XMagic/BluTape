@@ -8,6 +8,7 @@ import macro
 import savefile
 import templates
 import keybinds
+import smart_fill
 import webbrowser
 
 def grid(e, r, c, **kwargs):
@@ -385,11 +386,21 @@ def frame_color_update():
 		e.set_highlight(n == alive[sel_y])
 
 
-def update_sel_y_by_object_id(o: objects.Container, v):
+def update_sel_y_by_object_id(o: objects.Container, val):
 	global sel_y
 	for n, x in enumerate(elements):
-		if x.object == o.content[v]:
+		if x.object == o.content[val]:
 			sel_y = n
+	frame_color_update()
+
+def func_smart_fill(*args):
+	in_focus = str(args[0].widget.focus_get()).endswith("entry")
+	if in_focus:
+		return
+	smart_fill.run(active_object)
+	global sel_y
+	sel_y = max(len(elements), 0)
+	update_elements()
 	frame_color_update()
 
 
@@ -708,6 +719,7 @@ def func_reload_binds():
 	keybinds.bind("save", lambda a: func_save())
 	keybinds.bind("delete", del_active)
 	keybinds.bind("reload keybinds", lambda a: func_reload_binds())
+	keybinds.bind("smart fill", func_smart_fill)
 
 	keybinds.update()
 	global sel_y
@@ -811,8 +823,7 @@ def open_url_wrapper(_v):
 
 	return result
 
-
-with open("datafiles/help_url.json", "r") as _fl:
+with open(info.path+"datafiles/help_url.json", "r") as _fl:
 	_js = dict(json.load(_fl))
 
 	for k, v in _js.items():
@@ -821,6 +832,7 @@ with open("datafiles/help_url.json", "r") as _fl:
 				command = open_url_wrapper(v),
 				font = ("", 12)
 		)
+
 
 top_bar.add_cascade(
 		label = "Guides",

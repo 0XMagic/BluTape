@@ -30,6 +30,7 @@ various configuration options are located in *info.py*.
 * **Shift + A**: Add Element
 * **Shift + E**: Change Element
 * **Shift + X / Backspace / Delete**: Delete Element
+* **Ctrl + Shift + A**: Smart fill
 * **Escape / Return**: Stop editing text
 * **Up/Down**: Change highlighted Element
 * **Shift + Up/Down**: Shift Elements

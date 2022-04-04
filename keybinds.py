@@ -14,8 +14,19 @@ def reload():
 	global __binds_default
 	with open(info.config_dir + "keybinds.json", "r") as fl:
 		__binds = dict(json.load(fl))
-	with open("datafiles/default_config/keybinds.json", "r") as fl:
+	with open(info.path + "datafiles/default_config/keybinds.json", "r") as fl:
 		__binds_default = dict(json.load(fl))
+
+	if sorted(list(__binds.keys())) != sorted(list(__binds_default.keys())):
+		__bind_combo = dict()
+		for k in __binds_default.keys():
+			if k in __binds:
+				__bind_combo[k] = __binds[k]
+			else:
+				__bind_combo[k] = __binds_default[k]
+		with open(info.config_dir + "keybinds.json", "w") as fl:
+			json.dump(__bind_combo, fl)
+
 	for d in [__binds, __binds_default]:
 		for keys in d.values():
 			if isinstance(keys, str):

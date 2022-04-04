@@ -24,14 +24,19 @@ def save_dir_validate():
 			os.makedirs(app_f, exist_ok = True)
 
 
+def contains(obj: Container, s: str):
+	return s in [x.key() for x in obj.content]
+
+
 def config_validate():
-	c_def = "datafiles/default_config/"
+	c_def = info.path + "datafiles/default_config/"
 	files = [x for x in os.listdir(c_def) if x != "info.txt"]
 	if not os.path.isdir(info.config_dir):
 		os.makedirs(info.config_dir, exist_ok = True)
 
 	for f in files:
-		shutil.copyfile(c_def + f, info.config_dir + f)
+		if not os.path.isfile(info.config_dir + f):
+			shutil.copyfile(c_def + f, info.config_dir + f)
 
 
 def add_item(c: Container, s: str, *v, force_at = -1):

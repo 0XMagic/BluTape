@@ -24,5 +24,6 @@
   "open": "<Control-o>",
   "export": "<Control-e>",
   "reload templates": "<Control-Shift-R>",
-  "reload keybinds": "<Control-r>"
+  "reload keybinds": "<Control-r>",
+  "smart fill": "<Control-Shift-A>"
 }
