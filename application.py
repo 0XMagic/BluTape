@@ -466,7 +466,6 @@ class Element:
 		self.select.option_add("*TCombobox*Listbox.SelectForeground", COLOR_TEXT_STR)
 		self.select.bind("<<ComboboxSelected>>", lambda *args: self.func_selection())
 		self.select.bind("<FocusIn>", lambda *args: self.f_in())
-		self.select_items = list()
 
 		grid(self.remove_button, 0, 0, padx = 5)
 		ud = 1
