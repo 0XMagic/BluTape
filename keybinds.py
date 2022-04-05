@@ -25,7 +25,7 @@ def reload():
 			else:
 				__bind_combo[k] = __binds_default[k]
 		with open(info.config_dir + "keybinds.json", "w") as fl:
-			json.dump(__bind_combo, fl)
+			json.dump(__bind_combo, fl, indent = 5)
 
 	for d in [__binds, __binds_default]:
 		for keys in d.values():
