@@ -3,7 +3,7 @@ import objects
 import tkinter as tk
 import json
 import info
-from tkinter.filedialog import asksaveasfile, askopenfile
+from tkinter.filedialog import asksaveasfile, askopenfile, askdirectory
 import macro
 import templates
 
@@ -124,3 +124,23 @@ def export_project(parent, project: objects.Project):
 	io.write(watermark + macro.list_to_indented_string(project.export()))
 	io.close()
 	return
+
+
+def export_silent(project: objects.Project):
+	watermark = "\n".join(["//" + x for x in [f"Made with {info.full_title}", info.repo]]) + "\n"
+	i_file = int(project.map_name != "template file") * (project.map_name + "_") + (project.mission_name + ".pop")
+	to_write = project.pop_directory
+	if not to_write.endswith("/"):
+		to_write += "/"
+	to_write += i_file
+	with open(to_write, "w") as io:
+		print("Exported mission", i_file, "to", project.pop_directory)
+		io.write(watermark + macro.list_to_indented_string(project.export()))
+
+
+def select_folder(location):
+	i_path = location if location else info.save_dir + "exports"
+	result = askdirectory(
+			initialdir = i_path
+	)
+	return result

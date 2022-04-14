@@ -62,7 +62,7 @@ def _wave_spawn(obj: objects.Container):
 	if any(c):
 
 		if c[0]:
-			macro.add_item(obj, "Where", "spawnbot")
+			macro.add_item(obj, "Where")
 
 		if c[1]:
 			macro.add_item(obj, "TotalCount", 1)

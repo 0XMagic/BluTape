@@ -1,0 +1,58 @@
+{
+	"mvm_bigrock": [
+		"spawnbot",
+		"spawnbot_mission_spy",
+		"spawnbot_mission_sniper"
+	],
+	"mvm_coaltown": [
+		"spawnbot",
+		"spawnbot_mission_sniper",
+		"spawnbot_mission_spy",
+		"spawnbot_giant",
+		"spawnbot_invasion"
+	],
+	"mvm_decoy": [
+		"spawnbot",
+		"spawnbot_mission_sniper",
+		"spawnbot_mission_spy",
+		"spawnbot_invasion",
+		"spawnbot_single_flag",
+		"spawnbot_right",
+		"spawnbot_left"
+	],
+	"mvm_ghost_town": [
+		"spawnbot",
+		"spawnbot_mission_spy",
+		"spawnbot_mission_sniper",
+		"spawnbot_scattered"
+	],
+	"mvm_mannworks": [
+		"spawnbot",
+		"spawnbot_mission_sniper",
+		"spawnbot_mission_spy",
+		"spawnbot_right",
+		"spawnbot_left",
+		"spawnbot_lower"
+	],
+	"mvm_rottenburg": [
+		"spawnbot_mission_sentry_buster",
+		"spawnbot_mission_sniper",
+		"spawnbot_mission_spy",
+		"spawnbot",
+		"flankers",
+		"spawnbot_chief"
+	],
+	"mvm_mannhattan": [
+		"spawnbot_main0",
+		"spawnbot_main1_slow",
+		"spawnbot_main2",
+		"spawnbot_mission_sniper0",
+		"spawnbot_mission_sniper1",
+		"spawnbot_main1",
+		"spawnbot_upper0",
+		"spawnbot_main0_squad",
+		"spawnbot_upper1",
+		"spawnbot_upper2"
+	],
+	"template file": []
+}

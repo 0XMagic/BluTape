@@ -4,11 +4,15 @@ import templates
 
 #if a key or value contains any of these chars, put quotes around it when exporting
 force_quotes = " \t"
+force_quotes_when_parent = ["CharacterAttributes", "ItemAttributes"]  #containers to force quotes around the values
+set_null_0f = ["CharacterAttributes", "ItemAttributes"]  #containers to force "0.0" as the value if left blank
 
 
-def check_quotes(v):
+def check_quotes(v, force = False, null_to_0f = False):
 	s = str(v)
-	if any([b in s for b in force_quotes]):
+	if force or any([b in s for b in force_quotes]):
+		if null_to_0f and not s:
+			return "\"0.0\""
 		if not s.startswith("\""):
 			s = f"\"{s}"
 		if not s.endswith("\""):
@@ -24,6 +28,9 @@ with open(info.path + "datafiles/json/selection.json") as fl:
 
 with open(info.path + "datafiles/icons.txt") as fl:
 	icons = [x for x in fl.read().split("\n") if x and not x.startswith("//")]
+
+with open(info.path + "datafiles/json/map_spawns.json") as fl:
+	map_spawns = json.load(fl)
 
 data["None"] = {"valid_in": [x for x in data.keys()] + ["None"], "types": []}
 data["%template%"] = {"valid_in": ["Templates"], "types": []}
@@ -83,7 +90,11 @@ class Pair:
 		if self.is_temp or not max_recur:
 			return []
 		rk = check_quotes(self.key())
-		rv = check_quotes(self.value())
+		rv = check_quotes(
+				self.value(),
+				force = self.parent.key() in force_quotes_when_parent,
+				null_to_0f = self.parent.key() in set_null_0f
+		)
 		return [f"{rk}\t{rv}"]
 
 	def export_json(self):
@@ -211,7 +222,7 @@ class Container:
 		key = self.name if self.name_override else self.__key
 		if max_recur:
 			for content in self.content:
-				result += content.export(max_recur = max_recur - (1 if isinstance(content,Container) else 0))
+				result += content.export(max_recur = max_recur - (1 if isinstance(content, Container) else 0))
 
 			if not self.__is_root and not self.is_temp:
 				if max_recur != 1:

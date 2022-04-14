@@ -144,6 +144,7 @@ def get_available(o: Container):
 	key = o.key()
 	if key == "Templates":
 		return ["%template%"]
+
 	for s, d in data.items():
 		if can_contain(o, s) and s != "None":
 			result.append(s)
@@ -155,7 +156,7 @@ def list_available(o):
 	print("\n".join([f"[{x}] {y}" for x, y in enumerate(r)]))
 
 
-def get_pair_selections(o: Pair):
+def get_pair_selections(o: Pair, p:Project):
 	key = o.key()
 	r = selections.get(key, dict())
 	con, d = r.get("content", list()), r.get("default", 0)
@@ -163,6 +164,10 @@ def get_pair_selections(o: Pair):
 		con = [x for x in list(templates.active_bases.keys()) if x != "active_project"]
 	if selections.get(key, dict()).get("use_active_templates"):
 		con = templates.get_all_active()
+
+	if selections.get(key, dict()).get("use_map_spawns"):
+		con = map_spawns.get(p.map_name, list())
+
 	is_list = len(con) != 0
 	others = [x.value() for x in o.parent.content if x.key() == key]
 	con = [x for x in con if x not in others]

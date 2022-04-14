@@ -45,12 +45,14 @@ def set_app(app):
 def bind(keyword, func):
 	__app_binds.append((keyword, func))
 
+
 def bind_manual(obj, keyword, func):
 	kw = __binds.get(keyword, __binds_default.get(keyword, "NULL KEY"))
 	if isinstance(kw, str):
 		kw = [kw]
 	for k in kw:
 		obj.bind(k, func)
+
 
 def clear():
 	if isinstance(__app, tkinter.Tk):

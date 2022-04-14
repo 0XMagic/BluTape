@@ -11,6 +11,15 @@ import keybinds
 import smart_fill
 import webbrowser
 
+
+def func_update_window_name():
+	prefix = True  #set to false to have the project name appear after the program name
+	tag = active_project.project_name
+	body = f"{app_info['title']} v{app_info['version']}"
+	title = f"{(tag + ' - ') * prefix}{body}{(' - ' + tag) * (not prefix)}"
+	app.wm_title(title)
+
+
 def grid(e, r, c, **kwargs):
 	e.grid(row = r, column = c, **kwargs)
 
@@ -18,10 +27,18 @@ def grid(e, r, c, **kwargs):
 def update_sel_boxes():
 	for n, x in enumerate(elements):
 		if n < len(active_object.content):
-			s_con, s_def = macro.get_pair_selections(active_object.content[n])
+			s_con, s_def = macro.get_pair_selections(active_object.content[n], active_project)
 			if s_con:
 				x.select['values'] = s_con
 
+def refresh_screen():
+	keybinds.update()
+	global sel_y
+	sel_y = 0
+	for e in elements:
+		e.frame.destroy()
+	elements.clear()
+	update_elements()
 
 def update_elements(force_update = False):
 	app.focus_set()
@@ -38,13 +55,190 @@ def update_elements(force_update = False):
 	lbl_path_string.set(active_object.get_path())
 
 
+def project_settings_if_focus(*args):
+	in_focus = str(args[0].widget.focus_get())
+	if in_focus.endswith("entry") or in_focus.endswith("combobox"):
+		return
+	project_settings_window()
+
+
+def project_settings_window(**kwargs):
+	SettingsWindowInstance(**kwargs)
+
+
+class SettingsWindowInstance:
+	def __init__(self, confirm_exports = False):
+		w = 900
+		h = 130
+
+		#if this window was opened by the exporter for mission info, run the exporter when confirming.
+		self.confirm_exports = confirm_exports
+
+		self.top = tk.Toplevel(app, bg = COLOR_BACKGROUND)
+		self.top.protocol("WM_DELETE_WINDOW", self.w_on_close)
+
+		self.top.grab_set()
+		self.top.focus_set()
+
+		dx = round(app.winfo_x() + app.winfo_width() / 2 - w / 2)
+		dy = round(app.winfo_y() + app.winfo_height() / 2 - h / 2)
+		self.top.geometry(f"{w}x{h}")
+		self.top.geometry(f"+{dx}+{dy}")
+		self.top.wm_title("Project settings" + " (export)" * int(self.confirm_exports))
+
+		self.f = tk.Frame(
+				self.top,
+				bg = COLOR_BACKGROUND
+		)
+
+		self.f0 = tk.Frame(
+				self.f,
+				bg = COLOR_BACKGROUND
+		)
+
+		self.mn_lb = tk.Label(
+				self.f0,
+				bg = COLOR_BACKGROUND,
+				fg = COLOR_TEXT_GENERIC,
+				text = "Mission name"
+
+		)
+
+		self.mn_var = tk.StringVar()
+
+		self.mn_var.set(active_project.mission_name)
+
+		self.mn = tk.Entry(
+				self.f0,
+				width = 32,
+				bg = COLOR_BACKGROUND_ALT,
+				fg = COLOR_TEXT_STR,
+				textvariable = self.mn_var
+
+		)
+
+		self.ms_lb = tk.Label(
+				self.f0,
+				bg = COLOR_BACKGROUND,
+				fg = COLOR_TEXT_GENERIC,
+				text = "Map     "
+
+		)
+		self.ms_var = tk.StringVar()
+		self.m_val = list(objects.map_spawns.keys())
+		self.ms = ttk.Combobox(
+				self.f0,
+				width = 32,
+				state = "readonly",
+				textvariable = self.ms_var
+		)
+
+		self.m_val = [active_project.map_name] + [x for x in self.m_val if x != active_project.map_name]
+
+		self.ms["values"] = self.m_val
+		self.ms.selection_clear()
+
+		self.ms.option_add("*TCombobox*Listbox.background", COLOR_BACKGROUND_ALT)
+		self.ms.option_add("*TCombobox*Listbox.foreground", COLOR_TEXT_STR)
+		self.ms.option_add("*TCombobox*Listbox.SelectBackground", COLOR_BACKGROUND_ALT)
+		self.ms.option_add("*TCombobox*Listbox.SelectForeground", COLOR_TEXT_STR)
+
+		self.ms.bind("<<ComboboxSelected>>", lambda *args: self.on_select_map())
+		#ms.bind("<FocusIn>", lambda *args: self.f_in())
+		self.ms.current(0)
+
+		r = 0
+		grid(self.ms_lb, r, 0, sticky = "w", pady = 3)
+		grid(self.ms, r, 1, sticky = "e", pady = 3)
+
+		r += 1
+
+		grid(self.mn_lb, r, 0, sticky = "w", pady = 3)
+		grid(self.mn, r, 1, sticky = "e", pady = 3)
+
+		grid(self.f0, 0, 0)
+
+		self.f1 = tk.Frame(
+				self.f,
+				bg = COLOR_BACKGROUND
+		)
+		self.ep = tk.Text(self.f1, width = 64, height = 1, bg = COLOR_BACKGROUND_ALT, fg = COLOR_TEXT_STR, pady = 3)
+		c_dir = active_project.pop_directory
+		self.keep_export_dir = True
+		if not c_dir:
+			self.keep_export_dir = False
+			c_dir = info.save_dir + "exports"
+		self.ep.insert("0.1", c_dir)
+		self.ep.configure(state = "disabled")
+		self.ep_btn = tk.Button(self.f1, width = 2, height = 1, text = "...", command = self.on_ep_press)
+		self.ep_lb = tk.Label(
+				self.f1,
+				bg = COLOR_BACKGROUND,
+				fg = COLOR_TEXT_GENERIC,
+				text = "Export path"
+		)
+		grid(self.ep_lb, 0, 0)
+		grid(self.ep, 1, 0)
+		grid(self.ep_btn, 1, 1)
+		grid(self.f1, 0, 1, pady = 4, padx = 6)
+
+		self.fb = tk.Frame(
+				self.top,
+				bg = COLOR_BACKGROUND
+		)
+
+		keybinds.bind_manual(self.top, "confirm", self.on_confirm_press)
+		keybinds.bind_manual(self.top, "cancel", self.on_cancel_press)
+
+		self.b_confirm = tk.Button(self.fb, width = 8, height = 1, text = "Confirm", command = self.on_confirm_press)
+		self.b_cancel = tk.Button(self.fb, width = 8, height = 1, text = "Cancel", command = self.on_cancel_press)
+
+		grid(self.b_confirm, 0, 0, padx = 3)
+		grid(self.b_cancel, 0, 1, padx = 3)
+
+		grid(self.f, 0, 0)
+
+		grid(self.fb, 2, 0, pady = 25)
+
+	def w_on_close(self, *_):
+		self.top.grab_release()
+		self.top.destroy()
+
+		pass
+
+	def on_select_map(self):
+		self.ms.selection_clear()
+
+	def on_ep_press(self):
+		p = savefile.select_folder(active_project.pop_directory)
+		if p:
+			self.ep.configure(state = "normal")
+			self.ep.delete("0.1", "end")
+			self.ep.insert("0.1", p)
+			self.ep.configure(state = "disabled")
+
+	def on_cancel_press(self, *_):
+		self.w_on_close()
+
+	def on_confirm_press(self, *_):
+		if not self.mn_var.get():
+			self.mn_var.set("new blutape mission")
+		active_project.mission_name = self.mn_var.get().replace(" ", "_")
+		active_project.pop_directory = self.ep.get("0.1", "end").replace("\n", "")
+		active_project.map_name = self.ms.get()
+
+		if self.confirm_exports:
+			savefile.export_silent(active_project)
+		self.w_on_close()
+
+
 def modify_element_window(o: (objects.Container, objects.Pair), element_index, add_mode = False):
 	if element_index == -1:
 		to_set = Element(frame_element_items)
 		element_index = len(elements)
 		elements.append(to_set)
 
-	def w_on_close(*args):
+	def w_on_close(*_):
 		global sel_y
 		if o.is_temp:
 			elements[element_index].update(None, element_index)
@@ -58,7 +252,7 @@ def modify_element_window(o: (objects.Container, objects.Pair), element_index, a
 			sel_y = element_index
 		frame_color_update()
 
-	def lb_update(*args):
+	def lb_update(*_):
 		s = tx.get("1.0", tk.END)
 		if lb.size():
 			lb.delete(0, last = lb.size() - 1)
@@ -84,7 +278,7 @@ def modify_element_window(o: (objects.Container, objects.Pair), element_index, a
 			if _s and _s != "no results":
 				sv.set("Current selection:\n" + _s)
 
-	def btn_confirm(*args):
+	def btn_confirm(*_):
 		if sv.get():
 			_s = sv.get().replace("Current selection:\n", "")
 			if _s != "None":
@@ -157,17 +351,11 @@ def modify_element_window(o: (objects.Container, objects.Pair), element_index, a
 	keybinds.bind_manual(tx, "confirm", btn_confirm)
 	keybinds.bind_manual(top, "confirm", btn_confirm)
 	keybinds.bind_manual(top, "cancel", w_on_close)
-	"""
-	lb.bind("<Key>", btn_confirm)
-	tx.bind("<Key>", btn_confirm)
-	top.bind("<Key>", btn_confirm)
-	top.bind("<Key>", w_on_close)
-	"""
 	cb = tk.Button(top, text = info.text_config.get("modify confirm", "???"), command = btn_confirm)
 	_i_list = macro.get_available(o.parent)
 	_i_list.sort()
-	for n, v in enumerate(_i_list):
-		lb.insert(n, v)
+	for n, v_ in enumerate(_i_list):
+		lb.insert(n, v_)
 	w = 350
 	h = 300
 	top.grid_columnconfigure(0, weight = 1)
@@ -242,22 +430,31 @@ def func_add_element():
 
 def func_save():
 	savefile.save_project(app, active_project, save_as = False)
+	func_update_window_name()
 
 
 def func_save_as():
 	savefile.save_project(app, active_project, save_as = True)
+	func_update_window_name()
 
 
 def func_open_project():
 	new_project = savefile.load_project(app)
 	if new_project is not None:
 		set_active_project(new_project)
-
 	frame_color_update()
+	func_update_window_name()
+	refresh_screen()
 
 
 def func_export():
-	savefile.export_project(app, active_project)
+	if active_project.mission_name and active_project.pop_directory:
+		savefile.export_silent(active_project)
+	else:
+		project_settings_window(confirm_exports = True)
+
+
+#savefile.export_project(app, active_project)
 
 
 def func_reload_templates(*args):
@@ -392,6 +589,7 @@ def update_sel_y_by_object_id(o: objects.Container, val):
 		if x.object == o.content[val]:
 			sel_y = n
 	frame_color_update()
+
 
 def func_smart_fill(*args):
 	in_focus = str(args[0].widget.focus_get()).endswith("entry")
@@ -597,7 +795,7 @@ class Element:
 			mode = 0
 		if obj is not None:
 			self.key_button["text"] = obj.name if obj.name_mode else obj.key()
-			s_con, s_def = macro.get_pair_selections(obj)
+			s_con, s_def = macro.get_pair_selections(obj, active_project)
 
 		if mode == 2 and s_con:
 			mode = 3
@@ -669,31 +867,13 @@ app_info = {
 
 		]
 }
-app.wm_title(f"{app_info['title']} v{app_info['version']}")
+
+func_update_window_name()
 app.geometry("x".join([str(dim) for dim in app_info["window_size"]]))
 app.geometry("".join([f"+{dim}" if dim >= 0 else str(dim) for dim in app_info["window_pos"]]))
 app.configure(bg = COLOR_BACKGROUND)
 
 sel_y = 0
-"""
-app.bind("<Shift-A>", func_add_element_if_focus)
-app.bind("<Shift-E>", change_key_active)
-app.bind("<Shift-X>", del_active)
-app.bind("<BackSpace>", del_active)
-app.bind("<Delete>", del_active)
-app.bind("<Up>", arrow_up)
-app.bind("<Down>", arrow_down)
-app.bind("<Left>", arrow_left)
-app.bind("<Right>", element_action)
-app.bind("<Return>", element_action)
-app.bind("<Shift-Up>", arrow_up_move)
-app.bind("<Shift-Down>", arrow_down_move)
-app.bind("<Control-s>", lambda a: func_save())
-app.bind("<Control-Shift-S>", lambda a: func_save_as())
-app.bind("<Control-e>", lambda a: func_export())
-app.bind("<Control-o>", lambda a: func_open_project())
-app.bind("<Control-Shift-R>", func_reload_templates)
-"""
 
 
 def func_reload_binds():
@@ -712,7 +892,7 @@ def func_reload_binds():
 	keybinds.bind("change item", change_key_active)
 
 	keybinds.bind("open", lambda a: func_open_project())
-	keybinds.bind("export", lambda a: func_open_project())
+	keybinds.bind("export", lambda a: func_export())
 	keybinds.bind("reload templates", func_reload_templates)
 
 	keybinds.bind("save as", lambda a: func_save_as())
@@ -721,13 +901,13 @@ def func_reload_binds():
 	keybinds.bind("reload keybinds", lambda a: func_reload_binds())
 	keybinds.bind("smart fill", func_smart_fill)
 
+	keybinds.bind("project config", project_settings_if_focus)
+
 	keybinds.update()
-	global sel_y
-	sel_y = 0
-	for e in elements:
-		e.frame.destroy()
-	elements.clear()
-	update_elements()
+	refresh_screen()
+
+
+
 
 
 lbl_path_string = tk.StringVar()
@@ -771,15 +951,35 @@ top_bar_file.add_command(
 		font = ("", 12)
 )
 
-top_bar_file.add_command(
+
+top_bar.add_cascade(
+		label = "File",
+		menu = top_bar_file,
+		font = ("", 12)
+)
+
+top_bar_project = tk.Menu(
+		top_bar,
+		tearoff = 0,
+		background = COLOR_BACKGROUND_ALT,
+		foreground = COLOR_TEXT_GENERIC
+)
+
+top_bar_project.add_command(
+		label = "Configure",
+		command = project_settings_window,
+		font = ("", 12)
+)
+
+top_bar_project.add_command(
 		label = "Export",
 		command = func_export,
 		font = ("", 12)
 )
 
 top_bar.add_cascade(
-		label = "File",
-		menu = top_bar_file,
+		label = "Project",
+		menu = top_bar_project,
 		font = ("", 12)
 )
 
@@ -818,12 +1018,13 @@ top_bar_help = tk.Menu(
 
 def open_url_wrapper(_v):
 	def result():
-		print("opening",_v)
+		print("opening", _v)
 		webbrowser.open(_v)
 
 	return result
 
-with open(info.path+"datafiles/help_url.json", "r") as _fl:
+
+with open(info.path + "datafiles/help_url.json", "r") as _fl:
 	_js = dict(json.load(_fl))
 
 	for k, v in _js.items():
@@ -832,7 +1033,6 @@ with open(info.path+"datafiles/help_url.json", "r") as _fl:
 				command = open_url_wrapper(v),
 				font = ("", 12)
 		)
-
 
 top_bar.add_cascade(
 		label = "Guides",

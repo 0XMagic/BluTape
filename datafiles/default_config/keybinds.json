@@ -25,5 +25,6 @@
   "export": "<Control-e>",
   "reload templates": "<Control-Shift-R>",
   "reload keybinds": "<Control-r>",
-  "smart fill": "<Control-Shift-A>"
+  "smart fill": "<Control-Shift-A>",
+  "project config": "<Control-p>"
 }

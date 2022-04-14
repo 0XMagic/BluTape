@@ -132,14 +132,39 @@ def attribute_fix(data: dict):
 	data = {k: v for k, v in data.items() if "CharacterAttributes" not in v["valid_in"]}
 	for a in attrs:
 		data[a] = {"valid_in": ["CharacterAttributes", "ItemAttributes"], "types": ["float", "int", "var"]}
-	print("Loaded", len(attrs), "Tf2 attributes")
+	print("Loaded", len(attrs), "TF2 attributes")
 	return data
 
 
+def get_where(content: list):
+	with open("datafiles/maps.txt") as fl:
+		maps = fl.read().split("\n")
+
+	result = {m: list() for m in maps}
+	#bit of a hack solution, should just have the entries be linked from the start
+	f_list = os.listdir("datafiles/popfiles/")
+	for k, v in zip(f_list, content):
+		for m in maps:
+			if m in k:
+				to_add = [x[6:] for x in v if x.lower().startswith("where")]
+				for a in to_add:
+					if a not in result[m]:
+						result[m].append(a)
+						print(f"registering {m}.Where.{a}")
+				break
+	return result
+
+
 def main():
-	data = attribute_fix(consolidate(get_content()))
-	with open("datafiles/json/keywords.json", "w") as j:
-		json.dump(data, j, indent = "\t")
+	c = get_content()
+	data = attribute_fix(consolidate(c))
+	where = get_where(c)
+
+	with open("datafiles/json/keywords.json", "w") as fl:
+		json.dump(data, fl, indent = "\t")
+
+	with open("datafiles/json/map_spawns.json", "w") as fl:
+		json.dump(where, fl, indent = "\t")
 
 
 if __name__ == "__main__":
