@@ -26,6 +26,8 @@ various configuration options are located in *info.py*.
 * **Ctrl + Shift + S**: Save As
 * **Ctrl + E**: Export
 * **Ctrl + O**: Open
+* **Ctrl + P**: Project properties
+* **Ctrl + I**: Import popfile
 * **Ctrl + Shift + R**: Reload template files
 * **Shift + A**: Add Element
 * **Shift + E**: Change Element

@@ -144,3 +144,13 @@ def select_folder(location):
 			initialdir = i_path
 	)
 	return result
+
+def select_file(flt):
+	r = askopenfile(
+			filetypes = [flt],
+	)
+	if r is None:
+		return None
+	result = r.name
+	r.close()
+	return result

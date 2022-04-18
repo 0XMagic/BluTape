@@ -9,8 +9,17 @@ import savefile
 import templates
 import keybinds
 import smart_fill
+import pop_importer
 import webbrowser
 
+def func_import():
+	to_get = savefile.select_file(("MvM Mission", "*.pop"))
+	if to_get is None:
+		return
+	np = pop_importer.load_file(to_get)
+	set_active_project(np)
+	refresh_screen()
+	frame_color_update()
 
 def func_update_window_name():
 	prefix = True  #set to false to have the project name appear after the program name
@@ -893,6 +902,7 @@ def func_reload_binds():
 
 	keybinds.bind("open", lambda a: func_open_project())
 	keybinds.bind("export", lambda a: func_export())
+	keybinds.bind("import", lambda a: func_import())
 	keybinds.bind("reload templates", func_reload_templates)
 
 	keybinds.bind("save as", lambda a: func_save_as())
@@ -968,6 +978,12 @@ top_bar_project = tk.Menu(
 top_bar_project.add_command(
 		label = "Configure",
 		command = project_settings_window,
+		font = ("", 12)
+)
+
+top_bar_project.add_command(
+		label = "Import",
+		command = func_import,
 		font = ("", 12)
 )
 

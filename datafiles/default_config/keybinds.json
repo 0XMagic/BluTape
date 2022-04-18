@@ -23,6 +23,7 @@
   "save as": "<Control-Shift-S>",
   "open": "<Control-o>",
   "export": "<Control-e>",
+  "import": "<Control-i>",
   "reload templates": "<Control-Shift-R>",
   "reload keybinds": "<Control-r>",
   "smart fill": "<Control-Shift-A>",
