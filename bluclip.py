@@ -4,6 +4,7 @@ import os
 import info
 import objects
 import json
+import macro
 
 cache = list()
 
@@ -31,7 +32,7 @@ def get_clip_files():
 
 
 def save_item(o: (objects.Container, objects.Pair)):
-	to_write = f"{o.parent.key()}#=\"\"=" + json.dumps({"content": [o.export_json()]})
+	to_write = f"{o.key()}#=\"\"=" + json.dumps({"content": [o.export_json()]})
 	with open(info.save_dir + f"clipboard/{len(cache) + 1}.clp", "w") as fl:
 		fl.write(to_write)
 	update()
@@ -44,6 +45,6 @@ def load_recent(o: objects.Container):
 	with open(cache[0], "r") as fl:
 		txt = fl.read()
 	k = txt.split("#=\"\"=")[0]
-	if o.key() == k:
+	if k in macro.get_available(o):
 		content = txt.split("#=\"\"=")[1]
 		o.import_json(json.loads(content), post = True)
