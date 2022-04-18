@@ -8,6 +8,8 @@
     "<Return>",
     "<Right>"
   ],
+  "next page": "<Control-Right>",
+  "prev page": "<Control-Left>",
   "confirm": "<Return>",
   "cancel": "<Escape>",
   "delete": [

@@ -38,6 +38,8 @@ various configuration options are located in *info.py*.
 * **Shift + Up/Down**: Shift Elements
 * **Left**: Back button
 * **Return / Right**: Element Action
+* **Ctrl + Right**: Next page
+* **Ctrl + Left**: Previous page
 
 #### Modify Element Window:
 * **Escape**: Cancel

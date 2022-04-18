@@ -11,6 +11,27 @@ import keybinds
 import smart_fill
 import pop_importer
 import webbrowser
+import math
+
+
+def set_pg(n):
+	global pg_num
+	mp = math.ceil(len(active_object.content) / pg_size)
+	if n < 0:
+		n = mp
+	if n >= mp:
+		n = mp - 1
+	n = max(n, 0)
+	if pg_num != n:
+		pg_num = n
+		refresh_screen()
+		frame_color_update()
+	lbl_page_string.set(f"Page {n + 1}/{max(mp, 1)}")
+
+def pg_of(n):
+	result = math.floor((n + 1) / pg_size)
+	return result
+
 
 def func_import():
 	to_get = savefile.select_file(("MvM Mission", "*.pop"))
@@ -18,8 +39,7 @@ def func_import():
 		return
 	np = pop_importer.load_file(to_get)
 	set_active_project(np)
-	refresh_screen()
-	frame_color_update()
+	set_pg(0)
 
 def func_update_window_name():
 	prefix = True  #set to false to have the project name appear after the program name
@@ -40,6 +60,7 @@ def update_sel_boxes():
 			if s_con:
 				x.select['values'] = s_con
 
+
 def refresh_screen():
 	keybinds.update()
 	global sel_y
@@ -49,16 +70,22 @@ def refresh_screen():
 	elements.clear()
 	update_elements()
 
+
 def update_elements(force_update = False):
 	app.focus_set()
 	if macro.should_update_bases(active_object):
 		macro.update_bases(active_object)
-	while len(elements) < len(active_object.content):
+
+	to_dis = active_object.content[pg_num * pg_size:]
+	if len(to_dis) > pg_size:
+		to_dis = to_dis[:pg_size]
+
+	while len(elements) < len(to_dis):
 		to_add = Element(frame_element_items)
 		elements.append(to_add)
 	for n, x in enumerate(elements):
-		if n < len(active_object.content):
-			x.update(active_object.content[n], n, force_update = force_update)
+		if n < len(to_dis):
+			x.update(to_dis[n], n, force_update = force_update)
 		else:
 			x.update(None, n, force_update = force_update)
 	lbl_path_string.set(active_object.get_path())
@@ -259,6 +286,7 @@ def modify_element_window(o: (objects.Container, objects.Pair), element_index, a
 		top.destroy()
 		if not o.is_temp:
 			sel_y = element_index
+		set_pg(pg_of(element_index))
 		frame_color_update()
 
 	def lb_update(*_):
@@ -413,8 +441,11 @@ def func_back():
 	sel_y = i
 	for e in elements:
 		e.is_in_text = False
-
-	frame_color_update()
+	pvp = pg_num
+	set_pg(0)
+	if pvp == pg_num:
+		refresh_screen()
+		frame_color_update()
 
 
 def func_add_element_if_focus(*args):
@@ -477,6 +508,7 @@ def set_active_project(p: objects.Project):
 	active_project = p
 	set_active_object(p.container)
 	update_elements()
+	set_pg(0)
 
 
 def get_highlighted():
@@ -505,6 +537,7 @@ def arrow_down_move(*args):
 		a.func_down()
 	frame_color_update()
 
+#math.ceil(len(active_object.content) / pg_size)
 
 def arrow_up(*args):
 	in_focus = str(args[0].widget.focus_get())
@@ -513,6 +546,9 @@ def arrow_up(*args):
 	global sel_y
 	if sel_y > 0:
 		sel_y -= 1
+	elif pg_num > 0:
+		set_pg(pg_num - 1)
+		sel_y = pg_size
 	frame_color_update()
 
 
@@ -522,6 +558,10 @@ def arrow_down(*args):
 		return
 	global sel_y
 	sel_y += 1
+	if sel_y >= pg_size:
+		set_pg(pg_num + 1)
+		sel_y = 0
+
 	frame_color_update()
 
 
@@ -530,6 +570,14 @@ def arrow_left(*args):
 	if in_focus:
 		return
 	func_back()
+
+
+def next_page():
+	set_pg(pg_num + 1)
+
+
+def prev_page():
+	set_pg(pg_num - 1)
 
 
 def element_action(*args):
@@ -563,6 +611,7 @@ def del_active(*args):
 	a = get_highlighted()
 	if a is not None:
 		a.func_delete()
+
 
 
 def change_key_active(*args):
@@ -604,11 +653,16 @@ def func_smart_fill(*args):
 	in_focus = str(args[0].widget.focus_get()).endswith("entry")
 	if in_focus:
 		return
+	len_pre = len(active_object.content)
 	smart_fill.run(active_object)
+	len_post = len(active_object.content)
 	global sel_y
 	sel_y = max(len(elements), 0)
+	if len_pre != len_post:
+		set_pg(9999999)  #set_pg already does a frame_color_update
+	else:
+		frame_color_update()
 	update_elements()
-	frame_color_update()
 
 
 class Element:
@@ -730,9 +784,13 @@ class Element:
 
 			for e in elements:
 				e.is_in_text = False
-
 			update_elements()
-			frame_color_update()
+			pvp = pg_num
+			set_pg(0)
+			if pvp == pg_num:
+				refresh_screen()
+				frame_color_update()
+
 
 	@staticmethod
 	def func_text_lose_focus():
@@ -755,7 +813,12 @@ class Element:
 			b = a + offset
 			c = a if sel_y == self.get_self_index() else b
 			macro.swap(o, a, b, on_finish = lambda: update_sel_y_by_object_id(o, c))
+			new_p = pg_of(self.object.get_self_index() - 1)
+			if new_p != pg_num:
+				set_pg(new_p)
+				update_sel_y_by_object_id(o, self.object.get_self_index())
 			update_elements()
+
 
 	def func_selection(self):
 		if self.object is not None:
@@ -787,7 +850,7 @@ class Element:
 			self.object.self_destruct()
 			self.update(None, self.get_self_index())
 			update_sel_boxes()
-			frame_color_update()
+			set_pg(-1)
 
 	def get_self_index(self):
 		return [n for n, x in enumerate(elements) if x == self][0] if self in elements else -1
@@ -883,6 +946,8 @@ app.geometry("".join([f"+{dim}" if dim >= 0 else str(dim) for dim in app_info["w
 app.configure(bg = COLOR_BACKGROUND)
 
 sel_y = 0
+pg_size = 16
+pg_num = 0
 
 
 def func_reload_binds():
@@ -896,6 +961,9 @@ def func_reload_binds():
 	keybinds.bind("select down", arrow_down)
 	keybinds.bind("move item up", arrow_up_move)
 	keybinds.bind("move item down", arrow_down_move)
+
+	keybinds.bind("next page", lambda a: next_page())
+	keybinds.bind("prev page", lambda a: prev_page())
 
 	keybinds.bind("add item", func_add_element_if_focus)
 	keybinds.bind("change item", change_key_active)
@@ -917,16 +985,13 @@ def func_reload_binds():
 	refresh_screen()
 
 
-
-
-
 lbl_path_string = tk.StringVar()
 lbl_path_string.set("root")
 frame_project = tk.Frame(app, bg = COLOR_BACKGROUND)
 frame_header = tk.Frame(frame_project, bg = COLOR_BACKGROUND)
 frame_elements = tk.Frame(frame_project, bg = COLOR_BACKGROUND)
 frame_element_items = tk.Frame(frame_elements, bg = COLOR_BACKGROUND)
-
+frame_pages = tk.Frame(frame_elements, bg = COLOR_BACKGROUND)
 top_bar = tk.Menu(
 		app,
 		activebackground = COLOR_TEXT_HIGHLIGHT,
@@ -960,7 +1025,6 @@ top_bar_file.add_command(
 		command = func_save_as,
 		font = ("", 12)
 )
-
 
 top_bar.add_cascade(
 		label = "File",
@@ -1102,6 +1166,36 @@ side_pin = tk.Checkbutton(
 		command = frame_color_update,
 )
 
+btn_prev = tk.Button(
+		frame_pages,
+		width = 2,
+		height = 2,
+		text = info.text_config.get("left", "???"),
+		command = prev_page
+)
+
+btn_next = tk.Button(
+		frame_pages,
+		width = 2,
+		height = 2,
+		text = info.text_config.get("right", "???"),
+		command = next_page
+)
+lbl_page_string = tk.StringVar()
+lbl_page_string.set("Page 0/0")
+lbl_page = tk.Label(
+		frame_pages,
+		textvariable = lbl_page_string,
+		bg = COLOR_BACKGROUND,
+		fg = COLOR_TEXT_HIGHLIGHT,
+		width = 12,
+		font = ('Courier New bold', 15)
+
+)
+
+grid(btn_prev, 0, 0)
+grid(lbl_page, 0, 1, sticky = "w")
+grid(btn_next, 0, 2)
 grid(btn_back, 0, 0, sticky = "w")
 grid(lbl_path, 0, 1, sticky = "w")
 grid(btn_add_element, 0, 0, sticky = "nw", pady = 5)
@@ -1115,7 +1209,10 @@ frame_element_items.grid_columnconfigure(0, weight = 1)
 grid(frame_project, 0, 0, sticky = "new")
 grid(frame_header, 0, 0, sticky = "nw")
 grid(frame_elements, 1, 0, sticky = "new")
+grid(frame_pages, 0, 1, sticky = "new")
 grid(frame_element_items, 1, 0, sticky = "new")
+
+set_pg(99999)
 
 
 def style_init():
