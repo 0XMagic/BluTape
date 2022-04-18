@@ -38,6 +38,7 @@ def save_item(o: (objects.Container, objects.Pair)):
 
 
 def load_recent(o: objects.Container):
+	update()
 	if not cache:
 		return
 	with open(cache[0], "r") as fl:
