@@ -249,16 +249,17 @@ class Container:
 				}
 		}
 
-	def import_json(self, d):
-		self.key(d["key"])
-		self.name = d["name"]
-		self.name_mode = d["name_mode"]
-		self.name_override = d.get("name_override", False)
+	def import_json(self, d, post = False):
+		if not post:
+			self.key(d["key"])
+			self.name = d["name"]
+			self.name_mode = d["name_mode"]
+			self.name_override = d.get("name_override", False)
 
-		if self.name_mode:
-			print(f"loaded {self.name} ({self.key()})")
-		else:
-			print(f"loaded {self.key()}")
+			if self.name_mode:
+				print(f"loaded {self.name} ({self.key()})")
+			else:
+				print(f"loaded {self.key()}")
 
 		for x in d["content"]:
 			if "Container" in x:

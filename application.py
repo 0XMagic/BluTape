@@ -9,9 +9,41 @@ import savefile
 import templates
 import keybinds
 import smart_fill
+import bluclip
 import pop_importer
 import webbrowser
 import math
+
+copy_state = False
+
+
+def func_copy(*args):
+	a = str(args[0].widget.focus_get())
+	if len(a) > 1:
+		return
+	global copy_state
+	if copy_state:
+		return
+	copy_from = [x.object for x in elements if x.is_active]
+	if copy_from:
+		to_copy = copy_from[0]
+		bluclip.save_item(to_copy)
+	copy_state = True
+
+
+def func_copy_rel():
+	global copy_state
+	copy_state = False
+
+
+def func_paste():
+	bluclip.load_recent(active_object)
+	global sel_y
+
+	refresh_screen()
+	set_pg(999999)
+	sel_y = max(len(elements) - 1, 0)
+	frame_color_update()
 
 
 def set_pg(n):
@@ -28,6 +60,7 @@ def set_pg(n):
 		frame_color_update()
 	lbl_page_string.set(f"Page {n + 1}/{max(mp, 1)}")
 
+
 def pg_of(n):
 	result = math.floor((n + 1) / pg_size)
 	return result
@@ -40,6 +73,7 @@ def func_import():
 	np = pop_importer.load_file(to_get)
 	set_active_project(np)
 	set_pg(0)
+
 
 def func_update_window_name():
 	prefix = True  #set to false to have the project name appear after the program name
@@ -286,7 +320,8 @@ def modify_element_window(o: (objects.Container, objects.Pair), element_index, a
 		top.destroy()
 		if not o.is_temp:
 			sel_y = element_index
-		set_pg(pg_of(element_index))
+		if add_mode:
+			set_pg(pg_of(element_index))
 		frame_color_update()
 
 	def lb_update(*_):
@@ -494,9 +529,6 @@ def func_export():
 		project_settings_window(confirm_exports = True)
 
 
-#savefile.export_project(app, active_project)
-
-
 def func_reload_templates(*args):
 	print("Reloading templates" + "(Keyboard shortcut)" if args else "")
 	templates.reload_templates()
@@ -537,10 +569,15 @@ def arrow_down_move(*args):
 		a.func_down()
 	frame_color_update()
 
+
 #math.ceil(len(active_object.content) / pg_size)
 
 def arrow_up(*args):
-	in_focus = str(args[0].widget.focus_get())
+	if args:
+		in_focus = str(args[0].widget.focus_get())
+	else:
+		in_focus = ""
+
 	if in_focus.endswith("entry") or in_focus.endswith("combobox"):
 		return
 	global sel_y
@@ -553,7 +590,10 @@ def arrow_up(*args):
 
 
 def arrow_down(*args):
-	in_focus = str(args[0].widget.focus_get())
+	if args:
+		in_focus = str(args[0].widget.focus_get())
+	else:
+		in_focus = ""
 	if in_focus.endswith("entry") or in_focus.endswith("combobox"):
 		return
 	global sel_y
@@ -611,7 +651,6 @@ def del_active(*args):
 	a = get_highlighted()
 	if a is not None:
 		a.func_delete()
-
 
 
 def change_key_active(*args):
@@ -791,7 +830,6 @@ class Element:
 				refresh_screen()
 				frame_color_update()
 
-
 	@staticmethod
 	def func_text_lose_focus():
 		app.focus_force()
@@ -818,7 +856,6 @@ class Element:
 				set_pg(new_p)
 				update_sel_y_by_object_id(o, self.object.get_self_index())
 			update_elements()
-
 
 	def func_selection(self):
 		if self.object is not None:
@@ -850,7 +887,10 @@ class Element:
 			self.object.self_destruct()
 			self.update(None, self.get_self_index())
 			update_sel_boxes()
-			set_pg(-1)
+			if 0 == sum([x.mode for x in elements]):
+				set_pg(math.ceil(len(active_object.content) / pg_size))
+			update_elements()
+			frame_color_update()
 
 	def get_self_index(self):
 		return [n for n, x in enumerate(elements) if x == self][0] if self in elements else -1
@@ -944,7 +984,7 @@ func_update_window_name()
 app.geometry("x".join([str(dim) for dim in app_info["window_size"]]))
 app.geometry("".join([f"+{dim}" if dim >= 0 else str(dim) for dim in app_info["window_pos"]]))
 app.configure(bg = COLOR_BACKGROUND)
-
+app.bind("<FocusOut>", lambda a: func_copy_rel())
 sel_y = 0
 pg_size = 16
 pg_num = 0
@@ -980,6 +1020,11 @@ def func_reload_binds():
 	keybinds.bind("smart fill", func_smart_fill)
 
 	keybinds.bind("project config", project_settings_if_focus)
+
+	keybinds.bind("copy", func_copy)
+	keybinds.bind("copy unset", lambda a: func_copy_rel())
+
+	keybinds.bind("paste", lambda a: func_paste())
 
 	keybinds.update()
 	refresh_screen()
@@ -1235,4 +1280,5 @@ def style_init():
 
 def launch():
 	style_init()
+	bluclip.update()
 	tk.mainloop()

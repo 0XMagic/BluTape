@@ -29,5 +29,9 @@
   "reload templates": "<Control-Shift-R>",
   "reload keybinds": "<Control-r>",
   "smart fill": "<Control-Shift-A>",
-  "project config": "<Control-p>"
+  "project config": "<Control-p>",
+
+  "copy": "<Control-c>",
+  "copy unset": "<Control-KeyRelease-c>",
+  "paste": "<Control-v>"
 }

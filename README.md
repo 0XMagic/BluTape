@@ -40,6 +40,8 @@ various configuration options are located in *info.py*.
 * **Return / Right**: Element Action
 * **Ctrl + Right**: Next page
 * **Ctrl + Left**: Previous page
+* **Ctrl + C**: Copy
+* **Ctrl + V**: Paste
 
 #### Modify Element Window:
 * **Escape**: Cancel

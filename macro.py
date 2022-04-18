@@ -15,7 +15,8 @@ def save_dir_validate():
 			"saves",
 			"templates",
 			"exports",
-			"projects"
+			"projects",
+			"clipboard"
 	]
 
 	for f in folders:
