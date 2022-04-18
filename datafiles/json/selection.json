@@ -156,7 +156,6 @@
     "lim": 2
   },
   "Where": {
-    "lim": 2,
     "use_map_spawns": true
   },
   "Checkpoint": {
