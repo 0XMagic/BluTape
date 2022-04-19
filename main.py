@@ -2,7 +2,7 @@ import macro
 import application
 import savefile
 
-if __name__ == "__main__":
+def on_start():
 	macro.save_dir_validate()
 	macro.config_validate()
 	savefile.reload_templates()
@@ -10,3 +10,7 @@ if __name__ == "__main__":
 	application.set_active_project(project)
 	application.func_reload_binds()
 	application.launch()
+
+
+if __name__ == "__main__":
+	on_start()
