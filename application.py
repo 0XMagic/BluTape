@@ -491,6 +491,7 @@ def func_add_element_if_focus(*args):
 
 def func_add_element():
 	avail = macro.get_available(active_object)
+	print(active_object.key())
 	avail.sort()
 	to_update = -1
 	for n, x in enumerate(elements):

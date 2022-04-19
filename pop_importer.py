@@ -90,7 +90,7 @@ def load_string(s: str):
 
 			o.add_item(k, v)
 		else:
-			if o.parent.key() == "Templates":
+			if o.key() == "Templates":
 				o = o.add_container("%template%")
 				o.name_override = True
 				o.name_mode = True

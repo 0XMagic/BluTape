@@ -16,7 +16,8 @@ def save_dir_validate():
 			"templates",
 			"exports",
 			"projects",
-			"clipboard"
+			"clipboard",
+			"plugins"
 	]
 
 	for f in folders:
@@ -157,7 +158,7 @@ def list_available(o):
 	print("\n".join([f"[{x}] {y}" for x, y in enumerate(r)]))
 
 
-def get_pair_selections(o: Pair, p:Project):
+def get_pair_selections(o: Pair, p: Project):
 	key = o.key()
 	r = selections.get(key, dict())
 	con, d = r.get("content", list()), r.get("default", 0)
