@@ -85,8 +85,11 @@ def load_string(s: str):
 		k, v = get_split(x)
 		if v:
 			if k.lower() == "name" and o.key() != "%template%":
-				o.name = v.replace("\"","")
+				o.name = v.replace("\"", "")
 				o.name_mode = True
+
+			else:
+				k = k.replace("\"", "")
 
 			o.add_item(k, v)
 		else:
