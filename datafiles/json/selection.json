@@ -134,7 +134,9 @@
     "lim": 2
   },
   "Templates": {
-    "content": ["placeholder"],
+    "content": [
+      "placeholder"
+    ],
     "lim": 2
   },
   "CharacterAttributes": {
@@ -216,10 +218,18 @@
     "lim": 2
   },
   "WaitForAllDead": {
-    "lim": 2
+    "lim": 2,
+    "content": [
+      "placeholder"
+    ],
+    "use_prev_ws_names": true
   },
   "WaitForAllSpawned": {
-    "lim": 2
+    "lim": 2,
+    "content": [
+      "placeholder"
+    ],
+    "use_prev_ws_names": true
   },
   "RandomSpawn": {
     "lim": 2

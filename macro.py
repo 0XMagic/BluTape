@@ -158,6 +158,26 @@ def list_available(o):
 	print("\n".join([f"[{x}] {y}" for x, y in enumerate(r)]))
 
 
+def get_prev_ws_names(o: Pair):
+	ws = o.parent
+	w = ws.parent
+	result = list()
+	for x in w.content:
+
+		if x == ws:
+			break
+		if x.key() != "WaveSpawn":
+			continue
+
+		for y in x.content:
+			if y.key().lower() == "name":
+				result.append(y.value())
+				break
+
+	return result
+	pass
+
+
 def get_pair_selections(o: Pair, p: Project):
 	key = o.key()
 	r = selections.get(key, dict())
@@ -169,6 +189,9 @@ def get_pair_selections(o: Pair, p: Project):
 
 	if selections.get(key, dict()).get("use_map_spawns"):
 		con = map_spawns.get(p.map_name, list())
+
+	if selections.get(key, dict()).get("use_prev_ws_names"):
+		con = get_prev_ws_names(o)
 
 	is_list = len(con) != 0
 	others = [x.value() for x in o.parent.content if x.key() == key]

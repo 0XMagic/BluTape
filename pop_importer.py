@@ -87,7 +87,6 @@ def load_string(s: str):
 			if k.lower() == "name" and o.key() != "%template%":
 				o.name = v.replace("\"", "")
 				o.name_mode = True
-
 			else:
 				k = k.replace("\"", "")
 
@@ -98,6 +97,8 @@ def load_string(s: str):
 				o.name_override = True
 				o.name_mode = True
 				o.name = k
+			elif o.key() == "root":
+				o = o.add_container("WaveSchedule")
 			else:
 				o = o.add_container(k)
 	return p
