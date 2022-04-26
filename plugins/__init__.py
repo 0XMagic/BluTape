@@ -8,12 +8,17 @@ to_import = [
 		x.endswith(".py") and x != "__init__.py"
 ]
 
-modules = list()
-
+modules = [SourceFileLoader(name, file).load_module() for name, file in to_import]
+modules.sort(key = lambda m: getattr(m, "priority", 0), reverse = True)
 
 def init():
-	global modules
-	modules = [SourceFileLoader(name, file).load_module() for name, file in to_import]
 	for m in modules:
 		if "init" in dir(m):
 			m.init()
+
+def get(s: str):
+	result = [m for m in modules if m.__name__ == s]
+	if result:
+		return result[0]
+	else:
+		return None

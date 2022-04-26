@@ -76,5 +76,10 @@ You can add more by doing the following:
 
 ##Adding plugins
 With the plugin system, python files can be added to the `Blutape/plugins` folder.\
-Simply import the blutape modules you need and give it an `init()` function to start it.\
-*note: blutape needs to be re-launched to activate new plugins*
+*note: blutape needs to be re-launched to activate new plugins*\
+
+##Plugin properties
+* init() - a plugin needs a function named `init()` to start properly
+* priority - plugins are loaded in the order of their `priority` number, highest first, default 0
+* importing other plugins - plugins are imported by importing `plugin` and the running `plugin.get(plugin_name)`\
+(don't forget to add the .py to the end of the name)

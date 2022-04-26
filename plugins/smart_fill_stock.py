@@ -2,6 +2,7 @@ import smart_fill
 import objects
 import macro
 
+priority = 0
 
 def init():
 	smart_fill.add_item("root", _root)
