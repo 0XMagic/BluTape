@@ -279,6 +279,7 @@ class Project:
 		self.pop_directory = ""  #where to export the popfile
 		self.mission_name = "new_blutape_mission"
 		self.map_name = "mvm_coaltown"
+		self.copy_bases_with_export = False
 
 	def repair_strings(self):
 		if not self.map_name.startswith("mvm_"):
@@ -287,10 +288,12 @@ class Project:
 
 	def export_json(self):
 		return {
-				"map":       self.map_name,
-				"mission":   self.mission_name,
-				"export_to": self.pop_directory,
-				"project":   self.container.export_json()
+
+				"map":                 self.map_name,
+				"mission":             self.mission_name,
+				"export_to":           self.pop_directory,
+				"project":             self.container.export_json(),
+				"copy_base_to_export": self.copy_bases_with_export,
 		}
 
 	def import_json(self, d, name):
@@ -306,6 +309,7 @@ class Project:
 		self.map_name = d.get("map", "mvm_coaltown")
 		self.mission_name = d.get("mission", "new_blutape_mission")
 		self.pop_directory = d.get("export_to", "")
+		self.copy_bases_with_export = d.get("copy_base_to_export", False)
 		#the first layer is already created and should be skipped to avoid issues
 		self.container.get_root().import_json(d["project"]["Container"])
 

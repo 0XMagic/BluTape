@@ -46,7 +46,7 @@ The following configuration files will be present:
 2. Select `reload -> Templates`
 3. Go to your Root node and add a #base for the added the files.\
 *note: do not add templates to `Blutape\datafiles\templates`*\
-*these files are not copied to the export directory (feature not implemented yet)*
+*these files are not copied to the export directory*
 
 ## Having a project automatically open when launching Blutape
 To make a project load on start, simply save a project as "autoload.blu"

@@ -6,6 +6,7 @@ import info
 from tkinter.filedialog import asksaveasfile, askopenfile, askdirectory
 import macro
 import templates
+import shutil
 
 
 def reload_templates():
@@ -132,11 +133,21 @@ def export_silent(project: objects.Project):
 	to_write = project.pop_directory
 	if not to_write.endswith("/"):
 		to_write += "/"
-	to_write += i_file
-	with open(to_write, "w") as io:
+
+	with open(to_write + i_file, "w") as io:
 		print("Exported mission", i_file, "to", project.pop_directory)
 		io.write(watermark + macro.list_to_indented_string(project.export()))
 
+	if project.copy_bases_with_export:
+		for c in project.container.content:
+			if c.key() == "#base":
+				p_in = info.save_dir + "templates/" + c.value()
+				p_out = to_write + c.value()
+				if os.path.isfile(p_in):
+					shutil.copyfile(
+							p_in,
+							p_out
+					)
 
 def select_folder(location):
 	i_path = location if location else info.save_dir + "exports"
@@ -144,6 +155,7 @@ def select_folder(location):
 			initialdir = i_path
 	)
 	return result
+
 
 def select_file(flt):
 	r = askopenfile(

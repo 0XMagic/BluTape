@@ -247,10 +247,25 @@ class SettingsWindowInstance:
 				fg = COLOR_TEXT_GENERIC,
 				text = "Export path"
 		)
+
+		self.copy_base_var = tk.BooleanVar()
+		self.copy_base_var.set(active_project.copy_bases_with_export)
+		self.copy_base = tk.Checkbutton(
+				self.f1,
+				bg = COLOR_BACKGROUND,
+				fg = COLOR_TEXT_HIGHLIGHT,
+				text = "Copy bases to export dir",
+				variable = self.copy_base_var,
+				onvalue = True,
+				offvalue = False
+		)
+
 		grid(self.ep_lb, 0, 0)
 		grid(self.ep, 1, 0)
 		grid(self.ep_btn, 1, 1)
 		grid(self.f1, 0, 1, pady = 4, padx = 6)
+
+		grid(self.copy_base, 2, 0)
 
 		self.fb = tk.Frame(
 				self.top,
@@ -262,12 +277,9 @@ class SettingsWindowInstance:
 
 		self.b_confirm = tk.Button(self.fb, width = 8, height = 1, text = "Confirm", command = self.on_confirm_press)
 		self.b_cancel = tk.Button(self.fb, width = 8, height = 1, text = "Cancel", command = self.on_cancel_press)
-
 		grid(self.b_confirm, 0, 0, padx = 3)
 		grid(self.b_cancel, 0, 1, padx = 3)
-
 		grid(self.f, 0, 0)
-
 		grid(self.fb, 2, 0, pady = 25)
 
 	def w_on_close(self, *_):
@@ -296,6 +308,8 @@ class SettingsWindowInstance:
 		active_project.mission_name = self.mn_var.get().replace(" ", "_")
 		active_project.pop_directory = self.ep.get("0.1", "end").replace("\n", "")
 		active_project.map_name = self.ms.get()
+		to_set = bool(self.copy_base_var.get())
+		active_project.copy_bases_with_export = to_set
 
 		if self.confirm_exports:
 			savefile.export_silent(active_project)
