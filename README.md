@@ -1,5 +1,5 @@
 # BLUTAPE COMPREHENSIVE GUIDE
-**version 6.6**
+**version 6.7**
 
 ## System requirements
 * [The latest version of python](https://www.python.org/)
@@ -74,4 +74,7 @@ You can add more by doing the following:
 1. Open `Blutape/datafiles/icons.txt` and add the icon names.
 2. Re-launch Blutape.
 
-
+##Adding plugins
+With the plugin system, python files can be added to the `Blutape/plugins` folder.\
+Simply import the blutape modules you need and give it an `init()` function to start it.\
+*note: blutape needs to be re-launched to activate new plugins*

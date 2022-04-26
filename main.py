@@ -1,6 +1,7 @@
 import macro
 import application
 import savefile
+import plugins
 
 def on_start():
 	macro.save_dir_validate()
@@ -9,6 +10,7 @@ def on_start():
 	project = savefile.autoload()  #generates a blank project if autoload.blu is not found
 	application.set_active_project(project)
 	application.func_reload_binds()
+	plugins.init()
 	application.launch()
 
 
