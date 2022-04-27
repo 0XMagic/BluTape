@@ -2,14 +2,20 @@ from objects import *
 import templates
 import shutil
 
+_fallback_save_dir, _fallback_config_dir = info.get_fallback_dirs()
 
 def create_project():
 	result = Container("root")
 	save_dir_validate()
 	return result
 
-
 def save_dir_validate():
+	# If fallback save dir exists (for example if it was previously created when appdirs module wasn't installed)
+	# Let's move it to the new expected location.
+	if _fallback_save_dir.is_dir() and not info.save_dir.is_dir():
+		info.save_dir.parent.mkdir(0o755, True, True)
+		_fallback_save_dir.rename(info.save_dir)
+
 	folders = [
 			"saves",
 			"templates",
@@ -30,6 +36,12 @@ def contains(obj: Container, s: str):
 
 
 def config_validate():
+	# If fallback config dir exists (for example if it was previously created when appdirs module wasn't installed)
+	# Let's move it to the new expected location.
+	if _fallback_config_dir.is_dir() and not info.config_dir.is_dir():
+		info.config_dir.parent.mkdir(0o755, True, True)
+		_fallback_config_dir.rename(info.config_dir)
+
 	c_def = info.path / "datafiles" / "default_config"
 	files = (x for x in c_def.iterdir() if x.name != "info.txt")
 
