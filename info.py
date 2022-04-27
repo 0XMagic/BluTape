@@ -1,24 +1,25 @@
 import os
+import pathlib
 
 title = "BluTape"
 full_title = "BluTape Mission Generator"
 author = "ZeroX"
 repo = "https://github.com/0XMagic/BluTape"
-version = 6.7
+version = "6.7"
 schema_ver = 4
 window_size = (1280, 720)
 window_pos = (200, 200)
-path = "/".join(__file__.split("\\")[:-1]) + "/"
+path = pathlib.Path(__file__).resolve().parent
 
-save_dir = os.getenv("APPDATA")
-config_dir = os.getenv("APPDATA")
-if save_dir is None:
-	#fallback for linux/AppleOS
-	save_dir = path + "Blutape/data/"
-	config_dir = path + "Blutape/config/"
+base_dir = os.getenv("APPDATA")
+
+if base_dir is None:
+	base_dir = path / title
 else:
-	save_dir = save_dir.replace("\\", "/") + "/Blutape/data/"
-	config_dir = config_dir.replace("\\", "/") + "/Blutape/config/"
+	base_dir = pathlib.Path(base_dir).resolve() / title
+
+save_dir = base_dir / "data"
+config_dir = base_dir / "config"
 
 text_config = {
 		"up":                "↑",

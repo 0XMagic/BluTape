@@ -1,6 +1,8 @@
+import pathlib
 import tkinter as tk
 from tkinter import ttk
 import json
+import typing
 from color import *
 import info
 import objects
@@ -237,8 +239,8 @@ class SettingsWindowInstance:
 		self.keep_export_dir = True
 		if not c_dir:
 			self.keep_export_dir = False
-			c_dir = info.save_dir + "exports"
-		self.ep.insert("0.1", c_dir)
+			c_dir = info.save_dir / "exports"
+		self.ep.insert("0.1", str(c_dir.resolve()))
 		self.ep.configure(state = "disabled")
 		self.ep_btn = tk.Button(self.f1, width = 2, height = 1, text = "...", command = self.on_ep_press)
 		self.ep_lb = tk.Label(
@@ -306,7 +308,7 @@ class SettingsWindowInstance:
 		if not self.mn_var.get():
 			self.mn_var.set("new blutape mission")
 		active_project.mission_name = self.mn_var.get().replace(" ", "_")
-		active_project.pop_directory = self.ep.get("0.1", "end").replace("\n", "")
+		active_project.pop_directory = pathlib.Path(self.ep.get("0.1", "end").replace("\n", "")).resolve()
 		active_project.map_name = self.ms.get()
 		to_set = bool(self.copy_base_var.get())
 		active_project.copy_bases_with_export = to_set
@@ -316,7 +318,7 @@ class SettingsWindowInstance:
 		self.w_on_close()
 
 
-def modify_element_window(o: (objects.Container, objects.Pair), element_index, add_mode = False):
+def modify_element_window(o: typing.Union[objects.Container, objects.Pair], element_index, add_mode = False):
 	if element_index == -1:
 		to_set = Element(frame_element_items)
 		element_index = len(elements)
@@ -720,7 +722,7 @@ def func_smart_fill(*args):
 
 
 class Element:
-	def __init__(self, parent: (tk.Frame, tk.Tk)):
+	def __init__(self, parent: typing.Union[tk.Frame, tk.Tk]):
 		self.frame = tk.Frame(parent, bg = COLOR_BACKGROUND)
 		self.shift_frame = tk.Frame(self.frame, bg = COLOR_BACKGROUND)
 		self.text_mode = 0
@@ -977,7 +979,7 @@ class Element:
 			self.mode = mode
 
 
-active_project = objects.Project()  #temp objects to be overwritten by project creator
+active_project = objects.Project()    #temp objects to be overwritten by project creator
 active_object = active_project.container
 app = tk.Tk()
 style = ttk.Style()
@@ -1164,7 +1166,7 @@ def open_url_wrapper(_v):
 	return result
 
 
-with open(info.path + "datafiles/help_url.json", "r") as _fl:
+with open(info.path / "datafiles" / "help_url.json", "r") as _fl:
 	_js = dict(json.load(_fl))
 
 	for k, v in _js.items():

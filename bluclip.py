@@ -1,20 +1,18 @@
 #blutape clipboard manager
 
-import os
+import pathlib
+import typing
 import info
 import objects
 import json
 import macro
 
-cache = list()
+cache: typing.List[pathlib.Path] = list()
 
 
 def sort_cache_by_date():
 	global cache
-	nums = list(range(len(cache)))
-	times = [os.stat(x).st_ctime for x in cache]
-	nums.sort(key = lambda val: times[val], reverse = True)
-	cache = [cache[x] for x in nums]
+	cache.sort(key = lambda x: x.stat().st_ctime, reverse = True)
 
 
 def update():
@@ -24,16 +22,14 @@ def update():
 
 def get_clip_files():
 	if not cache:
-		for x in os.listdir(info.save_dir + "clipboard"):
-			to_c = info.save_dir + "clipboard/" + x
-			cache.append(to_c)
+		cache.extend((info.save_dir / "clipboard").iterdir())
 		sort_cache_by_date()
 	return cache
 
 
-def save_item(o: (objects.Container, objects.Pair)):
+def save_item(o: typing.Union[objects.Container, objects.Pair]):
 	to_write = f"{o.key()}#=\"\"=" + json.dumps({"content": [o.export_json()]})
-	with open(info.save_dir + f"clipboard/{len(cache) + 1}.clp", "w") as fl:
+	with open(info.save_dir / "clipboard" / f"{len(cache) + 1}.clp", "w") as fl:
 		fl.write(to_write)
 	update()
 

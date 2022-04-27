@@ -1,5 +1,4 @@
 from objects import *
-import os
 import templates
 import shutil
 
@@ -21,9 +20,9 @@ def save_dir_validate():
 	]
 
 	for f in folders:
-		app_f = info.save_dir + f
-		if not os.path.isdir(app_f):
-			os.makedirs(app_f, exist_ok = True)
+		app_f = info.save_dir / f
+		if not app_f.is_dir():
+			app_f.mkdir(0o755, True, True)
 
 
 def contains(obj: Container, s: str):
@@ -31,14 +30,16 @@ def contains(obj: Container, s: str):
 
 
 def config_validate():
-	c_def = info.path + "datafiles/default_config/"
-	files = [x for x in os.listdir(c_def) if x != "info.txt"]
-	if not os.path.isdir(info.config_dir):
-		os.makedirs(info.config_dir, exist_ok = True)
+	c_def = info.path / "datafiles" / "default_config"
+	files = (x for x in c_def.iterdir() if x.name != "info.txt")
 
-	for f in files:
-		if not os.path.isfile(info.config_dir + f):
-			shutil.copyfile(c_def + f, info.config_dir + f)
+	if not info.config_dir.is_dir():
+		info.config_dir.mkdir(0o755, True, True)
+
+	for src in files:
+		dest = info.config_dir / src.name
+		if not dest.is_file():
+			shutil.copy(src, dest)
 
 
 def add_item(c: Container, s: str, *v, force_at = -1):

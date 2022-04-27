@@ -1,5 +1,5 @@
-import os
 import json
+import info
 
 """
 Used for generating datafiles/json/keywords.json
@@ -13,7 +13,7 @@ This script only needs to be run if any of the following are changed:
 	datafiles/json/attr_blacklist.json
 """
 
-with open("datafiles/json/attr_blacklist.json", "r") as j:
+with open(info.path / "datafiles" / "json" / "attr_blacklist.json", "r") as j:
 	blacklist = dict(json.load(j))
 
 
@@ -32,11 +32,11 @@ def attribute_is_allowed(s: str):
 
 
 def get_content():
-	f_list = os.listdir("datafiles/popfiles/")
+	f_list = (f.name for f in (info.path / "datafiles" / "popfiles").iterdir())
 	content = list()
 	for f in f_list:
 		to_add = list()
-		with open(f"datafiles/popfiles/{f}") as fl:
+		with open(info.path / "datafiles" / "popfiles" / f) as fl:
 			print("reading ", f)
 			for p in fl.readlines():
 				p = p.replace("\n", "")
@@ -127,7 +127,7 @@ def consolidate(data):
 
 def attribute_fix(data: dict):
 	print("updating attribute database")
-	with open("datafiles/spreadsheets/Attributes.csv") as fl:
+	with open(info.path / "datafiles" / "spreadsheets" / "Attributes.csv") as fl:
 		attrs = [x for x in fl.read().split("\n") if x and not x.startswith("//") and attribute_is_allowed(x)]
 	data = {k: v for k, v in data.items() if "CharacterAttributes" not in v["valid_in"]}
 	for a in attrs:
@@ -137,12 +137,12 @@ def attribute_fix(data: dict):
 
 
 def get_where(content: list):
-	with open("datafiles/maps.txt") as fl:
+	with open(info.path / "datafiles" / "maps.txt") as fl:
 		maps = fl.read().split("\n")
 
 	result = {m: list() for m in maps}
 	#bit of a hack solution, should just have the entries be linked from the start
-	f_list = os.listdir("datafiles/popfiles/")
+	f_list = (f.name for f in (info.path / "datafiles" / "popfiles").iterdir())
 	for k, v in zip(f_list, content):
 		for m in maps:
 			if m in k:
@@ -160,10 +160,10 @@ def main():
 	data = attribute_fix(consolidate(c))
 	where = get_where(c)
 
-	with open("datafiles/json/keywords.json", "w") as fl:
+	with open(info.path / "datafiles" / "json" / "keywords.json", "w") as fl:
 		json.dump(data, fl, indent = "\t")
 
-	with open("datafiles/json/map_spawns.json", "w") as fl:
+	with open(info.path / "datafiles" / "json" / "map_spawns.json", "w") as fl:
 		json.dump(where, fl, indent = "\t")
 
 

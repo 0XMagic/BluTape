@@ -1,4 +1,6 @@
 import json
+import pathlib
+import typing
 import info
 import templates
 
@@ -20,16 +22,16 @@ def check_quotes(v, force = False, null_to_0f = False):
 	return s
 
 
-with open(info.path + "datafiles/json/keywords.json") as fl:
+with open(info.path / "datafiles" / "json" / "keywords.json") as fl:
 	data = json.load(fl)
 
-with open(info.path + "datafiles/json/selection.json") as fl:
+with open(info.path / "datafiles" / "json" / "selection.json") as fl:
 	selections = json.load(fl)
 
-with open(info.path + "datafiles/icons.txt") as fl:
+with open(info.path / "datafiles" / "icons.txt") as fl:
 	icons = [x for x in fl.read().split("\n") if x and not x.startswith("//")]
 
-with open(info.path + "datafiles/json/map_spawns.json") as fl:
+with open(info.path / "datafiles" / "json" / "map_spawns.json") as fl:
 	map_spawns = json.load(fl)
 
 data["None"] = {"valid_in": [x for x in data.keys()] + ["None"], "types": []}
@@ -273,10 +275,12 @@ class Container:
 class Project:
 	def __init__(self):
 		self.container = Container("root")
-		#blank str -> directory not set, ask user for it when needed
-		self.path = ""  #save path of the project, set this on file load/saveAs
+		# None means directory not set, ask user for it when needed
+		# Save path of the project, set this on file load/saveAs
+		self.path: typing.Optional[pathlib.Path] = None
 		self.project_name = "new_blutape_project"
-		self.pop_directory = ""  #where to export the popfile
+		# Where to export the popfile
+		self.pop_directory: typing.Optional[pathlib.Path] = None
 		self.mission_name = "new_blutape_mission"
 		self.map_name = "mvm_coaltown"
 		self.copy_bases_with_export = False
@@ -291,24 +295,21 @@ class Project:
 
 				"map":                 self.map_name,
 				"mission":             self.mission_name,
-				"export_to":           self.pop_directory,
+				"export_to":           str(self.pop_directory),
 				"project":             self.container.export_json(),
 				"copy_base_to_export": self.copy_bases_with_export,
 		}
 
-	def import_json(self, d, name):
-		if name is not None:
-			ns = name.split("/")
-			self.path = "/".join(ns[:-1])
-			self.project_name = ns[-1]
-		if self.project_name.endswith(".blu"):
-			self.project_name = self.project_name[:-4]
+	def import_json(self, d, path: typing.Optional[pathlib.Path]):
+		if path is not None:
+			self.path = path.parent
+			self.project_name = path.stem
 		if not isinstance(d, dict):
 			d = dict(d)
 
 		self.map_name = d.get("map", "mvm_coaltown")
 		self.mission_name = d.get("mission", "new_blutape_mission")
-		self.pop_directory = d.get("export_to", "")
+		self.pop_directory = pathlib.Path(d.get("export_to", ""))
 		self.copy_bases_with_export = d.get("copy_base_to_export", False)
 		#the first layer is already created and should be skipped to avoid issues
 		self.container.get_root().import_json(d["project"]["Container"])

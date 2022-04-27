@@ -1,4 +1,4 @@
-import os
+import pathlib
 import info
 
 content = dict()
@@ -29,7 +29,7 @@ def reset():
 	content.clear()
 
 
-def load(path: str):
+def load(path: pathlib.Path):
 	in_template = False
 	active_item = None
 	lv = 0
@@ -57,7 +57,7 @@ def load(path: str):
 		if lv == 1 and len(x) > 1:
 			active_item = Template()
 			active_item.name = x
-			active_item.popfile = path.split("/")[-1]
+			active_item.popfile = path.name
 			print(f"Loading {active_item.popfile}/{x}")
 			if active_item.popfile not in active_bases:
 				active_bases[active_item.popfile] = False
@@ -71,11 +71,11 @@ def load(path: str):
 def reload_templates():
 	reset()
 	for s in [
-			info.path + "datafiles/templates",
-			info.save_dir + "templates/"
+			info.path / "datafiles" / "templates",
+			info.save_dir / "templates"
 	]:
-		for p in os.listdir(s):
-			load(s + "/" + p)
+		for p in s.iterdir():
+			load(p)
 
 
 def clear_live_templates():
