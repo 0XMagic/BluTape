@@ -5,7 +5,8 @@
 * [The latest version of python](https://www.python.org/)
 
 ## Dependencies
-* Blutape requires no additional dependencies
+* Blutape requires no additional dependencies, however, there are optional dependencies which can be installed by running `python -m pip install -r requirements.txt` that provide the following additional functionality:
+  * appdirs module: allows the program to choose an appropriate configuration directory on all platforms.
 
 
 ## Launching Blutape:
