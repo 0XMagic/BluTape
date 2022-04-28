@@ -143,8 +143,13 @@ def export_silent(project: objects.Project):
 	watermark = "\n".join(["//" + x for x in [f"Made with {info.full_title}", info.repo]]) + "\n"
 	i_file = int(project.map_name != "template file") * (project.map_name + "_") + (project.mission_name + ".pop")
 
+	# FIXME: These errors should probably be indicated to the user in some way other than command line.
 	if project.pop_directory is None:
-		print("pop_directory is None, silent export failed")
+		print("Export failed: pop_directory is None")
+		return
+
+	if not project.pop_directory.is_dir():
+		print(f"Export failed: {project.pop_directory} does not exist.")
 		return
 
 	to_write = project.pop_directory
