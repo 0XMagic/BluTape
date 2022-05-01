@@ -60,7 +60,7 @@ If this is true, you can update the datafiles manually by doing the following:
 2. Run `Blutape/update_datafiles.py`
 3. Re-launch Blutape.
 
-##Adding custom maps
+## Adding custom maps
 Blutape has a preset map list that is used for generating selections for the "Where" choices.\
 You can add custom maps to blutape by doing the following:
 1. Open `Blutape/datafiles/maps.txt` and add the name of the map to the list.
@@ -68,17 +68,17 @@ You can add custom maps to blutape by doing the following:
 *note: use an empty list to convert the related selection boxes into regular text boxes*
 3. Re-launch Blutape.
 
-##Adding custom Icons
+## Adding custom Icons
 Robot icons are in a preset list.\
 You can add more by doing the following:
 1. Open `Blutape/datafiles/icons.txt` and add the icon names.
 2. Re-launch Blutape.
 
-##Adding plugins
+## Adding plugins
 With the plugin system, python files can be added to the `Blutape/plugins` folder.\
 *note: blutape needs to be re-launched to activate new plugins*\
 
-##Plugin properties
+## Plugin properties
 * init() - a plugin needs a function named `init()` to start properly
 * priority - plugins are loaded in the order of their `priority` number, highest first, default 0
 * importing other plugins - plugins are imported by importing `plugin` and the running `plugin.get(plugin_name)`\
