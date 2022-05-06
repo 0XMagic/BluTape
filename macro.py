@@ -1,6 +1,8 @@
 from objects import *
 import templates
 import shutil
+import subprocess
+import sys
 
 _fallback_save_dir, _fallback_config_dir = info.get_fallback_dirs()
 
@@ -238,3 +240,15 @@ def update_bases(obj):
 	for x in obj.get_root().content:
 		if selections.get(x.key(), dict()).get("use_template_files", False):
 			templates.active_bases[x.value()] = True
+
+def open_file(path):
+	path = str(path)
+	if sys.platform == "win32":
+		os.startfile(path)
+	else:
+		if sys.platform == "darwin":
+			program = "open"
+		else:
+			program = "xdg-open"
+
+		subprocess.call([program, path], stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT)
