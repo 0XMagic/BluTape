@@ -1,6 +1,8 @@
+import pathlib
 import tkinter as tk
 from tkinter import ttk
 import json
+import typing
 from color import *
 import info
 import objects
@@ -135,25 +137,48 @@ def project_settings_if_focus(*args):
 def project_settings_window(**kwargs):
 	SettingsWindowInstance(**kwargs)
 
+def center_window(win: typing.Union[tk.Tk, tk.Toplevel]):
+	# Update window to make sure the dimensions we get are correct
+	win.update()
+
+	parent = win.master
+	if parent:
+		parent_width = parent.winfo_width()
+		parent_height = parent.winfo_height()
+		parent_x = parent.winfo_x()
+		parent_y = parent.winfo_y()
+	else:
+		parent_width = win.winfo_screenwidth()
+		parent_height = win.winfo_screenheight()
+		parent_x = parent_y = 0
+
+	dx = round(parent_x + parent_width / 2 - win.winfo_width() / 2)
+	dy = round(parent_y + parent_height / 2 - win.winfo_height() / 2)
+
+	win.geometry(f"+{dx}+{dy}")
+
+def create_dialog_window(master: tk.Tk):
+	win = tk.Toplevel(master, bg = COLOR_BACKGROUND)
+
+	def delete_win():
+		win.grab_release()
+		win.destroy()
+
+	win.protocol("WM_DELETE_WINDOW", delete_win)
+
+	win.grab_set()
+	win.focus_set()
+
+	return win
 
 class SettingsWindowInstance:
 	def __init__(self, confirm_exports = False):
-		w = 900
-		h = 130
-
 		#if this window was opened by the exporter for mission info, run the exporter when confirming.
 		self.confirm_exports = confirm_exports
 
-		self.top = tk.Toplevel(app, bg = COLOR_BACKGROUND)
+		self.top = create_dialog_window(app)
+
 		self.top.protocol("WM_DELETE_WINDOW", self.w_on_close)
-
-		self.top.grab_set()
-		self.top.focus_set()
-
-		dx = round(app.winfo_x() + app.winfo_width() / 2 - w / 2)
-		dy = round(app.winfo_y() + app.winfo_height() / 2 - h / 2)
-		self.top.geometry(f"{w}x{h}")
-		self.top.geometry(f"+{dx}+{dy}")
 		self.top.wm_title("Project settings" + " (export)" * int(self.confirm_exports))
 
 		self.f = tk.Frame(
@@ -237,8 +262,8 @@ class SettingsWindowInstance:
 		self.keep_export_dir = True
 		if not c_dir:
 			self.keep_export_dir = False
-			c_dir = info.save_dir + "exports"
-		self.ep.insert("0.1", c_dir)
+			c_dir = info.save_dir / "exports"
+		self.ep.insert("0.1", str(c_dir.resolve()))
 		self.ep.configure(state = "disabled")
 		self.ep_btn = tk.Button(self.f1, width = 2, height = 1, text = "...", command = self.on_ep_press)
 		self.ep_lb = tk.Label(
@@ -282,6 +307,8 @@ class SettingsWindowInstance:
 		grid(self.f, 0, 0)
 		grid(self.fb, 2, 0, pady = 25)
 
+		center_window(self.top)
+
 	def w_on_close(self, *_):
 		self.top.grab_release()
 		self.top.destroy()
@@ -306,7 +333,7 @@ class SettingsWindowInstance:
 		if not self.mn_var.get():
 			self.mn_var.set("new blutape mission")
 		active_project.mission_name = self.mn_var.get().replace(" ", "_")
-		active_project.pop_directory = self.ep.get("0.1", "end").replace("\n", "")
+		active_project.pop_directory = pathlib.Path(self.ep.get("0.1", "end").replace("\n", "")).resolve()
 		active_project.map_name = self.ms.get()
 		to_set = bool(self.copy_base_var.get())
 		active_project.copy_bases_with_export = to_set
@@ -315,8 +342,55 @@ class SettingsWindowInstance:
 			savefile.export_silent(active_project)
 		self.w_on_close()
 
+class AboutWindowInstance:
+	def __init__(self):
+		self.top = create_dialog_window(app)
+		self.top.wm_title(f"About {info.title}")
 
-def modify_element_window(o: (objects.Container, objects.Pair), element_index, add_mode = False):
+		grid_frame = tk.Frame(self.top, bg=COLOR_BACKGROUND)
+		buttons_frame = tk.Frame(self.top, bg=COLOR_BACKGROUND)
+
+		about_info = [
+				("Author", info.author),
+				("Version", info.version),
+				("Config Path", info.config_dir),
+				("Save Data Path", info.save_dir),
+				]
+
+		common_label_opts = {"bg": COLOR_BACKGROUND, "fg": COLOR_TEXT_GENERIC}
+		for i, (name, value) in enumerate(about_info):
+			l_1 = tk.Label(grid_frame, text=name + ":", **common_label_opts)
+			l_2 = tk.Label(grid_frame, text=str(value), **common_label_opts)
+
+			l_1.grid(column=0, row=i, sticky=tk.W)
+			l_2.grid(column=1, row=i, sticky=tk.W)
+
+		for col in range(2):
+			grid_frame.columnconfigure(col, pad=4, weight=1)
+
+		def open_command(path):
+			return lambda: macro.open_file(path)
+
+		common_button_opts = {"bg": COLOR_BACKGROUND_ALT, "fg": COLOR_TEXT_GENERIC}
+		button_1 = tk.Button(buttons_frame, text="Open Save Directory", command=open_command(info.save_dir), **common_button_opts)
+		button_2 = tk.Button(buttons_frame, text="Open Config Directory", command=open_command(info.config_dir), **common_button_opts)
+
+		button_1.grid(column=0, row=0)
+		button_2.grid(column=1, row=0)
+
+		for col in range(2):
+			buttons_frame.columnconfigure(col, pad=4, weight=1)
+		buttons_frame.rowconfigure(0, pad=4)
+
+		center_window(self.top)
+
+		grid_frame.grid(column=0, row=0)
+		buttons_frame.grid(column=0, row=2, sticky=tk.W+tk.E)
+
+		self.top.columnconfigure(0, weight=1)
+		self.top.rowconfigure(1, weight=1)
+
+def modify_element_window(o: typing.Union[objects.Container, objects.Pair], element_index, add_mode = False):
 	if element_index == -1:
 		to_set = Element(frame_element_items)
 		element_index = len(elements)
@@ -720,7 +794,7 @@ def func_smart_fill(*args):
 
 
 class Element:
-	def __init__(self, parent: (tk.Frame, tk.Tk)):
+	def __init__(self, parent: typing.Union[tk.Frame, tk.Tk]):
 		self.frame = tk.Frame(parent, bg = COLOR_BACKGROUND)
 		self.shift_frame = tk.Frame(self.frame, bg = COLOR_BACKGROUND)
 		self.text_mode = 0
@@ -977,7 +1051,7 @@ class Element:
 			self.mode = mode
 
 
-active_project = objects.Project()  #temp objects to be overwritten by project creator
+active_project = objects.Project()    #temp objects to be overwritten by project creator
 active_object = active_project.container
 app = tk.Tk()
 style = ttk.Style()
@@ -1052,6 +1126,9 @@ frame_header = tk.Frame(frame_project, bg = COLOR_BACKGROUND)
 frame_elements = tk.Frame(frame_project, bg = COLOR_BACKGROUND)
 frame_element_items = tk.Frame(frame_elements, bg = COLOR_BACKGROUND)
 frame_pages = tk.Frame(frame_elements, bg = COLOR_BACKGROUND)
+
+top_bar_font = ("", 12)
+
 top_bar = tk.Menu(
 		app,
 		activebackground = COLOR_TEXT_HIGHLIGHT,
@@ -1071,25 +1148,25 @@ top_bar_file = tk.Menu(
 top_bar_file.add_command(
 		label = "Open",
 		command = func_open_project,
-		font = ("", 12)
+		font = top_bar_font
 )
 
 top_bar_file.add_command(
 		label = "Save",
 		command = func_save,
-		font = ("", 12)
+		font = top_bar_font
 )
 
 top_bar_file.add_command(
 		label = "Save As",
 		command = func_save_as,
-		font = ("", 12)
+		font = top_bar_font
 )
 
 top_bar.add_cascade(
 		label = "File",
 		menu = top_bar_file,
-		font = ("", 12)
+		font = top_bar_font
 )
 
 top_bar_project = tk.Menu(
@@ -1102,25 +1179,25 @@ top_bar_project = tk.Menu(
 top_bar_project.add_command(
 		label = "Configure",
 		command = project_settings_window,
-		font = ("", 12)
+		font = top_bar_font
 )
 
 top_bar_project.add_command(
 		label = "Import",
 		command = func_import,
-		font = ("", 12)
+		font = top_bar_font
 )
 
 top_bar_project.add_command(
 		label = "Export",
 		command = func_export,
-		font = ("", 12)
+		font = top_bar_font
 )
 
 top_bar.add_cascade(
 		label = "Project",
 		menu = top_bar_project,
-		font = ("", 12)
+		font = top_bar_font
 )
 
 top_bar_reload = tk.Menu(
@@ -1133,19 +1210,19 @@ top_bar_reload = tk.Menu(
 top_bar_reload.add_command(
 		label = "Templates",
 		command = func_reload_templates,
-		font = ("", 12)
+		font = top_bar_font
 )
 
 top_bar_reload.add_command(
 		label = "Keybinds",
 		command = func_reload_binds,
-		font = ("", 12)
+		font = top_bar_font
 )
 
 top_bar.add_cascade(
 		label = "Reload",
 		menu = top_bar_reload,
-		font = ("", 12)
+		font = top_bar_font
 )
 
 top_bar_help = tk.Menu(
@@ -1155,6 +1232,11 @@ top_bar_help = tk.Menu(
 		foreground = COLOR_TEXT_GENERIC
 )
 
+top_bar_help.add_command(
+		label = "About",
+		command = AboutWindowInstance,
+		font = top_bar_font
+)
 
 def open_url_wrapper(_v):
 	def result():
@@ -1164,20 +1246,20 @@ def open_url_wrapper(_v):
 	return result
 
 
-with open(info.path + "datafiles/help_url.json", "r") as _fl:
+with open(info.path / "datafiles" / "help_url.json", "r") as _fl:
 	_js = dict(json.load(_fl))
 
 	for k, v in _js.items():
 		top_bar_help.add_command(
 				label = k,
 				command = open_url_wrapper(v),
-				font = ("", 12)
+				font = top_bar_font
 		)
 
 top_bar.add_cascade(
-		label = "Guides",
+		label = "Help",
 		menu = top_bar_help,
-		font = ("", 12)
+		font = top_bar_font
 )
 
 app.configure(

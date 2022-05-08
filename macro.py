@@ -1,16 +1,23 @@
 from objects import *
-import os
 import templates
 import shutil
+import subprocess
+import sys
 
+_fallback_save_dir, _fallback_config_dir = info.get_fallback_dirs()
 
 def create_project():
 	result = Container("root")
 	save_dir_validate()
 	return result
 
-
 def save_dir_validate():
+	# If fallback save dir exists (for example if it was previously created when appdirs module wasn't installed)
+	# Let's move it to the new expected location.
+	if _fallback_save_dir.is_dir() and not info.save_dir.is_dir():
+		info.save_dir.parent.mkdir(0o755, True, True)
+		_fallback_save_dir.rename(info.save_dir)
+
 	folders = [
 			"saves",
 			"templates",
@@ -21,9 +28,9 @@ def save_dir_validate():
 	]
 
 	for f in folders:
-		app_f = info.save_dir + f
-		if not os.path.isdir(app_f):
-			os.makedirs(app_f, exist_ok = True)
+		app_f = info.save_dir / f
+		if not app_f.is_dir():
+			app_f.mkdir(0o755, True, True)
 
 
 def contains(obj: Container, s: str):
@@ -31,14 +38,22 @@ def contains(obj: Container, s: str):
 
 
 def config_validate():
-	c_def = info.path + "datafiles/default_config/"
-	files = [x for x in os.listdir(c_def) if x != "info.txt"]
-	if not os.path.isdir(info.config_dir):
-		os.makedirs(info.config_dir, exist_ok = True)
+	# If fallback config dir exists (for example if it was previously created when appdirs module wasn't installed)
+	# Let's move it to the new expected location.
+	if _fallback_config_dir.is_dir() and not info.config_dir.is_dir():
+		info.config_dir.parent.mkdir(0o755, True, True)
+		_fallback_config_dir.rename(info.config_dir)
 
-	for f in files:
-		if not os.path.isfile(info.config_dir + f):
-			shutil.copyfile(c_def + f, info.config_dir + f)
+	c_def = info.path / "datafiles" / "default_config"
+	files = (x for x in c_def.iterdir() if x.name != "info.txt")
+
+	if not info.config_dir.is_dir():
+		info.config_dir.mkdir(0o755, True, True)
+
+	for src in files:
+		dest = info.config_dir / src.name
+		if not dest.is_file():
+			shutil.copy(src, dest)
 
 
 def add_item(c: Container, s: str, *v, force_at = -1):
@@ -225,3 +240,15 @@ def update_bases(obj):
 	for x in obj.get_root().content:
 		if selections.get(x.key(), dict()).get("use_template_files", False):
 			templates.active_bases[x.value()] = True
+
+def open_file(path):
+	path = str(path)
+	if sys.platform == "win32":
+		os.startfile(path)
+	else:
+		if sys.platform == "darwin":
+			program = "open"
+		else:
+			program = "xdg-open"
+
+		subprocess.call([program, path], stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT)

@@ -5,7 +5,8 @@
 * [The latest version of python](https://www.python.org/)
 
 ## Dependencies
-* Blutape requires no additional dependencies
+* Blutape requires no additional dependencies, however, there are optional dependencies which can be installed by running `python -m pip install -r requirements.txt` that provide the following additional functionality:
+  * appdirs module: allows the program to choose an appropriate configuration directory on all platforms.
 
 
 ## Launching Blutape:
@@ -13,8 +14,7 @@ To launch Blutape, simply run `Blutape/main.py`\
 On windows, you can run Blutape without the background terminal with `Blutape/main_no_console_windows.pyw`
 
 ## Configuration
-After launching blutape for the first time, various configuration options will be placed in this directory\
-`C:/Users/(user)/AppData/Roaming/Blutape/config`\
+After launching blutape for the first time, various configuration options will be placed in a platform-dependent configuration path that you can find by selecting Help > About in BluTape's Menu Bar.
 The following configuration files will be present:
 * **keybinds.json**: allows for customisable keyboard shortcuts
 
@@ -42,7 +42,8 @@ The following configuration files will be present:
 
 
 ## Adding templates to the project
-1. Copy the pop file with your templates into `AppData/Blutape/data/templates`.
+1. Open the data directory by following the same steps as opening the configuration directory in the [Configuration](#Configuration) section, except select the Data path option instead of Configuration path.
+1. Copy the pop file with your templates into `(Data Directory)/templates`.
 2. Select `reload -> Templates`
 3. Go to your Root node and add a #base for the added the files.\
 *note: do not add templates to `Blutape\datafiles\templates`*\

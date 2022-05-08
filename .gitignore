@@ -1,2 +1,10 @@
 /.idea/
 /data/
+/BluTape
+__pycache__
+
+# No venv stuff
+/pyvenv.cfg
+/bin
+/lib
+/lib64

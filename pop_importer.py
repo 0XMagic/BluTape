@@ -1,5 +1,7 @@
+import pathlib
+import typing
 import objects
-
+import info
 
 def fmt_padding(s_l: list):
 	for n in range(len(s_l)):
@@ -104,14 +106,14 @@ def load_string(s: str):
 	return p
 
 
-def load_file(fp: str):
+def load_file(fp: typing.Union[pathlib.Path, str]):
 	with open(fp, "r") as fl:
 		txt = fl.read()
 	return load_string(txt)
 
 
 def get_example():
-	return load_file("datafiles/popfiles/robot_standard.pop")
+	return load_file(info.path / "datafiles" / "popfiles" / "robot_standard.pop")
 
 
 if __name__ == "__main__":
