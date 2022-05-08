@@ -137,6 +137,7 @@ def project_settings_if_focus(*args):
 def project_settings_window(**kwargs):
 	SettingsWindowInstance(**kwargs)
 
+
 def center_window(win: typing.Union[tk.Tk, tk.Toplevel]):
 	# Update window to make sure the dimensions we get are correct
 	win.update()
@@ -157,6 +158,7 @@ def center_window(win: typing.Union[tk.Tk, tk.Toplevel]):
 
 	win.geometry(f"+{dx}+{dy}")
 
+
 def create_dialog_window(master: tk.Tk):
 	win = tk.Toplevel(master, bg = COLOR_BACKGROUND)
 
@@ -170,6 +172,7 @@ def create_dialog_window(master: tk.Tk):
 	win.focus_set()
 
 	return win
+
 
 class SettingsWindowInstance:
 	def __init__(self, confirm_exports = False):
@@ -265,7 +268,11 @@ class SettingsWindowInstance:
 			c_dir = info.save_dir / "exports"
 		self.ep.insert("0.1", str(c_dir.resolve()))
 		self.ep.configure(state = "disabled")
-		self.ep_btn = tk.Button(self.f1, width = 2, height = 1, text = "...", command = self.on_ep_press)
+		self.ep_btn = tk.Button(
+				self.f1, width = 2, height = 1,
+				text = "...", command = self.on_ep_press,
+				**common_button_opts
+		)
 		self.ep_lb = tk.Label(
 				self.f1,
 				bg = COLOR_BACKGROUND,
@@ -300,8 +307,16 @@ class SettingsWindowInstance:
 		keybinds.bind_manual(self.top, "confirm", self.on_confirm_press)
 		keybinds.bind_manual(self.top, "cancel", self.on_cancel_press)
 
-		self.b_confirm = tk.Button(self.fb, width = 8, height = 1, text = "Confirm", command = self.on_confirm_press)
-		self.b_cancel = tk.Button(self.fb, width = 8, height = 1, text = "Cancel", command = self.on_cancel_press)
+		self.b_confirm = tk.Button(
+				self.fb, width = 8, height = 1,
+				text = "Confirm", command = self.on_confirm_press,
+				**common_button_opts
+		)
+		self.b_cancel = tk.Button(
+				self.fb, width = 8, height = 1,
+				text = "Cancel", command = self.on_cancel_press,
+				**common_button_opts
+		)
 		grid(self.b_confirm, 0, 0, padx = 3)
 		grid(self.b_cancel, 0, 1, padx = 3)
 		grid(self.f, 0, 0)
@@ -342,53 +357,62 @@ class SettingsWindowInstance:
 			savefile.export_silent(active_project)
 		self.w_on_close()
 
+
 class AboutWindowInstance:
 	def __init__(self):
 		self.top = create_dialog_window(app)
 		self.top.wm_title(f"About {info.title}")
 
-		grid_frame = tk.Frame(self.top, bg=COLOR_BACKGROUND)
-		buttons_frame = tk.Frame(self.top, bg=COLOR_BACKGROUND)
+		grid_frame = tk.Frame(self.top, bg = COLOR_BACKGROUND)
+		buttons_frame = tk.Frame(self.top, bg = COLOR_BACKGROUND)
 
 		about_info = [
 				("Author", info.author),
 				("Version", info.version),
 				("Config Path", info.config_dir),
 				("Save Data Path", info.save_dir),
-				]
+		]
 
 		common_label_opts = {"bg": COLOR_BACKGROUND, "fg": COLOR_TEXT_GENERIC}
 		for i, (name, value) in enumerate(about_info):
-			l_1 = tk.Label(grid_frame, text=name + ":", **common_label_opts)
-			l_2 = tk.Label(grid_frame, text=str(value), **common_label_opts)
+			l_1 = tk.Label(grid_frame, text = name + ":", **common_label_opts)
+			l_2 = tk.Label(grid_frame, text = str(value), **common_label_opts)
 
-			l_1.grid(column=0, row=i, sticky=tk.W)
-			l_2.grid(column=1, row=i, sticky=tk.W)
+			l_1.grid(column = 0, row = i, sticky = tk.W)
+			l_2.grid(column = 1, row = i, sticky = tk.W)
 
 		for col in range(2):
-			grid_frame.columnconfigure(col, pad=4, weight=1)
+			grid_frame.columnconfigure(col, pad = 4, weight = 1)
 
 		def open_command(path):
-			return lambda: macro.open_file(path)
+			return lambda: macro.open_content(path)
 
-		common_button_opts = {"bg": COLOR_BACKGROUND_ALT, "fg": COLOR_TEXT_GENERIC}
-		button_1 = tk.Button(buttons_frame, text="Open Save Directory", command=open_command(info.save_dir), **common_button_opts)
-		button_2 = tk.Button(buttons_frame, text="Open Config Directory", command=open_command(info.config_dir), **common_button_opts)
+		button_1 = tk.Button(
+				buttons_frame,
+				text = "Open Save Directory",
+				command = open_command(info.save_dir),
+				**common_button_opts)
+		button_2 = tk.Button(
+				buttons_frame,
+				text = "Open Config Directory",
+				command = open_command(info.config_dir),
+				**common_button_opts)
 
-		button_1.grid(column=0, row=0)
-		button_2.grid(column=1, row=0)
+		button_1.grid(column = 0, row = 0)
+		button_2.grid(column = 1, row = 0)
 
 		for col in range(2):
-			buttons_frame.columnconfigure(col, pad=4, weight=1)
-		buttons_frame.rowconfigure(0, pad=4)
+			buttons_frame.columnconfigure(col, pad = 4, weight = 1)
+		buttons_frame.rowconfigure(0, pad = 4)
 
 		center_window(self.top)
 
-		grid_frame.grid(column=0, row=0)
-		buttons_frame.grid(column=0, row=2, sticky=tk.W+tk.E)
+		grid_frame.grid(column = 0, row = 0)
+		buttons_frame.grid(column = 0, row = 2, sticky = tk.W + tk.E)
 
-		self.top.columnconfigure(0, weight=1)
-		self.top.rowconfigure(1, weight=1)
+		self.top.columnconfigure(0, weight = 1)
+		self.top.rowconfigure(1, weight = 1)
+
 
 def modify_element_window(o: typing.Union[objects.Container, objects.Pair], element_index, add_mode = False):
 	if element_index == -1:
@@ -511,7 +535,10 @@ def modify_element_window(o: typing.Union[objects.Container, objects.Pair], elem
 	keybinds.bind_manual(tx, "confirm", btn_confirm)
 	keybinds.bind_manual(top, "confirm", btn_confirm)
 	keybinds.bind_manual(top, "cancel", w_on_close)
-	cb = tk.Button(top, text = info.text_config.get("modify confirm", "???"), command = btn_confirm)
+	cb = tk.Button(
+			top, text = info.text_config.get("modify confirm", "???"), command = btn_confirm,
+			**common_button_opts
+	)
 	_i_list = macro.get_available(o.parent)
 	_i_list.sort()
 	for n, v_ in enumerate(_i_list):
@@ -810,12 +837,14 @@ class Element:
 		self.key_button = tk.Button(
 				self.frame, width = 32,
 				command = self.func_key,
-				height = 1
+				height = 1,
+				**common_button_opts
 		)
 		self.edit_button = tk.Button(
 				self.frame, width = 8, text = info.text_config.get("edit", "???"),
 				command = self.func_edit,
-				height = 1
+				height = 1,
+				**common_button_opts
 		)
 		self.text = tk.Entry(
 				self.frame,
@@ -832,24 +861,29 @@ class Element:
 		self.text.bind("<FocusIn>", lambda *args: self.f_in())
 		self.text.bind("<FocusOut>", lambda *args: self.f_out())
 
+		_com_rm = common_button_opts.copy()
+		_com_rm['fg'] = COLOR_ERROR
 		self.remove_button = tk.Button(
 				self.frame, width = 2,
-				text = info.text_config.get("delete", "???"), fg = COLOR_ERROR,
-				command = self.func_delete
+				text = info.text_config.get("delete", "???"),
+				command = self.func_delete,
+				**_com_rm
 		)
 		self.shift_up = tk.Button(
 				self.shift_frame,
 				text = info.text_config.get("up", "???"),
 				command = self.func_up,
 				width = 1,
-				height = 1
+				height = 1,
+				**common_button_opts
 		)
 		self.shift_down = tk.Button(
 				self.shift_frame,
 				text = info.text_config.get("down", "???"),
 				command = self.func_down,
 				width = 1,
-				height = 1
+				height = 1,
+				**common_button_opts
 		)
 		self.select = ttk.Combobox(
 				self.frame,
@@ -1051,7 +1085,8 @@ class Element:
 			self.mode = mode
 
 
-active_project = objects.Project()    #temp objects to be overwritten by project creator
+common_button_opts = {"bg": COLOR_BACKGROUND_ALT, "fg": COLOR_TEXT_GENERIC}
+active_project = objects.Project()  #temp objects to be overwritten by project creator
 active_object = active_project.container
 app = tk.Tk()
 style = ttk.Style()
@@ -1238,6 +1273,7 @@ top_bar_help.add_command(
 		font = top_bar_font
 )
 
+
 def open_url_wrapper(_v):
 	def result():
 		print("opening", _v)
@@ -1271,7 +1307,8 @@ btn_back = tk.Button(
 		width = 2,
 		height = 1,
 		text = info.text_config.get("left", "???"),
-		command = func_back
+		command = func_back,
+		**common_button_opts
 )
 
 lbl_path = tk.Label(
@@ -1287,7 +1324,8 @@ btn_add_element = tk.Button(
 		width = 32,
 		height = 2,
 		text = info.text_config.get("add element", "???"),
-		command = func_add_element
+		command = func_add_element,
+		**common_button_opts
 )
 side_text = tk.Text(
 		frame_elements,
@@ -1313,7 +1351,8 @@ btn_prev = tk.Button(
 		width = 2,
 		height = 2,
 		text = info.text_config.get("left", "???"),
-		command = prev_page
+		command = prev_page,
+		**common_button_opts
 )
 
 btn_next = tk.Button(
@@ -1321,7 +1360,8 @@ btn_next = tk.Button(
 		width = 2,
 		height = 2,
 		text = info.text_config.get("right", "???"),
-		command = next_page
+		command = next_page,
+		**common_button_opts
 )
 lbl_page_string = tk.StringVar()
 lbl_page_string.set("Page 0/0")

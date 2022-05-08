@@ -3,6 +3,7 @@ import templates
 import shutil
 import subprocess
 import sys
+import os
 
 _fallback_save_dir, _fallback_config_dir = info.get_fallback_dirs()
 
@@ -241,7 +242,7 @@ def update_bases(obj):
 		if selections.get(x.key(), dict()).get("use_template_files", False):
 			templates.active_bases[x.value()] = True
 
-def open_file(path):
+def open_content(path):
 	path = str(path)
 	if sys.platform == "win32":
 		os.startfile(path)

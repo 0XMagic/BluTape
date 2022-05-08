@@ -1,5 +1,5 @@
 # BLUTAPE COMPREHENSIVE GUIDE
-**version 6.7**
+**version 6.8**
 
 ## System requirements
 * [The latest version of python](https://www.python.org/)

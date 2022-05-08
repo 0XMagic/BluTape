@@ -1,6 +1,9 @@
 import smart_fill
 import objects
 import macro
+import json
+import info
+import application
 
 priority = 0
 
@@ -32,9 +35,12 @@ def _wave(obj: objects.Container):
 	]
 	if any(c):
 		if c[0]:
+			with open(info.path / "datafiles" / "json" / "start_relay_overrides.json") as fl:
+				js = dict(json.load(fl))
+			to_set = js.get(application.active_project.map_name, "wave_start_relay")
 			o = macro.add_item(obj, "StartWaveOutput")
 			macro.add_item(o, "Action", "Trigger")
-			macro.add_item(o, "Target", "wave_start_relay")
+			macro.add_item(o, "Target", to_set)
 
 		if c[1]:
 			o = macro.add_item(obj, "DoneOutput")
