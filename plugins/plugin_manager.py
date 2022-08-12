@@ -5,11 +5,38 @@ import tkinter as tk
 from color import *
 
 priority = 0
+"""
 plugins = {
 		x.stem: {"path": str(x), "is_enabled": x.suffix == ".py"}
 		for x in (info.path / "plugins").iterdir() if
 		(x.suffix == ".py" or x.suffix == ".disabled") and x.stem not in ("__init__", "plugin_manager")
-}
+}"""
+plugins = dict()
+for x in (info.path / "plugins").iterdir():
+	if x.name == "__pycache__": continue
+
+	to_add = dict()
+	key = ""
+
+	if x.is_dir():
+		itd = [y.name for y in x.iterdir()]
+		dir_enabled = "__init__.py" in itd
+		if dir_enabled or "__init__.py.disabled" in itd:
+			key = x.name
+			to_add = {
+					"path":       str(x / "__init__.py") if dir_enabled else str(x / "__init__.py.disabled"),
+					"is_enabled": dir_enabled
+			}
+
+	elif x.suffix == ".py" and x.stem not in ("__init__", "plugin_manager"):
+		key = x.name
+		to_add = {
+				"path":       str(x),
+				"is_enabled": not x.name.endswith(".disabled")
+		}
+
+	if to_add:
+		plugins[key] = to_add
 
 plugin_tab = tk.Menu(
 		application.top_bar, tearoff = 0, background = COLOR_BACKGROUND_ALT, foreground = COLOR_TEXT_GENERIC)
@@ -81,6 +108,7 @@ def btx(text: str, state: bool):
 	result = "(ON)  " if state else "(OFF) "
 	return f"{result}{text}"
 
+
 def btc(state: bool):
 	return COLOR_TEXT_STR if state else COLOR_ERROR
 
@@ -90,7 +118,7 @@ def apply_changes(changes: dict):
 		if k not in plugins or plugins[k]["is_enabled"] == v: continue
 		old_path = plugins[k]["path"]
 		new_path = old_path.rstrip(".disabled") if v else old_path + ".disabled"
-		if os.path.isfile(old_path):
+		if os.path.exists(old_path):
 			os.rename(old_path, new_path)
 		else:
 			print(f"notice: {old_path} does not exist, ignoring.")
