@@ -14,6 +14,7 @@ def init():
 	smart_fill.add_item("WaveSpawn", _wave_spawn)
 	smart_fill.add_item(lambda k: k in ["TFBot", "%template%"], _tf_bot)
 	smart_fill.add_item("ItemAttributes", _item_attributes)
+	smart_fill.add_item("Tank", _tank)
 
 
 def _root(obj: objects.Container):
@@ -109,3 +110,15 @@ def _item_attributes(obj: objects.Container):
 				p_name = x.value()
 				break
 		macro.add_item(obj, "ItemName", p_name)
+
+def _tank(obj: objects.Container):
+	if not macro.contains(obj, "OnBombDroppedOutput"):
+		o = macro.add_item(obj, "OnBombDroppedOutput")
+		macro.add_item(o, "Action", "Trigger")
+		macro.add_item(o, "Target", "boss_deploy_relay")
+
+	if not macro.contains(obj, "OnKilledOutput"):
+		o = macro.add_item(obj, "OnKilledOutput")
+		macro.add_item(o, "Action", "Trigger")
+		macro.add_item(o, "Target", "boss_dead_relay")
+
