@@ -1418,4 +1418,5 @@ def style_init():
 def launch():
 	style_init()
 	bluclip.update()
+	app.geometry("+0+0")
 	tk.mainloop()
